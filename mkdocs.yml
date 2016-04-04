@@ -1,0 +1,7 @@
+site_name: AppFriends Documentation
+theme: 'material'
+pages:
+- Welcome: index.md
+- iOS Documentation: ios.md
+- Android Documentation: android.md
+- AppFriends API: api.md
