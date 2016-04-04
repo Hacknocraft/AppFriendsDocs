@@ -1,0 +1,2 @@
+# AppFriendsDocs
+AppFriends documentation
