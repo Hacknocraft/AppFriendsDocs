@@ -1,4 +1,4 @@
-# AppFriends iOS SDK
+# AppFriends iOS SDK Documentation
 
 Welcome to the AppFriends iOS SDK documentation! You can integrate the SDK via [Cocoapods](https://cocoapods.org/). The SDK is used to signup and authenticate users, provide turn-key and modern UI components, give control of the social features and data, and so on.
 
@@ -39,7 +39,7 @@ Initialize AppFriends in Application Delegate `didFinishLaunchingWithOptions` me
 
 **Objective-C**
 
-	 [widget initializeWithApplicationKey:@"db" 
+	 [widget initializeWithApplicationKey:@"db"
     							  secret:"3MyNWQkQt4cbdSLiRlfFUAtt"
     							  configuration:@{kHCUseProduction: @NO}
     							  withLaunchOptions:launchOptions];
@@ -47,9 +47,9 @@ Initialize AppFriends in Application Delegate `didFinishLaunchingWithOptions` me
 
 **Swift**
 
-	 HCWidget.sharedWidget().initializeWithApplicationKey("db", 
-	 							secret: "3MyNWQkQt4cbdSLiRlfFUAtt", 
-	 							configuration: [kHCUseProduction: NSNumber(bool: false)], 
+	 HCWidget.sharedWidget().initializeWithApplicationKey("db",
+	 							secret: "3MyNWQkQt4cbdSLiRlfFUAtt",
+	 							configuration: [kHCUseProduction: NSNumber(bool: false)],
 	 							withLaunchOptions: launchOptions)
 
 ### Build Initialization Options
