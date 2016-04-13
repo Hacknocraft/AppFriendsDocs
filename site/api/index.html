@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    
+      
+        <title>AppFriends API - AppFriends Documentation</title>
+      
+      
+      
+        <link rel="canonical" href="http://www.appfriends.me/api/">
+      
+      
+        <meta name="author" content="John Doe">
+      
+    
+    <meta property="og:url" content="http://www.appfriends.me/api/">
+    <meta property="og:title" content="AppFriends Documentation">
+    <meta property="og:image" content="http://www.appfriends.me/api//../images/logo.png">
+    <meta name="apple-mobile-web-app-title" content="AppFriends Documentation">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+      <link rel="apple-touch-icon" href="../images/logo.png">
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../None">
+    <link rel="icon" type="image/x-icon" href="../None">
+    <style>
+      @font-face {
+      	font-family: 'Icon';
+      	src: url('../assets/fonts/icon.eot?52m981');
+      	src: url('../assets/fonts/icon.eot?#iefix52m981')
+               format('embedded-opentype'),
+      		   url('../assets/fonts/icon.woff?52m981')
+               format('woff'),
+      		   url('../assets/fonts/icon.ttf?52m981')
+               format('truetype'),
+      		   url('../assets/fonts/icon.svg?52m981#icon')
+               format('svg');
+      	font-weight: normal;
+      	font-style: normal;
+      }
+    </style>
+    <link rel="stylesheet" href="../assets/stylesheets/application-54f87043f3.css">
+    
+      <link rel="stylesheet" href="../assets/stylesheets/palettes-05ab2406df.css">
+    
+    
+      
+      
+      
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open Sans:400,700|Monaco">
+      <style>
+        body, input {
+          font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+        }
+        pre, code {
+          font-family: 'Monaco', 'Courier New', 'Courier', monospace;
+        }
+      </style>
+    
+    
+    <script src="../assets/javascripts/modernizr-4ab42b99fd.js"></script>
+    
+  </head>
+  
+  
+  
+  <body class="palette-primary-deep-orange palette-accent-orange">
+    
+    <div class="backdrop">
+      <div class="backdrop-paper"></div>
+    </div>
+    <input class="toggle" type="checkbox" id="toggle-drawer">
+    <input class="toggle" type="checkbox" id="toggle-search">
+    <label class="toggle-button overlay" for="toggle-drawer"></label>
+    <header class="header">
+      <nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        
+          <span class="path">
+            
+          </span>
+        
+        AppFriends API
+      </div>
+    </div>
+    
+    
+    <div class="button button-search" role="button" aria-label="Search">
+      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
+    </div>
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+    </header>
+    <main class="main">
+      
+      <div class="drawer">
+        <nav aria-label="Navigation">
+  
+  <a href="/" class="project">
+    <div class="banner">
+      
+        <div class="logo">
+          <img src="../images/logo.png">
+        </div>
+      
+      <div class="name">
+        <strong>
+          AppFriends Documentation
+          <span class="version">
+            
+          </span>
+        </strong>
+        
+      </div>
+    </div>
+  </a>
+  <div class="scrollable">
+    <div class="wrapper">
+      
+      <div class="toc">
+        <ul>
+          
+            
+  <li>
+    <a class="" title="Welcome" href="..">
+      Welcome
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="iOS Documentation" href="../ios/">
+      iOS Documentation
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="Android Documentation" href="../android/">
+      Android Documentation
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="current" title="AppFriends API" href="./">
+      AppFriends API
+    </a>
+    
+      
+        
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="Navigation" href="#navigation">
+                Navigation
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="REST API's" href="#rest-apis">
+                REST API's
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="User" href="#user">
+                User
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Activities" href="#activities">
+                Activities
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Public Chat Channels" href="#public-chat-channels">
+                Public Chat Channels
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Chat Groups" href="#chat-groups">
+                Chat Groups
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Messaging" href="#messaging">
+                Messaging
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Dialogs" href="#dialogs">
+                Dialogs
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Notifications" href="#notifications">
+                Notifications
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Constants" href="#constants">
+                Constants
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Admin APIs" href="#admin-apis">
+                Admin APIs
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Errors" href="#errors">
+                Errors
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="Authentication and API Requests" href="../security/">
+      Authentication and API Requests
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="Analytics" href="../analytics/">
+      Analytics
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="Referral and Sharing" href="../referral/">
+      Referral and Sharing
+    </a>
+    
+  </li>
+
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+      </div>
+      <article class="article">
+        <div class="wrapper">
+          
+          <h1 id="appfriends-api-documentation">AppFriends API Documentation</h1>
+<p>AppFriends API can be used to authenticate user, open the widget to a certain view, control the data and interact with all the features of AppFriends. For example, some common tasks that developers can do includes:</p>
+<ul>
+<li>Open AppFriends widget to certain view. See <a href="#navigation">Navigation</a>.</li>
+<li>Search for users. See <a href="#Users">Users</a>.</li>
+<li>Post an activity for a user. See <a href="../activities">Activities</a>.</li>
+<li>Create chat channels. See <a href="#chat-channels">Chat Channels</a>.</li>
+<li>Create chat groups. See <a href="#chat-groups">Chat Groups</a>.</li>
+<li>Send a notification to users. See <a href="#notifications">Notifications</a>.</li>
+</ul>
+<p>Most of the AppFriends APIs are accessed by using URL's, and all the URL's follow the standard REST API URL pattern, which is <code>[key]/[value]</code>. For example, the URL to access a user will be marked as <code>user/[:id]</code>, where <code>user</code> is the <strong>key</strong> and <code>[:id]</code> is the <strong>value</strong>. </p>
+<h2 id="navigation">Navigation</h2>
+<p>You can use URL path to navigate inside AppFriends, very similar to how you navigate in a browser. This is a practice we want to encourage your app to adapt as well. It makes routing very easy and works well with deeplinks. If you use AppFriends' sharing and deeplink features, same routing scheme will be used to navigate inside your app.</p>
+<p>For example, if you want to open a user's profile in AppFriends widget, you can use this URL: <code>/user/[:id]/profile</code> </p>
+<h3 id="code-examples">Code Examples</h3>
+<p>You can use the following code to open a specific view of AppFriends widget. There are options to either open a single view or the entire widget. The difference is that if you open the entire widget, the user can navigate from the view opened to other AppFriends features. If you open a single view, the user will be limited to that one feature.</p>
+<h4 id="objective-c">Objective-C</h4>
+<div class="code"><pre><span></span><span class="c1">// open entire widget and </span>
+<span class="p">[</span><span class="n">HCWidget</span> <span class="nl">openView</span><span class="p">:</span><span class="s">@&quot;/user/haowang/profile&quot;</span><span class="p">];</span> 
+</pre></div>
+
+
+<h4 id="swift">Swift</h4>
+<div class="code"><pre><span></span><span class="n">HCWidget</span><span class="p">.</span><span class="n">openView</span><span class="p">:(</span><span class="s">&quot;/user/haowang/profile&quot;</span><span class="p">)</span>
+
+<span class="c1">//</span>
+<span class="n">HCWidget</span><span class="p">.</span><span class="n">openSingleView</span><span class="p">:(</span><span class="s">&quot;/user/haowang/profile&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<h4 id="android">Android</h4>
+<div class="code"><pre><span></span><span class="n">HCWidget</span><span class="o">.</span><span class="na">openSingleView</span><span class="o">:(</span><span class="s">&quot;/user/haowang/profile&quot;</span><span class="o">)</span>
+</pre></div>
+
+
+<h3 id="appfriends-widget-views-and-their-urls">AppFriends Widget Views and Their URLs</h3>
+<table>
+<thead>
+<tr>
+<th>Destination</th>
+<th>URL</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>User profile page</td>
+<td>/users/[:id]/profile</td>
+<td>open the user's profile page. The id provided here is the user's id in your app.</td>
+</tr>
+<tr>
+<td>Activities page</td>
+<td>/activities</td>
+<td>open the activities page</td>
+</tr>
+<tr>
+<td>Activities page</td>
+<td>/activities/trending</td>
+<td>open the trending activities page.</td>
+</tr>
+<tr>
+<td>User search view</td>
+<td>/users/search</td>
+<td>open the search user view</td>
+</tr>
+<tr>
+<td>User followers list view</td>
+<td>/users/[:id]/followers</td>
+<td>open the user's followers list view. The id provided here is the user's id in your app.</td>
+</tr>
+<tr>
+<td>User followings list view</td>
+<td>/users/[:id]/followings</td>
+<td>open the view that lists the users which this user is following. The id provided here is the user's id in your app.</td>
+</tr>
+<tr>
+<td>User friends view</td>
+<td>/users/[:id]/friends</td>
+<td>open the user's friends list view. The id provided here is the user's id in your app.</td>
+</tr>
+<tr>
+<td>Private chat page</td>
+<td>/users/[:id]/chat</td>
+<td>open the private chat with the user. The id provided here is the user's id in your app.</td>
+</tr>
+<tr>
+<td>Group chat page</td>
+<td>/chat_groups/[:groupid]</td>
+<td>open the group chat. The id provided is the group id.</td>
+</tr>
+<tr>
+<td>Chat Channel</td>
+<td>/chat_channels/[:channelid]</td>
+<td>open the channel. The id provided is the channel id.</td>
+</tr>
+<tr>
+<td>Message thread view</td>
+<td>/chat_channels/[:channelid]/messages/[:messageid]</td>
+<td>open the message threading view which contains the message. Provide both channel id and message id.</td>
+</tr>
+<tr>
+<td>Notification view</td>
+<td>/notifications</td>
+<td>open the notifications view</td>
+</tr>
+<tr>
+<td>Screen sharing view</td>
+<td>/screen_share</td>
+<td>open the screenshot sharing window</td>
+</tr>
+</tbody>
+</table>
+<h2 id="rest-apis">REST API's</h2>
+<p>If you use our out of box UI, all functionalities are enabled and ready to use by default, but if you want to make a customized UI, we certainly facilitate that as well. To access and modify data on AppFriends, you can ultilize our REST interface. There are two types of REST API's:</p>
+<blockquote>
+<ol>
+<li>Application API</li>
+<li>Admin API</li>
+</ol>
+</blockquote>
+<p>Have fun! and remember to tell us what you made, and how we can improve our product to better support you.</p>
+<h3 id="application-api">Application API</h3>
+<p>Application API's can only be accessed via the SDK, using the application secret. </p>
+<h3 id="admin-api">Admin API</h3>
+<p>The admin api's can be accessed via any http client, using the admin secret. </p>
+<h2 id="user">User</h2>
+<div class="admonition note">
+<p class="admonition-title"><strong>/me</strong>, a shortcut for current user</p>
+<p><em>/me</em>, is a shortcut for <em>/user/[:current_user_id]</em>. For example, <em>/me/profile</em> is equivalent to <em>/user/[:current_user_id]/profile</em>. </p>
+</div>
+<h3 id="1-get-user-information">1. Get user information</h3>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Method</th>
+<th>API Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/users/[:id]</code></td>
+<td>GET</td>
+<td>Application</td>
+<td>get the user's information</td>
+</tr>
+</tbody>
+</table>
+<h4 id="response-data">Response Data</h4>
+<div class="code"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>                           <span class="c1">// user id provided by hosting app when sign up the user. Always use this id.</span>
+    <span class="s2">&quot;af_user_id&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>                   <span class="c1">// unique internal AppFriends user id </span>
+    <span class="s2">&quot;chat_user_id&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>                 <span class="c1">// unique internal chat id.</span>
+    <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>                        <span class="c1">// user&#39;s email if provided</span>
+    <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>                    <span class="c1">// user name</span>
+    <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>                       <span class="c1">// user&#39;s avatar if provided</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h3 id="2-update-user-information">2. Update user information</h3>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Method</th>
+<th>API Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/users/[:id]</code></td>
+<td>PUT</td>
+<td>Application</td>
+<td>update the user's information</td>
+</tr>
+</tbody>
+</table>
+<h4 id="response-data_1">Response Data</h4>
+<div class="code"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>                           <span class="c1">// user id provided by hosting app </span>
+    <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>                        <span class="c1">// user&#39;s email if provided</span>
+    <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>                    <span class="c1">// user name</span>
+    <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>                       <span class="c1">// user&#39;s avatar if provided</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h3 id="3-followers">3. Followers</h3>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Method</th>
+<th>API Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/users/[:id]/followers</code></td>
+<td>GET</td>
+<td>Application</td>
+<td>Get all the followers of the user.</td>
+</tr>
+<tr>
+<td><code>/users/[:id]/followers</code></td>
+<td>POST</td>
+<td>Application</td>
+<td>Make the current user follow this user, whose id is provided here.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4-followings">4. Followings</h3>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Method</th>
+<th>API Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/users/[:id]/followings</code></td>
+<td>GET</td>
+<td>Application</td>
+<td>Get all the users who this user is following</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5-followunfollow">5. Follow/unfollow</h3>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Method</th>
+<th>API Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/users/[:id]/follow</code></td>
+<td>POST</td>
+<td>Application</td>
+<td>follow this user</td>
+</tr>
+<tr>
+<td><code>/users/[:id]/unfollow</code></td>
+<td>POST</td>
+<td>Application</td>
+<td>unfollow this user</td>
+</tr>
+</tbody>
+</table>
+<h3 id="6-friends">6. Friends</h3>
+<div class="admonition note">
+<p class="admonition-title">who are my friends?</p>
+<p>Friends are users who follow each other.</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Method</th>
+<th>API Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/users/[:id]/Friends</code></td>
+<td>GET</td>
+<td>Application</td>
+<td>Get the users friends</td>
+</tr>
+</tbody>
+</table>
+<h3 id="7-blocksunblocks">7. Blocks/unblocks</h3>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Method</th>
+<th>API Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/users/[:id]/block</code></td>
+<td>POST</td>
+<td>Application</td>
+<td>Block this user</td>
+</tr>
+<tr>
+<td><code>/users/[:id]/unblock</code></td>
+<td>POST</td>
+<td>Application</td>
+<td>unblock this user</td>
+</tr>
+</tbody>
+</table>
+<h3 id="8-reporting-a-user">8. Reporting a user</h3>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Method</th>
+<th>API Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/users/[:id]/report</code></td>
+<td>POST</td>
+<td>Application</td>
+<td>report this user</td>
+</tr>
+</tbody>
+</table>
+<h3 id="9-preferences">9. Preferences</h3>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Method</th>
+<th>API Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/me/preferences</code></td>
+<td>GET</td>
+<td>Application</td>
+<td>get the current user's preferences</td>
+</tr>
+<tr>
+<td><code>/me/preferences</code></td>
+<td>PUT</td>
+<td>Application</td>
+<td>change the current user's preferences</td>
+</tr>
+</tbody>
+</table>
+<h2 id="activities">Activities</h2>
+<h3 id="1-get-the-users-activities">1. Get the user's activities</h3>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Method</th>
+<th>API Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/users/[:id]/activities</code></td>
+<td>GET</td>
+<td>Application</td>
+<td>get the user's activities</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-get-the-current-users-friends-activities">2. Get the current user's friends activities</h3>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Method</th>
+<th>API Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/users/[:id]/activities/friends</code></td>
+<td>GET</td>
+<td>Application</td>
+<td>get the user's friends' activities</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-create-an-activity-for-a-user">3. Create an activity for a user</h3>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Method</th>
+<th>API Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/users/[:id]/activities</code></td>
+<td>POST</td>
+<td>Admin</td>
+<td>create an activity for a user</td>
+</tr>
+<tr>
+<td><code>/me/activities</code></td>
+<td>POST</td>
+<td>Application</td>
+<td>create an activity for the current user</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4-create-a-trending-activity">4. Create a trending activity</h3>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Method</th>
+<th>API Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/activities/trending</code></td>
+<td>POST</td>
+<td>Admin</td>
+<td>create a trending activity</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5-get-the-the-trending-activities">5. Get the the trending activities</h3>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Method</th>
+<th>API Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/activities/trending</code></td>
+<td>GET</td>
+<td>Application</td>
+<td>get the trending activities</td>
+</tr>
+</tbody>
+</table>
+<h2 id="public-chat-channels">Public Chat Channels</h2>
+<p>Public chat channels are open to any user. </p>
+<h3 id="1-get-all-chat-channels">1. Get all chat channels</h3>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Method</th>
+<th>API Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/chat_channels</code></td>
+<td>GET</td>
+<td>Application</td>
+<td>get all the public chat channels</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-favoriteunfavorite-a-chat-channel">2. Favorite/unfavorite a chat channel</h3>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Method</th>
+<th>API Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/chat_channels/[:id]/favorite</code></td>
+<td>PUT</td>
+<td>Application</td>
+<td>favorite a chat channel for the current user</td>
+</tr>
+<tr>
+<td><code>/chat_channels/[:id]/unfavorite</code></td>
+<td>PUT</td>
+<td>Application</td>
+<td>unfavorite a chat channel for the current user</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-get-online-users-in-a-chat-channel">3. Get online users in a chat channel</h3>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Method</th>
+<th>API Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/chat_channels/[:id]/users</code></td>
+<td>GET</td>
+<td>Application</td>
+<td>get the current online users in the chat channel</td>
+</tr>
+<tr>
+<td><code>/chat_channels/[:id]/users/count</code></td>
+<td>GET</td>
+<td>Application</td>
+<td>get the count of the online users in the chat channel</td>
+</tr>
+<tr>
+<td><code>/chat_channels/user_counts</code></td>
+<td>GET</td>
+<td>Application</td>
+<td>get the count of the online users in all of the chat channels</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4-create-a-chat-channel">4. Create a chat channel</h3>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Method</th>
+<th>API Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/chat_channels</code></td>
+<td>POST</td>
+<td>Application</td>
+<td>create a chat channel</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5-modify-a-chat-channel">5. Modify a chat channel</h3>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Method</th>
+<th>API Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/chat_channels/[:id]</code></td>
+<td>PUT</td>
+<td>Application</td>
+<td>modify a chat channel</td>
+</tr>
+</tbody>
+</table>
+<h3 id="6-delete-a-chat-channel">6. Delete a chat channel</h3>
+<p><code>/chat_channels/[:id]</code> | DELETE | Application | delete a chat channel</p>
+<h2 id="chat-groups">Chat Groups</h2>
+<p>Chat groups are created by users or the admin, and other users can only join the group if they are invited by users in the group or the admin.</p>
+<h3 id="1-create-a-chat-group">1. Create a chat group</h3>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Method</th>
+<th>API Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/chat_group</code></td>
+<td>POST</td>
+<td>Application</td>
+<td>create a chat group</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-modify-a-chat-group">2. Modify a chat group</h3>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Method</th>
+<th>API Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/chat_group/[:id]</code></td>
+<td>PUT</td>
+<td>Application</td>
+<td>create a chat group</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-add-users-to-a-chat-group">3. Add users to a chat group</h3>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Method</th>
+<th>API Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/chat_group/[:id]/add_users</code></td>
+<td>POST</td>
+<td>Application</td>
+<td>add users to a chat group. After they users are added to the group, they will start receiving new messages from this group.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4-remove-users-from-a-chat-group">4. Remove users from a chat group</h3>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Method</th>
+<th>API Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/chat_group/[:id]/remove_users</code></td>
+<td>POST</td>
+<td>Application</td>
+<td>add users to a chat group. After they users are added to the group, they will start receiving new messages from this group.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5-delete-a-chat-group">5. Delete a chat group</h3>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Method</th>
+<th>API Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/chat_group/[:id]</code></td>
+<td>DELETE</td>
+<td>Application</td>
+<td>The owner or admin can delete a chat group</td>
+</tr>
+</tbody>
+</table>
+<h2 id="messaging">Messaging</h2>
+<h3 id="1-sending-a-message">1. Sending a message</h3>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Method</th>
+<th>API Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/dialogs/[:id]/messages</code></td>
+<td>POST</td>
+<td>Application</td>
+<td>Send a message in a dialog</td>
+</tr>
+<tr>
+<td><code>/users/[:id]/messages</code></td>
+<td>POST</td>
+<td>Application</td>
+<td>Send a message to a user</td>
+</tr>
+<tr>
+<td><code>/chat_groups/[:id]/messages</code></td>
+<td>POST</td>
+<td>Application</td>
+<td>Send a message to a chat group</td>
+</tr>
+<tr>
+<td><code>/chat_channels/[:id]/messages</code></td>
+<td>POST</td>
+<td>Application</td>
+<td>Send a message to a chat channel</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-receiving-a-message">2. Receiving a message</h3>
+<p>Messages are received in real time via native callbacks. </p>
+<h2 id="dialogs">Dialogs</h2>
+<h3 id="1-get-all-dialogs-that-the-user-is-in">1. Get all dialogs that the user is in</h3>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Method</th>
+<th>API Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/dialogs</code></td>
+<td>GET</td>
+<td>Application</td>
+<td>get All dialogs that the user is currently in</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-create-a-dialog-start-chat">2. Create a dialog (start chat)</h3>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Method</th>
+<th>API Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/dialogs</code></td>
+<td>POST</td>
+<td>Application</td>
+<td>create a chat dialog with other users</td>
+</tr>
+</tbody>
+</table>
+<h2 id="notifications">Notifications</h2>
+<h3 id="1-create-a-notification">1. Create a notification</h3>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Method</th>
+<th>API Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/notifications</code></td>
+<td>POST</td>
+<td>Admin</td>
+<td>Create a notification</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-get-all-notifications-for-a-user">2. Get all notifications for a user</h3>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Method</th>
+<th>API Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/users/[:id]/notifications</code></td>
+<td>GET</td>
+<td>Application</td>
+<td>fetch all notifications for the user</td>
+</tr>
+</tbody>
+</table>
+<h2 id="constants">Constants</h2>
+<h2 id="admin-apis">Admin APIs</h2>
+<h3 id="1-batch-create-users">1. Batch create users</h3>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Method</th>
+<th>API Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/users/batch_create</code></td>
+<td>POST</td>
+<td>Admin</td>
+<td>create multiple users</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-export-and-import-social-graph">2. Export and import social graph</h3>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Method</th>
+<th>API Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/social_graph</code></td>
+<td>GET</td>
+<td>Admin</td>
+<td>export social graph</td>
+</tr>
+<tr>
+<td><code>/social_graph</code></td>
+<td>POST</td>
+<td>Admin</td>
+<td>export social graph</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-update-user-token">3. Update user token</h3>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Method</th>
+<th>API Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/users/[:id]/update_token</code></td>
+<td>PUT</td>
+<td>Admin, Application</td>
+<td>change the user's token</td>
+</tr>
+</tbody>
+</table>
+<h2 id="errors">Errors</h2>
+<p>When errors are returned, they will be in a JSON object that contains information you need to interpret them.
+Sample error json:</p>
+<div class="code"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">401</span>
+    <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;authentication required&quot;</span>
+    <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">190</span>
+    <span class="s2">&quot;more_info&quot;</span><span class="o">:</span> <span class="s2">&quot;https://appfriends.me/documentation&quot;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h3 id="error-codes">Error Codes</h3>
+<table>
+<thead>
+<tr>
+<th>Error Code</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>unknown error</td>
+</tr>
+<tr>
+<td>4</td>
+<td>application request limit reached</td>
+</tr>
+<tr>
+<td>5</td>
+<td>application does not have permission</td>
+</tr>
+<tr>
+<td>6</td>
+<td>requests are too frequent</td>
+</tr>
+<tr>
+<td>100</td>
+<td>invalid parameters</td>
+</tr>
+<tr>
+<td>104</td>
+<td>incorrect signature</td>
+</tr>
+<tr>
+<td>190</td>
+<td>need to login to perform this request</td>
+</tr>
+<tr>
+<td>200</td>
+<td>permission error</td>
+</tr>
+</tbody>
+</table>
+          <aside class="copyright" role="note">
+            
+            Documentation built with
+            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
+            using the
+            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
+              Material
+            </a>
+            theme.
+          </aside>
+          
+            <footer class="footer">
+              
+  <nav class="pagination" aria-label="Footer">
+    <div class="previous">
+      
+        <a href="../android/" title="Android Documentation">
+          <span class="direction">
+            Previous
+          </span>
+          <div class="page">
+            <div class="button button-previous" role="button" aria-label="Previous">
+              <i class="icon icon-back"></i>
+            </div>
+            <div class="stretch">
+              <div class="title">
+                Android Documentation
+              </div>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+    <div class="next">
+      
+        <a href="../security/" title="Authentication and API Requests">
+          <span class="direction">
+            Next
+          </span>
+          <div class="page">
+            <div class="stretch">
+              <div class="title">
+                Authentication and API Requests
+              </div>
+            </div>
+            <div class="button button-next" role="button" aria-label="Next">
+              <i class="icon icon-forward"></i>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+  </nav>
+
+            </footer>
+          
+        </div>
+      </article>
+      <div class="results" role="status" aria-live="polite">
+        <div class="scrollable">
+          <div class="wrapper">
+            <div class="meta"></div>
+            <div class="list"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      var base_url = '..';
+      var repo_id  = '';
+    </script>
+    <script src="../assets/javascripts/application-997097ee0c.js"></script>
+    
+    
+  </body>
+</html>

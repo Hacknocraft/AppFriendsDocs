@@ -1,0 +1,534 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Welcome to AppFriends\n\n\nFor product overview, please visit \nAppFriends.me\n. You can get started by signing up an account. If you are interested in our product or have idea on how we can improve it, please send email to \nsupport@hacknocraft.com\n and we will get back to you very quickly.\n\n\niOS SDK\n\n\nThe iOS SDK can be integrated into existing xcode iOS projects. For details, please read \niOS SDK guide\n.\n\n\nFor detailed class interface document, please go to \nclass documents\n.\n\n\nAndroid SDK\n\n\nThe Android SDK can be integrated into existing Android projects. For details,\nplease read \nAndroid SDK guide\n.\n\n\nAppFriends API\n\n\nThe APIs complements our mobile SDKs and integrates directly with your backend. For details, please read \nServer API\n.\n\n\nAdmin Portal\n\n\nYou can control the widget by log into the admin portal with your AppFriends account.", 
+            "title": "Welcome"
+        }, 
+        {
+            "location": "/#welcome-to-appfriends", 
+            "text": "For product overview, please visit  AppFriends.me . You can get started by signing up an account. If you are interested in our product or have idea on how we can improve it, please send email to  support@hacknocraft.com  and we will get back to you very quickly.", 
+            "title": "Welcome to AppFriends"
+        }, 
+        {
+            "location": "/#ios-sdk", 
+            "text": "The iOS SDK can be integrated into existing xcode iOS projects. For details, please read  iOS SDK guide .  For detailed class interface document, please go to  class documents .", 
+            "title": "iOS SDK"
+        }, 
+        {
+            "location": "/#android-sdk", 
+            "text": "The Android SDK can be integrated into existing Android projects. For details,\nplease read  Android SDK guide .", 
+            "title": "Android SDK"
+        }, 
+        {
+            "location": "/#appfriends-api", 
+            "text": "The APIs complements our mobile SDKs and integrates directly with your backend. For details, please read  Server API .", 
+            "title": "AppFriends API"
+        }, 
+        {
+            "location": "/#admin-portal", 
+            "text": "You can control the widget by log into the admin portal with your AppFriends account.", 
+            "title": "Admin Portal"
+        }, 
+        {
+            "location": "/ios/", 
+            "text": "AppFriends iOS SDK Documentation\n\n\nWelcome to the AppFriends iOS SDK documentation! You can integrate the SDK via \nCocoapods\n. The SDK is used to signup and authenticate users, provide turn-key and modern UI components, give control of the social features and data, and so on.\n\n\nWe support both Objective-C and Swift. You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.\n\n\nYou can download our \nSwift demo project\n and \nObjective-C demo project\n from github.\n\n\nIntegration\n\n\nCocoapods\n\n\nTo integrate AppFriends iOS SDK to your Xcode iOS project, add this line in your \nPodfile\n\n\npod \nAppFriends\n\n\n\n\n\n\nAlso, add \nuse_frameworks!\n to the file. eg.\n\n\nplatform\n \n:\nios\n,\n \n8.0\n\n\nuse_frameworks\n!\n\n\n...\n\n\n\n\n\n\nInclude Header for ObjC Projects\n\n\nTo use the SDK, include the header:\n\n\n#import \nHacknocraftiOS/HacknocraftiOS.h\n\n\n\n\n\n\nAdd Bridge Header for Swift Projects\n\n\nAdd \n#import \nHacknocraftiOS/HacknocraftiOS.h\n to your bridge header.\n\n\nFor details on how to use bridge header and library in swift project, please follow \nthis guide\n\n\nInitialization\n\n\nAfter logging into your admin panel, and created your application, you can find your \nApp ID\n and \nApp Secret\n. Then use them in the initialization.\n\n\nInitialize AppFriends in Application Delegate \ndidFinishLaunchingWithOptions\n method.\n\n\nObjective-C\n\n\n \n[\nwidget\n \ninitializeWithApplicationKey\n:\n@\ndb\n\n                              \nsecret\n:\n3MyNWQkQt4cbdSLiRlfFUAtt\n\n                              \nconfiguration\n:\n@{\nkHCUseProduction\n:\n \n@NO\n}\n\n                              \nwithLaunchOptions\n:\nlaunchOptions\n];\n\n\n\n\n\n\nSwift\n\n\n HCWidget.sharedWidget().initializeWithApplicationKey(\ndb\n,\n                            secret: \n3MyNWQkQt4cbdSLiRlfFUAtt\n,\n                            configuration: [kHCUseProduction: NSNumber(bool: false)],\n                            withLaunchOptions: launchOptions)\n\n\n\n\n\nBuild Initialization Options\n\n\nTo initialize the SDK, you can pass in a \nNSDictionary\n\n\n\n\n\n\n\n\nKey\n\n\nType\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nkHCUseProduction\n\n\nBoolean\n\n\nSet @YES to use production rather than sendbox\n\n\n\n\n\n\nkHCDefaultSocialWidgetPosition\n\n\nCGPoint\n\n\nSpecify the position where the widget button will show up on the view.\n\n\n\n\n\n\nkHCDefaultSocialWidgetOpenDirection\n\n\nNSInteger\n\n\nEnum \nHCSocialWidgetOpenDirection\n This value will dictate the widget open direction.\n\n\n\n\n\n\nkHCDefaultSocialWidgetEnableProfileLink\n\n\nBoolean\n\n\nSet @YES to enable linking between the widget's user profile to the user profile in your app. If your app doesn't have a profile page, you can ignore this value.\n\n\n\n\n\n\nkHCDefaultSocialWidgetWidth\n\n\nFloat\n\n\nset width of the widget window. Max value is screen width - 20, and min value is 300.\n\n\n\n\n\n\n\n\nUser Authentication\n\n\nBefore your users can start enjoying AppFriends, they need to have an AppFriends account. Login the user by invoking:\n\n\n// find this method in HCSocialWidget\n- (void)loginWithUserInfo:(NSDictionary *)userInfo\n\n\n\n\n\nThe user's AppFriends account will be associated with the user's account in your app. To correctly display the user information, please fill the following information in the \nuserInfo\n dictionary:\n\n\n\n\n\n\n\n\nKey\n\n\nType\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nkHCUserName\n\n\ntext\n\n\nthe username\n\n\n\n\n\n\nkHCUserAvatar\n\n\ntext\n\n\nthe full URL of the user's avatar\n\n\n\n\n\n\nkHCUserAppID\n\n\ntext\n\n\nthe user's userID in \nyour own app\n.\n\n\n\n\n\n\nkHCUserEmail\n\n\ntext\n\n\nthe user's email\n\n\n\n\n\n\n\n\nStyling\n\n\nAppFriends UI can be customize to fit the style of your own app. To customize the UI, please use \nHCWidget\n properties. For example:\n\n\n// Setting the navigation bar icon highlight color to red\n\n\n[[\nHCWidget\n \nsharedWidget\n]\nsetNavBarIconHighlightColor\n:\nUIColor\n.\nredColor\n];\n\n\n\n\n\n\nShow the Widget on your App\n\n\nAfter the initialization is finished. You can now show the widget on the views in your App by calling:\n\n\n+ (void)showSocialWidgetOnViewController:(UIViewController *)viewController\n                      viewControllerPath:(NSString *)path\n                       disableScreenshot:(BOOL)disable\n                              completion:(void (^)(void))complete\n\n\n\n\n\nThe \nviewController\n parameter is the \nUIViewController\n, which is presenting the widget. We recommand showing the widget in \nviewDidAppear\n method of your view controller. For detail info on this method, please go to \nclass document\n.  \n\n\nContent Sharing with AppFriends\n\n\nA great feature with AppFriends is being able to share your app content within your app among your users or to outside the app in places like Facebook, Twitter, Instagram, SMS and so on. To utilize this feature, you need assign a \npath\n to each of your page (app screen). You can also use additional \nparameters\n to help your app with navigation.\n\n\nPath and Parameters\n\n\nA \npath\n with \nparameters\n looks like an URL without the host, for example, \n/profile?id=23\n could be a path that describes the profile page of your user with ID equal to 23.\n\n\nTo set the path and parameter of the current screen, you can call:\n\n\n    \n[\nHCWidget\n \nsetScreenPath\n:\n@\n/profile?id=23\n];\n\n\n    \nor\n,\n \nwhen\n \nyou\n \nshow\n \nthe\n \nwidget\n \nbutton\n,\n \ninclude\n \nthe\n \nscreen\n \npath\n \nwhen\n \nyou\n \npresent\n \nthe\n \nwidget\n \nbutton\n \non\n \nyour\n \nview\n \ncontroller\n:\n\n\n    \n[\nHCWidget\n \nshowSocialWidgetOnViewController\n:\nself\n \nviewControllerPath\n:\n@\n/profile?id=23\n \ndisableScreenshot\n:\nNO\n \ncompletion\n:\nnil\n];\n\n\n\n\n\n\nHandling callbacks\n\n\nAfter you set the \npath\n with \nparameters\n for your screen, you should then handle callback from our widget to navigate to this screen. For example, when someone shared his profile page to the chat, another user can tap the link below the shared screenshot. Then our widget will trigger the callback here:\n\n\n    \n[\nHCWidget\n \nmapURL\n:\n@\n/profile\n \ntoCallback\n:\n^\n(\nNSDictionary\n \n*\nparams\n)\n \n{\n\n        \nNSString\n \n*\nuserID\n \n=\n \nparams\n[\n@\nid\n];\n\n        \n// your logic to navigate to the user\ns profile page with the ID value.\n\n    \n}];\n\n\n\n\n\n\nDeeplinks\n\n\nWhen a user shares screenshot from your app, a deeplink will be generated and shared with the screenshot. If the screenshot is taken from a place you have assign a path and parameters to, the information will also be included in the deeplink. When users clicks on the deeplink and install/open the app, we will trigger the callback with the path and parameters you provided.\n\n\nTo receive deeplink actions, you need insert calls in the correct places in your application delegate:\n\n\n+ (BOOL)openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation\nand\n+ (BOOL)continueUserActivity:(NSUserActivity *)userActivity\n\n\n\n\n\nSee \nclass documents\n for more detail.\n\n\nPublic Chat Channels\n\n\nBy default, we create a global public chat channel for all of your users to chat. You can create, edit and remove public chat channels. You can either do it from the AppFriends admin panel or via our \nAPI\n.\n\n\nPrivate Group Chat\n\n\nYou can create private chat group using the \nHCWidget\n methods. In each private chat group, you can only include the users that you want to invite, and the chat group will not be visible to others. Users can leave the group if they want to. Please see \nclass document\n.\n\n\nPost User Activities\n\n\nUser activity feed is another powerful feature in AppFriends. User's activities will be posted in their user profile in the widget. We are already posting some activities from the widget by default. You can post activities generated inside your app can also be posted by call activity method inside \nHCWidget\n. Click \nhere\n for detail.\n\n\nPosting activity is a great way to let other users to find out what's going on inside the app. You can also create \ntrending\n activities by using our \nserver api\n. Trending activities are events in your app that you believe is hot or want to grab more attention. For example, you can post a trending activity with \"There are 500 users watching 'cute cat' video\" and a path with parameter which can navigate more users to the video when the activity is clicked.", 
+            "title": "iOS Documentation"
+        }, 
+        {
+            "location": "/ios/#appfriends-ios-sdk-documentation", 
+            "text": "Welcome to the AppFriends iOS SDK documentation! You can integrate the SDK via  Cocoapods . The SDK is used to signup and authenticate users, provide turn-key and modern UI components, give control of the social features and data, and so on.  We support both Objective-C and Swift. You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.  You can download our  Swift demo project  and  Objective-C demo project  from github.", 
+            "title": "AppFriends iOS SDK Documentation"
+        }, 
+        {
+            "location": "/ios/#integration", 
+            "text": "", 
+            "title": "Integration"
+        }, 
+        {
+            "location": "/ios/#cocoapods", 
+            "text": "To integrate AppFriends iOS SDK to your Xcode iOS project, add this line in your  Podfile  pod  AppFriends   Also, add  use_frameworks!  to the file. eg.  platform   : ios ,   8.0  use_frameworks !  ...", 
+            "title": "Cocoapods"
+        }, 
+        {
+            "location": "/ios/#include-header-for-objc-projects", 
+            "text": "To use the SDK, include the header:  #import  HacknocraftiOS/HacknocraftiOS.h", 
+            "title": "Include Header for ObjC Projects"
+        }, 
+        {
+            "location": "/ios/#add-bridge-header-for-swift-projects", 
+            "text": "Add  #import  HacknocraftiOS/HacknocraftiOS.h  to your bridge header.  For details on how to use bridge header and library in swift project, please follow  this guide", 
+            "title": "Add Bridge Header for Swift Projects"
+        }, 
+        {
+            "location": "/ios/#initialization", 
+            "text": "After logging into your admin panel, and created your application, you can find your  App ID  and  App Secret . Then use them in the initialization.  Initialize AppFriends in Application Delegate  didFinishLaunchingWithOptions  method.  Objective-C    [ widget   initializeWithApplicationKey : @ db \n                               secret : 3MyNWQkQt4cbdSLiRlfFUAtt \n                               configuration : @{ kHCUseProduction :   @NO } \n                               withLaunchOptions : launchOptions ];   Swift   HCWidget.sharedWidget().initializeWithApplicationKey( db ,\n                            secret:  3MyNWQkQt4cbdSLiRlfFUAtt ,\n                            configuration: [kHCUseProduction: NSNumber(bool: false)],\n                            withLaunchOptions: launchOptions)", 
+            "title": "Initialization"
+        }, 
+        {
+            "location": "/ios/#build-initialization-options", 
+            "text": "To initialize the SDK, you can pass in a  NSDictionary     Key  Type  Description      kHCUseProduction  Boolean  Set @YES to use production rather than sendbox    kHCDefaultSocialWidgetPosition  CGPoint  Specify the position where the widget button will show up on the view.    kHCDefaultSocialWidgetOpenDirection  NSInteger  Enum  HCSocialWidgetOpenDirection  This value will dictate the widget open direction.    kHCDefaultSocialWidgetEnableProfileLink  Boolean  Set @YES to enable linking between the widget's user profile to the user profile in your app. If your app doesn't have a profile page, you can ignore this value.    kHCDefaultSocialWidgetWidth  Float  set width of the widget window. Max value is screen width - 20, and min value is 300.", 
+            "title": "Build Initialization Options"
+        }, 
+        {
+            "location": "/ios/#user-authentication", 
+            "text": "Before your users can start enjoying AppFriends, they need to have an AppFriends account. Login the user by invoking:  // find this method in HCSocialWidget\n- (void)loginWithUserInfo:(NSDictionary *)userInfo  The user's AppFriends account will be associated with the user's account in your app. To correctly display the user information, please fill the following information in the  userInfo  dictionary:     Key  Type  Description      kHCUserName  text  the username    kHCUserAvatar  text  the full URL of the user's avatar    kHCUserAppID  text  the user's userID in  your own app .    kHCUserEmail  text  the user's email", 
+            "title": "User Authentication"
+        }, 
+        {
+            "location": "/ios/#styling", 
+            "text": "AppFriends UI can be customize to fit the style of your own app. To customize the UI, please use  HCWidget  properties. For example:  // Setting the navigation bar icon highlight color to red  [[ HCWidget   sharedWidget ] setNavBarIconHighlightColor : UIColor . redColor ];", 
+            "title": "Styling"
+        }, 
+        {
+            "location": "/ios/#show-the-widget-on-your-app", 
+            "text": "After the initialization is finished. You can now show the widget on the views in your App by calling:  + (void)showSocialWidgetOnViewController:(UIViewController *)viewController\n                      viewControllerPath:(NSString *)path\n                       disableScreenshot:(BOOL)disable\n                              completion:(void (^)(void))complete  The  viewController  parameter is the  UIViewController , which is presenting the widget. We recommand showing the widget in  viewDidAppear  method of your view controller. For detail info on this method, please go to  class document .", 
+            "title": "Show the Widget on your App"
+        }, 
+        {
+            "location": "/ios/#content-sharing-with-appfriends", 
+            "text": "A great feature with AppFriends is being able to share your app content within your app among your users or to outside the app in places like Facebook, Twitter, Instagram, SMS and so on. To utilize this feature, you need assign a  path  to each of your page (app screen). You can also use additional  parameters  to help your app with navigation.", 
+            "title": "Content Sharing with AppFriends"
+        }, 
+        {
+            "location": "/ios/#path-and-parameters", 
+            "text": "A  path  with  parameters  looks like an URL without the host, for example,  /profile?id=23  could be a path that describes the profile page of your user with ID equal to 23.  To set the path and parameter of the current screen, you can call:       [ HCWidget   setScreenPath : @ /profile?id=23 ]; \n\n     or ,   when   you   show   the   widget   button ,   include   the   screen   path   when   you   present   the   widget   button   on   your   view   controller : \n\n     [ HCWidget   showSocialWidgetOnViewController : self   viewControllerPath : @ /profile?id=23   disableScreenshot : NO   completion : nil ];", 
+            "title": "Path and Parameters"
+        }, 
+        {
+            "location": "/ios/#handling-callbacks", 
+            "text": "After you set the  path  with  parameters  for your screen, you should then handle callback from our widget to navigate to this screen. For example, when someone shared his profile page to the chat, another user can tap the link below the shared screenshot. Then our widget will trigger the callback here:       [ HCWidget   mapURL : @ /profile   toCallback : ^ ( NSDictionary   * params )   { \n         NSString   * userID   =   params [ @ id ]; \n         // your logic to navigate to the user s profile page with the ID value. \n     }];", 
+            "title": "Handling callbacks"
+        }, 
+        {
+            "location": "/ios/#deeplinks", 
+            "text": "When a user shares screenshot from your app, a deeplink will be generated and shared with the screenshot. If the screenshot is taken from a place you have assign a path and parameters to, the information will also be included in the deeplink. When users clicks on the deeplink and install/open the app, we will trigger the callback with the path and parameters you provided.  To receive deeplink actions, you need insert calls in the correct places in your application delegate:  + (BOOL)openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation\nand\n+ (BOOL)continueUserActivity:(NSUserActivity *)userActivity  See  class documents  for more detail.", 
+            "title": "Deeplinks"
+        }, 
+        {
+            "location": "/ios/#public-chat-channels", 
+            "text": "By default, we create a global public chat channel for all of your users to chat. You can create, edit and remove public chat channels. You can either do it from the AppFriends admin panel or via our  API .", 
+            "title": "Public Chat Channels"
+        }, 
+        {
+            "location": "/ios/#private-group-chat", 
+            "text": "You can create private chat group using the  HCWidget  methods. In each private chat group, you can only include the users that you want to invite, and the chat group will not be visible to others. Users can leave the group if they want to. Please see  class document .", 
+            "title": "Private Group Chat"
+        }, 
+        {
+            "location": "/ios/#post-user-activities", 
+            "text": "User activity feed is another powerful feature in AppFriends. User's activities will be posted in their user profile in the widget. We are already posting some activities from the widget by default. You can post activities generated inside your app can also be posted by call activity method inside  HCWidget . Click  here  for detail.  Posting activity is a great way to let other users to find out what's going on inside the app. You can also create  trending  activities by using our  server api . Trending activities are events in your app that you believe is hot or want to grab more attention. For example, you can post a trending activity with \"There are 500 users watching 'cute cat' video\" and a path with parameter which can navigate more users to the video when the activity is clicked.", 
+            "title": "Post User Activities"
+        }, 
+        {
+            "location": "/android/", 
+            "text": "AppFriends Android SDK\n\n\nIntegration\n\n\nMaven / jCenter / Bintray\n\n\nTo integerate AppFriends Android SDK to your Android Studio project, add the\nfollowing to your application's \nbuild.gradle\n file:\n\n\nrepositories {\n    maven {\n        url \nhttps://dl.bintray.com/mikedw/maven/\n\n    }\n}\n\n\n\n\n\nand add the appfriends SDK as part of your app's dependencies:\n\n\ndependencies {\n    compile \nme.appfriends.android:appfriends:1.4.+\n\n}\n\n\n\n\n\nInitialization and customization\n\n\nAfter logging into your admin panel, and created your application, you can find your \nApp ID\n and \nApp Secret\n. Add them to your \nAndroidManifest.xml\n file under \napplication\n.\n\n\n   \nmeta-data\n        android:name=\nme.appfriends.AppID\n\n        android:value=\n[APPFRIENDS_ID]\n /\n\n\n    \nmeta-data\n        android:name=\nme.appfriends.AppSecret\n\n        android:value=\n[APPFRIENDS_SECRET]\n /\n\n\n\n\n\n\nIn your \nApplication\n class, you have the option to customize the AppFriends SDK with \nAppFriendsConfiguration.Builder\n. You must call \nAppFriendsUIKit.init(this, configuration);\n to properly initialize the SDK:\n\n\npublic class MyApplication extends Application {\n    @Override\n    public void onCreate() {\n        super.onCreate();\n\n        AppFriendsConfiguration configuration = new AppFriendsConfiguration.Builder()\n                .appName(\nName of app\n) // Name of your app that shows up on the privacy agreement screen\n                .appIcon(R.drawabl.app_icon) // Icon resource of your app that shows up on the privacy agreement screen\n                .debugMode(true)\n                .gravity(Gravity.RIGHT) // Which way the widget should open from\n                .build();\n\n        AppFriendsUIKit.init(this, configuration);\n    }\n}\n\n\n\n\n\nAdd floating widget icon to layout\n\n\nTo add the default widget icon to your \nActivity\n or \nFragment\n, add the\nfollowing to your \nlayout xml\n:\n\n\nme.appfriends.android.widget.AppFriendsWidget\n    android:id=\n@+id/appfriends_icon\n\n    android:layout_width=\nwrap_content\n\n    android:layout_height=\nwrap_content\n\n    app:bragIcon=\n[BRAG ICON DRAWABLE]\n\n    app:deeplink=\n[DEEPLINK]\n/\n\n\n\n\n\n\nYou may specify the \"brag\" icon (which allows users to share a screenshot) and the deeplink path of the current fragment/activity.\n\n\nUser Authentication\n\n\nBefore your users can start enjoying AppFriends, they need to have an\nAppFriends account. Login the user by invoking:\n\n\nAppFriends.login(userID, username, avatarURL, userEmail);\n\n\n\n\n\nwhere the parameters as as follows:\n\n\n\n\n\n\n\n\nParameter\n\n\nType\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nuserID\n\n\nString\n\n\nthe user's userID in your own app.\n\n\n\n\n\n\nusername\n\n\nString\n\n\nthe username\n\n\n\n\n\n\navatarURL\n\n\nString\n\n\nthe full URL of the user's avatar\n\n\n\n\n\n\nuserEmail\n\n\nString\n\n\nuser's email address\n\n\n\n\n\n\n\n\nThe AppFriends Android SDK should now be integrated and ready to go!", 
+            "title": "Android Documentation"
+        }, 
+        {
+            "location": "/android/#appfriends-android-sdk", 
+            "text": "", 
+            "title": "AppFriends Android SDK"
+        }, 
+        {
+            "location": "/android/#integration", 
+            "text": "", 
+            "title": "Integration"
+        }, 
+        {
+            "location": "/android/#maven-jcenter-bintray", 
+            "text": "To integerate AppFriends Android SDK to your Android Studio project, add the\nfollowing to your application's  build.gradle  file:  repositories {\n    maven {\n        url  https://dl.bintray.com/mikedw/maven/ \n    }\n}  and add the appfriends SDK as part of your app's dependencies:  dependencies {\n    compile  me.appfriends.android:appfriends:1.4.+ \n}", 
+            "title": "Maven / jCenter / Bintray"
+        }, 
+        {
+            "location": "/android/#initialization-and-customization", 
+            "text": "After logging into your admin panel, and created your application, you can find your  App ID  and  App Secret . Add them to your  AndroidManifest.xml  file under  application .      meta-data\n        android:name= me.appfriends.AppID \n        android:value= [APPFRIENDS_ID]  / \n\n     meta-data\n        android:name= me.appfriends.AppSecret \n        android:value= [APPFRIENDS_SECRET]  /   In your  Application  class, you have the option to customize the AppFriends SDK with  AppFriendsConfiguration.Builder . You must call  AppFriendsUIKit.init(this, configuration);  to properly initialize the SDK:  public class MyApplication extends Application {\n    @Override\n    public void onCreate() {\n        super.onCreate();\n\n        AppFriendsConfiguration configuration = new AppFriendsConfiguration.Builder()\n                .appName( Name of app ) // Name of your app that shows up on the privacy agreement screen\n                .appIcon(R.drawabl.app_icon) // Icon resource of your app that shows up on the privacy agreement screen\n                .debugMode(true)\n                .gravity(Gravity.RIGHT) // Which way the widget should open from\n                .build();\n\n        AppFriendsUIKit.init(this, configuration);\n    }\n}", 
+            "title": "Initialization and customization"
+        }, 
+        {
+            "location": "/android/#add-floating-widget-icon-to-layout", 
+            "text": "To add the default widget icon to your  Activity  or  Fragment , add the\nfollowing to your  layout xml :  me.appfriends.android.widget.AppFriendsWidget\n    android:id= @+id/appfriends_icon \n    android:layout_width= wrap_content \n    android:layout_height= wrap_content \n    app:bragIcon= [BRAG ICON DRAWABLE] \n    app:deeplink= [DEEPLINK] /   You may specify the \"brag\" icon (which allows users to share a screenshot) and the deeplink path of the current fragment/activity.", 
+            "title": "Add floating widget icon to layout"
+        }, 
+        {
+            "location": "/android/#user-authentication", 
+            "text": "Before your users can start enjoying AppFriends, they need to have an\nAppFriends account. Login the user by invoking:  AppFriends.login(userID, username, avatarURL, userEmail);  where the parameters as as follows:     Parameter  Type  Description      userID  String  the user's userID in your own app.    username  String  the username    avatarURL  String  the full URL of the user's avatar    userEmail  String  user's email address     The AppFriends Android SDK should now be integrated and ready to go!", 
+            "title": "User Authentication"
+        }, 
+        {
+            "location": "/api/", 
+            "text": "AppFriends API Documentation\n\n\nAppFriends API can be used to authenticate user, open the widget to a certain view, control the data and interact with all the features of AppFriends. For example, some common tasks that developers can do includes:\n\n\n\n\nOpen AppFriends widget to certain view. See \nNavigation\n.\n\n\nSearch for users. See \nUsers\n.\n\n\nPost an activity for a user. See \nActivities\n.\n\n\nCreate chat channels. See \nChat Channels\n.\n\n\nCreate chat groups. See \nChat Groups\n.\n\n\nSend a notification to users. See \nNotifications\n.\n\n\n\n\nMost of the AppFriends APIs are accessed by using URL's, and all the URL's follow the standard REST API URL pattern, which is \n[key]/[value]\n. For example, the URL to access a user will be marked as \nuser/[:id]\n, where \nuser\n is the \nkey\n and \n[:id]\n is the \nvalue\n. \n\n\nNavigation\n\n\nYou can use URL path to navigate inside AppFriends, very similar to how you navigate in a browser. This is a practice we want to encourage your app to adapt as well. It makes routing very easy and works well with deeplinks. If you use AppFriends' sharing and deeplink features, same routing scheme will be used to navigate inside your app.\n\n\nFor example, if you want to open a user's profile in AppFriends widget, you can use this URL: \n/user/[:id]/profile\n \n\n\nCode Examples\n\n\nYou can use the following code to open a specific view of AppFriends widget. There are options to either open a single view or the entire widget. The difference is that if you open the entire widget, the user can navigate from the view opened to other AppFriends features. If you open a single view, the user will be limited to that one feature.\n\n\nObjective-C\n\n\n// open entire widget and \n\n\n[\nHCWidget\n \nopenView\n:\n@\n/user/haowang/profile\n];\n \n\n\n\n\n\nSwift\n\n\nHCWidget\n.\nopenView\n:(\n/user/haowang/profile\n)\n\n\n\n//\n\n\nHCWidget\n.\nopenSingleView\n:(\n/user/haowang/profile\n)\n\n\n\n\n\n\nAndroid\n\n\nHCWidget\n.\nopenSingleView\n:(\n/user/haowang/profile\n)\n\n\n\n\n\n\nAppFriends Widget Views and Their URLs\n\n\n\n\n\n\n\n\nDestination\n\n\nURL\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nUser profile page\n\n\n/users/[:id]/profile\n\n\nopen the user's profile page. The id provided here is the user's id in your app.\n\n\n\n\n\n\nActivities page\n\n\n/activities\n\n\nopen the activities page\n\n\n\n\n\n\nActivities page\n\n\n/activities/trending\n\n\nopen the trending activities page.\n\n\n\n\n\n\nUser search view\n\n\n/users/search\n\n\nopen the search user view\n\n\n\n\n\n\nUser followers list view\n\n\n/users/[:id]/followers\n\n\nopen the user's followers list view. The id provided here is the user's id in your app.\n\n\n\n\n\n\nUser followings list view\n\n\n/users/[:id]/followings\n\n\nopen the view that lists the users which this user is following. The id provided here is the user's id in your app.\n\n\n\n\n\n\nUser friends view\n\n\n/users/[:id]/friends\n\n\nopen the user's friends list view. The id provided here is the user's id in your app.\n\n\n\n\n\n\nPrivate chat page\n\n\n/users/[:id]/chat\n\n\nopen the private chat with the user. The id provided here is the user's id in your app.\n\n\n\n\n\n\nGroup chat page\n\n\n/chat_groups/[:groupid]\n\n\nopen the group chat. The id provided is the group id.\n\n\n\n\n\n\nChat Channel\n\n\n/chat_channels/[:channelid]\n\n\nopen the channel. The id provided is the channel id.\n\n\n\n\n\n\nMessage thread view\n\n\n/chat_channels/[:channelid]/messages/[:messageid]\n\n\nopen the message threading view which contains the message. Provide both channel id and message id.\n\n\n\n\n\n\nNotification view\n\n\n/notifications\n\n\nopen the notifications view\n\n\n\n\n\n\nScreen sharing view\n\n\n/screen_share\n\n\nopen the screenshot sharing window\n\n\n\n\n\n\n\n\nREST API's\n\n\nIf you use our out of box UI, all functionalities are enabled and ready to use by default, but if you want to make a customized UI, we certainly facilitate that as well. To access and modify data on AppFriends, you can ultilize our REST interface. There are two types of REST API's:\n\n\n\n\n\n\nApplication API\n\n\nAdmin API\n\n\n\n\n\n\nHave fun! and remember to tell us what you made, and how we can improve our product to better support you.\n\n\nApplication API\n\n\nApplication API's can only be accessed via the SDK, using the application secret. \n\n\nAdmin API\n\n\nThe admin api's can be accessed via any http client, using the admin secret. \n\n\nUser\n\n\n\n\n/me\n, a shortcut for current user\n\n\n/me\n, is a shortcut for \n/user/[:current_user_id]\n. For example, \n/me/profile\n is equivalent to \n/user/[:current_user_id]/profile\n. \n\n\n\n\n1. Get user information\n\n\n\n\n\n\n\n\nEndpoint\n\n\nMethod\n\n\nAPI Type\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\n/users/[:id]\n\n\nGET\n\n\nApplication\n\n\nget the user's information\n\n\n\n\n\n\n\n\nResponse Data\n\n\n{\n\n    \nid\n:\n \nstring\n,\n                           \n// user id provided by hosting app when sign up the user. Always use this id.\n\n    \naf_user_id\n:\n \nstring\n,\n                   \n// unique internal AppFriends user id \n\n    \nchat_user_id\n:\n \nstring\n,\n                 \n// unique internal chat id.\n\n    \nemail\n:\n \nstring\n,\n                        \n// user\ns email if provided\n\n    \nuser_name\n:\n \nstring\n,\n                    \n// user name\n\n    \navatar\n:\n \nstring\n,\n                       \n// user\ns avatar if provided\n\n\n}\n\n\n\n\n\n\n2. Update user information\n\n\n\n\n\n\n\n\nEndpoint\n\n\nMethod\n\n\nAPI Type\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\n/users/[:id]\n\n\nPUT\n\n\nApplication\n\n\nupdate the user's information\n\n\n\n\n\n\n\n\nResponse Data\n\n\n{\n\n    \nid\n:\n \nstring\n,\n                           \n// user id provided by hosting app \n\n    \nemail\n:\n \nstring\n,\n                        \n// user\ns email if provided\n\n    \nuser_name\n:\n \nstring\n,\n                    \n// user name\n\n    \navatar\n:\n \nstring\n,\n                       \n// user\ns avatar if provided\n\n\n}\n\n\n\n\n\n\n3. Followers\n\n\n\n\n\n\n\n\nEndpoint\n\n\nMethod\n\n\nAPI Type\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\n/users/[:id]/followers\n\n\nGET\n\n\nApplication\n\n\nGet all the followers of the user.\n\n\n\n\n\n\n/users/[:id]/followers\n\n\nPOST\n\n\nApplication\n\n\nMake the current user follow this user, whose id is provided here.\n\n\n\n\n\n\n\n\n4. Followings\n\n\n\n\n\n\n\n\nEndpoint\n\n\nMethod\n\n\nAPI Type\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\n/users/[:id]/followings\n\n\nGET\n\n\nApplication\n\n\nGet all the users who this user is following\n\n\n\n\n\n\n\n\n5. Follow/unfollow\n\n\n\n\n\n\n\n\nEndpoint\n\n\nMethod\n\n\nAPI Type\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\n/users/[:id]/follow\n\n\nPOST\n\n\nApplication\n\n\nfollow this user\n\n\n\n\n\n\n/users/[:id]/unfollow\n\n\nPOST\n\n\nApplication\n\n\nunfollow this user\n\n\n\n\n\n\n\n\n6. Friends\n\n\n\n\nwho are my friends?\n\n\nFriends are users who follow each other.\n\n\n\n\n\n\n\n\n\n\nEndpoint\n\n\nMethod\n\n\nAPI Type\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\n/users/[:id]/Friends\n\n\nGET\n\n\nApplication\n\n\nGet the users friends\n\n\n\n\n\n\n\n\n7. Blocks/unblocks\n\n\n\n\n\n\n\n\nEndpoint\n\n\nMethod\n\n\nAPI Type\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\n/users/[:id]/block\n\n\nPOST\n\n\nApplication\n\n\nBlock this user\n\n\n\n\n\n\n/users/[:id]/unblock\n\n\nPOST\n\n\nApplication\n\n\nunblock this user\n\n\n\n\n\n\n\n\n8. Reporting a user\n\n\n\n\n\n\n\n\nEndpoint\n\n\nMethod\n\n\nAPI Type\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\n/users/[:id]/report\n\n\nPOST\n\n\nApplication\n\n\nreport this user\n\n\n\n\n\n\n\n\n9. Preferences\n\n\n\n\n\n\n\n\nEndpoint\n\n\nMethod\n\n\nAPI Type\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\n/me/preferences\n\n\nGET\n\n\nApplication\n\n\nget the current user's preferences\n\n\n\n\n\n\n/me/preferences\n\n\nPUT\n\n\nApplication\n\n\nchange the current user's preferences\n\n\n\n\n\n\n\n\nActivities\n\n\n1. Get the user's activities\n\n\n\n\n\n\n\n\nEndpoint\n\n\nMethod\n\n\nAPI Type\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\n/users/[:id]/activities\n\n\nGET\n\n\nApplication\n\n\nget the user's activities\n\n\n\n\n\n\n\n\n2. Get the current user's friends activities\n\n\n\n\n\n\n\n\nEndpoint\n\n\nMethod\n\n\nAPI Type\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\n/users/[:id]/activities/friends\n\n\nGET\n\n\nApplication\n\n\nget the user's friends' activities\n\n\n\n\n\n\n\n\n3. Create an activity for a user\n\n\n\n\n\n\n\n\nEndpoint\n\n\nMethod\n\n\nAPI Type\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\n/users/[:id]/activities\n\n\nPOST\n\n\nAdmin\n\n\ncreate an activity for a user\n\n\n\n\n\n\n/me/activities\n\n\nPOST\n\n\nApplication\n\n\ncreate an activity for the current user\n\n\n\n\n\n\n\n\n4. Create a trending activity\n\n\n\n\n\n\n\n\nEndpoint\n\n\nMethod\n\n\nAPI Type\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\n/activities/trending\n\n\nPOST\n\n\nAdmin\n\n\ncreate a trending activity\n\n\n\n\n\n\n\n\n5. Get the the trending activities\n\n\n\n\n\n\n\n\nEndpoint\n\n\nMethod\n\n\nAPI Type\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\n/activities/trending\n\n\nGET\n\n\nApplication\n\n\nget the trending activities\n\n\n\n\n\n\n\n\nPublic Chat Channels\n\n\nPublic chat channels are open to any user. \n\n\n1. Get all chat channels\n\n\n\n\n\n\n\n\nEndpoint\n\n\nMethod\n\n\nAPI Type\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\n/chat_channels\n\n\nGET\n\n\nApplication\n\n\nget all the public chat channels\n\n\n\n\n\n\n\n\n2. Favorite/unfavorite a chat channel\n\n\n\n\n\n\n\n\nEndpoint\n\n\nMethod\n\n\nAPI Type\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\n/chat_channels/[:id]/favorite\n\n\nPUT\n\n\nApplication\n\n\nfavorite a chat channel for the current user\n\n\n\n\n\n\n/chat_channels/[:id]/unfavorite\n\n\nPUT\n\n\nApplication\n\n\nunfavorite a chat channel for the current user\n\n\n\n\n\n\n\n\n3. Get online users in a chat channel\n\n\n\n\n\n\n\n\nEndpoint\n\n\nMethod\n\n\nAPI Type\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\n/chat_channels/[:id]/users\n\n\nGET\n\n\nApplication\n\n\nget the current online users in the chat channel\n\n\n\n\n\n\n/chat_channels/[:id]/users/count\n\n\nGET\n\n\nApplication\n\n\nget the count of the online users in the chat channel\n\n\n\n\n\n\n/chat_channels/user_counts\n\n\nGET\n\n\nApplication\n\n\nget the count of the online users in all of the chat channels\n\n\n\n\n\n\n\n\n4. Create a chat channel\n\n\n\n\n\n\n\n\nEndpoint\n\n\nMethod\n\n\nAPI Type\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\n/chat_channels\n\n\nPOST\n\n\nApplication\n\n\ncreate a chat channel\n\n\n\n\n\n\n\n\n5. Modify a chat channel\n\n\n\n\n\n\n\n\nEndpoint\n\n\nMethod\n\n\nAPI Type\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\n/chat_channels/[:id]\n\n\nPUT\n\n\nApplication\n\n\nmodify a chat channel\n\n\n\n\n\n\n\n\n6. Delete a chat channel\n\n\n/chat_channels/[:id]\n | DELETE | Application | delete a chat channel\n\n\nChat Groups\n\n\nChat groups are created by users or the admin, and other users can only join the group if they are invited by users in the group or the admin.\n\n\n1. Create a chat group\n\n\n\n\n\n\n\n\nEndpoint\n\n\nMethod\n\n\nAPI Type\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\n/chat_group\n\n\nPOST\n\n\nApplication\n\n\ncreate a chat group\n\n\n\n\n\n\n\n\n2. Modify a chat group\n\n\n\n\n\n\n\n\nEndpoint\n\n\nMethod\n\n\nAPI Type\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\n/chat_group/[:id]\n\n\nPUT\n\n\nApplication\n\n\ncreate a chat group\n\n\n\n\n\n\n\n\n3. Add users to a chat group\n\n\n\n\n\n\n\n\nEndpoint\n\n\nMethod\n\n\nAPI Type\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\n/chat_group/[:id]/add_users\n\n\nPOST\n\n\nApplication\n\n\nadd users to a chat group. After they users are added to the group, they will start receiving new messages from this group.\n\n\n\n\n\n\n\n\n4. Remove users from a chat group\n\n\n\n\n\n\n\n\nEndpoint\n\n\nMethod\n\n\nAPI Type\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\n/chat_group/[:id]/remove_users\n\n\nPOST\n\n\nApplication\n\n\nadd users to a chat group. After they users are added to the group, they will start receiving new messages from this group.\n\n\n\n\n\n\n\n\n5. Delete a chat group\n\n\n\n\n\n\n\n\nEndpoint\n\n\nMethod\n\n\nAPI Type\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\n/chat_group/[:id]\n\n\nDELETE\n\n\nApplication\n\n\nThe owner or admin can delete a chat group\n\n\n\n\n\n\n\n\nMessaging\n\n\n1. Sending a message\n\n\n\n\n\n\n\n\nEndpoint\n\n\nMethod\n\n\nAPI Type\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\n/dialogs/[:id]/messages\n\n\nPOST\n\n\nApplication\n\n\nSend a message in a dialog\n\n\n\n\n\n\n/users/[:id]/messages\n\n\nPOST\n\n\nApplication\n\n\nSend a message to a user\n\n\n\n\n\n\n/chat_groups/[:id]/messages\n\n\nPOST\n\n\nApplication\n\n\nSend a message to a chat group\n\n\n\n\n\n\n/chat_channels/[:id]/messages\n\n\nPOST\n\n\nApplication\n\n\nSend a message to a chat channel\n\n\n\n\n\n\n\n\n2. Receiving a message\n\n\nMessages are received in real time via native callbacks. \n\n\nDialogs\n\n\n1. Get all dialogs that the user is in\n\n\n\n\n\n\n\n\nEndpoint\n\n\nMethod\n\n\nAPI Type\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\n/dialogs\n\n\nGET\n\n\nApplication\n\n\nget All dialogs that the user is currently in\n\n\n\n\n\n\n\n\n2. Create a dialog (start chat)\n\n\n\n\n\n\n\n\nEndpoint\n\n\nMethod\n\n\nAPI Type\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\n/dialogs\n\n\nPOST\n\n\nApplication\n\n\ncreate a chat dialog with other users\n\n\n\n\n\n\n\n\nNotifications\n\n\n1. Create a notification\n\n\n\n\n\n\n\n\nEndpoint\n\n\nMethod\n\n\nAPI Type\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\n/notifications\n\n\nPOST\n\n\nAdmin\n\n\nCreate a notification\n\n\n\n\n\n\n\n\n2. Get all notifications for a user\n\n\n\n\n\n\n\n\nEndpoint\n\n\nMethod\n\n\nAPI Type\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\n/users/[:id]/notifications\n\n\nGET\n\n\nApplication\n\n\nfetch all notifications for the user\n\n\n\n\n\n\n\n\nConstants\n\n\nAdmin APIs\n\n\n1. Batch create users\n\n\n\n\n\n\n\n\nEndpoint\n\n\nMethod\n\n\nAPI Type\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\n/users/batch_create\n\n\nPOST\n\n\nAdmin\n\n\ncreate multiple users\n\n\n\n\n\n\n\n\n2. Export and import social graph\n\n\n\n\n\n\n\n\nEndpoint\n\n\nMethod\n\n\nAPI Type\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\n/social_graph\n\n\nGET\n\n\nAdmin\n\n\nexport social graph\n\n\n\n\n\n\n/social_graph\n\n\nPOST\n\n\nAdmin\n\n\nexport social graph\n\n\n\n\n\n\n\n\n3. Update user token\n\n\n\n\n\n\n\n\nEndpoint\n\n\nMethod\n\n\nAPI Type\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\n/users/[:id]/update_token\n\n\nPUT\n\n\nAdmin, Application\n\n\nchange the user's token\n\n\n\n\n\n\n\n\nErrors\n\n\nWhen errors are returned, they will be in a JSON object that contains information you need to interpret them.\nSample error json:\n\n\n{\n\n    \nstatus\n:\n \n401\n\n    \nmessage\n:\n \nauthentication required\n\n    \ncode\n:\n \n190\n\n    \nmore_info\n:\n \nhttps://appfriends.me/documentation\n\n\n}\n\n\n\n\n\n\nError Codes\n\n\n\n\n\n\n\n\nError Code\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\n1\n\n\nunknown error\n\n\n\n\n\n\n4\n\n\napplication request limit reached\n\n\n\n\n\n\n5\n\n\napplication does not have permission\n\n\n\n\n\n\n6\n\n\nrequests are too frequent\n\n\n\n\n\n\n100\n\n\ninvalid parameters\n\n\n\n\n\n\n104\n\n\nincorrect signature\n\n\n\n\n\n\n190\n\n\nneed to login to perform this request\n\n\n\n\n\n\n200\n\n\npermission error", 
+            "title": "AppFriends API"
+        }, 
+        {
+            "location": "/api/#appfriends-api-documentation", 
+            "text": "AppFriends API can be used to authenticate user, open the widget to a certain view, control the data and interact with all the features of AppFriends. For example, some common tasks that developers can do includes:   Open AppFriends widget to certain view. See  Navigation .  Search for users. See  Users .  Post an activity for a user. See  Activities .  Create chat channels. See  Chat Channels .  Create chat groups. See  Chat Groups .  Send a notification to users. See  Notifications .   Most of the AppFriends APIs are accessed by using URL's, and all the URL's follow the standard REST API URL pattern, which is  [key]/[value] . For example, the URL to access a user will be marked as  user/[:id] , where  user  is the  key  and  [:id]  is the  value .", 
+            "title": "AppFriends API Documentation"
+        }, 
+        {
+            "location": "/api/#navigation", 
+            "text": "You can use URL path to navigate inside AppFriends, very similar to how you navigate in a browser. This is a practice we want to encourage your app to adapt as well. It makes routing very easy and works well with deeplinks. If you use AppFriends' sharing and deeplink features, same routing scheme will be used to navigate inside your app.  For example, if you want to open a user's profile in AppFriends widget, you can use this URL:  /user/[:id]/profile", 
+            "title": "Navigation"
+        }, 
+        {
+            "location": "/api/#code-examples", 
+            "text": "You can use the following code to open a specific view of AppFriends widget. There are options to either open a single view or the entire widget. The difference is that if you open the entire widget, the user can navigate from the view opened to other AppFriends features. If you open a single view, the user will be limited to that one feature.", 
+            "title": "Code Examples"
+        }, 
+        {
+            "location": "/api/#objective-c", 
+            "text": "// open entire widget and   [ HCWidget   openView : @ /user/haowang/profile ];", 
+            "title": "Objective-C"
+        }, 
+        {
+            "location": "/api/#swift", 
+            "text": "HCWidget . openView :( /user/haowang/profile )  //  HCWidget . openSingleView :( /user/haowang/profile )", 
+            "title": "Swift"
+        }, 
+        {
+            "location": "/api/#android", 
+            "text": "HCWidget . openSingleView :( /user/haowang/profile )", 
+            "title": "Android"
+        }, 
+        {
+            "location": "/api/#appfriends-widget-views-and-their-urls", 
+            "text": "Destination  URL  Description      User profile page  /users/[:id]/profile  open the user's profile page. The id provided here is the user's id in your app.    Activities page  /activities  open the activities page    Activities page  /activities/trending  open the trending activities page.    User search view  /users/search  open the search user view    User followers list view  /users/[:id]/followers  open the user's followers list view. The id provided here is the user's id in your app.    User followings list view  /users/[:id]/followings  open the view that lists the users which this user is following. The id provided here is the user's id in your app.    User friends view  /users/[:id]/friends  open the user's friends list view. The id provided here is the user's id in your app.    Private chat page  /users/[:id]/chat  open the private chat with the user. The id provided here is the user's id in your app.    Group chat page  /chat_groups/[:groupid]  open the group chat. The id provided is the group id.    Chat Channel  /chat_channels/[:channelid]  open the channel. The id provided is the channel id.    Message thread view  /chat_channels/[:channelid]/messages/[:messageid]  open the message threading view which contains the message. Provide both channel id and message id.    Notification view  /notifications  open the notifications view    Screen sharing view  /screen_share  open the screenshot sharing window", 
+            "title": "AppFriends Widget Views and Their URLs"
+        }, 
+        {
+            "location": "/api/#rest-apis", 
+            "text": "If you use our out of box UI, all functionalities are enabled and ready to use by default, but if you want to make a customized UI, we certainly facilitate that as well. To access and modify data on AppFriends, you can ultilize our REST interface. There are two types of REST API's:    Application API  Admin API    Have fun! and remember to tell us what you made, and how we can improve our product to better support you.", 
+            "title": "REST API's"
+        }, 
+        {
+            "location": "/api/#application-api", 
+            "text": "Application API's can only be accessed via the SDK, using the application secret.", 
+            "title": "Application API"
+        }, 
+        {
+            "location": "/api/#admin-api", 
+            "text": "The admin api's can be accessed via any http client, using the admin secret.", 
+            "title": "Admin API"
+        }, 
+        {
+            "location": "/api/#user", 
+            "text": "/me , a shortcut for current user  /me , is a shortcut for  /user/[:current_user_id] . For example,  /me/profile  is equivalent to  /user/[:current_user_id]/profile .", 
+            "title": "User"
+        }, 
+        {
+            "location": "/api/#1-get-user-information", 
+            "text": "Endpoint  Method  API Type  Description      /users/[:id]  GET  Application  get the user's information", 
+            "title": "1. Get user information"
+        }, 
+        {
+            "location": "/api/#response-data", 
+            "text": "{ \n     id :   string ,                             // user id provided by hosting app when sign up the user. Always use this id. \n     af_user_id :   string ,                     // unique internal AppFriends user id  \n     chat_user_id :   string ,                   // unique internal chat id. \n     email :   string ,                          // user s email if provided \n     user_name :   string ,                      // user name \n     avatar :   string ,                         // user s avatar if provided  }", 
+            "title": "Response Data"
+        }, 
+        {
+            "location": "/api/#2-update-user-information", 
+            "text": "Endpoint  Method  API Type  Description      /users/[:id]  PUT  Application  update the user's information", 
+            "title": "2. Update user information"
+        }, 
+        {
+            "location": "/api/#response-data_1", 
+            "text": "{ \n     id :   string ,                             // user id provided by hosting app  \n     email :   string ,                          // user s email if provided \n     user_name :   string ,                      // user name \n     avatar :   string ,                         // user s avatar if provided  }", 
+            "title": "Response Data"
+        }, 
+        {
+            "location": "/api/#3-followers", 
+            "text": "Endpoint  Method  API Type  Description      /users/[:id]/followers  GET  Application  Get all the followers of the user.    /users/[:id]/followers  POST  Application  Make the current user follow this user, whose id is provided here.", 
+            "title": "3. Followers"
+        }, 
+        {
+            "location": "/api/#4-followings", 
+            "text": "Endpoint  Method  API Type  Description      /users/[:id]/followings  GET  Application  Get all the users who this user is following", 
+            "title": "4. Followings"
+        }, 
+        {
+            "location": "/api/#5-followunfollow", 
+            "text": "Endpoint  Method  API Type  Description      /users/[:id]/follow  POST  Application  follow this user    /users/[:id]/unfollow  POST  Application  unfollow this user", 
+            "title": "5. Follow/unfollow"
+        }, 
+        {
+            "location": "/api/#6-friends", 
+            "text": "who are my friends?  Friends are users who follow each other.      Endpoint  Method  API Type  Description      /users/[:id]/Friends  GET  Application  Get the users friends", 
+            "title": "6. Friends"
+        }, 
+        {
+            "location": "/api/#7-blocksunblocks", 
+            "text": "Endpoint  Method  API Type  Description      /users/[:id]/block  POST  Application  Block this user    /users/[:id]/unblock  POST  Application  unblock this user", 
+            "title": "7. Blocks/unblocks"
+        }, 
+        {
+            "location": "/api/#8-reporting-a-user", 
+            "text": "Endpoint  Method  API Type  Description      /users/[:id]/report  POST  Application  report this user", 
+            "title": "8. Reporting a user"
+        }, 
+        {
+            "location": "/api/#9-preferences", 
+            "text": "Endpoint  Method  API Type  Description      /me/preferences  GET  Application  get the current user's preferences    /me/preferences  PUT  Application  change the current user's preferences", 
+            "title": "9. Preferences"
+        }, 
+        {
+            "location": "/api/#activities", 
+            "text": "", 
+            "title": "Activities"
+        }, 
+        {
+            "location": "/api/#1-get-the-users-activities", 
+            "text": "Endpoint  Method  API Type  Description      /users/[:id]/activities  GET  Application  get the user's activities", 
+            "title": "1. Get the user's activities"
+        }, 
+        {
+            "location": "/api/#2-get-the-current-users-friends-activities", 
+            "text": "Endpoint  Method  API Type  Description      /users/[:id]/activities/friends  GET  Application  get the user's friends' activities", 
+            "title": "2. Get the current user's friends activities"
+        }, 
+        {
+            "location": "/api/#3-create-an-activity-for-a-user", 
+            "text": "Endpoint  Method  API Type  Description      /users/[:id]/activities  POST  Admin  create an activity for a user    /me/activities  POST  Application  create an activity for the current user", 
+            "title": "3. Create an activity for a user"
+        }, 
+        {
+            "location": "/api/#4-create-a-trending-activity", 
+            "text": "Endpoint  Method  API Type  Description      /activities/trending  POST  Admin  create a trending activity", 
+            "title": "4. Create a trending activity"
+        }, 
+        {
+            "location": "/api/#5-get-the-the-trending-activities", 
+            "text": "Endpoint  Method  API Type  Description      /activities/trending  GET  Application  get the trending activities", 
+            "title": "5. Get the the trending activities"
+        }, 
+        {
+            "location": "/api/#public-chat-channels", 
+            "text": "Public chat channels are open to any user.", 
+            "title": "Public Chat Channels"
+        }, 
+        {
+            "location": "/api/#1-get-all-chat-channels", 
+            "text": "Endpoint  Method  API Type  Description      /chat_channels  GET  Application  get all the public chat channels", 
+            "title": "1. Get all chat channels"
+        }, 
+        {
+            "location": "/api/#2-favoriteunfavorite-a-chat-channel", 
+            "text": "Endpoint  Method  API Type  Description      /chat_channels/[:id]/favorite  PUT  Application  favorite a chat channel for the current user    /chat_channels/[:id]/unfavorite  PUT  Application  unfavorite a chat channel for the current user", 
+            "title": "2. Favorite/unfavorite a chat channel"
+        }, 
+        {
+            "location": "/api/#3-get-online-users-in-a-chat-channel", 
+            "text": "Endpoint  Method  API Type  Description      /chat_channels/[:id]/users  GET  Application  get the current online users in the chat channel    /chat_channels/[:id]/users/count  GET  Application  get the count of the online users in the chat channel    /chat_channels/user_counts  GET  Application  get the count of the online users in all of the chat channels", 
+            "title": "3. Get online users in a chat channel"
+        }, 
+        {
+            "location": "/api/#4-create-a-chat-channel", 
+            "text": "Endpoint  Method  API Type  Description      /chat_channels  POST  Application  create a chat channel", 
+            "title": "4. Create a chat channel"
+        }, 
+        {
+            "location": "/api/#5-modify-a-chat-channel", 
+            "text": "Endpoint  Method  API Type  Description      /chat_channels/[:id]  PUT  Application  modify a chat channel", 
+            "title": "5. Modify a chat channel"
+        }, 
+        {
+            "location": "/api/#6-delete-a-chat-channel", 
+            "text": "/chat_channels/[:id]  | DELETE | Application | delete a chat channel", 
+            "title": "6. Delete a chat channel"
+        }, 
+        {
+            "location": "/api/#chat-groups", 
+            "text": "Chat groups are created by users or the admin, and other users can only join the group if they are invited by users in the group or the admin.", 
+            "title": "Chat Groups"
+        }, 
+        {
+            "location": "/api/#1-create-a-chat-group", 
+            "text": "Endpoint  Method  API Type  Description      /chat_group  POST  Application  create a chat group", 
+            "title": "1. Create a chat group"
+        }, 
+        {
+            "location": "/api/#2-modify-a-chat-group", 
+            "text": "Endpoint  Method  API Type  Description      /chat_group/[:id]  PUT  Application  create a chat group", 
+            "title": "2. Modify a chat group"
+        }, 
+        {
+            "location": "/api/#3-add-users-to-a-chat-group", 
+            "text": "Endpoint  Method  API Type  Description      /chat_group/[:id]/add_users  POST  Application  add users to a chat group. After they users are added to the group, they will start receiving new messages from this group.", 
+            "title": "3. Add users to a chat group"
+        }, 
+        {
+            "location": "/api/#4-remove-users-from-a-chat-group", 
+            "text": "Endpoint  Method  API Type  Description      /chat_group/[:id]/remove_users  POST  Application  add users to a chat group. After they users are added to the group, they will start receiving new messages from this group.", 
+            "title": "4. Remove users from a chat group"
+        }, 
+        {
+            "location": "/api/#5-delete-a-chat-group", 
+            "text": "Endpoint  Method  API Type  Description      /chat_group/[:id]  DELETE  Application  The owner or admin can delete a chat group", 
+            "title": "5. Delete a chat group"
+        }, 
+        {
+            "location": "/api/#messaging", 
+            "text": "", 
+            "title": "Messaging"
+        }, 
+        {
+            "location": "/api/#1-sending-a-message", 
+            "text": "Endpoint  Method  API Type  Description      /dialogs/[:id]/messages  POST  Application  Send a message in a dialog    /users/[:id]/messages  POST  Application  Send a message to a user    /chat_groups/[:id]/messages  POST  Application  Send a message to a chat group    /chat_channels/[:id]/messages  POST  Application  Send a message to a chat channel", 
+            "title": "1. Sending a message"
+        }, 
+        {
+            "location": "/api/#2-receiving-a-message", 
+            "text": "Messages are received in real time via native callbacks.", 
+            "title": "2. Receiving a message"
+        }, 
+        {
+            "location": "/api/#dialogs", 
+            "text": "", 
+            "title": "Dialogs"
+        }, 
+        {
+            "location": "/api/#1-get-all-dialogs-that-the-user-is-in", 
+            "text": "Endpoint  Method  API Type  Description      /dialogs  GET  Application  get All dialogs that the user is currently in", 
+            "title": "1. Get all dialogs that the user is in"
+        }, 
+        {
+            "location": "/api/#2-create-a-dialog-start-chat", 
+            "text": "Endpoint  Method  API Type  Description      /dialogs  POST  Application  create a chat dialog with other users", 
+            "title": "2. Create a dialog (start chat)"
+        }, 
+        {
+            "location": "/api/#notifications", 
+            "text": "", 
+            "title": "Notifications"
+        }, 
+        {
+            "location": "/api/#1-create-a-notification", 
+            "text": "Endpoint  Method  API Type  Description      /notifications  POST  Admin  Create a notification", 
+            "title": "1. Create a notification"
+        }, 
+        {
+            "location": "/api/#2-get-all-notifications-for-a-user", 
+            "text": "Endpoint  Method  API Type  Description      /users/[:id]/notifications  GET  Application  fetch all notifications for the user", 
+            "title": "2. Get all notifications for a user"
+        }, 
+        {
+            "location": "/api/#constants", 
+            "text": "", 
+            "title": "Constants"
+        }, 
+        {
+            "location": "/api/#admin-apis", 
+            "text": "", 
+            "title": "Admin APIs"
+        }, 
+        {
+            "location": "/api/#1-batch-create-users", 
+            "text": "Endpoint  Method  API Type  Description      /users/batch_create  POST  Admin  create multiple users", 
+            "title": "1. Batch create users"
+        }, 
+        {
+            "location": "/api/#2-export-and-import-social-graph", 
+            "text": "Endpoint  Method  API Type  Description      /social_graph  GET  Admin  export social graph    /social_graph  POST  Admin  export social graph", 
+            "title": "2. Export and import social graph"
+        }, 
+        {
+            "location": "/api/#3-update-user-token", 
+            "text": "Endpoint  Method  API Type  Description      /users/[:id]/update_token  PUT  Admin, Application  change the user's token", 
+            "title": "3. Update user token"
+        }, 
+        {
+            "location": "/api/#errors", 
+            "text": "When errors are returned, they will be in a JSON object that contains information you need to interpret them.\nSample error json:  { \n     status :   401 \n     message :   authentication required \n     code :   190 \n     more_info :   https://appfriends.me/documentation  }", 
+            "title": "Errors"
+        }, 
+        {
+            "location": "/api/#error-codes", 
+            "text": "Error Code  Description      1  unknown error    4  application request limit reached    5  application does not have permission    6  requests are too frequent    100  invalid parameters    104  incorrect signature    190  need to login to perform this request    200  permission error", 
+            "title": "Error Codes"
+        }, 
+        {
+            "location": "/security/", 
+            "text": "Authentication and API Requests\n\n\nWhen you access AppFriends REST API via our SDK, you only need to provide the correct \nApp_ID\n and \nApp_Secret\n when you initialize the SDK. However, when you want to make direct REST API requests using a http client, the requests need to be structured correctly and signed by the appropriate secret. \n\n\nRequest Header\n\n\nIn the request http header, These fields need to be present:\n\n\nAPP_ID\n - Your App_ID. You can find it in the admin panel after your app is created there.\n\n\nTOKEN\n - When you are sending the requests on a user's behave, the user's auth token should be included here. Auth token is returned after the user signup or login to AppFriends. See \nuser authentication\n.\n\n\nAuthorization\n - Your request signature. See \nsignature creation\n.\n\n\nSample Request Header\n\n\nYour http header can contain other fields, but they need to include:\n\n\nAPP_ID: \nSVXJKXjXUGOkEFBWDK8NCwtt\n\nTOKEN: \nBE82LbEu_bGNnwXmy5KObw\n\nAuthorization: Bearer \nsignature token\n\n\n\n\n\n\nApp ID and Secrets\n\n\nFor each application you create on AppFriends, there's going to an \nApp_ID\n, an \nApp_Secret\n and an \nAdmin_Secret\n. \n\n\nApp_ID\n is used to identify your application.\n\n\nApp_Secret\n is the secret used to sign the requests coming from your application. \n\n\nAdmin_Secret\n is the secret used to sign the requests coming directly from you. For example, your server can send a request via AppFriends REST API to update a user's token.\n\n\nThese values play very important role in authenticating your requests, so please keep them as a secret. \n\n\nSignature Creation\n\n\nThe signature is creation is using JSON Web Tokens \n(JWT)\n, which is an open, industry standard \nRFC 7519\n method for representing claims securely between two parties.\n\n\n//signature creation\n\n\nHMACSHA256\n(\n\n  \nbase64UrlEncode\n(\nJWT\n \nheader\n)\n \n+\n \n.\n \n+\n\n  \nbase64UrlEncode\n(\nrequest\n \nJSON\n \npayload\n),\n\n  \nyour\n \nsecret\n \nhere\n\n\n)\n\n\n\n\n\n\nThe signature created here will be used in the Authorization header using the Bearer schema.\n\n\nAuthorization\n:\n \nBearer\n \nsignature\n \ntoken\n\n\n\n\n\n\nJWT Header\n\n\nJWT header is not your request http header. It is used just to sign the request. The JWT header will look like this:\n\n\n{\n\n  \nalg\n:\n \nHS256\n,\n\n  \ntyp\n:\n \nJWT\n\n\n}\n\n\n\n\n\n\nRequest Payload\n\n\nThe request payload needs to be part of the signature. It is JSON string of the data that your request is trying to send. If it's a GET request, and you have no extra payload, simply put an empty json object as the payload here. \n{}\n\n\nUser Authentication\n\n\nCreate a User\n\n\nUsers on AppFriends are simply mirror images or copies of users in your app. There are two ways to create users on AppFriends, \nsign up user in the app\n or \nbatch create users using the admin api\n. To create a user, you need to provide the user's id and user name. There are other optional properties of the user you can provide, such as email, avatar(recommend) and real name:\n\n\nSignup user in the app\n\n\nIn your app, call the SDK's login method.\n\n\nObjective-C\n\n\n\n\n\n\n\n\nSwift\n\n\n\n\n\n\n\n\nAndroid\n\n\n\n\n\n\n\n\nBatch create user using the admin api\n\n\nWith \nadmin API\n, you can batch create users.", 
+            "title": "Authentication and API Requests"
+        }, 
+        {
+            "location": "/security/#authentication-and-api-requests", 
+            "text": "When you access AppFriends REST API via our SDK, you only need to provide the correct  App_ID  and  App_Secret  when you initialize the SDK. However, when you want to make direct REST API requests using a http client, the requests need to be structured correctly and signed by the appropriate secret.", 
+            "title": "Authentication and API Requests"
+        }, 
+        {
+            "location": "/security/#request-header", 
+            "text": "In the request http header, These fields need to be present:  APP_ID  - Your App_ID. You can find it in the admin panel after your app is created there.  TOKEN  - When you are sending the requests on a user's behave, the user's auth token should be included here. Auth token is returned after the user signup or login to AppFriends. See  user authentication .  Authorization  - Your request signature. See  signature creation .", 
+            "title": "Request Header"
+        }, 
+        {
+            "location": "/security/#sample-request-header", 
+            "text": "Your http header can contain other fields, but they need to include:  APP_ID:  SVXJKXjXUGOkEFBWDK8NCwtt \nTOKEN:  BE82LbEu_bGNnwXmy5KObw \nAuthorization: Bearer  signature token", 
+            "title": "Sample Request Header"
+        }, 
+        {
+            "location": "/security/#app-id-and-secrets", 
+            "text": "For each application you create on AppFriends, there's going to an  App_ID , an  App_Secret  and an  Admin_Secret .   App_ID  is used to identify your application.  App_Secret  is the secret used to sign the requests coming from your application.   Admin_Secret  is the secret used to sign the requests coming directly from you. For example, your server can send a request via AppFriends REST API to update a user's token.  These values play very important role in authenticating your requests, so please keep them as a secret.", 
+            "title": "App ID and Secrets"
+        }, 
+        {
+            "location": "/security/#signature-creation", 
+            "text": "The signature is creation is using JSON Web Tokens  (JWT) , which is an open, industry standard  RFC 7519  method for representing claims securely between two parties.  //signature creation  HMACSHA256 ( \n   base64UrlEncode ( JWT   header )   +   .   + \n   base64UrlEncode ( request   JSON   payload ), \n   your   secret   here  )   The signature created here will be used in the Authorization header using the Bearer schema.  Authorization :   Bearer   signature   token", 
+            "title": "Signature Creation"
+        }, 
+        {
+            "location": "/security/#jwt-header", 
+            "text": "JWT header is not your request http header. It is used just to sign the request. The JWT header will look like this:  { \n   alg :   HS256 , \n   typ :   JWT  }", 
+            "title": "JWT Header"
+        }, 
+        {
+            "location": "/security/#request-payload", 
+            "text": "The request payload needs to be part of the signature. It is JSON string of the data that your request is trying to send. If it's a GET request, and you have no extra payload, simply put an empty json object as the payload here.  {}", 
+            "title": "Request Payload"
+        }, 
+        {
+            "location": "/security/#user-authentication", 
+            "text": "", 
+            "title": "User Authentication"
+        }, 
+        {
+            "location": "/security/#create-a-user", 
+            "text": "Users on AppFriends are simply mirror images or copies of users in your app. There are two ways to create users on AppFriends,  sign up user in the app  or  batch create users using the admin api . To create a user, you need to provide the user's id and user name. There are other optional properties of the user you can provide, such as email, avatar(recommend) and real name:", 
+            "title": "Create a User"
+        }, 
+        {
+            "location": "/security/#signup-user-in-the-app", 
+            "text": "In your app, call the SDK's login method.", 
+            "title": "Signup user in the app"
+        }, 
+        {
+            "location": "/security/#objective-c", 
+            "text": "", 
+            "title": "Objective-C"
+        }, 
+        {
+            "location": "/security/#swift", 
+            "text": "", 
+            "title": "Swift"
+        }, 
+        {
+            "location": "/security/#android", 
+            "text": "", 
+            "title": "Android"
+        }, 
+        {
+            "location": "/security/#batch-create-user-using-the-admin-api", 
+            "text": "With  admin API , you can batch create users.", 
+            "title": "Batch create user using the admin api"
+        }, 
+        {
+            "location": "/analytics/", 
+            "text": "", 
+            "title": "Analytics"
+        }, 
+        {
+            "location": "/referral/", 
+            "text": "", 
+            "title": "Referral and Sharing"
+        }
+    ]
+}

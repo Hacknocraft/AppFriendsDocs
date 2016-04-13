@@ -1,7 +1,25 @@
 site_name: AppFriends Documentation
+site_description: 'A turn-key to make your app social.'
+site_author: 'John Doe'
+site_url: 'http://www.appfriends.me'
+
 theme: 'material'
 pages:
 - Welcome: index.md
 - iOS Documentation: ios.md
 - Android Documentation: android.md
 - AppFriends API: api.md
+- Authentication and API Requests: security.md
+- Analytics: analytics.md
+- Referral and Sharing: referral.md
+markdown_extensions:
+  - codehilite(css_class=code)
+  - admonition
+extra:
+  logo: 'images/logo.png'
+  palette:
+    primary: 'deep orange'
+    accent: 'orange'
+  font:
+    text: 'Open Sans'
+    code: 'Monaco'
