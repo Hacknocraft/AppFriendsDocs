@@ -3,6 +3,9 @@ site_description: 'A turn-key to make your app social.'
 site_author: 'John Doe'
 site_url: 'http://www.appfriends.me'
 
+# Copyright
+copyright: 'Copyright (c) 2016 Hacknocraft'
+
 theme: 'material'
 pages:
 - Welcome: index.md
@@ -12,9 +15,12 @@ pages:
 - Authentication and API Requests: security.md
 - Analytics: analytics.md
 - Referral and Sharing: referral.md
+
 markdown_extensions:
   - codehilite(css_class=code)
   - admonition
+extra_css: [extra.css]
+
 extra:
   logo: 'images/logo.png'
   palette:

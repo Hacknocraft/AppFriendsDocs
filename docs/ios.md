@@ -74,9 +74,9 @@ The user's AppFriends account will be associated with the user's account in your
 Key           | Type          | Description
 ------------- | ------------- | -------------
 kHCUserName   | text          | the username
-kHCUserAvatar | text          | the full URL of the user's avatar
-kHCUserAppID  | text          | the user's userID in **your own app**.
-kHCUserEmail  | text          | the user's email
+kHCUserAvatar | text          | optional, the full URL of the user's avatar
+kHCUserAppID  | text          | optional, the user's userID in **your own app**. If userID is not provided here, we will assign an ID to this user.
+kHCUserEmail  | text          | optional, the user's email
 
 ## Styling
 

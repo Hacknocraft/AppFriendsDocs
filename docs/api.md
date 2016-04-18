@@ -20,21 +20,25 @@ You can use the following code to open a specific view of AppFriends widget. The
 
 ####Objective-C
 ```objc
-// open entire widget and 
-[HCWidget openView:@"/user/haowang/profile"]; 
+// open entire widget and go to user's profile
+[HCWidget openView:@"/users/haowang/profile"]; 
+
+// open user's profile alone
+[HCWidget openSingleView:@"/users/haowang/profile"]; 
 ```
 	
 ####Swift
 ```swift 
-HCWidget.openView:("/user/haowang/profile")
+// open entire widget and go to user's profile
+HCWidget.openView:("/users/haowang/profile")
 	
-//
-HCWidget.openSingleView:("/user/haowang/profile")
+// open user's profile alone
+HCWidget.openSingleView:("/users/haowang/profile")
 ```
 	
 ####Android
 ```java
-HCWidget.openSingleView:("/user/haowang/profile")
+HCWidget.openSingleView:("/users/haowang/profile")
 ```
 
 ### AppFriends Widget Views and Their URLs
@@ -73,55 +77,118 @@ The admin api's can be accessed via any http client, using the admin secret.
 !!! note "**/me**, a shortcut for current user"
     */me*, is a shortcut for */user/[:current_user_id]*. For example, */me/profile* is equivalent to */user/[:current_user_id]/profile*. 
     
-### 1. Get user information
+### 1. Use information
+------
+
 Endpoint      | Method        | API Type      | Description
 ------------- | ------------- | ------------- | -------------
 `/users/[:id]`   | GET           | Application   | get the user's information
 	
-#### Response Data
+#### Response
 ```javascript
 {
     "id": string, 							// user id provided by hosting app when sign up the user. Always use this id.
-    "af_user_id": string,					// unique internal AppFriends user id 
-    "chat_user_id": string,					// unique internal chat id.
     "email": string,						// user's email if provided
-    "user_name": string,					// user name
+    "user_name": string,					// username
     "avatar": string,						// user's avatar if provided
 }
 ```
-### 2. Update user information
+------
 Endpoint      | Method        | API Type      | Description
 ------------- | ------------- | ------------- | -------------
 `/users/[:id]`   | PUT           | Application   | update the user's information
 
-#### Response Data
+#### Request Parameters
 ```javascript
 {
-    "id": string, 							// user id provided by hosting app 
-    "email": string,						// user's email if provided
-    "user_name": string,					// user name
-    "avatar": string,						// user's avatar if provided
+	"id": string, 			// required, the name of the chat group
+	"email": string, 		// optional, email of the user
+	"user_name": string, 	// optional, username,
+	"real_name": string, 	// optional, the real name of the user
+	"avatar": string, 		// optional, the avatar of the user
 }
 ```
-### 3. Followers
+
+#### Response
+```javascript
+{
+    "id": string, 				// user id provided by hosting app 
+    "email": string,			// user's email if provided
+    "user_name": string,		// username
+    "real_name": string,		// user's real name if provided
+    "avatar": string,			// user's avatar if provided
+}
+```
+
+### Followers and Friends
+------
 Endpoint      | Method        | API Type      | Description      
 ------------- | ------------- | ------------- | -------------
 `/users/[:id]/followers`   | GET | Application | Get all the followers of the user.
-`/users/[:id]/followers`   | POST | Application | Make the current user follow this user, whose id is provided here.
 
-### 4. Followings
+#### Response
+```javascript
+// array of followers
+[
+	{
+	    "id": string, 				// user id provided by hosting app 
+	    "user_name": string,		// username
+	    "avatar": string,			// user's avatar if provided
+	}, 
+	{
+	    "id": string, 				
+	    "user_name": string,		
+	    "avatar": string,			
+	}
+	...
+]
+```
+------
+
 Endpoint      | Method        | API Type      | Description      
 ------------- | ------------- | ------------- | -------------
-`/users/[:id]/followings`   | GET | Application | Get all the users who this user is following
+`/me/followings`  | GET | Application | Get all the users that the current user is following.
 
-### 5. Follow/unfollow
-Endpoint      | Method        | API Type      | Description     
-------------- | ------------- | ------------- | ------------- 
-`/users/[:id]/follow`   | POST   | Application | follow this user
-`/users/[:id]/unfollow` | POST   | Application | unfollow this user
+#### Response
+```javascript
+// array of users that the current user is following
+[
+	{
+	    "id": string, 				// user id provided by hosting app 
+	    "user_name": string,		// username
+	    "avatar": string,			// user's avatar if provided
+	}, 
+	{
+	    "id": string, 				
+	    "user_name": string,		
+	    "avatar": string,			
+	}
+	...
+]
+```
+------
+Endpoint      | Method        | API Type      | Description      
+------------- | ------------- | ------------- | -------------
+`/me/followings`  | POST | Application | Make the current user follow a user
 
-### 6. Friends
+#### Request Parameters
+```javascript
+{
+	"id": string, 			// required, the id of the user to be followed
+}
+```
+------
+Endpoint      | Method        | API Type      | Description      
+------------- | ------------- | ------------- | -------------
+`/me/followings`  | DELETE | Application | Make the current user unfollow a user
 
+#### Request Parameters
+```javascript
+{
+	"id": string, 			// required, the id of the user to be unfollowed
+}
+```
+------
 !!! note "who are my friends?"
     Friends are users who follow each other.
 
@@ -212,7 +279,27 @@ Chat groups are created by users or the admin, and other users can only join the
 ### 1. Create a chat group
 Endpoint      | Method        | API Type      | Description     
 ------------- | ------------- | ------------- | ------------- 
-`/chat_group` | POST | Application | create a chat group
+`/chat_groups`| POST          | Application   | create a chat group
+
+#### Request Parameters
+```javascript
+{
+	"id": string			// required, id of the chat group
+	"name": string			// required, the name of the chat group
+	"memebers": string		// required, an array of the id's of the users who you want to be in this group
+	"owner_id"				// optional, the user id of the owner of the group
+}
+```
+
+#### JSON Response
+```javascript
+{
+	"id": string
+	"name": string
+	"members": array
+	"owner_id": string 
+}
+```
 
 ### 2. Modify a chat group
 Endpoint      | Method        | API Type      | Description     
@@ -309,6 +396,11 @@ Error Code | Description
 100        | invalid parameters
 104        | incorrect signature
 190			 | need to login to perform this request
-200        | permission error
-
+200        | need user to agree to permissions first 
+202        | operation cannot complete 
+203			 | navigation url not found
+405			 | user authentication failed
+406			 | your account is logged in on another device
+502			 | under maintenance
+503 		 | verify new device failed 
 

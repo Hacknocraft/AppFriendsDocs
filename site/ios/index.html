@@ -66,6 +66,8 @@
       </style>
     
     
+      <link rel="stylesheet" href="../extra.css">
+    
     <script src="../assets/javascripts/modernizr-4ab42b99fd.js"></script>
     
   </head>
@@ -393,17 +395,17 @@
 <tr>
 <td>kHCUserAvatar</td>
 <td>text</td>
-<td>the full URL of the user's avatar</td>
+<td>optional, the full URL of the user's avatar</td>
 </tr>
 <tr>
 <td>kHCUserAppID</td>
 <td>text</td>
-<td>the user's userID in <strong>your own app</strong>.</td>
+<td>optional, the user's userID in <strong>your own app</strong>. If userID is not provided here, we will assign an ID to this user.</td>
 </tr>
 <tr>
 <td>kHCUserEmail</td>
 <td>text</td>
-<td>the user's email</td>
+<td>optional, the user's email</td>
 </tr>
 </tbody>
 </table>
@@ -464,6 +466,8 @@ and
 <p>User activity feed is another powerful feature in AppFriends. User's activities will be posted in their user profile in the widget. We are already posting some activities from the widget by default. You can post activities generated inside your app can also be posted by call activity method inside <code>HCWidget</code>. Click <a href="../server/ios_class/Classes/HCWidget.html#//api/name/createActivityWithLeftImageURL:leftImageCode:title:path:params:complete:">here</a> for detail.</p>
 <p>Posting activity is a great way to let other users to find out what's going on inside the app. You can also create <strong>trending</strong> activities by using our <a href="../server/index.html">server api</a>. Trending activities are events in your app that you believe is hot or want to grab more attention. For example, you can post a trending activity with "There are 500 users watching 'cute cat' video" and a path with parameter which can navigate more users to the video when the activity is clicked.</p>
           <aside class="copyright" role="note">
+            
+              Copyright (c) 2016 Hacknocraft &ndash;
             
             Documentation built with
             <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
