@@ -340,7 +340,7 @@ Endpoint      | Method        | API Type      | Description
 ### 2. Modify a chat group
 Endpoint      | Method        | API Type      | Description     
 ------------- | ------------- | ------------- | ------------- 
-`/chat_group/[:id]` | PUT | Application | modify a chat group
+`/chat_groups/[:id]` | PUT | Application | modify a chat group
 
 #### Request Parameters
 ```javascript
@@ -353,7 +353,7 @@ Endpoint      | Method        | API Type      | Description
 ### 3. Add users to a chat group
 Endpoint      | Method        | API Type      | Description     
 ------------- | ------------- | ------------- | ------------- 
-`/chat_group/[:id]/add_users` | POST | Application | add users to a chat group. After they users are added to the group, they will start receiving new messages from this group.
+`/chat_groups/[:id]/add_users` | POST | Application | add users to a chat group. After they users are added to the group, they will start receiving new messages from this group.
 
 #### Request Parameters
 ```javascript
@@ -365,7 +365,7 @@ Endpoint      | Method        | API Type      | Description
 ### 4. Remove users from a chat group
 Endpoint      | Method        | API Type      | Description     
 ------------- | ------------- | ------------- | ------------- 
-`/chat_group/[:id]/remove_users` | POST | Application | add users to a chat group. After they users are added to the group, they will start receiving new messages from this group.
+`/chat_groups/[:id]/remove_users` | POST | Application | add users to a chat group. After they users are added to the group, they will start receiving new messages from this group.
 
 #### Request Parameters
 ```javascript
@@ -377,7 +377,7 @@ Endpoint      | Method        | API Type      | Description
 ### 5. Delete a chat group
 Endpoint      | Method        | API Type      | Description     
 ------------- | ------------- | ------------- | ------------- 
-`/chat_group/[:id]` | DELETE | Application | The owner or admin can delete a chat group
+`/chat_groups/[:id]` | DELETE | Application | The owner or admin can delete a chat group
 
 ## Messaging
 ### 1. Sending a message
