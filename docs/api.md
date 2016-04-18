@@ -367,6 +367,13 @@ Endpoint      | Method        | API Type      | Description
 ------------- | ------------- | ------------- | ------------- 
 `/chat_group/[:id]/remove_users` | POST | Application | add users to a chat group. After they users are added to the group, they will start receiving new messages from this group.
 
+#### Request Parameters
+```javascript
+{
+	"new_members": array,		// required, the id's of the users who you want to add to remove from the chat group
+}
+```
+
 ### 5. Delete a chat group
 Endpoint      | Method        | API Type      | Description     
 ------------- | ------------- | ------------- | ------------- 
