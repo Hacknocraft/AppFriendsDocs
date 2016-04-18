@@ -72,6 +72,21 @@ Application API's can only be accessed via the SDK, using the application secret
 ### Admin API
 The admin api's can be accessed via any http client, using the admin secret. 
 
+### Response
+All responses from the REST API will be in `JSON` format. When a request is successful, the REST api will respond with requested data. When request is failed, an error with appropriate error code and some description of the error will be returned.
+
+#### Sample error response:
+```javascript
+{
+    "error": {
+        "code": 100,
+        "reason": "invalid parameters"
+        "detail": "user id cannot be empty"
+        "more_info": "https://appfriends.me/documentation"
+    }
+}
+```
+
 ## User
 
 !!! note "**/me**, a shortcut for current user"
@@ -120,8 +135,11 @@ Endpoint      | Method        | API Type      | Description
 }
 ```
 
-### Followers and Friends
-------
+## Followers and Friends
+
+!!! note "who are my friends?"
+    Friends are users who follow each other.
+    
 Endpoint      | Method        | API Type      | Description      
 ------------- | ------------- | ------------- | -------------
 `/users/[:id]/followers`   | GET | Application | Get all the followers of the user.
@@ -189,12 +207,29 @@ Endpoint      | Method        | API Type      | Description
 }
 ```
 ------
-!!! note "who are my friends?"
-    Friends are users who follow each other.
 
 Endpoint      | Method        | API Type      | Description     
 ------------- | ------------- | ------------- | ------------- 
 `/users/[:id]/Friends`   | GET   | Application | Get the users friends
+
+#### Response
+```javascript
+// array of users
+[
+	{
+	    "id": string, 				// user id provided by hosting app 
+	    "user_name": string,		// username
+	    "avatar": string,			// user's avatar if provided
+	}, 
+	{
+	    "id": string, 				
+	    "user_name": string,		
+	    "avatar": string,			
+	}
+	...
+]
+```
+------
 
 ### 7. Blocks/unblocks
 Endpoint      | Method        | API Type      | Description     
@@ -284,9 +319,9 @@ Endpoint      | Method        | API Type      | Description
 #### Request Parameters
 ```javascript
 {
-	"id": string			// required, id of the chat group
-	"name": string			// required, the name of the chat group
-	"memebers": string		// required, an array of the id's of the users who you want to be in this group
+	"id": string,			// required, id of the chat group
+	"name": string,			// required, the name of the chat group
+	"memebers": string,		// required, an array of the id's of the users who you want to be in this group
 	"owner_id"				// optional, the user id of the owner of the group
 }
 ```
@@ -294,22 +329,38 @@ Endpoint      | Method        | API Type      | Description
 #### JSON Response
 ```javascript
 {
-	"id": string
-	"name": string
-	"members": array
-	"owner_id": string 
+	"id": string,
+	"name": string,
+	"members": array,
+	"owner_id": string,
+	"dialog_id": string		// the id of the chat dialog of this group.
 }
 ```
 
 ### 2. Modify a chat group
 Endpoint      | Method        | API Type      | Description     
 ------------- | ------------- | ------------- | ------------- 
-`/chat_group/[:id]` | PUT | Application | create a chat group
+`/chat_group/[:id]` | PUT | Application | modify a chat group
+
+#### Request Parameters
+```javascript
+{
+	"name": string,			// optional, the name of the chat group
+	"owner_id"				// optional, the user id of the owner of the group
+}
+```
 
 ### 3. Add users to a chat group
 Endpoint      | Method        | API Type      | Description     
 ------------- | ------------- | ------------- | ------------- 
 `/chat_group/[:id]/add_users` | POST | Application | add users to a chat group. After they users are added to the group, they will start receiving new messages from this group.
+
+#### Request Parameters
+```javascript
+{
+	"new_members": array,		// required, the id's of the users who you want to add to the chat group
+}
+```
 
 ### 4. Remove users from a chat group
 Endpoint      | Method        | API Type      | Description     
@@ -380,10 +431,12 @@ Sample error json:
 
 ```javascript
 {
-	"status": 401
-	"message": "authentication required"
-	"code": 190
-	"more_info": "https://appfriends.me/documentation"
+    "error": {
+        "code": 100,
+        "reason": "invalid parameters"
+        "detail": "user id cannot be empty"
+        "more_info": "https://appfriends.me/documentation"
+    }
 }
 ``` 
 ### Error Codes
