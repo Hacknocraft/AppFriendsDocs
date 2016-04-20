@@ -271,7 +271,7 @@ Endpoint      | Method        | API Type      | Description
 {
 	"activity_permission_type": int,      // int value which indicates which type of activity sharing permission this user has.
 	"private_messaging_permission_type": int, 	// int value which indicates which type of private messaging permission this user has 
-	"show_real_name": int, // int value which indicates which type of permission the user for showing the real name					
+	"show_real_name": int, // int value which indicates which type of permission the user for showing the real name	"push_enabled": boolean, // show if this user wants to accept push
 }
 ```
 ------
@@ -286,7 +286,8 @@ Endpoint      | Method        | API Type      | Description
 {
 	"activity_permission_type": int,      			// optional
 	"private_messaging_permission_type": int, 		// optional 
-	"show_real_name": int, 							// optional					
+	"show_real_name": int, 							// optional	
+	"push_enabled": boolean, ／／optional				
 }
 ```
 ------
