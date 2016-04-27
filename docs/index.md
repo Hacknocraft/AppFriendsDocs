@@ -12,7 +12,7 @@ The Android SDK can be integrated into existing Android projects. For details,
 please read [Android SDK guide](android.md).
 
 ## AppFriends API
-The APIs complements our mobile SDKs and integrates directly with your backend. For details, please read [Server API](server/index.html).
+Our SDK and backend have comprehensive API's for you to use, please read [our API doc](api.md).
 
 ## Admin Portal
-You can control the widget by log into the admin portal with your AppFriends account.
+You can control the widget by log into the [admin portal](http://appfriends.hacknocraft.com/) with your AppFriends account.

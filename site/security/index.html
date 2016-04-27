@@ -275,14 +275,14 @@ Authorization: Bearer &lt;signature token&gt;
 <p>For each application you create on AppFriends, there's going to an <strong>App_ID</strong>, an <strong>App_Secret</strong> and an <strong>Admin_Secret</strong>. </p>
 <p><code>App_ID</code> is used to identify your application.</p>
 <p><code>App_Secret</code> is the secret used to sign the requests coming from your application. </p>
-<p><code>Admin_Secret</code> is the secret used to sign the requests coming directly from you. For example, your server can send a request via AppFriends REST API to update a user's token.</p>
-<p>These values play very important role in authenticating your requests, so please keep them as a secret. </p>
+<p><code>Admin_Secret</code> is the secret used to sign the requests coming directly from your server. For example, your server can send a request via AppFriends REST API to update a user's token or you can export all the social graph data with your admin secret.</p>
+<p>These values play very important role in authenticating your requests, so please keep them away from the bad guys. </p>
 <h2 id="signature-creation">Signature Creation</h2>
-<p>The signature is creation is using JSON Web Tokens <a href="https://jwt.io/">(JWT)</a>, which is an open, industry standard <a href="https://tools.ietf.org/html/rfc7519">RFC 7519</a> method for representing claims securely between two parties.</p>
+<p>The signature is creation is using JSON Web Tokens <a href="https://jwt.io/">(JWT)</a>, which is an open, industry standard <a href="https://tools.ietf.org/html/rfc7519">RFC 7519</a> method for representing claims securely between two parties. You can use <a href="https://jwt.io/">this website</a> to verify your signature.</p>
 <div class="code"><pre><span></span><span class="c1">//signature creation</span>
 <span class="nx">HMACSHA256</span><span class="p">(</span>
   <span class="nx">base64UrlEncode</span><span class="p">(</span><span class="nx">JWT</span> <span class="nx">header</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;.&quot;</span> <span class="o">+</span>
-  <span class="nx">base64UrlEncode</span><span class="p">(</span><span class="nx">request</span> <span class="nx">JSON</span> <span class="nx">payload</span><span class="p">),</span>
+  <span class="nx">base64UrlEncode</span><span class="p">(</span><span class="nx">timestamp</span><span class="p">),</span>
   <span class="o">&lt;</span><span class="nx">your</span> <span class="nx">secret</span> <span class="nx">here</span><span class="o">&gt;</span>
 <span class="p">)</span>
 </pre></div>

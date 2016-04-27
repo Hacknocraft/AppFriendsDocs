@@ -244,12 +244,6 @@
             </li>
           
             <li class="anchor">
-              <a title="Chat Groups" href="#chat-groups">
-                Chat Groups
-              </a>
-            </li>
-          
-            <li class="anchor">
               <a title="Messaging" href="#messaging">
                 Messaging
               </a>
@@ -346,19 +340,23 @@
 <p>You can use the following code to open a specific view of AppFriends widget. There are options to either open a single view or the entire widget. The difference is that if you open the entire widget, the user can navigate from the view opened to other AppFriends features. If you open a single view, the user will be limited to that one feature.</p>
 <h4 id="objective-c">Objective-C</h4>
 <div class="code"><pre><span></span><span class="c1">// open entire widget and go to user&#39;s profile</span>
-<span class="p">[</span><span class="n">HCWidget</span> <span class="nl">openView</span><span class="p">:</span><span class="s">@&quot;/users/haowang/profile&quot;</span><span class="p">];</span> 
+<span class="p">[</span><span class="n">HCWidget</span> <span class="nl">openView</span><span class="p">:</span><span class="s">@&quot;/users/haowang/profile&quot;</span> <span class="nl">completion</span><span class="p">:</span><span class="nb">nil</span><span class="p">];</span> 
 
 <span class="c1">// open user&#39;s profile alone</span>
-<span class="p">[</span><span class="n">HCWidget</span> <span class="nl">openSingleView</span><span class="p">:</span><span class="s">@&quot;/users/haowang/profile&quot;</span><span class="p">];</span> 
+<span class="p">[</span><span class="n">HCWidget</span> <span class="nl">openSingleView</span><span class="p">:</span><span class="s">@&quot;/users/haowang/profile&quot;</span> <span class="nl">completion</span><span class="p">:</span><span class="nb">nil</span><span class="p">];</span> 
 </pre></div>
 
 
 <h4 id="swift">Swift</h4>
 <div class="code"><pre><span></span><span class="c1">// open entire widget and go to user&#39;s profile</span>
-<span class="n">HCWidget</span><span class="p">.</span><span class="n">openView</span><span class="p">:(</span><span class="s">&quot;/users/haowang/profile&quot;</span><span class="p">)</span>
+<span class="n">HCWidget</span><span class="p">.</span><span class="n">sharedWidget</span><span class="p">().</span><span class="n">openView</span><span class="p">(</span><span class="s">&quot;/users/haowang/profile&quot;</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">success</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+    <span class="c1">// callback</span>
+<span class="p">}</span>
 
 <span class="c1">// open user&#39;s profile alone</span>
-<span class="n">HCWidget</span><span class="p">.</span><span class="n">openSingleView</span><span class="p">:(</span><span class="s">&quot;/users/haowang/profile&quot;</span><span class="p">)</span>
+<span class="n">HCWidget</span><span class="p">.</span><span class="n">sharedWidget</span><span class="p">().</span><span class="n">openSingleView</span><span class="p">:(</span><span class="s">&quot;/users/haowang/profile&quot;</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">success</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+    <span class="c1">// callback</span>
+<span class="p">}</span>
 </pre></div>
 
 
@@ -426,6 +424,11 @@
 <td>Chat Channel</td>
 <td>/chat_channels/[:channelid]</td>
 <td>open the channel. The id provided is the channel id.</td>
+</tr>
+<tr>
+<td>Dialog list</td>
+<td>/dialogs/list</td>
+<td>open dialogs list</td>
 </tr>
 <tr>
 <td>Message thread view</td>
@@ -798,7 +801,7 @@
 <div class="code"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;activity_permission_type&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span>      <span class="c1">// int value which indicates which type of activity sharing permission this user has.</span>
     <span class="s2">&quot;private_messaging_permission_type&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span>   <span class="c1">// int value which indicates which type of private messaging permission this user has </span>
-    <span class="s2">&quot;show_real_name&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span> <span class="c1">// int value which indicates which type of permission the user for showing the real name                 </span>
+    <span class="s2">&quot;show_real_name&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span> <span class="c1">// int value which indicates which type of permission the user for showing the real name &quot;push_enabled&quot;: boolean, // show if this user wants to accept push</span>
 <span class="p">}</span>
 </pre></div>
 
@@ -827,7 +830,8 @@
 <div class="code"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;activity_permission_type&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span>                <span class="c1">// optional</span>
     <span class="s2">&quot;private_messaging_permission_type&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span>       <span class="c1">// optional </span>
-    <span class="s2">&quot;show_real_name&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span>                          <span class="c1">// optional                 </span>
+    <span class="s2">&quot;show_real_name&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span>                          <span class="c1">// optional </span>
+    <span class="s2">&quot;push_enabled&quot;</span><span class="o">:</span> <span class="kr">boolean</span><span class="p">,</span> <span class="err">／／</span><span class="nx">optional</span>             
 <span class="p">}</span>
 </pre></div>
 
@@ -1276,146 +1280,6 @@
 <hr />
 <h3 id="6-delete-a-chat-channel">6. Delete a chat channel</h3>
 <p><code>/chat_channels/[:id]</code> | DELETE | Application | delete a chat channel</p>
-<h2 id="chat-groups">Chat Groups</h2>
-<p>Chat groups are created by users or the admin, and other users can only join the group if they are invited by users in the group or the admin.</p>
-<h3 id="1-create-a-chat-group">1. Create a chat group</h3>
-<table>
-<thead>
-<tr>
-<th>Endpoint</th>
-<th>Method</th>
-<th>API Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>/chat_groups</code></td>
-<td>POST</td>
-<td>Application</td>
-<td>create a chat group</td>
-</tr>
-</tbody>
-</table>
-<h4 id="request-parameters_5">Request Parameters</h4>
-<div class="code"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>           <span class="c1">// required, id of the chat group</span>
-    <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>         <span class="c1">// required, the name of the chat group</span>
-    <span class="s2">&quot;memebers&quot;</span><span class="o">:</span> <span class="nx">array</span><span class="p">,</span>      <span class="c1">// required, an array of the id&#39;s of the users who you want to be in this group</span>
-    <span class="s2">&quot;owner_id&quot;</span>              <span class="c1">// optional, the user id of the owner of the group</span>
-<span class="p">}</span>
-</pre></div>
-
-
-<h4 id="json-response">JSON Response</h4>
-<div class="code"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>
-    <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>
-    <span class="s2">&quot;members&quot;</span><span class="o">:</span> <span class="nx">array</span><span class="p">,</span>
-    <span class="s2">&quot;owner_id&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>
-    <span class="s2">&quot;dialog_id&quot;</span><span class="o">:</span> <span class="nx">string</span>     <span class="c1">// the id of the chat dialog of this group.</span>
-<span class="p">}</span>
-</pre></div>
-
-
-<h3 id="2-modify-a-chat-group">2. Modify a chat group</h3>
-<table>
-<thead>
-<tr>
-<th>Endpoint</th>
-<th>Method</th>
-<th>API Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>/chat_groups/[:id]</code></td>
-<td>PUT</td>
-<td>Application</td>
-<td>modify a chat group</td>
-</tr>
-</tbody>
-</table>
-<h4 id="request-parameters_6">Request Parameters</h4>
-<div class="code"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>         <span class="c1">// optional, the name of the chat group</span>
-    <span class="s2">&quot;owner_id&quot;</span>              <span class="c1">// optional, the user id of the owner of the group</span>
-<span class="p">}</span>
-</pre></div>
-
-
-<h3 id="3-add-users-to-a-chat-group">3. Add users to a chat group</h3>
-<table>
-<thead>
-<tr>
-<th>Endpoint</th>
-<th>Method</th>
-<th>API Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>/chat_groups/[:id]/add_users</code></td>
-<td>POST</td>
-<td>Application</td>
-<td>add users to a chat group. After they users are added to the group, they will start receiving new messages from this group.</td>
-</tr>
-</tbody>
-</table>
-<h4 id="request-parameters_7">Request Parameters</h4>
-<div class="code"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;members&quot;</span><span class="o">:</span> <span class="nx">array</span><span class="p">,</span>       <span class="c1">// required, the id&#39;s of the users who you want to add to the chat group</span>
-<span class="p">}</span>
-</pre></div>
-
-
-<h3 id="4-remove-users-from-a-chat-group">4. Remove users from a chat group</h3>
-<table>
-<thead>
-<tr>
-<th>Endpoint</th>
-<th>Method</th>
-<th>API Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>/chat_groups/[:id]/remove_users</code></td>
-<td>POST</td>
-<td>Application</td>
-<td>add users to a chat group. After they users are added to the group, they will start receiving new messages from this group.</td>
-</tr>
-</tbody>
-</table>
-<h4 id="request-parameters_8">Request Parameters</h4>
-<div class="code"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;members&quot;</span><span class="o">:</span> <span class="nx">array</span><span class="p">,</span>       <span class="c1">// required, the id&#39;s of the users who you want to add to remove from the chat group</span>
-<span class="p">}</span>
-</pre></div>
-
-
-<h3 id="5-delete-a-chat-group">5. Delete a chat group</h3>
-<table>
-<thead>
-<tr>
-<th>Endpoint</th>
-<th>Method</th>
-<th>API Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>/chat_groups/[:id]</code></td>
-<td>DELETE</td>
-<td>Application</td>
-<td>The owner or admin can delete a chat group</td>
-</tr>
-</tbody>
-</table>
 <h2 id="messaging">Messaging</h2>
 <h3 id="1-sending-a-message">1. Sending a message</h3>
 <table>
@@ -1441,12 +1305,6 @@
 <td>Send a message to a user</td>
 </tr>
 <tr>
-<td><code>/chat_groups/[:id]/messages</code></td>
-<td>POST</td>
-<td>Application</td>
-<td>Send a message to a chat group</td>
-</tr>
-<tr>
 <td><code>/chat_channels/[:id]/messages</code></td>
 <td>POST</td>
 <td>Application</td>
@@ -1457,7 +1315,48 @@
 <h3 id="2-receiving-a-message">2. Receiving a message</h3>
 <p>Messages are received in real time via native callbacks. </p>
 <h2 id="dialogs">Dialogs</h2>
-<h3 id="1-get-all-dialogs-that-the-user-is-in">1. Get all dialogs that the user is in</h3>
+<h3 id="1-create-a-dialog">1. Create a dialog</h3>
+<p>To start a new conversation, call this method to create a dialog with users. You can then add or remove users from it.</p>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Method</th>
+<th>API Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/dialogs</code></td>
+<td>POST</td>
+<td>Application</td>
+<td>create a chat dialog</td>
+</tr>
+</tbody>
+</table>
+<h4 id="request-parameters_5">Request Parameters</h4>
+<div class="code"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>           <span class="c1">// optional, id of the dialog. You can provide an id. If you don&#39;t provide id, we will assign an id to the dialog</span>
+    <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>         <span class="c1">// required, the name of the dialog</span>
+    <span class="s2">&quot;members&quot;</span><span class="o">:</span> <span class="nx">array</span><span class="p">,</span>       <span class="c1">// required, an array of the id&#39;s of the users who you want to be in this dialog</span>
+    <span class="s2">&quot;owner_id&quot;</span>              <span class="c1">// optional, the user id of the owner of the dialog</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h4 id="json-response">JSON Response</h4>
+<div class="code"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>           <span class="c1">// the id of the chat dialog.</span>
+    <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>         <span class="c1">// the name of the dialog</span>
+    <span class="s2">&quot;members&quot;</span><span class="o">:</span> <span class="nx">array</span><span class="p">,</span>       <span class="c1">// members in the dialog</span>
+    <span class="s2">&quot;owner_id&quot;</span><span class="o">:</span> <span class="nx">string</span>      <span class="c1">// owner id, if provided</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h3 id="2-get-all-dialogs-that-the-user-is-in">2. Get all dialogs that the user is in</h3>
+<p>When you want to start chat for user, you need to call this api to create a dialog first. </p>
 <table>
 <thead>
 <tr>
@@ -1476,7 +1375,23 @@
 </tr>
 </tbody>
 </table>
-<h3 id="2-create-a-dialog-start-chat">2. Create a dialog (start chat)</h3>
+<h4 id="json-response_1">JSON Response</h4>
+<div class="code"><pre><span></span><span class="c1">// an array of dialogs</span>
+<span class="p">[</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>           <span class="c1">// the id of the chat dialog</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>         <span class="c1">// the name of the dialog       &quot;members&quot;: array,       // members in the dialog</span>
+        <span class="s2">&quot;owner_id&quot;</span><span class="o">:</span> <span class="nx">string</span>      <span class="c1">// owner id, if provided</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+    <span class="p">...</span>
+    <span class="p">}</span>
+    <span class="p">...</span>
+<span class="p">]</span>
+</pre></div>
+
+
+<h3 id="2-modify-a-dialog">2. Modify a dialog</h3>
 <table>
 <thead>
 <tr>
@@ -1488,10 +1403,90 @@
 </thead>
 <tbody>
 <tr>
-<td><code>/dialogs</code></td>
+<td><code>/dialogs/[:id]</code></td>
+<td>PUT</td>
+<td>Application</td>
+<td>modify a dialog</td>
+</tr>
+</tbody>
+</table>
+<h4 id="request-parameters_6">Request Parameters</h4>
+<div class="code"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>         <span class="c1">// optional, the name of the dialog</span>
+    <span class="s2">&quot;owner_id&quot;</span>              <span class="c1">// optional, the user id of the owner of the dialog</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h3 id="3-add-users-to-a-chat-group">3. Add users to a chat group</h3>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Method</th>
+<th>API Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/dialogs/[:id]/add_users</code></td>
 <td>POST</td>
 <td>Application</td>
-<td>create a chat dialog with other users</td>
+<td>add users to a dialog. After they users are added to the dialog, they will start receiving new messages from this dialog.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="request-parameters_7">Request Parameters</h4>
+<div class="code"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;members&quot;</span><span class="o">:</span> <span class="nx">array</span><span class="p">,</span>       <span class="c1">// required, the id&#39;s of the users who you want to add to the dialog</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h3 id="4-remove-users-from-a-chat-group">4. Remove users from a chat group</h3>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Method</th>
+<th>API Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/dialogs/[:id]/remove_users</code></td>
+<td>POST</td>
+<td>Application</td>
+<td>remove users from a dialog.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="request-parameters_8">Request Parameters</h4>
+<div class="code"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;members&quot;</span><span class="o">:</span> <span class="nx">array</span><span class="p">,</span>       <span class="c1">// required, the id&#39;s of the users who you want to add to remove from the dialog</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h3 id="5-delete-a-chat-group">5. Delete a chat group</h3>
+<p>this api is only available to the owner of the group or using the admin secret</p>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Method</th>
+<th>API Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/dialogs/[:id]</code></td>
+<td>DELETE</td>
+<td>Application</td>
+<td>The owner or admin can delete a dialog</td>
 </tr>
 </tbody>
 </table>

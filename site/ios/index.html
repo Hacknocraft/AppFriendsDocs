@@ -388,24 +388,29 @@
 </thead>
 <tbody>
 <tr>
-<td>kHCUserName</td>
+<td>"username"</td>
 <td>text</td>
 <td>the username</td>
 </tr>
 <tr>
-<td>kHCUserAvatar</td>
+<td>"avatar"</td>
 <td>text</td>
 <td>optional, the full URL of the user's avatar</td>
 </tr>
 <tr>
-<td>kHCUserAppID</td>
+<td>"id"</td>
 <td>text</td>
 <td>optional, the user's userID in <strong>your own app</strong>. If userID is not provided here, we will assign an ID to this user.</td>
 </tr>
 <tr>
-<td>kHCUserEmail</td>
+<td>"email"</td>
 <td>text</td>
 <td>optional, the user's email</td>
+</tr>
+<tr>
+<td>"token"</td>
+<td>text</td>
+<td>optional, assign a token to the user. If provided at signup, the later login has to provde the same token. If the user's token has changed, please use admin secret to update the user's token.</td>
 </tr>
 </tbody>
 </table>
