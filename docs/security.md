@@ -27,18 +27,18 @@ For each application you create on AppFriends, there's going to an **App_ID**, a
 
 `App_Secret` is the secret used to sign the requests coming from your application. 
 
-`Admin_Secret` is the secret used to sign the requests coming directly from you. For example, your server can send a request via AppFriends REST API to update a user's token.
+`Admin_Secret` is the secret used to sign the requests coming directly from your server. For example, your server can send a request via AppFriends REST API to update a user's token or you can export all the social graph data with your admin secret.
 
-These values play very important role in authenticating your requests, so please keep them as a secret. 
+These values play very important role in authenticating your requests, so please keep them away from the bad guys. 
 
 ## Signature Creation
-The signature is creation is using JSON Web Tokens [(JWT)](https://jwt.io/), which is an open, industry standard [RFC 7519](https://tools.ietf.org/html/rfc7519) method for representing claims securely between two parties.
+The signature is creation is using JSON Web Tokens [(JWT)](https://jwt.io/), which is an open, industry standard [RFC 7519](https://tools.ietf.org/html/rfc7519) method for representing claims securely between two parties. You can use [this website](https://jwt.io/) to verify your signature.
 
 ```javascript
 //signature creation
 HMACSHA256(
   base64UrlEncode(JWT header) + "." +
-  base64UrlEncode(request JSON payload),
+  base64UrlEncode(timestamp),
   <your secret here>
 )
 ```
@@ -83,3 +83,4 @@ With [admin API](api/#admin-apis), you can batch create users.
 
 
 
+  

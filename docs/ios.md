@@ -73,10 +73,11 @@ The user's AppFriends account will be associated with the user's account in your
 
 Key           | Type          | Description
 ------------- | ------------- | -------------
-kHCUserName   | text          | the username
-kHCUserAvatar | text          | optional, the full URL of the user's avatar
-kHCUserAppID  | text          | optional, the user's userID in **your own app**. If userID is not provided here, we will assign an ID to this user.
-kHCUserEmail  | text          | optional, the user's email
+"username"    | text          | the username
+"avatar"      | text          | optional, the full URL of the user's avatar
+"id"		    | text          | optional, the user's userID in **your own app**. If userID is not provided here, we will assign an ID to this user.
+"email"       | text          | optional, the user's email
+"token"       | text          | optional, assign a token to the user. If provided at signup, the later login has to provde the same token. If the user's token has changed, please use admin secret to update the user's token.
 
 ## Styling
 

@@ -21,19 +21,23 @@ You can use the following code to open a specific view of AppFriends widget. The
 ####Objective-C
 ```objc
 // open entire widget and go to user's profile
-[HCWidget openView:@"/users/haowang/profile"]; 
+[HCWidget openView:@"/users/haowang/profile" completion:nil]; 
 
 // open user's profile alone
-[HCWidget openSingleView:@"/users/haowang/profile"]; 
+[HCWidget openSingleView:@"/users/haowang/profile" completion:nil]; 
 ```
 	
 ####Swift
 ```swift 
 // open entire widget and go to user's profile
-HCWidget.openView:("/users/haowang/profile")
+HCWidget.sharedWidget().openView("/users/haowang/profile") { (success, error) in
+    // callback
+}
 	
 // open user's profile alone
-HCWidget.openSingleView:("/users/haowang/profile")
+HCWidget.sharedWidget().openSingleView:("/users/haowang/profile") { (success, error) in
+    // callback
+}
 ```
 	
 ####Android
@@ -55,6 +59,7 @@ User friends view | /users/[:id]/friends | open the user's friends list view. Th
 Private chat page | /users/[:id]/chat | open the private chat with the user. The id provided here is the user's id in your app.
 Group chat page | /chat_groups/[:groupid] | open the group chat. The id provided is the group id.
 Chat Channel | /chat_channels/[:channelid] | open the channel. The id provided is the channel id.
+Dialog list | /dialogs/list | open dialogs list
 Message thread view | /chat_channels/[:channelid]/messages/[:messageid] | open the message threading view which contains the message. Provide both channel id and message id.
 Notification view | /notifications | open the notifications view
 Screen sharing view | /screen_share | open the screenshot sharing window
@@ -563,100 +568,111 @@ Endpoint      | Method        | API Type      | Description
 `/chat_channels/[:id]` | DELETE | Application | delete a chat channel
 
 
-## Chat Groups
-Chat groups are created by users or the admin, and other users can only join the group if they are invited by users in the group or the admin.
-
-### 1. Create a chat group
-Endpoint      | Method        | API Type      | Description     
-------------- | ------------- | ------------- | ------------- 
-`/chat_groups`| POST          | Application   | create a chat group
-
-#### Request Parameters
-```javascript
-{
-	"id": string,			// required, id of the chat group
-	"name": string,			// required, the name of the chat group
-	"memebers": array,		// required, an array of the id's of the users who you want to be in this group
-	"owner_id"				// optional, the user id of the owner of the group
-}
-```
-
-#### JSON Response
-```javascript
-{
-	"id": string,
-	"name": string,
-	"members": array,
-	"owner_id": string,
-	"dialog_id": string		// the id of the chat dialog of this group.
-}
-```
-
-### 2. Modify a chat group
-Endpoint      | Method        | API Type      | Description     
-------------- | ------------- | ------------- | ------------- 
-`/chat_groups/[:id]` | PUT | Application | modify a chat group
-
-#### Request Parameters
-```javascript
-{
-	"name": string,			// optional, the name of the chat group
-	"owner_id"				// optional, the user id of the owner of the group
-}
-```
-
-### 3. Add users to a chat group
-Endpoint      | Method        | API Type      | Description     
-------------- | ------------- | ------------- | ------------- 
-`/chat_groups/[:id]/add_users` | POST | Application | add users to a chat group. After they users are added to the group, they will start receiving new messages from this group.
-
-#### Request Parameters
-```javascript
-{
-	"members": array,		// required, the id's of the users who you want to add to the chat group
-}
-```
-
-### 4. Remove users from a chat group
-Endpoint      | Method        | API Type      | Description     
-------------- | ------------- | ------------- | ------------- 
-`/chat_groups/[:id]/remove_users` | POST | Application | add users to a chat group. After they users are added to the group, they will start receiving new messages from this group.
-
-#### Request Parameters
-```javascript
-{
-	"members": array,		// required, the id's of the users who you want to add to remove from the chat group
-}
-```
-
-### 5. Delete a chat group
-Endpoint      | Method        | API Type      | Description     
-------------- | ------------- | ------------- | ------------- 
-`/chat_groups/[:id]` | DELETE | Application | The owner or admin can delete a chat group
-
 ## Messaging
 ### 1. Sending a message
 Endpoint      | Method        | API Type      | Description     
 ------------- | ------------- | ------------- | ------------- 
 `/dialogs/[:id]/messages` | POST | Application | Send a message in a dialog
 `/users/[:id]/messages` | POST | Application | Send a message to a user
-`/chat_groups/[:id]/messages` | POST | Application | Send a message to a chat group
 `/chat_channels/[:id]/messages` | POST | Application | Send a message to a chat channel
 
 ### 2. Receiving a message
 Messages are received in real time via native callbacks. 
 
 ## Dialogs
-### 1. Get all dialogs that the user is in
+### 1. Create a dialog
+To start a new conversation, call this method to create a dialog with users. You can then add or remove users from it.
+
 Endpoint      | Method        | API Type      | Description     
 ------------- | ------------- | ------------- | ------------- 
-`/dialogs` | GET | Application | get All dialogs that the user is currently in
+`/dialogs`    | POST          | Application   | create a chat dialog
 
+#### Request Parameters
+```javascript
+{
+	"id": string,			// optional, id of the dialog. You can provide an id. If you don't provide id, we will assign an id to the dialog
+	"name": string,			// required, the name of the dialog
+	"members": array,		// required, an array of the id's of the users who you want to be in this dialog
+	"owner_id"				// optional, the user id of the owner of the dialog
+}
+```
 
-### 2. Create a dialog (start chat)
+#### JSON Response
+```javascript
+{
+	"id": string,			// the id of the chat dialog.
+	"name": string,			// the name of the dialog
+	"members": array,		// members in the dialog
+	"owner_id": string		// owner id, if provided
+}
+```
+
+### 2. Get all dialogs that the user is in 
+When you want to start chat for user, you need to call this api to create a dialog first. 
+ 
 Endpoint      | Method        | API Type      | Description     
 ------------- | ------------- | ------------- | ------------- 
-`/dialogs` | POST | Application | create a chat dialog with other users
+`/dialogs`    | GET           | Application   | get All dialogs that the user is currently in
+
+#### JSON Response
+```javascript
+// an array of dialogs
+[
+	{
+		"id": string,			// the id of the chat dialog
+		"name": string,			// the name of the dialog		"members": array,		// members in the dialog
+		"owner_id": string		// owner id, if provided
+	},
+	{
+	...
+	}
+	...
+]
+```
+### 2. Modify a dialog
+Endpoint      | Method        | API Type      | Description     
+------------- | ------------- | ------------- | ------------- 
+`/dialogs/[:id]` | PUT | Application | modify a dialog
+
+#### Request Parameters
+```javascript
+{
+	"name": string,			// optional, the name of the dialog
+	"owner_id"				// optional, the user id of the owner of the dialog
+}
+```
+
+### 3. Add users to a chat group
+Endpoint      | Method        | API Type      | Description     
+------------- | ------------- | ------------- | ------------- 
+`/dialogs/[:id]/add_users` | POST | Application | add users to a dialog. After they users are added to the dialog, they will start receiving new messages from this dialog.
+
+#### Request Parameters
+```javascript
+{
+	"members": array,		// required, the id's of the users who you want to add to the dialog
+}
+```
+
+### 4. Remove users from a chat group
+Endpoint      | Method        | API Type      | Description     
+------------- | ------------- | ------------- | ------------- 
+`/dialogs/[:id]/remove_users` | POST | Application | remove users from a dialog. 
+
+#### Request Parameters
+```javascript
+{
+	"members": array,		// required, the id's of the users who you want to add to remove from the dialog
+}
+```
+
+### 5. Delete a chat group
+this api is only available to the owner of the group or using the admin secret
+
+Endpoint      | Method        | API Type      | Description     
+------------- | ------------- | ------------- | ------------- 
+`/dialogs/[:id]` | DELETE | Application | The owner or admin can delete a dialog
+
 
 ## Notifications
 ### 1. Create a notification
