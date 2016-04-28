@@ -190,6 +190,12 @@
             </li>
           
             <li class="anchor">
+              <a title="Display Widget Bubble" href="#display-widget-bubble">
+                Display Widget Bubble
+              </a>
+            </li>
+          
+            <li class="anchor">
               <a title="Styling" href="#styling">
                 Styling
               </a>
@@ -317,18 +323,16 @@
 <p>After logging into your admin panel, and created your application, you can find your <code>App ID</code> and <code>App Secret</code>. Then use them in the initialization.</p>
 <p>Initialize AppFriends in Application Delegate <code>didFinishLaunchingWithOptions</code> method.</p>
 <p><strong>Objective-C</strong></p>
-<div class="code"><pre><span></span> <span class="p">[</span><span class="n">widget</span> <span class="nl">initializeWithApplicationKey</span><span class="p">:</span><span class="s">@&quot;db&quot;</span>
-                              <span class="nl">secret</span><span class="p">:</span><span class="s">&quot;3MyNWQkQt4cbdSLiRlfFUAtt&quot;</span>
-                              <span class="nl">configuration</span><span class="p">:</span><span class="l">@{</span><span class="nl">kHCUseProduction</span><span class="p">:</span> <span class="m">@NO</span><span class="l">}</span>
-                              <span class="nl">withLaunchOptions</span><span class="p">:</span><span class="n">launchOptions</span><span class="p">];</span>
+<div class="code"><pre><span></span><span class="p">[</span><span class="n">HCWidget</span><span class="p">.</span><span class="n">sharedWidget</span> <span class="nl">initializeWithApplicationKey</span><span class="p">:</span><span class="s">@&quot;p8tnnIRmsl4cJngsH2rxGwtt&quot;</span> 
+                            <span class="nl">secret</span><span class="p">:</span> <span class="s">@&quot;34vRadekQhhQohgDNTCDDQtt&quot;</span> 
+                            <span class="nl">configuration</span><span class="p">:</span><span class="nb">nil</span>  <span class="c1">// set to nil for default configuration</span>
+                            <span class="nl">withLaunchOptions</span><span class="p">:</span><span class="n">launchOptions</span><span class="p">];</span>
 </pre></div>
 
 
 <p><strong>Swift</strong></p>
-<div class="code"><pre><span></span> HCWidget.sharedWidget().initializeWithApplicationKey(&quot;db&quot;,
-                            secret: &quot;3MyNWQkQt4cbdSLiRlfFUAtt&quot;,
-                            configuration: [kHCUseProduction: NSNumber(bool: false)],
-                            withLaunchOptions: launchOptions)
+<div class="code"><pre><span></span>HCWidget.sharedWidget()
+        .initializeWithApplicationKey(&quot;p8tnnIRmsl4cJngsH2rxGwtt&quot;, secret: &quot;34vRadekQhhQohgDNTCDDQtt&quot;, configuration: nil, withLaunchOptions: launchOptions)
 </pre></div>
 
 
@@ -344,24 +348,9 @@
 </thead>
 <tbody>
 <tr>
-<td>kHCUseProduction</td>
-<td>Boolean</td>
-<td>Set @YES to use production rather than sendbox</td>
-</tr>
-<tr>
-<td>kHCDefaultSocialWidgetPosition</td>
-<td>CGPoint</td>
-<td>Specify the position where the widget button will show up on the view.</td>
-</tr>
-<tr>
 <td>kHCDefaultSocialWidgetOpenDirection</td>
 <td>NSInteger</td>
 <td>Enum <code>HCSocialWidgetOpenDirection</code> This value will dictate the widget open direction.</td>
-</tr>
-<tr>
-<td>kHCDefaultSocialWidgetEnableProfileLink</td>
-<td>Boolean</td>
-<td>Set @YES to enable linking between the widget's user profile to the user profile in your app. If your app doesn't have a profile page, you can ignore this value.</td>
 </tr>
 <tr>
 <td>kHCDefaultSocialWidgetWidth</td>
@@ -372,8 +361,25 @@
 </table>
 <h2 id="user-authentication">User Authentication</h2>
 <p>Before your users can start enjoying AppFriends, they need to have an AppFriends account. Login the user by invoking:</p>
-<div class="code"><pre><span></span>// find this method in HCSocialWidget
-- (void)loginWithUserInfo:(NSDictionary *)userInfo
+<p><strong>Objective-C</strong></p>
+<div class="code"><pre><span></span><span class="p">[[</span><span class="n">HCWidget</span> <span class="n">sharedWidget</span><span class="p">]</span><span class="nl">loginWithUserInfo</span><span class="p">:</span><span class="l">@{</span>
+                                            <span class="nl">kHCUserName</span><span class="p">:</span> <span class="s">@&quot;username&quot;</span><span class="p">,</span>
+                                            <span class="nl">kHCUserAvatar</span><span class="p">:</span> <span class="s">@&quot;https://cdn0.iconfinder.com/data/icons/iconshock_guys/128/andrew.png&quot;</span><span class="p">,</span>
+                                            <span class="nl">kHCUserAppID</span><span class="p">:</span> <span class="s">@&quot;3000&quot;</span><span class="p">,</span>
+                                            <span class="nl">kHCUserEmail</span><span class="p">:</span> <span class="s">@&quot;test@gmail.com&quot;</span>
+                                            <span class="l">}</span>
+                               <span class="nl">completion</span><span class="p">:</span><span class="nb">nil</span><span class="p">];</span>
+</pre></div>
+
+
+<p><strong>Swift</strong></p>
+<div class="code"><pre><span></span><span class="n">HCWidget</span><span class="p">.</span><span class="n">sharedWidget</span><span class="p">().</span><span class="n">loginWithUserInfo</span> <span class="p">(</span>
+                    <span class="p">[</span> <span class="nl">kHCUserName</span><span class="p">:</span> <span class="s">&quot;username&quot;</span><span class="p">,</span>
+                      <span class="nl">kHCUserAvatar</span><span class="p">:</span> <span class="s">&quot;https://cdn0.iconfinder.com/data/icons/iconshock_guys/128/andrew.png&quot;</span><span class="p">,</span>
+                      <span class="nl">kHCUserAppID</span><span class="p">:</span> <span class="s">@&quot;3000&quot;</span><span class="p">,</span>
+                      <span class="nl">kHCUserEmail</span><span class="p">:</span> <span class="s">&quot;test@gmail.com&quot;</span> <span class="p">])</span> <span class="p">{</span> <span class="p">(</span><span class="n">success</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+
+                   <span class="p">}</span>
 </pre></div>
 
 
@@ -414,6 +420,30 @@
 </tr>
 </tbody>
 </table>
+<h2 id="display-widget-bubble">Display Widget Bubble</h2>
+<p>To display the widget bubble, use the following code in <code>viewDidAppear</code> of your view controller.</p>
+<p><strong>Objective-C</strong></p>
+<div class="code"><pre><span></span><span class="p">[[</span><span class="n">HCWidget</span> <span class="n">sharedWidget</span><span class="p">]</span><span class="nl">showWidgetBubbleOnViewController</span><span class="p">:</span><span class="nb">self</span>
+                                  <span class="nl">allowScreenShotSharing</span><span class="p">:</span><span class="nb">YES</span>
+                                              <span class="nl">atPosition</span><span class="p">:</span><span class="n">CGPointMake</span><span class="p">(</span><span class="nb">self</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="n">frame</span><span class="p">.</span><span class="n">size</span><span class="p">.</span><span class="n">width</span> <span class="o">-</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">80</span><span class="p">)</span>
+                                              <span class="nl">completion</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="kt">BOOL</span> <span class="n">success</span><span class="p">,</span> <span class="bp">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+
+                                                  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">success</span><span class="p">)</span> <span class="p">{</span>
+                                                      <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;%@&quot;</span><span class="p">,</span> <span class="n">error</span><span class="p">);</span>
+                                                  <span class="p">}</span>
+
+                                              <span class="p">}];</span>
+</pre></div>
+
+
+<p><strong>Swift</strong></p>
+<div class="code"><pre><span></span>HCWidget.sharedWidget().showWidgetBubbleOnViewController(self, allowScreenShotSharing: true, atPosition: CGPointMake(self.view.frame.size.width - 60, 160)) { (success, error) in
+
+        // callback block
+    }
+</pre></div>
+
+
 <h2 id="styling">Styling</h2>
 <p>AppFriends UI can be customize to fit the style of your own app. To customize the UI, please use <code>HCWidget</code> properties. For example:</p>
 <div class="code"><pre><span></span><span class="c1">// Setting the navigation bar icon highlight color to red</span>

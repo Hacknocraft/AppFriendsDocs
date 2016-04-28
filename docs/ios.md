@@ -39,35 +39,47 @@ Initialize AppFriends in Application Delegate `didFinishLaunchingWithOptions` me
 
 **Objective-C**
 
-	 [widget initializeWithApplicationKey:@"db"
-    							  secret:"3MyNWQkQt4cbdSLiRlfFUAtt"
-    							  configuration:@{kHCUseProduction: @NO}
-    							  withLaunchOptions:launchOptions];
-
+	[HCWidget.sharedWidget initializeWithApplicationKey:@"p8tnnIRmsl4cJngsH2rxGwtt" 
+		 						secret: @"34vRadekQhhQohgDNTCDDQtt" 
+		 						configuration:nil  // set to nil for default configuration
+		 						withLaunchOptions:launchOptions];
 
 **Swift**
 
-	 HCWidget.sharedWidget().initializeWithApplicationKey("db",
-	 							secret: "3MyNWQkQt4cbdSLiRlfFUAtt",
-	 							configuration: [kHCUseProduction: NSNumber(bool: false)],
-	 							withLaunchOptions: launchOptions)
+	HCWidget.sharedWidget()
+			.initializeWithApplicationKey("p8tnnIRmsl4cJngsH2rxGwtt", secret: "34vRadekQhhQohgDNTCDDQtt", configuration: nil, withLaunchOptions: launchOptions)
 
 ### Build Initialization Options
 To initialize the SDK, you can pass in a `NSDictionary`
 
 Key           | Type          | Description
 ------------- | ------------- | -------------
-kHCUseProduction  | Boolean | Set @YES to use production rather than sendbox
-kHCDefaultSocialWidgetPosition  | CGPoint | Specify the position where the widget button will show up on the view.
 kHCDefaultSocialWidgetOpenDirection  | NSInteger | Enum `HCSocialWidgetOpenDirection` This value will dictate the widget open direction.
-kHCDefaultSocialWidgetEnableProfileLink  | Boolean | Set @YES to enable linking between the widget's user profile to the user profile in your app. If your app doesn't have a profile page, you can ignore this value.
 kHCDefaultSocialWidgetWidth  | Float | set width of the widget window. Max value is screen width - 20, and min value is 300.
 
 ## User Authentication
 Before your users can start enjoying AppFriends, they need to have an AppFriends account. Login the user by invoking:
 
-	// find this method in HCSocialWidget
-	- (void)loginWithUserInfo:(NSDictionary *)userInfo
+**Objective-C**
+
+	[[HCWidget sharedWidget]loginWithUserInfo:@{
+                                                kHCUserName: @"username",
+                                                kHCUserAvatar: @"https://cdn0.iconfinder.com/data/icons/iconshock_guys/128/andrew.png",
+                                                kHCUserAppID: @"3000",
+                                                kHCUserEmail: @"test@gmail.com"
+                                                }
+                                   completion:nil];
+                                   
+
+**Swift**
+
+	HCWidget.sharedWidget().loginWithUserInfo (
+                        [ kHCUserName: "username",
+                          kHCUserAvatar: "https://cdn0.iconfinder.com/data/icons/iconshock_guys/128/andrew.png",
+                          kHCUserAppID: @"3000",
+                          kHCUserEmail: "test@gmail.com" ]) { (success, error) in
+                       
+                       }
 
 The user's AppFriends account will be associated with the user's account in your app. To correctly display the user information, please fill the following information in the *userInfo* dictionary:
 
@@ -78,6 +90,30 @@ Key           | Type          | Description
 "id"		    | text          | optional, the user's userID in **your own app**. If userID is not provided here, we will assign an ID to this user.
 "email"       | text          | optional, the user's email
 "token"       | text          | optional, assign a token to the user. If provided at signup, the later login has to provde the same token. If the user's token has changed, please use admin secret to update the user's token.
+
+## Display Widget Bubble
+
+To display the widget bubble, use the following code in `viewDidAppear` of your view controller.
+
+**Objective-C**
+
+    [[HCWidget sharedWidget]showWidgetBubbleOnViewController:self
+                                      allowScreenShotSharing:YES
+                                                  atPosition:CGPointMake(self.view.frame.size.width - 30, 80)
+                                                  completion:^(BOOL success, NSError *error) {
+                                                      
+                                                      if (!success) {
+                                                          NSLog(@"%@", error);
+                                                      }
+                                                      
+                                                  }];
+
+**Swift**
+
+	HCWidget.sharedWidget().showWidgetBubbleOnViewController(self, allowScreenShotSharing: true, atPosition: CGPointMake(self.view.frame.size.width - 60, 160)) { (success, error) in
+            
+            // callback block
+        }
 
 ## Styling
 
