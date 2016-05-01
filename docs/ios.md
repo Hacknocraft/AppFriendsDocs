@@ -64,9 +64,9 @@ Before your users can start enjoying AppFriends, they need to have an AppFriends
 
 	[[HCWidget sharedWidget]loginWithUserInfo:@{
                                                 kHCUserName: @"username",
-                                                kHCUserAvatar: @"https://cdn0.iconfinder.com/data/icons/iconshock_guys/128/andrew.png",
+                                                kHCUserAvatar: @"https://cdn0.iconfinder.com/data/icons/iconshock_guys/128/andrew.png",    // optional
                                                 kHCUserAppID: @"3000",
-                                                kHCUserEmail: @"test@gmail.com"
+                                                kHCUserEmail: @"test@gmail.com"    // optional
                                                 }
                                    completion:nil];
                                    
@@ -75,9 +75,10 @@ Before your users can start enjoying AppFriends, they need to have an AppFriends
 
 	HCWidget.sharedWidget().loginWithUserInfo (
                         [ kHCUserName: "username",
-                          kHCUserAvatar: "https://cdn0.iconfinder.com/data/icons/iconshock_guys/128/andrew.png",
+                          kHCUserAvatar: "https://cdn0.iconfinder.com/data/icons/iconshock_guys/128/andrew.png",    // optional
                           kHCUserAppID: @"3000",
-                          kHCUserEmail: "test@gmail.com" ]) { (success, error) in
+                          kHCUserEmail: "test@gmail.com"     // optional
+                        ]) { (success, error) in
                        
                        }
 
@@ -133,6 +134,32 @@ After the initialization is finished. You can now show the widget on the views i
 
 The *viewController* parameter is the `UIViewController`, which is presenting the widget. We recommand showing the widget in `viewDidAppear` method of your view controller. For detail info on this method, please go to [class document](ios_class/Classes/HCWidget.html#//api/name/showSocialWidgetOnViewController:viewControllerPath:disableScreenshot:completion:).  
 
+## Open a Specific View
+
+If you want to open a specific view of the widget, you can do that by using our API. 
+
+####Objective-C
+```objc
+// open entire widget and go the user's dialog list
+[HCWidget openView:@"/dialogs/list" completion:nil]; 
+
+// open the user's dialog list alone
+[HCWidget openSingleView:@"/dialogs/list" completion:nil]; 
+```
+	
+####Swift
+```swift 
+// open entire widget and go the user's dialog list
+HCWidget.sharedWidget().openView("/dialogs/list") { (success, error) in
+    // callback
+}
+	
+// open the user's dialog list alone
+HCWidget.sharedWidget().openSingleView:("/dialogs/list") { (success, error) in
+    // callback
+}
+```
+
 ## Content Sharing with AppFriends
 
 A great feature with AppFriends is being able to share your app content within your app among your users or to outside the app in places like Facebook, Twitter, Instagram, SMS and so on. To utilize this feature, you need assign a **path** to each of your page (app screen). You can also use additional **parameters** to help your app with navigation.
@@ -173,7 +200,4 @@ By default, we create a global public chat channel for all of your users to chat
 ## Private Group Chat
 You can create private chat group using the `HCWidget` methods. In each private chat group, you can only include the users that you want to invite, and the chat group will not be visible to others. Users can leave the group if they want to. Please see [class document](ios_class/Classes/HCWidget.html#//api/name/createGroup:lookupKey:withUserIDs:complete:).
 
-## Post User Activities
-User activity feed is another powerful feature in AppFriends. User's activities will be posted in their user profile in the widget. We are already posting some activities from the widget by default. You can post activities generated inside your app can also be posted by call activity method inside `HCWidget`. Click [here](server/ios_class/Classes/HCWidget.html#//api/name/createActivityWithLeftImageURL:leftImageCode:title:path:params:complete:) for detail.
 
-Posting activity is a great way to let other users to find out what's going on inside the app. You can also create **trending** activities by using our [server api](server/index.html). Trending activities are events in your app that you believe is hot or want to grab more attention. For example, you can post a trending activity with "There are 500 users watching 'cute cat' video" and a path with parameter which can navigate more users to the video when the activity is clicked.

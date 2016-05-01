@@ -590,7 +590,6 @@ Endpoint      | Method        | API Type      | Description
 #### Request Parameters
 ```javascript
 {
-	"id": string,			// optional, id of the dialog. You can provide an id. If you don't provide id, we will assign an id to the dialog
 	"name": string,			// required, the name of the dialog
 	"members": array,		// required, an array of the id's of the users who you want to be in this dialog
 	"owner_id"				// optional, the user id of the owner of the dialog
@@ -600,7 +599,7 @@ Endpoint      | Method        | API Type      | Description
 #### JSON Response
 ```javascript
 {
-	"id": string,			// the id of the chat dialog.
+	"id": string,			// the id of the newly created chat dialog.
 	"name": string,			// the name of the dialog
 	"members": array,		// members in the dialog
 	"owner_id": string		// owner id, if provided
