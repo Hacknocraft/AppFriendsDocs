@@ -448,6 +448,7 @@
 </tbody>
 </table>
 <h2 id="rest-apis">REST API's</h2>
+<p>Base URL: <strong>https://appfriends-staging-api.hacknocraft.com/api/v3/</strong></p>
 <p>If you use our out of box UI, all functionalities are enabled and ready to use by default, but if you want to make a customized UI, we certainly facilitate that as well. To access and modify data on AppFriends, you can ultilize our REST interface. There are two types of REST API's:</p>
 <blockquote>
 <ol>
@@ -1337,7 +1338,6 @@
 </table>
 <h4 id="request-parameters_5">Request Parameters</h4>
 <div class="code"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>           <span class="c1">// optional, id of the dialog. You can provide an id. If you don&#39;t provide id, we will assign an id to the dialog</span>
     <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>         <span class="c1">// required, the name of the dialog</span>
     <span class="s2">&quot;members&quot;</span><span class="o">:</span> <span class="nx">array</span><span class="p">,</span>       <span class="c1">// required, an array of the id&#39;s of the users who you want to be in this dialog</span>
     <span class="s2">&quot;owner_id&quot;</span>              <span class="c1">// optional, the user id of the owner of the dialog</span>
@@ -1347,7 +1347,7 @@
 
 <h4 id="json-response">JSON Response</h4>
 <div class="code"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>           <span class="c1">// the id of the chat dialog.</span>
+    <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>           <span class="c1">// the id of the newly created chat dialog.</span>
     <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>         <span class="c1">// the name of the dialog</span>
     <span class="s2">&quot;members&quot;</span><span class="o">:</span> <span class="nx">array</span><span class="p">,</span>       <span class="c1">// members in the dialog</span>
     <span class="s2">&quot;owner_id&quot;</span><span class="o">:</span> <span class="nx">string</span>      <span class="c1">// owner id, if provided</span>

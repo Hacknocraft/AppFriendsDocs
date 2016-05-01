@@ -208,6 +208,12 @@
             </li>
           
             <li class="anchor">
+              <a title="Open a Specific View" href="#open-a-specific-view">
+                Open a Specific View
+              </a>
+            </li>
+          
+            <li class="anchor">
               <a title="Content Sharing with AppFriends" href="#content-sharing-with-appfriends">
                 Content Sharing with AppFriends
               </a>
@@ -222,12 +228,6 @@
             <li class="anchor">
               <a title="Private Group Chat" href="#private-group-chat">
                 Private Group Chat
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="Post User Activities" href="#post-user-activities">
-                Post User Activities
               </a>
             </li>
           
@@ -364,9 +364,9 @@
 <p><strong>Objective-C</strong></p>
 <div class="code"><pre><span></span><span class="p">[[</span><span class="n">HCWidget</span> <span class="n">sharedWidget</span><span class="p">]</span><span class="nl">loginWithUserInfo</span><span class="p">:</span><span class="l">@{</span>
                                             <span class="nl">kHCUserName</span><span class="p">:</span> <span class="s">@&quot;username&quot;</span><span class="p">,</span>
-                                            <span class="nl">kHCUserAvatar</span><span class="p">:</span> <span class="s">@&quot;https://cdn0.iconfinder.com/data/icons/iconshock_guys/128/andrew.png&quot;</span><span class="p">,</span>
+                                            <span class="nl">kHCUserAvatar</span><span class="p">:</span> <span class="s">@&quot;https://cdn0.iconfinder.com/data/icons/iconshock_guys/128/andrew.png&quot;</span><span class="p">,</span>    <span class="c1">// optional</span>
                                             <span class="nl">kHCUserAppID</span><span class="p">:</span> <span class="s">@&quot;3000&quot;</span><span class="p">,</span>
-                                            <span class="nl">kHCUserEmail</span><span class="p">:</span> <span class="s">@&quot;test@gmail.com&quot;</span>
+                                            <span class="nl">kHCUserEmail</span><span class="p">:</span> <span class="s">@&quot;test@gmail.com&quot;</span>    <span class="c1">// optional</span>
                                             <span class="l">}</span>
                                <span class="nl">completion</span><span class="p">:</span><span class="nb">nil</span><span class="p">];</span>
 </pre></div>
@@ -375,9 +375,10 @@
 <p><strong>Swift</strong></p>
 <div class="code"><pre><span></span><span class="n">HCWidget</span><span class="p">.</span><span class="n">sharedWidget</span><span class="p">().</span><span class="n">loginWithUserInfo</span> <span class="p">(</span>
                     <span class="p">[</span> <span class="nl">kHCUserName</span><span class="p">:</span> <span class="s">&quot;username&quot;</span><span class="p">,</span>
-                      <span class="nl">kHCUserAvatar</span><span class="p">:</span> <span class="s">&quot;https://cdn0.iconfinder.com/data/icons/iconshock_guys/128/andrew.png&quot;</span><span class="p">,</span>
+                      <span class="nl">kHCUserAvatar</span><span class="p">:</span> <span class="s">&quot;https://cdn0.iconfinder.com/data/icons/iconshock_guys/128/andrew.png&quot;</span><span class="p">,</span>    <span class="c1">// optional</span>
                       <span class="nl">kHCUserAppID</span><span class="p">:</span> <span class="s">@&quot;3000&quot;</span><span class="p">,</span>
-                      <span class="nl">kHCUserEmail</span><span class="p">:</span> <span class="s">&quot;test@gmail.com&quot;</span> <span class="p">])</span> <span class="p">{</span> <span class="p">(</span><span class="n">success</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+                      <span class="nl">kHCUserEmail</span><span class="p">:</span> <span class="s">&quot;test@gmail.com&quot;</span>     <span class="c1">// optional</span>
+                    <span class="p">])</span> <span class="p">{</span> <span class="p">(</span><span class="n">success</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
 
                    <span class="p">}</span>
 </pre></div>
@@ -451,6 +452,10 @@
 </pre></div>
 
 
+<h3 id="status-bar">Status Bar</h3>
+<p>AppFriends widget UI will try hide the status bar while the widget is being presented. This will give the maximum layout for your users. To allow this behavior, you need to allow view controller based status bar in the plist:</p>
+<p><img alt="Screenshot" src="../images/statusbar.png" /></p>
+<p><em>Above: plist change to allow status bar adjustment</em></p>
 <h2 id="show-the-widget-on-your-app">Show the Widget on your App</h2>
 <p>After the initialization is finished. You can now show the widget on the views in your App by calling:</p>
 <div class="code"><pre><span></span>+ (void)showSocialWidgetOnViewController:(UIViewController *)viewController
@@ -461,6 +466,30 @@
 
 
 <p>The <em>viewController</em> parameter is the <code>UIViewController</code>, which is presenting the widget. We recommand showing the widget in <code>viewDidAppear</code> method of your view controller. For detail info on this method, please go to <a href="../ios_class/Classes/HCWidget.html#//api/name/showSocialWidgetOnViewController:viewControllerPath:disableScreenshot:completion:">class document</a>.  </p>
+<h2 id="open-a-specific-view">Open a Specific View</h2>
+<p>If you want to open a specific view of the widget, you can do that by using our API. </p>
+<h4 id="objective-c">Objective-C</h4>
+<div class="code"><pre><span></span><span class="c1">// open entire widget and go the user&#39;s dialog list</span>
+<span class="p">[</span><span class="n">HCWidget</span> <span class="nl">openView</span><span class="p">:</span><span class="s">@&quot;/dialogs/list&quot;</span> <span class="nl">completion</span><span class="p">:</span><span class="nb">nil</span><span class="p">];</span> 
+
+<span class="c1">// open the user&#39;s dialog list alone</span>
+<span class="p">[</span><span class="n">HCWidget</span> <span class="nl">openSingleView</span><span class="p">:</span><span class="s">@&quot;/dialogs/list&quot;</span> <span class="nl">completion</span><span class="p">:</span><span class="nb">nil</span><span class="p">];</span> 
+</pre></div>
+
+
+<h4 id="swift">Swift</h4>
+<div class="code"><pre><span></span><span class="c1">// open entire widget and go the user&#39;s dialog list</span>
+<span class="n">HCWidget</span><span class="p">.</span><span class="n">sharedWidget</span><span class="p">().</span><span class="n">openView</span><span class="p">(</span><span class="s">&quot;/dialogs/list&quot;</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">success</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+    <span class="c1">// callback</span>
+<span class="p">}</span>
+
+<span class="c1">// open the user&#39;s dialog list alone</span>
+<span class="n">HCWidget</span><span class="p">.</span><span class="n">sharedWidget</span><span class="p">().</span><span class="n">openSingleView</span><span class="p">:(</span><span class="s">&quot;/dialogs/list&quot;</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">success</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+    <span class="c1">// callback</span>
+<span class="p">}</span>
+</pre></div>
+
+
 <h2 id="content-sharing-with-appfriends">Content Sharing with AppFriends</h2>
 <p>A great feature with AppFriends is being able to share your app content within your app among your users or to outside the app in places like Facebook, Twitter, Instagram, SMS and so on. To utilize this feature, you need assign a <strong>path</strong> to each of your page (app screen). You can also use additional <strong>parameters</strong> to help your app with navigation.</p>
 <h3 id="path-and-parameters">Path and Parameters</h3>
@@ -497,9 +526,6 @@ and
 <p>By default, we create a global public chat channel for all of your users to chat. You can create, edit and remove public chat channels. You can either do it from the AppFriends admin panel or via our <a href="../server/index.html">API</a>.</p>
 <h2 id="private-group-chat">Private Group Chat</h2>
 <p>You can create private chat group using the <code>HCWidget</code> methods. In each private chat group, you can only include the users that you want to invite, and the chat group will not be visible to others. Users can leave the group if they want to. Please see <a href="../ios_class/Classes/HCWidget.html#//api/name/createGroup:lookupKey:withUserIDs:complete:">class document</a>.</p>
-<h2 id="post-user-activities">Post User Activities</h2>
-<p>User activity feed is another powerful feature in AppFriends. User's activities will be posted in their user profile in the widget. We are already posting some activities from the widget by default. You can post activities generated inside your app can also be posted by call activity method inside <code>HCWidget</code>. Click <a href="../server/ios_class/Classes/HCWidget.html#//api/name/createActivityWithLeftImageURL:leftImageCode:title:path:params:complete:">here</a> for detail.</p>
-<p>Posting activity is a great way to let other users to find out what's going on inside the app. You can also create <strong>trending</strong> activities by using our <a href="../server/index.html">server api</a>. Trending activities are events in your app that you believe is hot or want to grab more attention. For example, you can post a trending activity with "There are 500 users watching 'cute cat' video" and a path with parameter which can navigate more users to the video when the activity is clicked.</p>
           <aside class="copyright" role="note">
             
               Copyright (c) 2016 Hacknocraft &ndash;

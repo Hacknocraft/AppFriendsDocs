@@ -282,7 +282,7 @@ Authorization: Bearer &lt;signature token&gt;
 <div class="code"><pre><span></span><span class="c1">//signature creation</span>
 <span class="nx">HMACSHA256</span><span class="p">(</span>
   <span class="nx">base64UrlEncode</span><span class="p">(</span><span class="nx">JWT</span> <span class="nx">header</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;.&quot;</span> <span class="o">+</span>
-  <span class="nx">base64UrlEncode</span><span class="p">(</span><span class="nx">timestamp</span><span class="p">),</span>
+  <span class="nx">base64UrlEncode</span><span class="p">(</span><span class="nx">payload</span><span class="p">),</span>
   <span class="o">&lt;</span><span class="nx">your</span> <span class="nx">secret</span> <span class="nx">here</span><span class="o">&gt;</span>
 <span class="p">)</span>
 </pre></div>
@@ -302,8 +302,16 @@ Authorization: Bearer &lt;signature token&gt;
 </pre></div>
 
 
-<h3 id="request-payload">Request Payload</h3>
-<p>The request payload needs to be part of the signature. It is JSON string of the data that your request is trying to send. If it's a GET request, and you have no extra payload, simply put an empty json object as the payload here. <code>{}</code></p>
+<h3 id="jwt-payload">JWT Payload</h3>
+<p>Put timestamp (seconds) in your payout</p>
+<div class="code"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;timestamp&quot;</span><span class="p">:</span> <span class="s2">&quot;1462117651&quot;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p><img alt="Screenshot" src="../images/jwt.png" /></p>
+<p><em>Above: JWT example on <a href="https://jwt.io/">jwt.io</a></em></p>
 <h2 id="user-authentication">User Authentication</h2>
 <h3 id="create-a-user">Create a User</h3>
 <p>Users on AppFriends are simply mirror images or copies of users in your app. There are two ways to create users on AppFriends, <strong>sign up user in the app</strong> or <strong>batch create users using the admin api</strong>. To create a user, you need to provide the user's id and user name. There are other optional properties of the user you can provide, such as email, avatar(recommend) and real name:</p>
