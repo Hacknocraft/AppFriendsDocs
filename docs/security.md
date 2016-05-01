@@ -38,7 +38,7 @@ The signature is creation is using JSON Web Tokens [(JWT)](https://jwt.io/), whi
 //signature creation
 HMACSHA256(
   base64UrlEncode(JWT header) + "." +
-  base64UrlEncode(timestamp),
+  base64UrlEncode(payload),
   <your secret here>
 )
 ```
@@ -55,9 +55,17 @@ JWT header is not your request http header. It is used just to sign the request.
   "typ": "JWT"
 }
 ```
+### JWT Payload
+Put timestamp (seconds) in your payout
+```json
+{
+  "timestamp": "1462117651"
+}
+```
 
-### Request Payload
-The request payload needs to be part of the signature. It is JSON string of the data that your request is trying to send. If it's a GET request, and you have no extra payload, simply put an empty json object as the payload here. `{}`
+![Screenshot](images/jwt.png)
+
+*Above: JWT example on [jwt.io](https://jwt.io/)*
 
 ## User Authentication
 ### Create a User

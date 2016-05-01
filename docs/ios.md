@@ -123,6 +123,12 @@ AppFriends UI can be customize to fit the style of your own app. To customize th
 	// Setting the navigation bar icon highlight color to red
 	[[HCWidget sharedWidget]setNavBarIconHighlightColor:UIColor.redColor];
 
+### Status Bar
+AppFriends widget UI will try hide the status bar while the widget is being presented. This will give the maximum layout for your users. To allow this behavior, you need to allow view controller based status bar in the plist:
+
+![Screenshot](images/statusbar.png)
+
+*Above: plist change to allow status bar adjustment*
 
 ## Show the Widget on your App
 After the initialization is finished. You can now show the widget on the views in your App by calling:

@@ -65,6 +65,9 @@ Notification view | /notifications | open the notifications view
 Screen sharing view | /screen_share | open the screenshot sharing window
 
 ## REST API's
+
+Base URL: **https://appfriends-staging-api.hacknocraft.com/api/v3/**
+
 If you use our out of box UI, all functionalities are enabled and ready to use by default, but if you want to make a customized UI, we certainly facilitate that as well. To access and modify data on AppFriends, you can ultilize our REST interface. There are two types of REST API's:
 >1. Application API
 >2. Admin API
