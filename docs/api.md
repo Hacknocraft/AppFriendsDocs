@@ -694,11 +694,80 @@ Endpoint      | Method        | API Type      | Description
 ------------- | ------------- | ------------- | -------------
 `/users/batch_create`   | POST           | Admin   | create multiple users
 
+#### Request Body
+```javascript
+// array of users
+[
+  {
+    "id": "1235",
+    "user_name": "kejia",
+    "avatar": "https://avatar.appfriends.me/kejia.png"
+    "email": "kejia@gmail.com"
+  },
+  {
+    "id": "1236",
+    "user_name": "shuwei",
+    "avatar": "https://avatar.appfriends.me/shuwei.png"
+  },
+  {
+    "id": "1237",
+    "user_name": "mike",
+    "avatar": "https://avatar.appfriends.me/mike.png"
+  },
+  ...
+ ]
+
+```
+
 ### 2. Export and import social graph
+**Import social graph**
+
+Endpoint      | Method        | API Type      | Description
+------------- | ------------- | ------------- | -------------
+`/social_graph`   | POST          | Admin   | export social graph
+
+#### Request Body
+```javascript
+// id is the user, and friend id is the friend of the user
+[
+  {
+    "id": "16",
+    "followers": ["11","12" ...],
+    "followings": ["11, "12" ...]
+  },
+  {
+    "id": "19",
+    "followers": ["11","12" ...],
+    "followings": ["11, "12" ...]
+  },
+  ....
+]
+
+```
+**Export social graph**
+
 Endpoint      | Method        | API Type      | Description
 ------------- | ------------- | ------------- | -------------
 `/social_graph`   | GET           | Admin   | export social graph
-`/social_graph`   | POST          | Admin   | export social graph
+
+#### Response Body
+```javascript
+// id is the user, and friend id is the friend of the user
+[
+  {
+    "id": "16",
+    "followers": ["11","12" ...],
+    "followings": ["11, "12" ...]
+  },
+  {
+    "id": "19",
+    "followers": ["11","12" ...],
+    "followings": ["11, "12" ...]
+  },
+  ....
+]
+
+```
 
 ### 3. Update user token
 Endpoint      | Method        | API Type      | Description

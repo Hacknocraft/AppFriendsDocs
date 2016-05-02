@@ -1550,7 +1550,69 @@
 </tr>
 </tbody>
 </table>
+<h4 id="request-body">Request Body</h4>
+<div class="code"><pre><span></span><span class="c1">// array of users</span>
+<span class="p">[</span>
+  <span class="p">{</span>
+    <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;1235&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;kejia&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;https://avatar.appfriends.me/kejia.png&quot;</span>
+    <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="s2">&quot;kejia@gmail.com&quot;</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;1236&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;shuwei&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;https://avatar.appfriends.me/shuwei.png&quot;</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;1237&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;mike&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;https://avatar.appfriends.me/mike.png&quot;</span>
+  <span class="p">},</span>
+  <span class="p">...</span>
+ <span class="p">]</span>
+</pre></div>
+
+
 <h3 id="2-export-and-import-social-graph">2. Export and import social graph</h3>
+<p><strong>Import social graph</strong></p>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Method</th>
+<th>API Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/social_graph</code></td>
+<td>POST</td>
+<td>Admin</td>
+<td>export social graph</td>
+</tr>
+</tbody>
+</table>
+<h4 id="request-body_1">Request Body</h4>
+<div class="code"><pre><span></span><span class="c1">// id is the user, and friend id is the friend of the user</span>
+<span class="p">[</span>
+  <span class="p">{</span>
+    <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;16&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;followers&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;11&quot;</span><span class="p">,</span><span class="s2">&quot;12&quot;</span> <span class="p">...],</span>
+    <span class="s2">&quot;followings&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;11, &quot;</span><span class="mi">12</span><span class="s2">&quot; ...]</span>
+<span class="s2">  },</span>
+<span class="s2">  {</span>
+<span class="s2">    &quot;</span><span class="nx">id</span><span class="s2">&quot;: &quot;</span><span class="mi">19</span><span class="s2">&quot;,</span>
+<span class="s2">    &quot;</span><span class="nx">followers</span><span class="s2">&quot;: [&quot;</span><span class="mi">11</span><span class="s2">&quot;,&quot;</span><span class="mi">12</span><span class="s2">&quot; ...],</span>
+<span class="s2">    &quot;</span><span class="nx">followings</span><span class="s2">&quot;: [&quot;</span><span class="mi">11</span><span class="p">,</span> <span class="s2">&quot;12&quot;</span> <span class="p">...]</span>
+  <span class="p">},</span>
+  <span class="p">....</span>
+<span class="p">]</span>
+</pre></div>
+
+
+<p><strong>Export social graph</strong></p>
 <table>
 <thead>
 <tr>
@@ -1567,14 +1629,26 @@
 <td>Admin</td>
 <td>export social graph</td>
 </tr>
-<tr>
-<td><code>/social_graph</code></td>
-<td>POST</td>
-<td>Admin</td>
-<td>export social graph</td>
-</tr>
 </tbody>
 </table>
+<h4 id="response-body">Response Body</h4>
+<div class="code"><pre><span></span><span class="c1">// id is the user, and friend id is the friend of the user</span>
+<span class="p">[</span>
+  <span class="p">{</span>
+    <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;16&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;followers&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;11&quot;</span><span class="p">,</span><span class="s2">&quot;12&quot;</span> <span class="p">...],</span>
+    <span class="s2">&quot;followings&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;11, &quot;</span><span class="mi">12</span><span class="s2">&quot; ...]</span>
+<span class="s2">  },</span>
+<span class="s2">  {</span>
+<span class="s2">    &quot;</span><span class="nx">id</span><span class="s2">&quot;: &quot;</span><span class="mi">19</span><span class="s2">&quot;,</span>
+<span class="s2">    &quot;</span><span class="nx">followers</span><span class="s2">&quot;: [&quot;</span><span class="mi">11</span><span class="s2">&quot;,&quot;</span><span class="mi">12</span><span class="s2">&quot; ...],</span>
+<span class="s2">    &quot;</span><span class="nx">followings</span><span class="s2">&quot;: [&quot;</span><span class="mi">11</span><span class="p">,</span> <span class="s2">&quot;12&quot;</span> <span class="p">...]</span>
+  <span class="p">},</span>
+  <span class="p">....</span>
+<span class="p">]</span>
+</pre></div>
+
+
 <h3 id="3-update-user-token">3. Update user token</h3>
 <table>
 <thead>
