@@ -1113,7 +1113,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="3-get-online-users-in-a-chat-channel">3. Get online users in a chat channel</h3>
+<h3 id="4-get-online-users-in-a-chat-channel">4. Get online users in a chat channel</h3>
 <table>
 <thead>
 <tr>
@@ -1149,7 +1149,7 @@
 
 
 <hr />
-<h3 id="3-get-online-user-count-for-a-channel">3. Get online user count for a channel</h3>
+<h3 id="5-get-online-user-count-for-a-channel">5. Get online user count for a channel</h3>
 <table>
 <thead>
 <tr>
@@ -1177,7 +1177,7 @@
 
 
 <hr />
-<h3 id="4-get-online-user-count-for-all-the-channels">4. Get online user count for all the channels</h3>
+<h3 id="6-get-online-user-count-for-all-the-channels">6. Get online user count for all the channels</h3>
 <table>
 <thead>
 <tr>
@@ -1211,7 +1211,7 @@
 
 
 <hr />
-<h3 id="4-create-a-chat-channel">4. Create a chat channel</h3>
+<h3 id="7-create-a-chat-channel">7. Create a chat channel</h3>
 <table>
 <thead>
 <tr>
@@ -1258,7 +1258,7 @@
 
 
 <hr />
-<h3 id="5-modify-a-chat-channel">5. Modify a chat channel</h3>
+<h3 id="8-modify-a-chat-channel">8. Modify a chat channel</h3>
 <table>
 <thead>
 <tr>
@@ -1287,11 +1287,33 @@
 
 
 <hr />
-<h3 id="6-enable-notification">6. Enable Notification</h3>
-<p><code>/chat_channels/[:id]/enable_notification</code> | PUT | Application | enable the notification</p>
-<h3 id="7-disable-notification">7. Disable Notification</h3>
-<p><code>/chat_channels/[:id]/disable_notification</code> | PUT | Application | disable the notification</p>
-<h3 id="8-delete-a-chat-channel">8. Delete a chat channel</h3>
+<h3 id="9-enabledisable-notification">9. Enable/Disable Notification</h3>
+<p>Disable notification from a channel for a user. When notification is disabled, the user will no longer receive push when he gets a mention or reply in a channel.</p>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Method</th>
+<th>API Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/chat_channels/[:id]/enable_notification</code></td>
+<td>PUT</td>
+<td>Application</td>
+<td>enable the notification</td>
+</tr>
+<tr>
+<td><code>/chat_channels/[:id]/disable_notification</code></td>
+<td>PUT</td>
+<td>Application</td>
+<td>disable the notification</td>
+</tr>
+</tbody>
+</table>
+<h3 id="10-delete-a-chat-channel">10. Delete a chat channel</h3>
 <p><code>/chat_channels/[:id]</code> | DELETE | Application | delete a chat channel</p>
 <h2 id="messaging">Messaging</h2>
 <h3 id="1-sending-a-message">1. Sending a message</h3>

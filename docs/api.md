@@ -469,7 +469,7 @@ Endpoint      | Method        | API Type      | Description
 `/chat_channels/[:id]/favorite` | PUT | Application | favorite a chat channel for the current user
 `/chat_channels/[:id]/unfavorite` | PUT | Application | unfavorite a chat channel for the current user
 
-### 3. Get online users in a chat channel
+### 4. Get online users in a chat channel
 Endpoint      | Method        | API Type      | Description     
 ------------- | ------------- | ------------- | ------------- 
 `/chat_channels/[:id]/users` | GET | Application | get the current online users in the chat channel
@@ -491,7 +491,7 @@ Endpoint      | Method        | API Type      | Description
 ```
 ------
 
-### 3. Get online user count for a channel
+### 5. Get online user count for a channel
 Endpoint      | Method        | API Type      | Description     
 ------------- | ------------- | ------------- | ------------- 
 `/chat_channels/[:id]/users/count` | GET | Application | get the count of the online users in the chat channel
@@ -505,7 +505,7 @@ Endpoint      | Method        | API Type      | Description
 ```
 ------
 
-### 4. Get online user count for all the channels
+### 6. Get online user count for all the channels
 Endpoint      | Method        | API Type      | Description     
 ------------- | ------------- | ------------- | ------------- 
 `/chat_channels/user_counts` | GET | Application | get the count of the online users in all of the chat channels
@@ -525,7 +525,7 @@ Endpoint      | Method        | API Type      | Description
 ```
 ------
 
-### 4. Create a chat channel
+### 7. Create a chat channel
 Endpoint      | Method        | API Type      | Description     
 ------------- | ------------- | ------------- | ------------- 
 `/chat_channels` | POST | Application | create a chat channel
@@ -557,7 +557,7 @@ Endpoint      | Method        | API Type      | Description
 ```
 ------
 
-### 5. Modify a chat channel
+### 8. Modify a chat channel
 Endpoint      | Method        | API Type      | Description     
 ------------- | ------------- | ------------- | ------------- 
 `/chat_channels/[:id]` | PUT | Application | modify a chat channel
@@ -572,13 +572,15 @@ Endpoint      | Method        | API Type      | Description
 ```
 ------
 
-### 6. Enable Notification
-`/chat_channels/[:id]/enable_notification` | PUT | Application | enable the notification
+### 9. Enable/Disable Notification
+Disable notification from a channel for a user. When notification is disabled, the user will no longer receive push when he gets a mention or reply in a channel.
 
-### 7. Disable Notification
+Endpoint      | Method        | API Type      | Description     
+------------- | ------------- | ------------- | ------------- 
+`/chat_channels/[:id]/enable_notification` | PUT | Application | enable the notification
 `/chat_channels/[:id]/disable_notification` | PUT | Application | disable the notification
 
-### 8. Delete a chat channel
+### 10. Delete a chat channel
 `/chat_channels/[:id]` | DELETE | Application | delete a chat channel
 
 
