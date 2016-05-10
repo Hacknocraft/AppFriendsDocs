@@ -47,6 +47,8 @@ HCWidget.openSingleView:("/users/haowang/profile")
 
 ### AppFriends Widget Views and Their URLs
 
+If you use AppFriends provided UI, you can use these following URL path to navigate directly to certain views.
+
 Destination            | URL           | Description
 ---------------------- | ------------- | -------------
 User profile page | /users/[:id]/profile | open the user's profile page. The id provided here is the user's id in your app.
@@ -58,6 +60,7 @@ User followings list view | /users/[:id]/followings | open the view that lists t
 User friends view | /users/[:id]/friends | open the user's friends list view. The id provided here is the user's id in your app. 
 Private chat page | /users/[:id]/chat | open the private chat with the user. The id provided here is the user's id in your app.
 Group chat page | /chat_groups/[:groupid] | open the group chat. The id provided is the group id.
+Chat Channel List | /chat_channels/list | open the channel list 
 Chat Channel | /chat_channels/[:channelid] | open the channel. The id provided is the channel id.
 Dialog list | /dialogs/list | open dialogs list
 Message thread view | /chat_channels/[:channelid]/messages/[:messageid] | open the message threading view which contains the message. Provide both channel id and message id.
@@ -66,7 +69,7 @@ Screen sharing view | /screen_share | open the screenshot sharing window
 
 ## REST API's
 
-Base URL: **https://appfriends-staging-api.hacknocraft.com/api/v3/**
+Base URL: **https://appfriends-api.hacknocraft.com/api/v3/**
 
 If you use our out of box UI, all functionalities are enabled and ready to use by default, but if you want to make a customized UI, we certainly facilitate that as well. To access and modify data on AppFriends, you can ultilize our REST interface. There are two types of REST API's:
 >1. Application API
@@ -425,8 +428,8 @@ Endpoint      | Method        | API Type      | Description
 ```
 ------
 
-## Public Chat Channels
-Public chat channels are open to any user. 
+## Chat Channels
+Chat channels are open to any user. 
 ### 1. Get all chat channels
 Endpoint      | Method        | API Type      | Description     
 ------------- | ------------- | ------------- | ------------- 
@@ -434,27 +437,29 @@ Endpoint      | Method        | API Type      | Description
 
 #### Response
 ```javascript
-// array of activities;
-[
-	{
-		"id": int, 							// chat channel id
-		"name": string,						// chat channel name
-		"title": string, 					// title of the activity
-		"create_time": int,					// create time of the channel
-		"cover_image_url": string,			// the cover image of the channel
-		"favorited": boolean,				// show if the user has favorited this channel
-		"favorite_count": int,				// number of people who favorited the channel
-		"online_user_count": int,			// number of current online users
-		"timestamp": int,					// the time when the activity is created
-		"additional_data": json object,		// additional data attach to channel
-		"notification_enabled": boolean,	// time stamp of the expiry time of this trending activity
-		"enabled": boolean,					// indicates if the channel is enabled or not
-	},
-	{
-	...
-	},
-	...
-]
+// paged chat channels
+{
+	"chat_channels": [
+							{
+								"id": int, 							// chat channel id
+								"name": string,						// chat channel name
+								"title": string, 					// title of the activity
+								"create_time": int,					// create time of the channel
+								"cover_image_url": string,			// the cover image of the channel
+								"favorited": boolean,				// show if the user has favorited this channel
+								"favorite_count": int,				// number of people who favorited the channel
+								"online_user_count": int,			// number of current online users
+								"timestamp": int,					// the time when the activity is created
+								"additional_data": json object,		// additional data attach to channel
+								"notification_enabled": boolean,	// time stamp of the expiry time of this trending activity
+								"enabled": boolean,					// indicates if the channel is enabled or not
+							},
+							{
+							...
+							},
+							...
+						]
+}
 ```
 ------
 
@@ -567,7 +572,13 @@ Endpoint      | Method        | API Type      | Description
 ```
 ------
 
-### 6. Delete a chat channel
+### 6. Enable Notification
+`/chat_channels/[:id]/enable_notification` | PUT | Application | enable the notification
+
+### 7. Disable Notification
+`/chat_channels/[:id]/disable_notification` | PUT | Application | disable the notification
+
+### 8. Delete a chat channel
 `/chat_channels/[:id]` | DELETE | Application | delete a chat channel
 
 
@@ -805,4 +816,5 @@ Error Code | Description
 406			 | your account is logged in on another device
 502			 | under maintenance
 503 		 | verify new device failed 
+504        | internet not available
 

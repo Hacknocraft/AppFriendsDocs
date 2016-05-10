@@ -238,8 +238,8 @@
             </li>
           
             <li class="anchor">
-              <a title="Public Chat Channels" href="#public-chat-channels">
-                Public Chat Channels
+              <a title="Chat Channels" href="#chat-channels">
+                Chat Channels
               </a>
             </li>
           
@@ -366,6 +366,7 @@
 
 
 <h3 id="appfriends-widget-views-and-their-urls">AppFriends Widget Views and Their URLs</h3>
+<p>If you use AppFriends provided UI, you can use these following URL path to navigate directly to certain views.</p>
 <table>
 <thead>
 <tr>
@@ -421,6 +422,11 @@
 <td>open the group chat. The id provided is the group id.</td>
 </tr>
 <tr>
+<td>Chat Channel List</td>
+<td>/chat_channels/list</td>
+<td>open the channel list</td>
+</tr>
+<tr>
 <td>Chat Channel</td>
 <td>/chat_channels/[:channelid]</td>
 <td>open the channel. The id provided is the channel id.</td>
@@ -448,7 +454,7 @@
 </tbody>
 </table>
 <h2 id="rest-apis">REST API's</h2>
-<p>Base URL: <strong>https://appfriends-staging-api.hacknocraft.com/api/v3/</strong></p>
+<p>Base URL: <strong>https://appfriends-api.hacknocraft.com/api/v3/</strong></p>
 <p>If you use our out of box UI, all functionalities are enabled and ready to use by default, but if you want to make a customized UI, we certainly facilitate that as well. To access and modify data on AppFriends, you can ultilize our REST interface. There are two types of REST API's:</p>
 <blockquote>
 <ol>
@@ -1033,8 +1039,8 @@
 
 
 <hr />
-<h2 id="public-chat-channels">Public Chat Channels</h2>
-<p>Public chat channels are open to any user. </p>
+<h2 id="chat-channels">Chat Channels</h2>
+<p>Chat channels are open to any user. </p>
 <h3 id="1-get-all-chat-channels">1. Get all chat channels</h3>
 <table>
 <thead>
@@ -1055,27 +1061,29 @@
 </tbody>
 </table>
 <h4 id="response_10">Response</h4>
-<div class="code"><pre><span></span><span class="c1">// array of activities;</span>
-<span class="p">[</span>
-    <span class="p">{</span>
-        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span>                          <span class="c1">// chat channel id</span>
-        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>                     <span class="c1">// chat channel name</span>
-        <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>                    <span class="c1">// title of the activity</span>
-        <span class="s2">&quot;create_time&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span>                 <span class="c1">// create time of the channel</span>
-        <span class="s2">&quot;cover_image_url&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>          <span class="c1">// the cover image of the channel</span>
-        <span class="s2">&quot;favorited&quot;</span><span class="o">:</span> <span class="kr">boolean</span><span class="p">,</span>               <span class="c1">// show if the user has favorited this channel</span>
-        <span class="s2">&quot;favorite_count&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span>              <span class="c1">// number of people who favorited the channel</span>
-        <span class="s2">&quot;online_user_count&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span>           <span class="c1">// number of current online users</span>
-        <span class="s2">&quot;timestamp&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span>                   <span class="c1">// the time when the activity is created</span>
-        <span class="s2">&quot;additional_data&quot;</span><span class="o">:</span> <span class="nx">json</span> <span class="nx">object</span><span class="p">,</span>     <span class="c1">// additional data attach to channel</span>
-        <span class="s2">&quot;notification_enabled&quot;</span><span class="o">:</span> <span class="kr">boolean</span><span class="p">,</span>    <span class="c1">// time stamp of the expiry time of this trending activity</span>
-        <span class="s2">&quot;enabled&quot;</span><span class="o">:</span> <span class="kr">boolean</span><span class="p">,</span>                 <span class="c1">// indicates if the channel is enabled or not</span>
-    <span class="p">},</span>
-    <span class="p">{</span>
-    <span class="p">...</span>
-    <span class="p">},</span>
-    <span class="p">...</span>
-<span class="p">]</span>
+<div class="code"><pre><span></span><span class="c1">// paged chat channels</span>
+<span class="p">{</span>
+    <span class="s2">&quot;chat_channels&quot;</span><span class="o">:</span> <span class="p">[</span>
+                            <span class="p">{</span>
+                                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span>                          <span class="c1">// chat channel id</span>
+                                <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>                     <span class="c1">// chat channel name</span>
+                                <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>                    <span class="c1">// title of the activity</span>
+                                <span class="s2">&quot;create_time&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span>                 <span class="c1">// create time of the channel</span>
+                                <span class="s2">&quot;cover_image_url&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>          <span class="c1">// the cover image of the channel</span>
+                                <span class="s2">&quot;favorited&quot;</span><span class="o">:</span> <span class="kr">boolean</span><span class="p">,</span>               <span class="c1">// show if the user has favorited this channel</span>
+                                <span class="s2">&quot;favorite_count&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span>              <span class="c1">// number of people who favorited the channel</span>
+                                <span class="s2">&quot;online_user_count&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span>           <span class="c1">// number of current online users</span>
+                                <span class="s2">&quot;timestamp&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span>                   <span class="c1">// the time when the activity is created</span>
+                                <span class="s2">&quot;additional_data&quot;</span><span class="o">:</span> <span class="nx">json</span> <span class="nx">object</span><span class="p">,</span>     <span class="c1">// additional data attach to channel</span>
+                                <span class="s2">&quot;notification_enabled&quot;</span><span class="o">:</span> <span class="kr">boolean</span><span class="p">,</span>    <span class="c1">// time stamp of the expiry time of this trending activity</span>
+                                <span class="s2">&quot;enabled&quot;</span><span class="o">:</span> <span class="kr">boolean</span><span class="p">,</span>                 <span class="c1">// indicates if the channel is enabled or not</span>
+                            <span class="p">},</span>
+                            <span class="p">{</span>
+                            <span class="p">...</span>
+                            <span class="p">},</span>
+                            <span class="p">...</span>
+                        <span class="p">]</span>
+<span class="p">}</span>
 </pre></div>
 
 
@@ -1279,7 +1287,11 @@
 
 
 <hr />
-<h3 id="6-delete-a-chat-channel">6. Delete a chat channel</h3>
+<h3 id="6-enable-notification">6. Enable Notification</h3>
+<p><code>/chat_channels/[:id]/enable_notification</code> | PUT | Application | enable the notification</p>
+<h3 id="7-disable-notification">7. Disable Notification</h3>
+<p><code>/chat_channels/[:id]/disable_notification</code> | PUT | Application | disable the notification</p>
+<h3 id="8-delete-a-chat-channel">8. Delete a chat channel</h3>
 <p><code>/chat_channels/[:id]</code> | DELETE | Application | delete a chat channel</p>
 <h2 id="messaging">Messaging</h2>
 <h3 id="1-sending-a-message">1. Sending a message</h3>
@@ -1746,6 +1758,10 @@ Sample error json:</p>
 <tr>
 <td>503</td>
 <td>verify new device failed</td>
+</tr>
+<tr>
+<td>504</td>
+<td>internet not available</td>
 </tr>
 </tbody>
 </table>

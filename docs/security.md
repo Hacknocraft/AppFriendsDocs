@@ -60,6 +60,7 @@ Put timestamp (seconds) in your payout
 ```json
 {
   "timestamp": "1462117651"
+  "token": 
 }
 ```
 
