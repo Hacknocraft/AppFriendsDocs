@@ -145,16 +145,14 @@ Endpoint      | Method        | API Type      | Description
 }
 ```
 
-## Followers and Friends
-
-### 1. Get a user's followers
-Endpoint      | Method        | API Type      | Description      
+### 3. Online Users
+Endpoint      | Method        | API Type      | Description
 ------------- | ------------- | ------------- | -------------
-`/users/[:id]/followers`   | GET | Application | Get all the followers of the user.
+`/users/online`   | GET           | Application   | Get the users who are currently online
 
 #### Response
 ```javascript
-// array of followers
+// array of online users
 [
 	{
 	    "id": string, 				// user id provided by hosting app 
@@ -168,6 +166,46 @@ Endpoint      | Method        | API Type      | Description
 	}
 	...
 ]
+```
+
+### 3. Online Users
+Endpoint      | Method        | API Type      | Description
+------------- | ------------- | ------------- | -------------
+`/users/online/count`   | GET           | Application   | Get the count of the users who are currently online
+
+
+## Followers and Friends
+
+### 1. Get a user's followers
+Endpoint      | Method        | API Type      | Description      
+------------- | ------------- | ------------- | -------------
+`/users/[:id]/followers`   | GET | Application | Get all the followers of the user.
+
+#### Response
+```javascript
+{
+  "users": [
+    {
+      "id": "782",
+      "user_name": "wshucn7",
+      "avatar": "https://cdn1.iconfinder.com/data/icons/user-pictures/100/male3-128.png"
+    },
+    {
+      "id": "3",
+      "user_name": "haowang",
+      "avatar": "https://robohash.org/3"
+    },
+    ...
+  ],
+  "paging": {
+    "cursors": {
+      "after": 1463167249339,
+      "before": 1463252914178
+    },
+    "next": "https://appfriends-staging-api.hacknocraft.com/api/v3/users/online?limit=25&after=1463167249339",
+    "previous": "https://appfriends-staging-api.hacknocraft.com/api/v3/users/online?limit=25&before=1463252914178"
+  }
+}
 ```
 ------
 
@@ -439,7 +477,10 @@ Endpoint      | Method        | API Type      | Description
 ```javascript
 // paged chat channels
 {
-	"chat_channels": [
+  "total_count": 2,
+  "total_page": 1,
+  "current_page": 1,
+  "chat_channels": [
 							{
 								"id": int, 							// chat channel id
 								"name": string,						// chat channel name
@@ -477,17 +518,22 @@ Endpoint      | Method        | API Type      | Description
 #### Response
 ```javascript
 // array of users
-[
-	{
-	    "id": string, 				// user id 
-	    "user_name": string,		// username
-	    "avatar": string,			// user's avatar if provided
-	},
-	{
+{
+  "total_count": 2,
+  "total_page": 1,
+  "current_page": 1,
+  "users": [
+		{
+		    "id": string, 				// user id 
+		    "user_name": string,		// username
+		    "avatar": string,			// user's avatar if provided
+		},
+		{
+			...
+		},
 		...
-	},
-	...
-]
+	]
+}
 ```
 ------
 
@@ -592,8 +638,50 @@ Endpoint      | Method        | API Type      | Description
 `/users/[:id]/messages` | POST | Application | Send a message to a user
 `/chat_channels/[:id]/messages` | POST | Application | Send a message to a chat channel
 
+#### Request
+```javascript
+{
+	"text": string,						// message content
+	"data": dictionary, 				// custom data
+}
+```
+
 ### 2. Receiving a message
 Messages are received in real time via native callbacks. 
+#### Objective-C
+```objc
+[HCWidget.sharedWidget setReceiveMessageBlock:^(NSDictionary *message) {
+        // handle the message here
+    }];
+```
+
+#### Swift
+```swift
+HCWidget.sharedWidget.setReceiveMessageBlock (
+{ (message) in
+                        
+})
+```
+
+#### Android
+```java
+```
+
+#### Message Format
+``` javascript
+{
+	id: string,
+	timestamp: number, // time when the message was sent, in mSeconds
+	text: string, // message text
+	data: dictionary, // extra data contained in the message
+	dialog_id: string, // the dialog ID 
+	from: {
+		id: string, // sender user id
+	},
+	mentioned: [], // array of mentioned user id's
+	replyingTo: string, // the user id of the user which the message is replyingTo
+}
+```
 
 ## Dialogs
 ### 1. Create a dialog
@@ -741,7 +829,7 @@ Endpoint      | Method        | API Type      | Description
 
 #### Request Body
 ```javascript
-// id is the user, and friend id is the friend of the user
+// id is the user, and followers and followings contains the id's
 [
   {
     "id": "16",

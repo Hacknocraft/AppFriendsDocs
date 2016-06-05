@@ -65,7 +65,7 @@ Before your users can start enjoying AppFriends, they need to have an AppFriends
 	[[HCWidget sharedWidget]loginWithUserInfo:@{
                                                 kHCUserName: @"username",
                                                 kHCUserAvatar: @"https://cdn0.iconfinder.com/data/icons/iconshock_guys/128/andrew.png",    // optional
-                                                kHCUserAppID: @"3000",
+                                                kHCUserID: @"3000",
                                                 kHCUserEmail: @"test@gmail.com"    // optional
                                                 }
                                    completion:nil];
@@ -76,7 +76,7 @@ Before your users can start enjoying AppFriends, they need to have an AppFriends
 	HCWidget.sharedWidget().loginWithUserInfo (
                         [ kHCUserName: "username",
                           kHCUserAvatar: "https://cdn0.iconfinder.com/data/icons/iconshock_guys/128/andrew.png",    // optional
-                          kHCUserAppID: @"3000",
+                          kHCUserID: @"3000",
                           kHCUserEmail: "test@gmail.com"     // optional
                         ]) { (success, error) in
                        
