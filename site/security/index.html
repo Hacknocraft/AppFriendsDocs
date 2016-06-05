@@ -316,19 +316,31 @@ Authorization: Bearer &lt;signature token&gt;
 <h2 id="user-authentication">User Authentication</h2>
 <h3 id="create-a-user">Create a User</h3>
 <p>Users on AppFriends are simply mirror images or copies of users in your app. There are two ways to create users on AppFriends, <strong>sign up user in the app</strong> or <strong>batch create users using the admin api</strong>. To create a user, you need to provide the user's id and user name. There are other optional properties of the user you can provide, such as email, avatar(recommend) and real name:</p>
-<h4 id="signup-user-in-the-app">Signup user in the app</h4>
+<h3 id="sign-up-or-sign-in-user-in-the-app">Sign-up or Sign-in user in the app</h3>
 <p>In your app, call the SDK's login method.</p>
-<h5 id="objective-c">Objective-C</h5>
-<div class="code"><pre><span></span>
+<h4 id="objective-c">Objective-C</h4>
+<div class="code"><pre><span></span><span class="p">[</span><span class="n">HCWidget</span><span class="p">.</span><span class="n">sharedWidget</span> <span class="nl">loginWithUserInfo</span><span class="p">:</span><span class="l">@{</span>
+                       <span class="nl">kHCUserName</span><span class="p">:</span> <span class="s">@&quot;(user name)&quot;</span><span class="p">,</span>
+                       <span class="nl">kHCUserAvatar</span><span class="p">:</span> <span class="s">@&quot;(user avatar url)&quot;</span><span class="p">,</span>
+                       <span class="nl">kHCUserID</span><span class="p">:</span> <span class="s">@&quot;(user id)&quot;</span><span class="p">,</span>
+                       <span class="nl">kHCUserEmail</span><span class="p">:</span> <span class="s">@&quot;(user email)&quot;</span>
+                      <span class="l">}</span> <span class="nl">completion</span><span class="p">:</span><span class="nb">nil</span><span class="p">];</span>
 </pre></div>
 
 
-<h5 id="swift">Swift</h5>
-<div class="code"><pre><span></span>
+<h4 id="swift">Swift</h4>
+<div class="code"><pre><span></span><span class="n">HCWidget</span><span class="p">.</span><span class="n">sharedWidget</span><span class="p">().</span><span class="n">loginWithUserInfo</span><span class="p">(</span>
+                    <span class="p">[</span>
+                            <span class="n">kHCUserName</span><span class="p">:</span> <span class="s">&quot;(user name)&quot;</span><span class="p">,</span>
+                            <span class="n">kHCUserAvatar</span><span class="p">:</span> <span class="s">&quot;(user avatar url)&quot;</span><span class="p">,</span>
+                            <span class="n">kHCUserID</span><span class="p">:</span> <span class="s">&quot;(user id)&quot;</span>
+                    <span class="p">])</span> <span class="p">{</span> <span class="p">(</span><span class="n">success</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+
+                    <span class="p">}</span>
 </pre></div>
 
 
-<h5 id="android">Android</h5>
+<h4 id="android">Android</h4>
 <div class="code"><pre><span></span>
 </pre></div>
 

@@ -557,6 +557,62 @@
 </pre></div>
 
 
+<h3 id="3-online-users">3. Online Users</h3>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Method</th>
+<th>API Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/users/online</code></td>
+<td>GET</td>
+<td>Application</td>
+<td>Get the users who are currently online</td>
+</tr>
+</tbody>
+</table>
+<h4 id="response_3">Response</h4>
+<div class="code"><pre><span></span><span class="c1">// array of online users</span>
+<span class="p">[</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>               <span class="c1">// user id provided by hosting app </span>
+        <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>        <span class="c1">// username</span>
+        <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>           <span class="c1">// user&#39;s avatar if provided</span>
+    <span class="p">},</span> 
+    <span class="p">{</span>
+        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>               
+        <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>        
+        <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>           
+    <span class="p">}</span>
+    <span class="p">...</span>
+<span class="p">]</span>
+</pre></div>
+
+
+<h3 id="3-online-users_1">3. Online Users</h3>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Method</th>
+<th>API Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/users/online/count</code></td>
+<td>GET</td>
+<td>Application</td>
+<td>Get the count of the users who are currently online</td>
+</tr>
+</tbody>
+</table>
 <h2 id="followers-and-friends">Followers and Friends</h2>
 <h3 id="1-get-a-users-followers">1. Get a user's followers</h3>
 <table>
@@ -577,21 +633,30 @@
 </tr>
 </tbody>
 </table>
-<h4 id="response_3">Response</h4>
-<div class="code"><pre><span></span><span class="c1">// array of followers</span>
-<span class="p">[</span>
+<h4 id="response_4">Response</h4>
+<div class="code"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;users&quot;</span><span class="o">:</span> <span class="p">[</span>
     <span class="p">{</span>
-        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>               <span class="c1">// user id provided by hosting app </span>
-        <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>        <span class="c1">// username</span>
-        <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>           <span class="c1">// user&#39;s avatar if provided</span>
-    <span class="p">},</span> 
+      <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;782&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;wshucn7&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;https://cdn1.iconfinder.com/data/icons/user-pictures/100/male3-128.png&quot;</span>
+    <span class="p">},</span>
     <span class="p">{</span>
-        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>               
-        <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>        
-        <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>           
-    <span class="p">}</span>
+      <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;haowang&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;https://robohash.org/3&quot;</span>
+    <span class="p">},</span>
     <span class="p">...</span>
-<span class="p">]</span>
+  <span class="p">],</span>
+  <span class="s2">&quot;paging&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;cursors&quot;</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s2">&quot;after&quot;</span><span class="o">:</span> <span class="mi">1463167249339</span><span class="p">,</span>
+      <span class="s2">&quot;before&quot;</span><span class="o">:</span> <span class="mi">1463252914178</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="s2">&quot;https://appfriends-staging-api.hacknocraft.com/api/v3/users/online?limit=25&amp;after=1463167249339&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;previous&quot;</span><span class="o">:</span> <span class="s2">&quot;https://appfriends-staging-api.hacknocraft.com/api/v3/users/online?limit=25&amp;before=1463252914178&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 
 
@@ -615,7 +680,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="response_4">Response</h4>
+<h4 id="response_5">Response</h4>
 <div class="code"><pre><span></span><span class="c1">// array of users that the current user is following</span>
 <span class="p">[</span>
     <span class="p">{</span>
@@ -711,7 +776,7 @@
 <p class="admonition-title">who are my friends?</p>
 <p>Friends are users who follow each other.</p>
 </div>
-<h4 id="response_5">Response</h4>
+<h4 id="response_6">Response</h4>
 <div class="code"><pre><span></span><span class="c1">// array of users</span>
 <span class="p">[</span>
     <span class="p">{</span>
@@ -804,7 +869,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="response_6">Response</h4>
+<h4 id="response_7">Response</h4>
 <div class="code"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;activity_permission_type&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span>      <span class="c1">// int value which indicates which type of activity sharing permission this user has.</span>
     <span class="s2">&quot;private_messaging_permission_type&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span>   <span class="c1">// int value which indicates which type of private messaging permission this user has </span>
@@ -864,7 +929,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="response_7">Response</h4>
+<h4 id="response_8">Response</h4>
 <div class="code"><pre><span></span><span class="c1">// array of activities;</span>
 <span class="p">[</span>
     <span class="p">{</span>
@@ -906,7 +971,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="response_8">Response</h4>
+<h4 id="response_9">Response</h4>
 <div class="code"><pre><span></span><span class="c1">// array of activities;</span>
 <span class="p">[</span>
     <span class="p">{</span>
@@ -1015,7 +1080,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="response_9">Response</h4>
+<h4 id="response_10">Response</h4>
 <div class="code"><pre><span></span><span class="c1">// array of activities;</span>
 <span class="p">[</span>
     <span class="p">{</span>
@@ -1060,10 +1125,13 @@
 </tr>
 </tbody>
 </table>
-<h4 id="response_10">Response</h4>
+<h4 id="response_11">Response</h4>
 <div class="code"><pre><span></span><span class="c1">// paged chat channels</span>
 <span class="p">{</span>
-    <span class="s2">&quot;chat_channels&quot;</span><span class="o">:</span> <span class="p">[</span>
+  <span class="s2">&quot;total_count&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+  <span class="s2">&quot;total_page&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="s2">&quot;current_page&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="s2">&quot;chat_channels&quot;</span><span class="o">:</span> <span class="p">[</span>
                             <span class="p">{</span>
                                 <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span>                          <span class="c1">// chat channel id</span>
                                 <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>                     <span class="c1">// chat channel name</span>
@@ -1132,19 +1200,24 @@
 </tr>
 </tbody>
 </table>
-<h4 id="response_11">Response</h4>
+<h4 id="response_12">Response</h4>
 <div class="code"><pre><span></span><span class="c1">// array of users</span>
-<span class="p">[</span>
-    <span class="p">{</span>
-        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>               <span class="c1">// user id </span>
-        <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>        <span class="c1">// username</span>
-        <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>           <span class="c1">// user&#39;s avatar if provided</span>
-    <span class="p">},</span>
-    <span class="p">{</span>
+<span class="p">{</span>
+  <span class="s2">&quot;total_count&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+  <span class="s2">&quot;total_page&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="s2">&quot;current_page&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="s2">&quot;users&quot;</span><span class="o">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>               <span class="c1">// user id </span>
+            <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>        <span class="c1">// username</span>
+            <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>           <span class="c1">// user&#39;s avatar if provided</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="p">...</span>
+        <span class="p">},</span>
         <span class="p">...</span>
-    <span class="p">},</span>
-    <span class="p">...</span>
-<span class="p">]</span>
+    <span class="p">]</span>
+<span class="p">}</span>
 </pre></div>
 
 
@@ -1168,7 +1241,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="response_12">Response</h4>
+<h4 id="response_13">Response</h4>
 <div class="code"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span>          <span class="c1">// channel id</span>
     <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="kr">int</span>        <span class="c1">// online user count</span>
@@ -1196,7 +1269,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="response_13">Response</h4>
+<h4 id="response_14">Response</h4>
 <div class="code"><pre><span></span><span class="p">[</span>
     <span class="p">{</span>
         <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span>          <span class="c1">// channel id</span>
@@ -1239,7 +1312,7 @@
 </pre></div>
 
 
-<h4 id="response_14">Response</h4>
+<h4 id="response_15">Response</h4>
 <div class="code"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span>                          <span class="c1">// chat channel id</span>
     <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>                     <span class="c1">// chat channel name</span>
@@ -1347,8 +1420,52 @@
 </tr>
 </tbody>
 </table>
+<h4 id="request_4">Request</h4>
+<div class="code"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;text&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>                     <span class="c1">// message content</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="nx">dictionary</span><span class="p">,</span>                 <span class="c1">// custom data</span>
+<span class="p">}</span>
+</pre></div>
+
+
 <h3 id="2-receiving-a-message">2. Receiving a message</h3>
 <p>Messages are received in real time via native callbacks. </p>
+<h4 id="objective-c_1">Objective-C</h4>
+<div class="code"><pre><span></span><span class="p">[</span><span class="n">HCWidget</span><span class="p">.</span><span class="n">sharedWidget</span> <span class="nl">setReceiveMessageBlock</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="bp">NSDictionary</span> <span class="o">*</span><span class="n">message</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// handle the message here</span>
+    <span class="p">}];</span>
+</pre></div>
+
+
+<h4 id="swift_1">Swift</h4>
+<div class="code"><pre><span></span><span class="n">HCWidget</span><span class="p">.</span><span class="n">sharedWidget</span><span class="p">.</span><span class="n">setReceiveMessageBlock</span> <span class="p">(</span>
+<span class="p">{</span> <span class="p">(</span><span class="n">message</span><span class="p">)</span> <span class="k">in</span>
+
+<span class="p">})</span>
+</pre></div>
+
+
+<h4 id="android_1">Android</h4>
+<div class="code"><pre><span></span>
+</pre></div>
+
+
+<h4 id="message-format">Message Format</h4>
+<div class="code"><pre><span></span><span class="p">{</span>
+    <span class="nx">id</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>
+    <span class="nx">timestamp</span><span class="o">:</span> <span class="nx">number</span><span class="p">,</span> <span class="c1">// time when the message was sent, in mSeconds</span>
+    <span class="nx">text</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span> <span class="c1">// message text</span>
+    <span class="nx">data</span><span class="o">:</span> <span class="nx">dictionary</span><span class="p">,</span> <span class="c1">// extra data contained in the message</span>
+    <span class="nx">dialog_id</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span> <span class="c1">// the dialog ID </span>
+    <span class="nx">from</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">id</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span> <span class="c1">// sender user id</span>
+    <span class="p">},</span>
+    <span class="nx">mentioned</span><span class="o">:</span> <span class="p">[],</span> <span class="c1">// array of mentioned user id&#39;s</span>
+    <span class="nx">replyingTo</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span> <span class="c1">// the user id of the user which the message is replyingTo</span>
+<span class="p">}</span>
+</pre></div>
+
+
 <h2 id="dialogs">Dialogs</h2>
 <h3 id="1-create-a-dialog">1. Create a dialog</h3>
 <p>To start a new conversation, call this method to create a dialog with users. You can then add or remove users from it.</p>
@@ -1629,7 +1746,7 @@
 </tbody>
 </table>
 <h4 id="request-body_1">Request Body</h4>
-<div class="code"><pre><span></span><span class="c1">// id is the user, and friend id is the friend of the user</span>
+<div class="code"><pre><span></span><span class="c1">// id is the user, and followers and followings contains the id&#39;s</span>
 <span class="p">[</span>
   <span class="p">{</span>
     <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;16&quot;</span><span class="p">,</span>
