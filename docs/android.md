@@ -1,5 +1,8 @@
 # AppFriends Android SDK
 
+## Demo App
+A simple demo app showing the integrated AppFriends SDK is available at: [Demo](https://github.com/AppFriendsMe/AndroidDemo).
+
 ## Integration
 
 ### Maven / jCenter / Bintray
@@ -16,20 +19,28 @@ repositories {
 and add the appfriends SDK as part of your app's dependencies:
 ```
 dependencies {
-    compile 'me.appfriends.android:appfriends:2.0.+'
+    compile 'me.appfriends.android:appfriends:2.0.19'
+}
+```
+
+If your application uses a version of the Android support libraries that results in conflicts, you can force Gradle to build with your version with:
+
+```
+compile ('com.android.support:support-v4:23.4.0'){
+  force = true;
 }
 ```
 
 ## Initialization
 After logging into your admin panel, and created your application, you can find your ``App ID`` and ``App Secret``. Add them to your ```AndroidManifest.xml``` file under ```<application>```.
 ```
-   <meta-data
-        android:name="me.appfriends.AppID"
-        android:value="[APPFRIENDS_ID]" />
+<meta-data
+    android:name="me.appfriends.AppID"
+    android:value="[APPFRIENDS_ID]" />
 
-    <meta-data
-        android:name="me.appfriends.AppSecret"
-        android:value="[APPFRIENDS_SECRET]" />
+<meta-data
+    android:name="me.appfriends.AppSecret"
+    android:value="[APPFRIENDS_SECRET]" />
 ```
 
 AppFriends SDK and the corresponding UI Kit must be initialized prior to usage. In your custom ``Application`` class, you have the option to customize the AppFriends SDK with ```AppFriendsConfiguration.Builder```. You must call ```AppFriendsUIKit.init(this, configuration);``` to properly initialize the SDK:
@@ -39,10 +50,10 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
 
-        AppFriendsConfiguration configuration = new AppFriendsConfiguration.Builder()
-                .debugMode(true)
-                .gravity(Gravity.RIGHT) // Which way the widget should open from
-                .build();
+        AppFriendsConfiguration configuration =
+          new AppFriendsConfiguration.Builder()
+                                     .gravity(Gravity.RIGHT) // Which way the widget should open from
+                                     .build();
 
         AppFriendsUIKit.init(this, configuration);
     }
@@ -99,7 +110,3 @@ To receive deeplink actions, you need to implement the `OnAppFriendsNotification
 
 ## Public Chat Channels
 By default, we create a global public chat channel for all of your users to chat. You can create, edit and remove public chat channels. You can either do it from the AppFriends admin panel or via our [API](server/index.html).
-<<<<<<< HEAD
-=======
-
->>>>>>> 582ef9b3697c1ef1536f4b53c7de577ee64cd28a
