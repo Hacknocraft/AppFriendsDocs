@@ -1,0 +1,2908 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>HCWidget Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">AppFriends </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Hacknocraft</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/appID">appID</option>
+		
+		<option value="//api/name/appSecret">appSecret</option>
+		
+		<option value="//api/name/badgeBgColor">badgeBgColor</option>
+		
+		<option value="//api/name/blurLayerTintColor">blurLayerTintColor</option>
+		
+		<option value="//api/name/configuration">configuration</option>
+		
+		<option value="//api/name/currentPresentingVC">currentPresentingVC</option>
+		
+		<option value="//api/name/currentVCPath">currentVCPath</option>
+		
+		<option value="//api/name/delegate">delegate</option>
+		
+		<option value="//api/name/isSandboxEnvironment">isSandboxEnvironment</option>
+		
+		<option value="//api/name/navBarIconHighlightColor">navBarIconHighlightColor</option>
+		
+		<option value="//api/name/navBarIconUnselectedColor">navBarIconUnselectedColor</option>
+		
+		<option value="//api/name/openProfileBlock">openProfileBlock</option>
+		
+		<option value="//api/name/profileLinkButtonImage">profileLinkButtonImage</option>
+		
+		<option value="//api/name/shareIconImage">shareIconImage</option>
+		
+		<option value="//api/name/showTotalOnlineUsersInChannel">showTotalOnlineUsersInChannel</option>
+		
+		<option value="//api/name/widgetButtonImage">widgetButtonImage</option>
+		
+		<option value="//api/name/widgetOpenDirection">widgetOpenDirection</option>
+		
+		<option value="//api/name/widgetWindowWidth">widgetWindowWidth</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/closeSlideoutWithCompletion:">+ closeSlideoutWithCompletion:</option>
+		
+		<option value="//api/name/continueUserActivity:">+ continueUserActivity:</option>
+		
+		<option value="//api/name/openChatOnViewController:andGroupID:withCompletion:">+ openChatOnViewController:andGroupID:withCompletion:</option>
+		
+		<option value="//api/name/openURL:sourceApplication:annotation:">+ openURL:sourceApplication:annotation:</option>
+		
+		<option value="//api/name/openWidgetOnViewController:withCompletion:">+ openWidgetOnViewController:withCompletion:</option>
+		
+		<option value="//api/name/setLogLevel:">+ setLogLevel:</option>
+		
+		<option value="//api/name/setScreenPath:">+ setScreenPath:</option>
+		
+		<option value="//api/name/shareImage:text:deeplinkPath:onViewController:">+ shareImage:text:deeplinkPath:onViewController:</option>
+		
+		<option value="//api/name/sharedWidget">+ sharedWidget</option>
+		
+		<option value="//api/name/widgetIsOpen">+ widgetIsOpen</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/addMembers:toGroup:complete:">- addMembers:toGroup:complete:</option>
+		
+		<option value="//api/name/applicationWillTerminate">- applicationWillTerminate</option>
+		
+		<option value="//api/name/createActivityWithLeftImageURL:leftImageCode:title:path:params:complete:">- createActivityWithLeftImageURL:leftImageCode:title:path:params:complete:</option>
+		
+		<option value="//api/name/createGroup:lookupKey:withUserIDs:complete:">- createGroup:lookupKey:withUserIDs:complete:</option>
+		
+		<option value="//api/name/deleteGroup:complete:">- deleteGroup:complete:</option>
+		
+		<option value="//api/name/fetchChatGroupInfo:completion:">- fetchChatGroupInfo:completion:</option>
+		
+		<option value="//api/name/fetchChatGroupsWithCompletion:">- fetchChatGroupsWithCompletion:</option>
+		
+		<option value="//api/name/followUserWithID:withCompletion:">- followUserWithID:withCompletion:</option>
+		
+		<option value="//api/name/initializeWithApplicationKey:secret:configuration:withLaunchOptions:">- initializeWithApplicationKey:secret:configuration:withLaunchOptions:</option>
+		
+		<option value="//api/name/isLoggedIn">- isLoggedIn</option>
+		
+		<option value="//api/name/loginWithUserInfo:completion:">- loginWithUserInfo:completion:</option>
+		
+		<option value="//api/name/logout">- logout</option>
+		
+		<option value="//api/name/mapPath:toCallback:">- mapPath:toCallback:</option>
+		
+		<option value="//api/name/openSingleView:completion:">- openSingleView:completion:</option>
+		
+		<option value="//api/name/openView:completion:">- openView:completion:</option>
+		
+		<option value="//api/name/registerPushToken:pushID:">- registerPushToken:pushID:</option>
+		
+		<option value="//api/name/removeMembers:toGroup:complete:">- removeMembers:toGroup:complete:</option>
+		
+		<option value="//api/name/removeWidgetBubble">- removeWidgetBubble</option>
+		
+		<option value="//api/name/setCurrentPresentingVC:">- setCurrentPresentingVC:</option>
+		
+		<option value="//api/name/setReceiveMessageBlock:">- setReceiveMessageBlock:</option>
+		
+		<option value="//api/name/showWidgetBubbleOnViewController:allowScreenShotSharing:atPosition:completion:">- showWidgetBubbleOnViewController:allowScreenShotSharing:atPosition:completion:</option>
+		
+		<option value="//api/name/startRequestWithPath:parameters:httpMethod:completionHandler:">- startRequestWithPath:parameters:httpMethod:completionHandler:</option>
+		
+		<option value="//api/name/unfollowUserWithID:withCompletion:">- unfollowUserWithID:withCompletion:</option>
+		
+		<option value="//api/name/updateUserInfo:withCompletion:">- updateUserInfo:withCompletion:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">HCWidget Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>HCWidget.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>This is the widget interface class. You can use this class to initialize, customize, control and react to the widget. For more information on how to use the widget, you can refer to the <a href="http://www.appfriends.me/documents/ios/">AppFriends iOS SDK documentation</a>.</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/appID" title="appID"></a>
+	<h3 class="method-title"><code><a href="#//api/name/appID">&nbsp;&nbsp;appID</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>application id. Set via initialization</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (readonly) NSString *appID</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HCWidget.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/appSecret" title="appSecret"></a>
+	<h3 class="method-title"><code><a href="#//api/name/appSecret">&nbsp;&nbsp;appSecret</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>application secret. Set via initialization</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (readonly) NSString *appSecret</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HCWidget.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/currentVCPath" title="currentVCPath"></a>
+	<h3 class="method-title"><code><a href="#//api/name/currentVCPath">&nbsp;&nbsp;currentVCPath</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>the current VC Path. It&rsquo;s set via :
+<code>+ (void)showSocialWidgetOnViewController:(UIViewController *)viewController viewControllerPath:(NSString *)path;</code></p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic, copy) NSString *currentVCPath</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HCWidget.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/currentPresentingVC" title="currentPresentingVC"></a>
+	<h3 class="method-title"><code><a href="#//api/name/currentPresentingVC">&nbsp;&nbsp;currentPresentingVC</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>the view controller you used to present the widget</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic, assign) UIViewController *currentPresentingVC</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HCWidget.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/configuration" title="configuration"></a>
+	<h3 class="method-title"><code><a href="#//api/name/configuration">&nbsp;&nbsp;configuration</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>the configuration passed in during intialization</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic, strong) NSDictionary *configuration</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HCWidget.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/isSandboxEnvironment" title="isSandboxEnvironment"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isSandboxEnvironment">&nbsp;&nbsp;isSandboxEnvironment</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>shows if the SDK is connecting to sandbox environment</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic, assign) BOOL isSandboxEnvironment</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HCWidget.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/showTotalOnlineUsersInChannel" title="showTotalOnlineUsersInChannel"></a>
+	<h3 class="method-title"><code><a href="#//api/name/showTotalOnlineUsersInChannel">&nbsp;&nbsp;showTotalOnlineUsersInChannel</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>When set to true, we will show all online users in the public channel instead of showing only the users currently in the channel</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL showTotalOnlineUsersInChannel</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HCWidget.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/widgetWindowWidth" title="widgetWindowWidth"></a>
+	<h3 class="method-title"><code><a href="#//api/name/widgetWindowWidth">&nbsp;&nbsp;widgetWindowWidth</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>shows the width of the widget window</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic, assign) CGFloat widgetWindowWidth</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HCWidget.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/widgetButtonImage" title="widgetButtonImage"></a>
+	<h3 class="method-title"><code><a href="#//api/name/widgetButtonImage">&nbsp;&nbsp;widgetButtonImage</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>the image for the widget button</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) UIImage *widgetButtonImage</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HCWidget.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/shareIconImage" title="shareIconImage"></a>
+	<h3 class="method-title"><code><a href="#//api/name/shareIconImage">&nbsp;&nbsp;shareIconImage</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>the image for the share icon that appears under the widget button</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) UIImage *shareIconImage</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HCWidget.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/widgetOpenDirection" title="widgetOpenDirection"></a>
+	<h3 class="method-title"><code><a href="#//api/name/widgetOpenDirection">&nbsp;&nbsp;widgetOpenDirection</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>shows the open direction of the widget</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic, assign) HCSocialWidgetOpenDirection widgetOpenDirection</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HCWidget.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/badgeBgColor" title="badgeBgColor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/badgeBgColor">&nbsp;&nbsp;badgeBgColor</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>the background color of the badge</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) UIColor *badgeBgColor</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HCWidget.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/blurLayerTintColor" title="blurLayerTintColor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/blurLayerTintColor">&nbsp;&nbsp;blurLayerTintColor</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>the tint color of the blur layer</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) UIColor *blurLayerTintColor</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HCWidget.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/navBarIconHighlightColor" title="navBarIconHighlightColor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/navBarIconHighlightColor">&nbsp;&nbsp;navBarIconHighlightColor</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>the color of the navigation bar icons when they are highlighted</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) UIColor *navBarIconHighlightColor</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HCWidget.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/navBarIconUnselectedColor" title="navBarIconUnselectedColor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/navBarIconUnselectedColor">&nbsp;&nbsp;navBarIconUnselectedColor</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>the color of the navigation bar icons when they are unselected</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) UIColor *navBarIconUnselectedColor</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HCWidget.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/delegate" title="delegate"></a>
+	<h3 class="method-title"><code><a href="#//api/name/delegate">&nbsp;&nbsp;delegate</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>the delegate to receive callbacks. See protocol <a href="../Protocols/HCWidgetDelegate.html">HCWidgetDelegate</a>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) id&lt;HCWidgetDelegate&gt; delegate</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HCWidget.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/openProfileBlock" title="openProfileBlock"></a>
+	<h3 class="method-title"><code><a href="#//api/name/openProfileBlock">&nbsp;&nbsp;openProfileBlock</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>when the user clicks on the profile link, the widget will callback via this block. enable profile linking by setting kHCDefaultSocialWidgetEnableProfileLink to true</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) HCWidgetOpenProfileBlock openProfileBlock</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HCWidget.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/profileLinkButtonImage" title="profileLinkButtonImage"></a>
+	<h3 class="method-title"><code><a href="#//api/name/profileLinkButtonImage">&nbsp;&nbsp;profileLinkButtonImage</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The image for the button to open your app profile from the widget profile. If not set, we will use your app icon. The icon size is 30x30 at 1x size</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) UIImage *profileLinkButtonImage</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HCWidget.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/sharedWidget" title="sharedWidget"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sharedWidget">+&nbsp;sharedWidget</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>convenient method to get the shared instance of the widget</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (HCWidget *)sharedWidget</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>the shared instance of the widget</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HCWidget.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setLogLevel:" title="setLogLevel:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setLogLevel:">+&nbsp;setLogLevel:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>setting the desired log level from HC widget, the default level is HCLogLevelError</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)setLogLevel:(HCLogLevel)<em>level</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>level</code></th>
+						<td><p>log level, which decides which log output you will see from the widget.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HCWidget.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/initializeWithApplicationKey:secret:configuration:withLaunchOptions:" title="initializeWithApplicationKey:secret:configuration:withLaunchOptions:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initializeWithApplicationKey:secret:configuration:withLaunchOptions:">&ndash;&nbsp;initializeWithApplicationKey:secret:configuration:withLaunchOptions:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>call this first to initialize the SDK</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)initializeWithApplicationKey:(NSString *)<em>key</em> secret:(NSString *)<em>secret</em> configuration:(NSDictionary *)<em>options</em> withLaunchOptions:(NSDictionary *)<em>launchOptions</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>key</code></th>
+						<td><p>your application key, which can be found at your admin panel</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>secret</code></th>
+						<td><p>your application secret, which can be found at your admin panel</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>widget <a href="#//api/name/configuration">configuration</a> options. See <code>HacknocraftiOS.h</code> to find out which keys and values you can set for configuring the widget.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>launchOptions</code></th>
+						<td><p>application launch options</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HCWidget.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setCurrentPresentingVC:" title="setCurrentPresentingVC:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setCurrentPresentingVC:">&ndash;&nbsp;setCurrentPresentingVC:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Setting the current presenting view controller</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setCurrentPresentingVC:(UIViewController *)<em>currentPresentingVC</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>currentPresentingVC</code></th>
+						<td><p>the view controller which AppFriends UI will be presented on</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HCWidget.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/openView:completion:" title="openView:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/openView:completion:">&ndash;&nbsp;openView:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>You can use URL path to navigate inside AppFriends. This method will open AppFriends and land on the view you specified here. Entire AppFriends widget will be included so user will be able to then navigate away inside AppFriends to other views. Checkout our online <a href="http://appfriends.me/documentation/api/#navigation">documentation</a> for more detail.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)openView:(NSString *)<em>viewURL</em> completion:(void ( ^ ) ( BOOL success , NSError *error ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>viewURL</code></th>
+						<td><p>The URL of the view.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>The callback which happens after the transition if completed. It will report success or failure of the transition.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HCWidget.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/openSingleView:completion:" title="openSingleView:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/openSingleView:completion:">&ndash;&nbsp;openSingleView:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Use URL path to open an AppFriends widget provided view by its own. Each feature of AppFriends is module, so you can use this method if you only want to present a single view of the widget.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)openSingleView:(NSString *)<em>viewURL</em> completion:(void ( ^ ) ( BOOL success , NSError *error ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>viewURL</code></th>
+						<td><p>The URL of the view.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>The callback which happens after the transition if completed. It will report success or failure of the transition.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HCWidget.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/mapPath:toCallback:" title="mapPath:toCallback:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mapPath:toCallback:">&ndash;&nbsp;mapPath:toCallback:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Mapping a path to a call back</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)mapPath:(NSString *)<em>path</em> toCallback:(void ( ^ ) ( NSDictionary *params ))<em>callback</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>path</code></th>
+						<td><p>the path which you want to handle</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>callback</code></th>
+						<td><p>callback block which has the params provided with the path. In this callback block, you should react to the path and params, to perform appropriate action.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HCWidget.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/showWidgetBubbleOnViewController:allowScreenShotSharing:atPosition:completion:" title="showWidgetBubbleOnViewController:allowScreenShotSharing:atPosition:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/showWidgetBubbleOnViewController:allowScreenShotSharing:atPosition:completion:">&ndash;&nbsp;showWidgetBubbleOnViewController:allowScreenShotSharing:atPosition:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Use this method to show the widget bubble on your view. This the easiest way to use AppFriends.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)showWidgetBubbleOnViewController:(UIViewController *)<em>viewController</em> allowScreenShotSharing:(BOOL)<em>allow</em> atPosition:(CGPoint)<em>point</em> completion:(void ( ^ ) ( BOOL success , NSError *error ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>viewController</code></th>
+						<td><p>The view controller which the widget bubble will be shown on top of</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>allow</code></th>
+						<td><p>When set to NO, we will not show the screenshot button</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>point</code></th>
+						<td><p>The position of the bubble</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>The callback. It will report success or failure of the operation.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HCWidget.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removeWidgetBubble" title="removeWidgetBubble"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removeWidgetBubble">&ndash;&nbsp;removeWidgetBubble</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>remove the widget bubble</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)removeWidgetBubble</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HCWidget.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/startRequestWithPath:parameters:httpMethod:completionHandler:" title="startRequestWithPath:parameters:httpMethod:completionHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/startRequestWithPath:parameters:httpMethod:completionHandler:">&ndash;&nbsp;startRequestWithPath:parameters:httpMethod:completionHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Making a request to interact with AppFriends REST API using this method.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)startRequestWithPath:(NSString *)<em>path</em> parameters:(NSDictionary *)<em>params</em> httpMethod:(NSString *)<em>method</em> completionHandler:(void ( ^ ) ( id result , NSError *error ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>path</code></th>
+						<td><p>the URL path</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>params</code></th>
+						<td><p>the parameters for the request</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>method</code></th>
+						<td><p>http method, use &ldquo;GET&rdquo;, &ldquo;POST&rdquo;, &ldquo;DELETE&rdquo; , &ldquo;PUT&rdquo; and etc</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>request completion handler callback</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HCWidget.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setReceiveMessageBlock:" title="setReceiveMessageBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setReceiveMessageBlock:">&ndash;&nbsp;setReceiveMessageBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Set the receive block for messaging</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setReceiveMessageBlock:(void ( ^ ) ( NSDictionary *message ))<em>callback</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>callback</code></th>
+						<td><p>is the block in which you handle received messages</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HCWidget.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/isLoggedIn" title="isLoggedIn"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isLoggedIn">&ndash;&nbsp;isLoggedIn</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>test if a user is logged in</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)isLoggedIn</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><code>YES</code> if the user is logged in, <code>NO</code> if the user is not logged in</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HCWidget.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/loginWithUserInfo:completion:" title="loginWithUserInfo:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/loginWithUserInfo:completion:">&ndash;&nbsp;loginWithUserInfo:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>login the user, and provide the necessary information, pass nil to login with currently remembered user, or the currently configured user</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)loginWithUserInfo:(NSDictionary *)<em>userInfo</em> completion:(void ( ^ ) ( BOOL success , NSError *error ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>userInfo</code></th>
+						<td><p>userInfo a dictionary containing necessary information to login the current user. The first time calling this method will perform a signup process. You need to at least provide username. Optionally, you can provide email and userAvatar. If you already have your own user system, please provide the user identifier (userID) on your system. See <code>HacknocraftiOS.h</code> to find out the keys for the dictionary.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>The callback which happens after the login finishes</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HCWidget.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/logout" title="logout"></a>
+	<h3 class="method-title"><code><a href="#//api/name/logout">&ndash;&nbsp;logout</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>log out the current user</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)logout</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HCWidget.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/updateUserInfo:withCompletion:" title="updateUserInfo:withCompletion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/updateUserInfo:withCompletion:">&ndash;&nbsp;updateUserInfo:withCompletion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>update the current user</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)updateUserInfo:(NSDictionary *)<em>userInfo</em> withCompletion:(void ( ^ ) ( BOOL success , NSError *error ))<em>complete</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>userInfo</code></th>
+						<td><p>a dictionary containing information of the user that you want to update to. See <code>HacknocraftiOS.h</code> to find out the keys for the dictionary.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>complete</code></th>
+						<td><p>the callback block after the user information update is finished.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HCWidget.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/widgetIsOpen" title="widgetIsOpen"></a>
+	<h3 class="method-title"><code><a href="#//api/name/widgetIsOpen">+&nbsp;widgetIsOpen</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Check if the widget is currently open.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (BOOL)widgetIsOpen</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><code>YES</code> if the widget is current open to the user</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HCWidget.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/openWidgetOnViewController:withCompletion:" title="openWidgetOnViewController:withCompletion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/openWidgetOnViewController:withCompletion:">+&nbsp;openWidgetOnViewController:withCompletion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>slide open the social widget</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)openWidgetOnViewController:(UIViewController *)<em>viewController</em> withCompletion:(void ( ^ ) ( void ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>viewController</code></th>
+						<td><p>the view controller which the widget is presented on top of</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>callback block happens after the transition is finished</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HCWidget.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/closeSlideoutWithCompletion:" title="closeSlideoutWithCompletion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/closeSlideoutWithCompletion:">+&nbsp;closeSlideoutWithCompletion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>slide close the social widget</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)closeSlideoutWithCompletion:(void ( ^ ) ( void ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>callback block happens after the transition is finished</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HCWidget.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/openChatOnViewController:andGroupID:withCompletion:" title="openChatOnViewController:andGroupID:withCompletion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/openChatOnViewController:andGroupID:withCompletion:">+&nbsp;openChatOnViewController:andGroupID:withCompletion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>slide open the social widget and enter a group chat</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)openChatOnViewController:(UIViewController *)<em>viewController</em> andGroupID:(NSString *)<em>groupID</em> withCompletion:(void ( ^ ) ( BOOL success , NSError *error ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>viewController</code></th>
+						<td><p>the view controller which the widget is presented on top of</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>groupID</code></th>
+						<td><p>ID of the chat group</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>completion callback block happens after the transition is finished</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HCWidget.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/shareImage:text:deeplinkPath:onViewController:" title="shareImage:text:deeplinkPath:onViewController:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/shareImage:text:deeplinkPath:onViewController:">+&nbsp;shareImage:text:deeplinkPath:onViewController:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>initiate a image sharing action. This will popup the image cropper</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)shareImage:(UIImage *)<em>image</em> text:(NSString *)<em>text</em> deeplinkPath:(NSString *)<em>path</em> onViewController:(UIViewController *)<em>viewController</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>image</code></th>
+						<td><p>is the image that you want to share</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>text</code></th>
+						<td><p>is the caption text</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>path</code></th>
+						<td><p>is the screen path</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>viewController</code></th>
+						<td><p>the view controller which the widget is presented on top of</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HCWidget.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/createActivityWithLeftImageURL:leftImageCode:title:path:params:complete:" title="createActivityWithLeftImageURL:leftImageCode:title:path:params:complete:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/createActivityWithLeftImageURL:leftImageCode:title:path:params:complete:">&ndash;&nbsp;createActivityWithLeftImageURL:leftImageCode:title:path:params:complete:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Post an activity for the current user. The activity will be visible in the user&rsquo;s profile page. Depending on the user setting, other users might be able to see this user&rsquo;s activity as well.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)createActivityWithLeftImageURL:(NSString *)<em>leftImageURL</em> leftImageCode:(NSString *)<em>leftImageCode</em> title:(NSString *)<em>title</em> path:(NSString *)<em>path</em> params:(NSDictionary *)<em>params</em> complete:(void ( ^ ) ( BOOL success , NSError *error ))<em>complete</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>leftImageURL</code></th>
+						<td><p>An image URL used to show an image on the left side of the activity cell. Must provide this or <code>leftImageCode</code>.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>leftImageCode</code></th>
+						<td><p>An image code, which can be found in <a href="https://design.google.com/icons/">Google Icons</a>. Must provide this or <code>leftImageURL</code>.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>title</code></th>
+						<td><p>title of the activity</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>path</code></th>
+						<td><p>You can provide a path for an activity, so that when the user clicks on the activity, he can be brought to certain place in the app.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>params</code></th>
+						<td><p>additional params you want to provide. You will get these params when the navigation callback happens.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>complete</code></th>
+						<td><p>callback block happens after the process is complete</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HCWidget.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/applicationWillTerminate" title="applicationWillTerminate"></a>
+	<h3 class="method-title"><code><a href="#//api/name/applicationWillTerminate">&ndash;&nbsp;applicationWillTerminate</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Please call this method in your application delegate&rsquo;s <code>applicationWillTerminate</code> method.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)applicationWillTerminate</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HCWidget.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/openURL:sourceApplication:annotation:" title="openURL:sourceApplication:annotation:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/openURL:sourceApplication:annotation:">+&nbsp;openURL:sourceApplication:annotation:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Please call this method in your application delegate&rsquo;s <code>- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation</code> method.
+This method will help the widget process the deeplinks the user clicked and help navigate the user to the correct place in the app.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (BOOL)openURL:(NSURL *)<em>url</em> sourceApplication:(NSString *)<em>sourceApplication</em> annotation:(id)<em>annotation</em></code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>it will return true if we can handle this URL</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HCWidget.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/continueUserActivity:" title="continueUserActivity:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/continueUserActivity:">+&nbsp;continueUserActivity:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Please call this method in your application delegate&rsquo;s <code>+ (BOOL)continueUserActivity:(NSUserActivity *)userActivity</code> method. This method will help the widget process the deeplinks the user clicked and help navigate the user to the correct place in the app.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (BOOL)continueUserActivity:(NSUserActivity *)<em>userActivity</em></code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>it will return true if we can handle this activity</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HCWidget.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setScreenPath:" title="setScreenPath:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setScreenPath:">+&nbsp;setScreenPath:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Setting the path of the current screen.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)setScreenPath:(NSString *)<em>path</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>path</code></th>
+						<td><p>the current screen&rsquo;s path. This path will be used when the user shares screenshot of their current view.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HCWidget.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/createGroup:lookupKey:withUserIDs:complete:" title="createGroup:lookupKey:withUserIDs:complete:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/createGroup:lookupKey:withUserIDs:complete:">&ndash;&nbsp;createGroup:lookupKey:withUserIDs:complete:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Create a group chat, and include users that you specify in there. After the group chat is created, it will appear in the chat list of the users who you included in the group.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)createGroup:(NSString *)<em>groupName</em> lookupKey:(NSString *)<em>groupKey</em> withUserIDs:(NSArray *)<em>userIDs</em> complete:(void ( ^ ) ( BOOL success , HCChatGroup *group , NSError *error ))<em>complete</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>groupName</code></th>
+						<td><p>display name of the group chat.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>groupKey</code></th>
+						<td><p>a unique lookup key for the group</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>userIDs</code></th>
+						<td><p>ID&rsquo;s of the users you want to include in the group</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>complete</code></th>
+						<td><p>Callback when the process is finished. It will return a <code>HCChatGroup</code> object for you to keep reference.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HCWidget.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addMembers:toGroup:complete:" title="addMembers:toGroup:complete:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addMembers:toGroup:complete:">&ndash;&nbsp;addMembers:toGroup:complete:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Add users to an existing group chat</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addMembers:(NSArray *)<em>userIDs</em> toGroup:(NSString *)<em>groupKey</em> complete:(void ( ^ ) ( BOOL success , NSError *error ))<em>complete</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>userIDs</code></th>
+						<td><p>ID&rsquo;s of the users you want to include in the group</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>groupKey</code></th>
+						<td><p>a unique lookup key for the group, that you provided at create group.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>complete</code></th>
+						<td><p>Callback when the process is finished.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HCWidget.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removeMembers:toGroup:complete:" title="removeMembers:toGroup:complete:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removeMembers:toGroup:complete:">&ndash;&nbsp;removeMembers:toGroup:complete:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>remove users from an existing group chat</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)removeMembers:(NSArray *)<em>userIDs</em> toGroup:(NSString *)<em>groupKey</em> complete:(void ( ^ ) ( BOOL success , NSError *error ))<em>complete</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>userIDs</code></th>
+						<td><p>ID&rsquo;s of the users you want to include in the group. If the users ID is not found in the group, they will be ignored.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>groupKey</code></th>
+						<td><p>a unique lookup key for the group, that you provided at create group.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>complete</code></th>
+						<td><p>Callback when the process is finished.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HCWidget.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/deleteGroup:complete:" title="deleteGroup:complete:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/deleteGroup:complete:">&ndash;&nbsp;deleteGroup:complete:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>delete a group chat</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)deleteGroup:(NSString *)<em>groupKey</em> complete:(void ( ^ ) ( BOOL success , NSError *error ))<em>complete</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>groupKey</code></th>
+						<td><p>the unique key you provided at creating the group. Only the user who created the group can delete the group.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>complete</code></th>
+						<td><p>complete Callback when the process is finished.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HCWidget.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fetchChatGroupsWithCompletion:" title="fetchChatGroupsWithCompletion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fetchChatGroupsWithCompletion:">&ndash;&nbsp;fetchChatGroupsWithCompletion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>get a list of all the groups the current user is in.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fetchChatGroupsWithCompletion:(void ( ^ ) ( BOOL success , NSArray *groups , NSError *error ))<em>complete</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>complete</code></th>
+						<td><p>callback block happens when the process is finished.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HCWidget.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fetchChatGroupInfo:completion:" title="fetchChatGroupInfo:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fetchChatGroupInfo:completion:">&ndash;&nbsp;fetchChatGroupInfo:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>get detail group information of one chat group</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fetchChatGroupInfo:(NSString *)<em>groupLookupKey</em> completion:(void ( ^ ) ( BOOL success , HCChatGroup *group , NSError *error ))<em>complete</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>groupLookupKey</code></th>
+						<td><p>the unique key provided at creating the group.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>complete</code></th>
+						<td><p>callback block happens when the process is finished.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HCWidget.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/followUserWithID:withCompletion:" title="followUserWithID:withCompletion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/followUserWithID:withCompletion:">&ndash;&nbsp;followUserWithID:withCompletion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>follow a user</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)followUserWithID:(NSString *)<em>userID</em> withCompletion:(void ( ^ ) ( BOOL success , NSError *error ))<em>complete</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>userID</code></th>
+						<td><p>id of the user</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>complete</code></th>
+						<td><p>callback block happens after the process is complete</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HCWidget.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/unfollowUserWithID:withCompletion:" title="unfollowUserWithID:withCompletion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/unfollowUserWithID:withCompletion:">&ndash;&nbsp;unfollowUserWithID:withCompletion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>unfollow a user</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)unfollowUserWithID:(NSString *)<em>userID</em> withCompletion:(void ( ^ ) ( BOOL success , NSError *error ))<em>complete</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>userID</code></th>
+						<td><p>id of the user</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>complete</code></th>
+						<td><p>callback block happens after the process is complete</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HCWidget.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/registerPushToken:pushID:" title="registerPushToken:pushID:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/registerPushToken:pushID:">&ndash;&nbsp;registerPushToken:pushID:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Register push service. If you use OneSignal as your push provider, you can pass the push token and push ID to us to enable push notification generated from the widget.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)registerPushToken:(NSString *)<em>pushToken</em> pushID:(NSString *)<em>pushID</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pushToken</code></th>
+						<td><p>push service token.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pushID</code></th>
+						<td><p>user push ID.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HCWidget.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2016 Hacknocraft. All rights reserved. Updated: 2016-06-17</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>
