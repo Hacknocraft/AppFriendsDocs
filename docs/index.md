@@ -5,7 +5,7 @@ For product overview, please visit [AppFriends.me](http://appfriends.me). You ca
 ## iOS SDK
 The iOS SDK can be integrated into existing xcode iOS projects. For details, please read [iOS SDK guide](ios.md).
 
-For detailed class interface document, please go to [class documents](http://www.appfriends.me/documents/ios_class/index.html).
+For detailed class interface document, please go to [class documents](http://www.appfriends.me/documentation/ios_class/index.html).
 
 ## Android SDK
 The Android SDK can be integrated into existing Android projects. For details,
