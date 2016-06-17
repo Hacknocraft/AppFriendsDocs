@@ -1467,7 +1467,6 @@
 
 
 <h3 id="3-get-messages-in-a-channel">3. Get Messages in a Channel</h3>
-<p>Get messages in a channel. The last <code>:messageid</code> is optional, and if provided, it will try to fetch the messages earlier than the provided message id.</p>
 <table>
 <thead>
 <tr>
@@ -1482,7 +1481,13 @@
 <td><code>/chat_channels/[:id]/messages?since_id=[:messageid]</code></td>
 <td>GET</td>
 <td>Application</td>
-<td>get messages in a channel</td>
+<td>get messages in a channel after the message id if provided.</td>
+</tr>
+<tr>
+<td><code>/chat_channels/[:id]/messages?from_id=[:messageid]</code></td>
+<td>GET</td>
+<td>Application</td>
+<td>get messages in a channel before the message id if provided.</td>
 </tr>
 </tbody>
 </table>

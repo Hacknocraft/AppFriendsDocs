@@ -684,11 +684,11 @@ HCWidget.sharedWidget.setReceiveMessageBlock (
 ```
 
 ### 3. Get Messages in a Channel
-Get messages in a channel. The last `:messageid` is optional, and if provided, it will try to fetch the messages earlier than the provided message id.
 
 Endpoint      | Method        | API Type      | Description     
 ------------- | ------------- | ------------- | ------------- 
-`/chat_channels/[:id]/messages?since_id=[:messageid]` | GET | Application | get messages in a channel
+`/chat_channels/[:id]/messages?since_id=[:messageid]` | GET | Application | get messages in a channel after the message id if provided. 
+`/chat_channels/[:id]/messages?from_id=[:messageid]` | GET | Application | get messages in a channel before the message id if provided.
 
 ### 4. Like a Message
 Endpoint      | Method        | API Type      | Description     
