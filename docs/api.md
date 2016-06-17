@@ -683,6 +683,19 @@ HCWidget.sharedWidget.setReceiveMessageBlock (
 }
 ```
 
+### 3. Get Messages in a Channel
+Get messages in a channel. The last `:messageid` is optional, and if provided, it will try to fetch the messages earlier than the provided message id.
+
+Endpoint      | Method        | API Type      | Description     
+------------- | ------------- | ------------- | ------------- 
+`/channels/[:id]/messages?since_id=[:messageid]` | GET | Application | get messages in a channel
+
+### 4. Like a Message
+Endpoint      | Method        | API Type      | Description     
+------------- | ------------- | ------------- | ------------- 
+`/messages/[:messageid]/like` | PUT | Application | get messages in a channel
+
+
 ## Dialogs
 ### 1. Create a dialog
 To start a new conversation, call this method to create a dialog with users. You can then add or remove users from it.
