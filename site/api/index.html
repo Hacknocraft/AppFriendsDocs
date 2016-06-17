@@ -1466,6 +1466,45 @@
 </pre></div>
 
 
+<h3 id="3-get-messages-in-a-channel">3. Get Messages in a Channel</h3>
+<p>Get messages in a channel. The last <code>:messageid</code> is optional, and if provided, it will try to fetch the messages earlier than the provided message id.</p>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Method</th>
+<th>API Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/channels/[:id]/messages?since_id=[:messageid]</code></td>
+<td>GET</td>
+<td>Application</td>
+<td>get messages in a channel</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4-like-a-message">4. Like a Message</h3>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Method</th>
+<th>API Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/messages/[:messageid]/like</code></td>
+<td>PUT</td>
+<td>Application</td>
+<td>get messages in a channel</td>
+</tr>
+</tbody>
+</table>
 <h2 id="dialogs">Dialogs</h2>
 <h3 id="1-create-a-dialog">1. Create a dialog</h3>
 <p>To start a new conversation, call this method to create a dialog with users. You can then add or remove users from it.</p>
