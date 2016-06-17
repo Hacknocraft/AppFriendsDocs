@@ -688,12 +688,12 @@ Get messages in a channel. The last `:messageid` is optional, and if provided, i
 
 Endpoint      | Method        | API Type      | Description     
 ------------- | ------------- | ------------- | ------------- 
-`/channels/[:id]/messages?since_id=[:messageid]` | GET | Application | get messages in a channel
+`/chat_channels/[:id]/messages?since_id=[:messageid]` | GET | Application | get messages in a channel
 
 ### 4. Like a Message
 Endpoint      | Method        | API Type      | Description     
 ------------- | ------------- | ------------- | ------------- 
-`/messages/[:messageid]/like` | PUT | Application | get messages in a channel
+`/chat_channels/[:id]/messages/[:messageid]/like` | PUT | Application | get messages in a channel
 
 
 ## Dialogs
