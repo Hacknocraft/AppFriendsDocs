@@ -803,10 +803,11 @@ Endpoint      | Method        | API Type      | Description
 
 ## Constants
 ## Admin APIs
-### 1. Batch create users
+### 1. Batch create and update users
 Endpoint      | Method        | API Type      | Description
 ------------- | ------------- | ------------- | -------------
 `/users/batch_create`   | POST           | Admin   | create multiple users
+`/users/batch_update`   | PUT            | Admin   | update multiple users
 
 #### Request Body
 ```javascript
@@ -815,8 +816,9 @@ Endpoint      | Method        | API Type      | Description
   {
     "id": "1235",
     "user_name": "kejia",
-    "avatar": "https://avatar.appfriends.me/kejia.png"
-    "email": "kejia@gmail.com"
+    "avatar": "https://avatar.appfriends.me/kejia.png",
+    "email": "kejia@gmail.com",
+    "note": "champion" // notes for this user, if it has value, it will be displayed below the user name in the default UI
   },
   {
     "id": "1236",

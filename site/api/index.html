@@ -1726,7 +1726,7 @@
 </table>
 <h2 id="constants">Constants</h2>
 <h2 id="admin-apis">Admin APIs</h2>
-<h3 id="1-batch-create-users">1. Batch create users</h3>
+<h3 id="1-batch-create-and-update-users">1. Batch create and update users</h3>
 <table>
 <thead>
 <tr>
@@ -1743,6 +1743,12 @@
 <td>Admin</td>
 <td>create multiple users</td>
 </tr>
+<tr>
+<td><code>/users/batch_update</code></td>
+<td>PUT</td>
+<td>Admin</td>
+<td>update multiple users</td>
+</tr>
 </tbody>
 </table>
 <h4 id="request-body">Request Body</h4>
@@ -1751,8 +1757,9 @@
   <span class="p">{</span>
     <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;1235&quot;</span><span class="p">,</span>
     <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;kejia&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;https://avatar.appfriends.me/kejia.png&quot;</span>
-    <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="s2">&quot;kejia@gmail.com&quot;</span>
+    <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;https://avatar.appfriends.me/kejia.png&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="s2">&quot;kejia@gmail.com&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;note&quot;</span><span class="o">:</span> <span class="s2">&quot;champion&quot;</span> <span class="c1">// notes for this user, if it has value, it will be displayed below the user name in the default UI</span>
   <span class="p">},</span>
   <span class="p">{</span>
     <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;1236&quot;</span><span class="p">,</span>
