@@ -1423,7 +1423,7 @@
 <h4 id="request_4">Request</h4>
 <div class="code"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;text&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>                     <span class="c1">// message content</span>
-    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="nx">dictionary</span><span class="p">,</span>                 <span class="c1">// custom data</span>
+    <span class="s2">&quot;custom_data&quot;</span><span class="o">:</span> <span class="nx">dictionary</span><span class="p">,</span>      <span class="c1">// custom data</span>
 <span class="p">}</span>
 </pre></div>
 
@@ -1450,18 +1450,15 @@
 </pre></div>
 
 
-<h4 id="message-format">Message Format</h4>
+<h4 id="message-response-format">Message Response Format</h4>
 <div class="code"><pre><span></span><span class="p">{</span>
-    <span class="nx">id</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>
-    <span class="nx">timestamp</span><span class="o">:</span> <span class="nx">number</span><span class="p">,</span> <span class="c1">// time when the message was sent, in mSeconds</span>
+    <span class="nx">id</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span> <span class="c1">// message id</span>
+    <span class="nx">sender_id</span><span class="o">:</span> <span class="nx">string</span> <span class="c1">// sender&#39;s id</span>
+    <span class="nx">sender_name</span><span class="o">:</span> <span class="nx">string</span> <span class="c1">// sender&#39;s name</span>
+    <span class="nx">timestamp</span><span class="o">:</span> <span class="nx">number</span><span class="p">,</span> <span class="c1">// time when the message was sent, in miliseconds</span>
     <span class="nx">text</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span> <span class="c1">// message text</span>
-    <span class="nx">data</span><span class="o">:</span> <span class="nx">dictionary</span><span class="p">,</span> <span class="c1">// extra data contained in the message</span>
-    <span class="nx">dialog_id</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span> <span class="c1">// the dialog ID </span>
-    <span class="nx">from</span><span class="o">:</span> <span class="p">{</span>
-        <span class="nx">id</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span> <span class="c1">// sender user id</span>
-    <span class="p">},</span>
-    <span class="nx">mentioned</span><span class="o">:</span> <span class="p">[],</span> <span class="c1">// array of mentioned user id&#39;s</span>
-    <span class="nx">replyingTo</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span> <span class="c1">// the user id of the user which the message is replyingTo</span>
+    <span class="nx">custom_data</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span> <span class="c1">// user defined data, sent with the message</span>
+    <span class="nx">message_data</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span> <span class="c1">// other message data</span>
 <span class="p">}</span>
 </pre></div>
 
