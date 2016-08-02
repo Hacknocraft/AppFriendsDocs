@@ -642,7 +642,7 @@ Endpoint      | Method        | API Type      | Description
 ```javascript
 {
 	"text": string,						// message content
-	"data": dictionary, 				// custom data
+	"custom_data": dictionary, 		// custom data
 }
 ```
 
@@ -667,19 +667,16 @@ HCWidget.sharedWidget.setReceiveMessageBlock (
 ```java
 ```
 
-#### Message Format
+#### Message Response Format
 ``` javascript
 {
-	id: string,
-	timestamp: number, // time when the message was sent, in mSeconds
+	id: string, // message id
+	sender_id: string // sender's id
+	sender_name: string // sender's name
+	timestamp: number, // time when the message was sent, in miliseconds
 	text: string, // message text
-	data: dictionary, // extra data contained in the message
-	dialog_id: string, // the dialog ID 
-	from: {
-		id: string, // sender user id
-	},
-	mentioned: [], // array of mentioned user id's
-	replyingTo: string, // the user id of the user which the message is replyingTo
+	custom_data: string, // user defined data, sent with the message
+	message_data: string, // other message data
 }
 ```
 
