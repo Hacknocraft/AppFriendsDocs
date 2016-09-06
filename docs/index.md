@@ -2,6 +2,9 @@
 
 For product overview, please visit [AppFriends.me](http://appfriends.me). You can get started by signing up an account. If you are interested in our product or have idea on how we can improve it, please send email to [support@hacknocraft.com](SUPPORT@HACKNOCRAFT.COM) and we will get back to you very quickly.
 
+## Chat
+To learn about how to use AppFriends to implement chat, and the different types of chats AppFriends offer, please read [Chat guide](chat.md).
+
 ## iOS SDK
 The iOS SDK can be integrated into existing xcode iOS projects. For details, please read [iOS SDK guide](ios.md).
 

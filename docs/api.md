@@ -1,71 +1,12 @@
 # AppFriends API Documentation
-AppFriends API can be used to authenticate user, open the widget to a certain view, control the data and interact with all the features of AppFriends. For example, some common tasks that developers can do includes:
+AppFriends API can be used to authenticate user, send messages, search for user, update user information, create social relationship and etc.
 
-- Open AppFriends widget to certain view. See [Navigation](#navigation).
-- Search for users. See [Users](#Users).
-- Post an activity for a user. See [Activities](activities).
-- Create chat channels. See [Chat Channels](#chat-channels).
+- For user related APIs and users search. See [Users](#Users).
+- Create individual chat. See [Chat Groups](#chat-groups).
 - Create chat groups. See [Chat Groups](#chat-groups).
-- Send a notification to users. See [Notifications](#notifications).
+- Create chat channels. See [Chat Channels](#chat-channels).
 
-Most of the AppFriends APIs are accessed by using URL's, and all the URL's follow the standard REST API URL pattern, which is `[key]/[value]`. For example, the URL to access a user will be marked as `user/[:id]`, where `user` is the **key** and `[:id]` is the **value**. 
-
-## Navigation
-You can use URL path to navigate inside AppFriends, very similar to how you navigate in a browser. This is a practice we want to encourage your app to adapt as well. It makes routing very easy and works well with deeplinks. If you use AppFriends' sharing and deeplink features, same routing scheme will be used to navigate inside your app.
-
-For example, if you want to open a user's profile in AppFriends widget, you can use this URL: `/user/[:id]/profile` 
-
-###Code Examples
-You can use the following code to open a specific view of AppFriends widget. There are options to either open a single view or the entire widget. The difference is that if you open the entire widget, the user can navigate from the view opened to other AppFriends features. If you open a single view, the user will be limited to that one feature.
-
-####Objective-C
-```objc
-// open entire widget and go to user's profile
-[HCWidget openView:@"/users/haowang/profile" completion:nil]; 
-
-// open user's profile alone
-[HCWidget openSingleView:@"/users/haowang/profile" completion:nil]; 
-```
-	
-####Swift
-```swift 
-// open entire widget and go to user's profile
-HCWidget.sharedWidget().openView("/users/haowang/profile") { (success, error) in
-    // callback
-}
-	
-// open user's profile alone
-HCWidget.sharedWidget().openSingleView:("/users/haowang/profile") { (success, error) in
-    // callback
-}
-```
-	
-####Android
-```java
-HCWidget.openSingleView:("/users/haowang/profile")
-```
-
-### AppFriends Widget Views and Their URLs
-
-If you use AppFriends provided UI, you can use these following URL path to navigate directly to certain views.
-
-Destination            | URL           | Description
----------------------- | ------------- | -------------
-User profile page | /users/[:id]/profile | open the user's profile page. The id provided here is the user's id in your app.
-Activities page | /activities | open the activities page
-Activities page | /activities/trending | open the trending activities page.
-User search view | /users/search | open the search user view
-User followers list view | /users/[:id]/followers | open the user's followers list view. The id provided here is the user's id in your app.
-User followings list view | /users/[:id]/followings | open the view that lists the users which this user is following. The id provided here is the user's id in your app.
-User friends view | /users/[:id]/friends | open the user's friends list view. The id provided here is the user's id in your app. 
-Private chat page | /users/[:id]/chat | open the private chat with the user. The id provided here is the user's id in your app.
-Group chat page | /chat_groups/[:groupid] | open the group chat. The id provided is the group id.
-Chat Channel List | /chat_channels/list | open the channel list 
-Chat Channel | /chat_channels/[:channelid] | open the channel. The id provided is the channel id.
-Dialog list | /dialogs/list | open dialogs list
-Message thread view | /chat_channels/[:channelid]/messages/[:messageid] | open the message threading view which contains the message. Provide both channel id and message id.
-Notification view | /notifications | open the notifications view
-Screen sharing view | /screen_share | open the screenshot sharing window
+Most of the AppFriends APIs are accessed by using REST API
 
 ## REST API's
 
