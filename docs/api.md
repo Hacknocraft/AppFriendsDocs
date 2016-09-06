@@ -642,7 +642,7 @@ Endpoint      | Method        | API Type      | Description
 ```javascript
 {
 	"text": string,						// message content
-	"custom_data": dictionary, 		// custom data
+	"custom_data": string, 				// custom data. If you want to send object or json, please convert to string
 }
 ```
 
@@ -676,7 +676,7 @@ HCWidget.sharedWidget.setReceiveMessageBlock (
 	timestamp: number, // time when the message was sent, in miliseconds
 	text: string, // message text
 	custom_data: string, // user defined data, sent with the message
-	message_data: string, // other message data
+	message_data: json, // other message data
 }
 ```
 

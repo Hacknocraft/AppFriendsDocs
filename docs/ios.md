@@ -1,209 +1,156 @@
-# AppFriends iOS SDK Documentation
+# AppFriends iOS SDKs
+AppFriends iOS has two SDKs that you could use: `AppFriendsCore` and `AppFriendsUI`.
 
-Welcome to the AppFriends iOS SDK documentation! You can integrate the SDK via [Cocoapods](https://cocoapods.org/). The SDK is used to signup and authenticate users, provide turn-key and modern UI components, give control of the social features and data, and so on.
-
-We support both Objective-C and Swift. You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
-
-You can download our [Swift demo project](https://github.com/laeroah/AppFriendsDemo_Swift.git) and [Objective-C demo project](https://github.com/laeroah/AppFriendsDemo_Swift.git) from github.
+# AppFriends Core
+AppFriendsCore SDK is used to make direct API calls to AppFriends server. For advance AppFriends users who wish to build UI from scratch, You only need to install this SDK into your project to start. It conveniently handles client authentication, request construction and callbacks. At the same time, it leaves the UI implementation completely up to the developer. 
 
 ## Integration
 
 ### Cocoapods
 To integrate AppFriends iOS SDK to your Xcode iOS project, add this line in your `Podfile`
 
-	pod 'AppFriends'
+	pod 'AppFriendsCore'
 
 Also, add `use_frameworks!` to the file. eg.
 
 	platform :ios, "8.0"
 	use_frameworks!
 	...
-
-### Include Header for ObjC Projects
-To use the SDK, include the header:
-
-	#import <HacknocraftiOS/HacknocraftiOS.h>
-
-### Add Bridge Header for Swift Projects
-
-Add `#import <HacknocraftiOS/HacknocraftiOS.h>` to your bridge header.
-
-For details on how to use bridge header and library in swift project, please follow [this guide](http://swiftalicio.us/2014/11/using-cocoapods-from-swift/)
-
-
+	
 ## Initialization
 
-After logging into your admin panel, and created your application, you can find your `App ID` and `App Secret`. Then use them in the initialization.
+This is the first step to complete to start using AppFriends. After logging into your admin panel, and created your application, you can find your `App ID` and `App Secret`. Then use them in the initialization.
 
 Initialize AppFriends in Application Delegate `didFinishLaunchingWithOptions` method.
 
-**Objective-C**
-
-	[HCWidget.sharedWidget initializeWithApplicationKey:@"p8tnnIRmsl4cJngsH2rxGwtt" 
-		 						secret: @"34vRadekQhhQohgDNTCDDQtt" 
-		 						configuration:nil  // set to nil for default configuration
-		 						withLaunchOptions:launchOptions];
-
 **Swift**
 
-	HCWidget.sharedWidget()
-			.initializeWithApplicationKey("p8tnnIRmsl4cJngsH2rxGwtt", secret: "34vRadekQhhQohgDNTCDDQtt", configuration: nil, withLaunchOptions: launchOptions)
-
-### Build Initialization Options
-To initialize the SDK, you can pass in a `NSDictionary`
-
-Key           | Type          | Description
-------------- | ------------- | -------------
-kHCDefaultSocialWidgetOpenDirection  | NSInteger | Enum `HCSocialWidgetOpenDirection` This value will dictate the widget open direction.
-kHCDefaultSocialWidgetWidth  | Float | set width of the widget window. Max value is screen width - 20, and min value is 300.
-
-## User Authentication
-Before your users can start enjoying AppFriends, they need to have an AppFriends account. Login the user by invoking:
-
-**Objective-C**
-
-	[[HCWidget sharedWidget]loginWithUserInfo:@{
-                                                kHCUserName: @"username",
-                                                kHCUserAvatar: @"https://cdn0.iconfinder.com/data/icons/iconshock_guys/128/andrew.png",    // optional
-                                                kHCUserID: @"3000",
-                                                kHCUserEmail: @"test@gmail.com"    // optional
-                                                }
-                                   completion:nil];
-                                   
-
-**Swift**
-
-	HCWidget.sharedWidget().loginWithUserInfo (
-                        [ kHCUserName: "username",
-                          kHCUserAvatar: "https://cdn0.iconfinder.com/data/icons/iconshock_guys/128/andrew.png",    // optional
-                          kHCUserID: @"3000",
-                          kHCUserEmail: "test@gmail.com"     // optional
-                        ]) { (success, error) in
-                       
-                       }
-
-The user's AppFriends account will be associated with the user's account in your app. To correctly display the user information, please fill the following information in the *userInfo* dictionary:
-
-Key           | Type          | Description
-------------- | ------------- | -------------
-"username"    | text          | the username
-"avatar"      | text          | optional, the full URL of the user's avatar
-"id"		    | text          | optional, the user's userID in **your own app**. If userID is not provided here, we will assign an ID to this user.
-"email"       | text          | optional, the user's email
-"token"       | text          | optional, assign a token to the user. If provided at signup, the later login has to provde the same token. If the user's token has changed, please use admin secret to update the user's token.
-
-## Display Widget Bubble
-
-To display the widget bubble, use the following code in `viewDidAppear` of your view controller.
-
-**Objective-C**
-
-    [[HCWidget sharedWidget]showWidgetBubbleOnViewController:self
-                                      allowScreenShotSharing:YES
-                                                  atPosition:CGPointMake(self.view.frame.size.width - 30, 80)
-                                                  completion:^(BOOL success, NSError *error) {
-                                                      
-                                                      if (!success) {
-                                                          NSLog(@"%@", error);
-                                                      }
-                                                      
-                                                  }];
-
-**Swift**
-
-	HCWidget.sharedWidget().showWidgetBubbleOnViewController(self, allowScreenShotSharing: true, atPosition: CGPointMake(self.view.frame.size.width - 60, 160)) { (success, error) in
+	let appFriendsCore = HCSDKCore.sharedInstance
+    appFriendsCore.initialize(key: "U9x5pl32dZ7u87Nr75Wx0wtt", secret: "CSegECsEOz0E7PrR2SJ78wtt") { (success, error) in
             
-            // callback block
+            if !success {
+                // handle error here
+            }
         }
+        
+## Usage
 
-## Styling
+### Singleton
+`HCSDKCore.sharedInstance` is a singleton to provide easy access.
 
-AppFriends UI can be customize to fit the style of your own app. To customize the UI, please use `HCWidget` properties. For example:
+### Constants
+Constants can be accessed from `HCSDKConstants`
 
-	// Setting the navigation bar icon highlight color to red
-	[[HCWidget sharedWidget]setNavBarIconHighlightColor:UIColor.redColor];
+### Login
+To login the user, you can use:
 
-### Status Bar
-AppFriends widget UI will try hide the status bar while the widget is being presented. This will give the maximum layout for your users. To allow this behavior, you need to allow view controller based status bar in the plist:
+	public func loginWithUserInfo(params: [String: AnyObject]?, completion: ((response: AnyObject?, error: NSError?) -> ())? = nil)
+	
+The first time user login, a new user will be created on AppFriends.	
+At login, you should provide the user ID, and a user name for this user. Example:
 
-![Screenshot](images/statusbar.png)
+	HCSDKCore.sharedInstance.loginWithUserInfo([
+                    HCSDKConstants.kUserID: "random ID here",
+                    HCSDKConstants.kUserName: "User Name"
+                    ])
+                { (response, error) in
+                    
+                    if let err = error {
+                    	// handle error
+                    }
+                    
+                }
+You can check if a user has logged in or not by calling
 
-*Above: plist change to allow status bar adjustment*
+	HCSDKCore.sharedInstance.isLogin()
 
-## Show the Widget on your App
-After the initialization is finished. You can now show the widget on the views in your App by calling:
 
-	+ (void)showSocialWidgetOnViewController:(UIViewController *)viewController
-                          viewControllerPath:(NSString *)path
-                           disableScreenshot:(BOOL)disable
-                                  completion:(void (^)(void))complete
+### Making Requests
+You can make direct API request to AppFriends by calling `startRequest` method on the singleton. For example, if you want to fetch the profile info of a user, you can do so by:
 
-The *viewController* parameter is the `UIViewController`, which is presenting the widget. We recommand showing the widget in `viewDidAppear` method of your view controller. For detail info on this method, please go to [class document](ios_class/Classes/HCWidget.html#//api/name/showSocialWidgetOnViewController:viewControllerPath:disableScreenshot:completion:).  
-
-## Open a Specific View
-
-If you want to open a specific view of the widget, you can do that by using our API. 
-
-####Objective-C
-```objc
-// open entire widget and go the user's dialog list
-[HCWidget openView:@"/dialogs/list" completion:nil]; 
-
-// open the user's dialog list alone
-[HCWidget openSingleView:@"/dialogs/list" completion:nil]; 
 ```
-	
-####Swift
-```swift 
-// open entire widget and go the user's dialog list
-HCWidget.sharedWidget().openView("/dialogs/list") { (success, error) in
-    // callback
-}
-	
-// open the user's dialog list alone
-HCWidget.sharedWidget().openSingleView:("/dialogs/list") { (success, error) in
-    // callback
+let appFriendsCore = HCSDKCore.sharedInstance
+appFriendsCore.startRequest(httpMethod: "GET", path: "/users/\(userID)", parameters: nil) { (response, error) in
 }
 ```
 
-## Content Sharing with AppFriends
+## Advanced Usage
+Besides chat and social, you can take advantage of the core of AppFriends, which is content pushing, to implement some interesting Applications. 
 
-A great feature with AppFriends is being able to share your app content within your app among your users or to outside the app in places like Facebook, Twitter, Instagram, SMS and so on. To utilize this feature, you need assign a **path** to each of your page (app screen). You can also use additional **parameters** to help your app with navigation.
 
-### Path and Parameters
-A **path** with **parameters** looks like an URL without the host, for example, `/profile?id=23` could be a path that describes the profile page of your user with ID equal to 23.
+# AppFriends UI
 
-To set the path and parameter of the current screen, you can call:
+AppFriendsUI is an open source library which provides customizable UI components and example usage of AppFriends. It's a great starting point to build an app using AppFriends. It can save you a lot of development hours. Besides UI components, this library also provides convenient methods for you to handles dialogs, send/receive messages and query for users. It uses CoreData to store dialogs and 
 
-		[HCWidget setScreenPath:@"/profile?id=23"];
+## Example App
+You can checkout how to use this SDK together with the AppFriendsCore SDK by running the AFChatUISample app included in this repo.
 
-		or, when you show the widget button, include the screen path when you present the widget button on your view controller:
+## Integration
 
-		[HCWidget showSocialWidgetOnViewController:self viewControllerPath:@"/profile?id=23" disableScreenshot:NO completion:nil];
+#### Step 1 - cocoapod installation
+To integrate AppFriends iOS SDK to your Xcode iOS project, add this line in your `Podfile`
 
-### Handling callbacks
-After you set the **path** with **parameters** for your screen, you should then handle callback from our widget to navigate to this screen. For example, when someone shared his profile page to the chat, another user can tap the link below the shared screenshot. Then our widget will trigger the callback here:
+	pod 'AppFriendsUI'
+	
+Also, add `use_frameworks!` to the file. eg.
 
-		[HCWidget mapURL:@"/profile" toCallback:^(NSDictionary *params) {
-			NSString *userID = params[@"id"];
-			// your logic to navigate to the user's profile page with the ID value.
-		}];
+	platform :ios, "8.0"
+	use_frameworks!
+	...
+	
+#### Step 2 - initialization
+After installation, the first thing you need to do is initializing the SDK. Look for `AppFriendsUI`, then invoke:
+``
+public func initialize(completion: ((success: Bool, error: NSError?) -> ())? = nil)
+``
+You need to do this after you initialize the `AppFriendsCore` library
 
-### Deeplinks
-When a user shares screenshot from your app, a deeplink will be generated and shared with the screenshot. If the screenshot is taken from a place you have assign a path and parameters to, the information will also be included in the deeplink. When users clicks on the deeplink and install/open the app, we will trigger the callback with the path and parameters you provided.
+#### Step 3 - Login
+Then you need to login the user by using `AppFriendsCore`. After login is successful, you can start using all the components of `AppFriendsUI`
 
-To receive deeplink actions, you need insert calls in the correct places in your application delegate:
+## UI Components
 
-	+ (BOOL)openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
-	and
-	+ (BOOL)continueUserActivity:(NSUserActivity *)userActivity
+### AppFriends Chat Container
+`AppFriendsUI` has a `HCChatContainerViewController` which contains a dialog list view, a friends list view and chat view. This is the easiest way to use AppFriends. You can use it by calling:
 
-See [class documents](ios_class/index.html) for more detail.
+```
+let chatContainer = HCChatContainerViewController(tabs:HCTitles.dialogsTabTitle, HCTitles.contactsTabTitle])
+let nav = UINavigationController(rootViewController: chatContainer)
+nav.navigationBar.tintColor = UIColor.whiteColor()
+self.presentVC(nav)
+```
 
-## Public Chat Channels
-By default, we create a global public chat channel for all of your users to chat. You can create, edit and remove public chat channels. You can either do it from the AppFriends admin panel or via our [API](server/index.html).
+### Dialog List
+`HCDialogsListViewController` is a class to help you display your dialogs list. 
 
-## Private Group Chat
-You can create private chat group using the `HCWidget` methods. In each private chat group, you can only include the users that you want to invite, and the chat group will not be visible to others. Users can leave the group if they want to. Please see [class document](ios_class/Classes/HCWidget.html#//api/name/createGroup:lookupKey:withUserIDs:complete:).
+![Alt text](http://res.cloudinary.com/hacknocraft-appfriends/image/upload/v1473191446/dialogsList_zwzuiz.png "Dialogs List Example")
 
+### Chat UI
+`HCBaseChatViewController` or `HCDialogChatViewController` is a class you can use to display a chat UI. It provides basic chat UI.
+
+### Search User
+`AppFriendsUI` offers a convenient UI for you to search for users. To use this UI, you can either directly use `HCUserSearchViewController` or create its sub class. 
+
+![Alt text](http://res.cloudinary.com/hacknocraft-appfriends/image/upload/v1473189966/Simulator_Screen_Shot_Sep_6_2016_3.25.43_PM_auyjtu.png "Search User Example")
+
+### Side Panel
+Sometimes, you may not wish to leave the current screen to show the chat. With `AppFriendsUI`, you can achieve this very easily by using a side panel. 
+
+![Alt text](http://res.cloudinary.com/hacknocraft-appfriends/image/upload/c_scale,w_200/v1473185124/screenshot_fuwkjq.png "Side Panel Example")
+
+#### Example
+```
+// use this code in one of your view controller
+AppFriendsUI.sharedInstance.presentVCInSidePanel(fromVC: self, showVC: channelChatVC, direction: .Left)
+```
+
+## UI Customization
+`AppFriendsUI` customization can be done through `HCUIConfiguration`. You can change the color, font, and text. Example:
+
+```
+HCColorPalette.chatBackgroundColor = UIColor(hexString: "0d0e28")
+HCColorPalette.SegmentSelectorOnBgColor = UIColor(hexString: "3c3a60")
+```
+
+If more advanced customizations are needed, you can sub class components of AppFriendsUI. 
 
