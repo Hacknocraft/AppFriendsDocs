@@ -190,12 +190,6 @@
         <ul>
           
             <li class="anchor">
-              <a title="Navigation" href="#navigation">
-                Navigation
-              </a>
-            </li>
-          
-            <li class="anchor">
               <a title="REST API's" href="#rest-apis">
                 REST API's
               </a>
@@ -226,18 +220,6 @@
             </li>
           
             <li class="anchor">
-              <a title="User Preferences" href="#user-preferences">
-                User Preferences
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="Activities" href="#activities">
-                Activities
-              </a>
-            </li>
-          
-            <li class="anchor">
               <a title="Chat Channels" href="#chat-channels">
                 Chat Channels
               </a>
@@ -252,18 +234,6 @@
             <li class="anchor">
               <a title="Dialogs" href="#dialogs">
                 Dialogs
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="Notifications" href="#notifications">
-                Notifications
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="Constants" href="#constants">
-                Constants
               </a>
             </li>
           
@@ -323,136 +293,12 @@
         <div class="wrapper">
           
           <h1 id="appfriends-api-documentation">AppFriends API Documentation</h1>
-<p>AppFriends API can be used to authenticate user, open the widget to a certain view, control the data and interact with all the features of AppFriends. For example, some common tasks that developers can do includes:</p>
+<p>AppFriends API can be used to authenticate user, send messages, search for user, update user information, create social relationship and etc.</p>
 <ul>
-<li>Open AppFriends widget to certain view. See <a href="#navigation">Navigation</a>.</li>
-<li>Search for users. See <a href="#Users">Users</a>.</li>
-<li>Post an activity for a user. See <a href="../activities">Activities</a>.</li>
-<li>Create chat channels. See <a href="#chat-channels">Chat Channels</a>.</li>
-<li>Create chat groups. See <a href="#chat-groups">Chat Groups</a>.</li>
-<li>Send a notification to users. See <a href="#notifications">Notifications</a>.</li>
+<li>For user related APIs and users search. See <a href="#Users">Users</a>.</li>
+<li>For messaging. See <a href="#Messaging">Messaging</a>.</li>
 </ul>
-<p>Most of the AppFriends APIs are accessed by using URL's, and all the URL's follow the standard REST API URL pattern, which is <code>[key]/[value]</code>. For example, the URL to access a user will be marked as <code>user/[:id]</code>, where <code>user</code> is the <strong>key</strong> and <code>[:id]</code> is the <strong>value</strong>. </p>
-<h2 id="navigation">Navigation</h2>
-<p>You can use URL path to navigate inside AppFriends, very similar to how you navigate in a browser. This is a practice we want to encourage your app to adapt as well. It makes routing very easy and works well with deeplinks. If you use AppFriends' sharing and deeplink features, same routing scheme will be used to navigate inside your app.</p>
-<p>For example, if you want to open a user's profile in AppFriends widget, you can use this URL: <code>/user/[:id]/profile</code> </p>
-<h3 id="code-examples">Code Examples</h3>
-<p>You can use the following code to open a specific view of AppFriends widget. There are options to either open a single view or the entire widget. The difference is that if you open the entire widget, the user can navigate from the view opened to other AppFriends features. If you open a single view, the user will be limited to that one feature.</p>
-<h4 id="objective-c">Objective-C</h4>
-<div class="code"><pre><span></span><span class="c1">// open entire widget and go to user&#39;s profile</span>
-<span class="p">[</span><span class="n">HCWidget</span> <span class="nl">openView</span><span class="p">:</span><span class="s">@&quot;/users/haowang/profile&quot;</span> <span class="nl">completion</span><span class="p">:</span><span class="nb">nil</span><span class="p">];</span> 
-
-<span class="c1">// open user&#39;s profile alone</span>
-<span class="p">[</span><span class="n">HCWidget</span> <span class="nl">openSingleView</span><span class="p">:</span><span class="s">@&quot;/users/haowang/profile&quot;</span> <span class="nl">completion</span><span class="p">:</span><span class="nb">nil</span><span class="p">];</span> 
-</pre></div>
-
-
-<h4 id="swift">Swift</h4>
-<div class="code"><pre><span></span><span class="c1">// open entire widget and go to user&#39;s profile</span>
-<span class="n">HCWidget</span><span class="p">.</span><span class="n">sharedWidget</span><span class="p">().</span><span class="n">openView</span><span class="p">(</span><span class="s">&quot;/users/haowang/profile&quot;</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">success</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
-    <span class="c1">// callback</span>
-<span class="p">}</span>
-
-<span class="c1">// open user&#39;s profile alone</span>
-<span class="n">HCWidget</span><span class="p">.</span><span class="n">sharedWidget</span><span class="p">().</span><span class="n">openSingleView</span><span class="p">:(</span><span class="s">&quot;/users/haowang/profile&quot;</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">success</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
-    <span class="c1">// callback</span>
-<span class="p">}</span>
-</pre></div>
-
-
-<h4 id="android">Android</h4>
-<div class="code"><pre><span></span><span class="n">HCWidget</span><span class="o">.</span><span class="na">openSingleView</span><span class="o">:(</span><span class="s">&quot;/users/haowang/profile&quot;</span><span class="o">)</span>
-</pre></div>
-
-
-<h3 id="appfriends-widget-views-and-their-urls">AppFriends Widget Views and Their URLs</h3>
-<p>If you use AppFriends provided UI, you can use these following URL path to navigate directly to certain views.</p>
-<table>
-<thead>
-<tr>
-<th>Destination</th>
-<th>URL</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>User profile page</td>
-<td>/users/[:id]/profile</td>
-<td>open the user's profile page. The id provided here is the user's id in your app.</td>
-</tr>
-<tr>
-<td>Activities page</td>
-<td>/activities</td>
-<td>open the activities page</td>
-</tr>
-<tr>
-<td>Activities page</td>
-<td>/activities/trending</td>
-<td>open the trending activities page.</td>
-</tr>
-<tr>
-<td>User search view</td>
-<td>/users/search</td>
-<td>open the search user view</td>
-</tr>
-<tr>
-<td>User followers list view</td>
-<td>/users/[:id]/followers</td>
-<td>open the user's followers list view. The id provided here is the user's id in your app.</td>
-</tr>
-<tr>
-<td>User followings list view</td>
-<td>/users/[:id]/followings</td>
-<td>open the view that lists the users which this user is following. The id provided here is the user's id in your app.</td>
-</tr>
-<tr>
-<td>User friends view</td>
-<td>/users/[:id]/friends</td>
-<td>open the user's friends list view. The id provided here is the user's id in your app.</td>
-</tr>
-<tr>
-<td>Private chat page</td>
-<td>/users/[:id]/chat</td>
-<td>open the private chat with the user. The id provided here is the user's id in your app.</td>
-</tr>
-<tr>
-<td>Group chat page</td>
-<td>/chat_groups/[:groupid]</td>
-<td>open the group chat. The id provided is the group id.</td>
-</tr>
-<tr>
-<td>Chat Channel List</td>
-<td>/chat_channels/list</td>
-<td>open the channel list</td>
-</tr>
-<tr>
-<td>Chat Channel</td>
-<td>/chat_channels/[:channelid]</td>
-<td>open the channel. The id provided is the channel id.</td>
-</tr>
-<tr>
-<td>Dialog list</td>
-<td>/dialogs/list</td>
-<td>open dialogs list</td>
-</tr>
-<tr>
-<td>Message thread view</td>
-<td>/chat_channels/[:channelid]/messages/[:messageid]</td>
-<td>open the message threading view which contains the message. Provide both channel id and message id.</td>
-</tr>
-<tr>
-<td>Notification view</td>
-<td>/notifications</td>
-<td>open the notifications view</td>
-</tr>
-<tr>
-<td>Screen sharing view</td>
-<td>/screen_share</td>
-<td>open the screenshot sharing window</td>
-</tr>
-</tbody>
-</table>
+<p>Most of the AppFriends APIs are accessed by using REST API</p>
 <h2 id="rest-apis">REST API's</h2>
 <p>Base URL: <strong>https://appfriends-api.hacknocraft.com/api/v3/</strong></p>
 <p>If you use our out of box UI, all functionalities are enabled and ready to use by default, but if you want to make a customized UI, we certainly facilitate that as well. To access and modify data on AppFriends, you can ultilize our REST interface. There are two types of REST API's:</p>
@@ -511,6 +357,7 @@
     <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>                        <span class="c1">// user&#39;s email if provided</span>
     <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>                    <span class="c1">// username</span>
     <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>                       <span class="c1">// user&#39;s avatar if provided</span>
+    <span class="s2">&quot;custom_data&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>                  <span class="c1">// custom data of the user</span>
 <span class="p">}</span>
 </pre></div>
 
@@ -542,6 +389,7 @@
     <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>    <span class="c1">// optional, username,</span>
     <span class="s2">&quot;real_name&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>    <span class="c1">// optional, the real name of the user</span>
     <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>       <span class="c1">// optional, the avatar of the user</span>
+   <span class="s2">&quot;custom_data&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>                   <span class="c1">// optional , custom data of the user</span>
 <span class="p">}</span>
 </pre></div>
 
@@ -553,6 +401,7 @@
     <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>        <span class="c1">// username</span>
     <span class="s2">&quot;real_name&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>        <span class="c1">// user&#39;s real name if provided</span>
     <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>           <span class="c1">// user&#39;s avatar if provided</span>
+    <span class="s2">&quot;custom_data&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>      <span class="c1">// optional , custom data of the user</span>
 <span class="p">}</span>
 </pre></div>
 
@@ -583,11 +432,13 @@
         <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>               <span class="c1">// user id provided by hosting app </span>
         <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>        <span class="c1">// username</span>
         <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>           <span class="c1">// user&#39;s avatar if provided</span>
+         <span class="s2">&quot;custom_data&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>     <span class="c1">// optional , custom data of the user</span>
     <span class="p">},</span> 
     <span class="p">{</span>
         <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>               
         <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>        
-        <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>           
+        <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>   
+         <span class="s2">&quot;custom_data&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>     <span class="c1">// optional , custom data of the user       </span>
     <span class="p">}</span>
     <span class="p">...</span>
 <span class="p">]</span>
@@ -848,262 +699,6 @@
 
 
 <hr />
-<h2 id="user-preferences">User Preferences</h2>
-<p>For detail meanings of the constant values in user preference, please checkout <a href="#constants">constants</a> secions.</p>
-<h3 id="1-get-the-preferences-of-the-current-user">1. Get the preferences of the current user</h3>
-<table>
-<thead>
-<tr>
-<th>Endpoint</th>
-<th>Method</th>
-<th>API Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>/me/preferences</code></td>
-<td>GET</td>
-<td>Application</td>
-<td>get the current user's preferences</td>
-</tr>
-</tbody>
-</table>
-<h4 id="response_7">Response</h4>
-<div class="code"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;activity_permission_type&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span>      <span class="c1">// int value which indicates which type of activity sharing permission this user has.</span>
-    <span class="s2">&quot;private_messaging_permission_type&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span>   <span class="c1">// int value which indicates which type of private messaging permission this user has </span>
-    <span class="s2">&quot;show_real_name&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span> <span class="c1">// int value which indicates which type of permission the user for showing the real name &quot;push_enabled&quot;: boolean, // show if this user wants to accept push</span>
-<span class="p">}</span>
-</pre></div>
-
-
-<hr />
-<h3 id="2-update-the-preferences-of-the-current-user">2. Update the preferences of the current user</h3>
-<table>
-<thead>
-<tr>
-<th>Endpoint</th>
-<th>Method</th>
-<th>API Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>/me/preferences</code></td>
-<td>PUT</td>
-<td>Application</td>
-<td>change the current user's preferences</td>
-</tr>
-</tbody>
-</table>
-<h4 id="request-parameters_4">Request Parameters</h4>
-<div class="code"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;activity_permission_type&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span>                <span class="c1">// optional</span>
-    <span class="s2">&quot;private_messaging_permission_type&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span>       <span class="c1">// optional </span>
-    <span class="s2">&quot;show_real_name&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span>                          <span class="c1">// optional </span>
-    <span class="s2">&quot;push_enabled&quot;</span><span class="o">:</span> <span class="kr">boolean</span><span class="p">,</span> <span class="err">／／</span><span class="nx">optional</span>             
-<span class="p">}</span>
-</pre></div>
-
-
-<hr />
-<h2 id="activities">Activities</h2>
-<h3 id="1-get-the-users-activities">1. Get the user's activities</h3>
-<table>
-<thead>
-<tr>
-<th>Endpoint</th>
-<th>Method</th>
-<th>API Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>/users/[:id]/activities</code></td>
-<td>GET</td>
-<td>Application</td>
-<td>get the user's activities</td>
-</tr>
-</tbody>
-</table>
-<h4 id="response_8">Response</h4>
-<div class="code"><pre><span></span><span class="c1">// array of activities;</span>
-<span class="p">[</span>
-    <span class="p">{</span>
-        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span>                      <span class="c1">// activity id</span>
-        <span class="s2">&quot;icon_image_url&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>       <span class="c1">// the url of the icon image for this activity. You can use either this or the icon_image_code to set the icon image for the activity.  </span>
-        <span class="s2">&quot;icon_image_code&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>      <span class="c1">// google icon code of the icon image. You can use either this or the icon_image_url to set the icon image for the activity.</span>
-        <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>                <span class="c1">// title of the activity</span>
-        <span class="s2">&quot;content&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>              <span class="c1">// content of the activity</span>
-        <span class="s2">&quot;content_image_url&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>    <span class="c1">// the url of the image you want to attach to this activity</span>
-        <span class="s2">&quot;path_url&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>             <span class="c1">// a activity can link to a place in the app. See navigation section for detail     </span>
-        <span class="s2">&quot;timestamp&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span>               <span class="c1">// the time when the activity is created</span>
-        <span class="s2">&quot;additional_data&quot;</span><span class="o">:</span> <span class="nx">json</span> <span class="nx">object</span><span class="p">,</span> <span class="c1">// additional data attach to activity   </span>
-    <span class="p">},</span>
-    <span class="p">{</span>
-    <span class="p">...</span>
-    <span class="p">},</span>
-    <span class="p">...</span>
-<span class="p">]</span>
-</pre></div>
-
-
-<hr />
-<h3 id="2-get-the-current-users-friends-activities">2. Get the current user's friends activities</h3>
-<table>
-<thead>
-<tr>
-<th>Endpoint</th>
-<th>Method</th>
-<th>API Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>/users/[:id]/activities/friends</code></td>
-<td>GET</td>
-<td>Application</td>
-<td>get the user's friends' activities</td>
-</tr>
-</tbody>
-</table>
-<h4 id="response_9">Response</h4>
-<div class="code"><pre><span></span><span class="c1">// array of activities;</span>
-<span class="p">[</span>
-    <span class="p">{</span>
-        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span>                      <span class="c1">// activity id</span>
-        <span class="s2">&quot;icon_image_url&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>       <span class="c1">// the url of the icon image for this activity. You can use either this or the icon_image_code to set the icon image for the activity.  </span>
-        <span class="s2">&quot;icon_image_code&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>      <span class="c1">// google icon code of the icon image. You can use either this or the icon_image_url to set the icon image for the activity.</span>
-        <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>                <span class="c1">// title of the activity</span>
-        <span class="s2">&quot;content&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>              <span class="c1">// content of the activity</span>
-        <span class="s2">&quot;content_image_url&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>    <span class="c1">// the url of the image you want to attach to this activity</span>
-        <span class="s2">&quot;path_url&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>             <span class="c1">// a activity can link to a place in the app. See navigation section for detail     </span>
-        <span class="s2">&quot;timestamp&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span>               <span class="c1">// the time when the activity is created</span>
-        <span class="s2">&quot;additional_data&quot;</span><span class="o">:</span> <span class="nx">json</span> <span class="nx">object</span><span class="p">,</span> <span class="c1">// additional data attach to activity   </span>
-    <span class="p">},</span>
-    <span class="p">{</span>
-    <span class="p">...</span>
-    <span class="p">},</span>
-    <span class="p">...</span>
-<span class="p">]</span>
-</pre></div>
-
-
-<hr />
-<h3 id="3-create-an-activity-for-a-user">3. Create an activity for a user</h3>
-<table>
-<thead>
-<tr>
-<th>Endpoint</th>
-<th>Method</th>
-<th>API Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>/users/[:id]/activities</code></td>
-<td>POST</td>
-<td>Admin</td>
-<td>create an activity for a user</td>
-</tr>
-</tbody>
-</table>
-<h4 id="request">Request</h4>
-<div class="code"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;icon_image_url&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>       <span class="c1">// the url of the icon image for this activity. You can use either this or the icon_image_code to set the icon image for the activity.  </span>
-    <span class="s2">&quot;icon_image_code&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>      <span class="c1">// google icon code of the icon image. You can use either this or the icon_image_url to set the icon image for the activity.</span>
-    <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>                <span class="c1">// title of the activity</span>
-    <span class="s2">&quot;content&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>              <span class="c1">// content of the activity</span>
-    <span class="s2">&quot;content_image_url&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>    <span class="c1">// the url of the image you want to attach to this activity</span>
-    <span class="s2">&quot;path_url&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>             <span class="c1">// a activity can link to a place in the app. See navigation section for detail     </span>
-    <span class="s2">&quot;timestamp&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span>               <span class="c1">// the time when the activity is created</span>
-    <span class="s2">&quot;additional_data&quot;</span><span class="o">:</span> <span class="nx">json</span> <span class="nx">object</span><span class="p">,</span> <span class="c1">// additional data attach to activity</span>
-<span class="p">}</span>
-</pre></div>
-
-
-<h3 id="4-create-a-trending-activity">4. Create a trending activity</h3>
-<table>
-<thead>
-<tr>
-<th>Endpoint</th>
-<th>Method</th>
-<th>API Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>/activities/trending</code></td>
-<td>POST</td>
-<td>Admin</td>
-<td>create a trending activity</td>
-</tr>
-</tbody>
-</table>
-<h4 id="request_1">Request</h4>
-<div class="code"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;icon_image_url&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>       <span class="c1">// the url of the icon image for this activity. You can use either this or the icon_image_code to set the icon image for the activity.  </span>
-    <span class="s2">&quot;icon_image_code&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>      <span class="c1">// google icon code of the icon image. You can use either this or the icon_image_url to set the icon image for the activity.</span>
-    <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>                <span class="c1">// title of the activity</span>
-    <span class="s2">&quot;content&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>              <span class="c1">// content of the activity</span>
-    <span class="s2">&quot;content_image_url&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>    <span class="c1">// the url of the image you want to attach to this activity</span>
-    <span class="s2">&quot;path_url&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>             <span class="c1">// a activity can link to a place in the app. See navigation section for detail     </span>
-    <span class="s2">&quot;timestamp&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span>               <span class="c1">// the time when the activity is created</span>
-    <span class="s2">&quot;additional_data&quot;</span><span class="o">:</span> <span class="nx">json</span> <span class="nx">object</span><span class="p">,</span> <span class="c1">// additional data attach to activity</span>
-    <span class="s2">&quot;expiry_time&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span>             <span class="c1">// time stamp of the expiry time of this trending activity</span>
-<span class="p">}</span>
-</pre></div>
-
-
-<h3 id="5-get-the-the-trending-activities">5. Get the the trending activities</h3>
-<table>
-<thead>
-<tr>
-<th>Endpoint</th>
-<th>Method</th>
-<th>API Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>/activities/trending</code></td>
-<td>GET</td>
-<td>Application</td>
-<td>get the trending activities</td>
-</tr>
-</tbody>
-</table>
-<h4 id="response_10">Response</h4>
-<div class="code"><pre><span></span><span class="c1">// array of activities;</span>
-<span class="p">[</span>
-    <span class="p">{</span>
-        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span>                      <span class="c1">// activity id</span>
-        <span class="s2">&quot;icon_image_url&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>       <span class="c1">// the url of the icon image for this activity. You can use either this or the icon_image_code to set the icon image for the activity.  </span>
-        <span class="s2">&quot;icon_image_code&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>      <span class="c1">// google icon code of the icon image. You can use either this or the icon_image_url to set the icon image for the activity.</span>
-        <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>                <span class="c1">// title of the activity</span>
-        <span class="s2">&quot;content&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>              <span class="c1">// content of the activity</span>
-        <span class="s2">&quot;content_image_url&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>    <span class="c1">// the url of the image you want to attach to this activity</span>
-        <span class="s2">&quot;path_url&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>             <span class="c1">// a activity can link to a place in the app. See navigation section for detail     </span>
-        <span class="s2">&quot;timestamp&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span>               <span class="c1">// the time when the activity is created</span>
-        <span class="s2">&quot;additional_data&quot;</span><span class="o">:</span> <span class="nx">json</span> <span class="nx">object</span><span class="p">,</span> <span class="c1">// additional data attach to activity</span>
-        <span class="s2">&quot;expiry_time&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span>             <span class="c1">// time stamp of the expiry time of this trending activity</span>
-    <span class="p">},</span>
-    <span class="p">{</span>
-    <span class="p">...</span>
-    <span class="p">},</span>
-    <span class="p">...</span>
-<span class="p">]</span>
-</pre></div>
-
-
-<hr />
 <h2 id="chat-channels">Chat Channels</h2>
 <p>Chat channels are open to any user. </p>
 <h3 id="1-get-all-chat-channels">1. Get all chat channels</h3>
@@ -1118,69 +713,24 @@
 </thead>
 <tbody>
 <tr>
-<td><code>/chat_channels</code></td>
+<td><code>/channels</code></td>
 <td>GET</td>
 <td>Application</td>
 <td>get all the public chat channels</td>
 </tr>
 </tbody>
 </table>
-<h4 id="response_11">Response</h4>
-<div class="code"><pre><span></span><span class="c1">// paged chat channels</span>
+<h4 id="response_7">Response</h4>
+<div class="code"><pre><span></span><span class="p">[</span>
 <span class="p">{</span>
-  <span class="s2">&quot;total_count&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
-  <span class="s2">&quot;total_page&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-  <span class="s2">&quot;current_page&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-  <span class="s2">&quot;chat_channels&quot;</span><span class="o">:</span> <span class="p">[</span>
-                            <span class="p">{</span>
-                                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span>                          <span class="c1">// chat channel id</span>
-                                <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>                     <span class="c1">// chat channel name</span>
-                                <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>                    <span class="c1">// title of the activity</span>
-                                <span class="s2">&quot;create_time&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span>                 <span class="c1">// create time of the channel</span>
-                                <span class="s2">&quot;cover_image_url&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>          <span class="c1">// the cover image of the channel</span>
-                                <span class="s2">&quot;favorited&quot;</span><span class="o">:</span> <span class="kr">boolean</span><span class="p">,</span>               <span class="c1">// show if the user has favorited this channel</span>
-                                <span class="s2">&quot;favorite_count&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span>              <span class="c1">// number of people who favorited the channel</span>
-                                <span class="s2">&quot;online_user_count&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span>           <span class="c1">// number of current online users</span>
-                                <span class="s2">&quot;timestamp&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span>                   <span class="c1">// the time when the activity is created</span>
-                                <span class="s2">&quot;additional_data&quot;</span><span class="o">:</span> <span class="nx">json</span> <span class="nx">object</span><span class="p">,</span>     <span class="c1">// additional data attach to channel</span>
-                                <span class="s2">&quot;notification_enabled&quot;</span><span class="o">:</span> <span class="kr">boolean</span><span class="p">,</span>    <span class="c1">// time stamp of the expiry time of this trending activity</span>
-                                <span class="s2">&quot;enabled&quot;</span><span class="o">:</span> <span class="kr">boolean</span><span class="p">,</span>                 <span class="c1">// indicates if the channel is enabled or not</span>
-                            <span class="p">},</span>
-                            <span class="p">{</span>
-                            <span class="p">...</span>
-                            <span class="p">},</span>
-                            <span class="p">...</span>
-                        <span class="p">]</span>
-<span class="p">}</span>
+
+<span class="p">},</span>
+<span class="p">....</span>
+<span class="p">]</span>
 </pre></div>
 
 
 <hr />
-<h3 id="2-favoriteunfavorite-a-chat-channel">2. Favorite/unfavorite a chat channel</h3>
-<table>
-<thead>
-<tr>
-<th>Endpoint</th>
-<th>Method</th>
-<th>API Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>/chat_channels/[:id]/favorite</code></td>
-<td>PUT</td>
-<td>Application</td>
-<td>favorite a chat channel for the current user</td>
-</tr>
-<tr>
-<td><code>/chat_channels/[:id]/unfavorite</code></td>
-<td>PUT</td>
-<td>Application</td>
-<td>unfavorite a chat channel for the current user</td>
-</tr>
-</tbody>
-</table>
 <h3 id="4-get-online-users-in-a-chat-channel">4. Get online users in a chat channel</h3>
 <table>
 <thead>
@@ -1193,14 +743,14 @@
 </thead>
 <tbody>
 <tr>
-<td><code>/chat_channels/[:id]/users</code></td>
+<td><code>/channels/[:id]/users</code></td>
 <td>GET</td>
 <td>Application</td>
 <td>get the current online users in the chat channel</td>
 </tr>
 </tbody>
 </table>
-<h4 id="response_12">Response</h4>
+<h4 id="response_8">Response</h4>
 <div class="code"><pre><span></span><span class="c1">// array of users</span>
 <span class="p">{</span>
   <span class="s2">&quot;total_count&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
@@ -1234,14 +784,14 @@
 </thead>
 <tbody>
 <tr>
-<td><code>/chat_channels/[:id]/users/count</code></td>
+<td><code>/channels/[:id]/users/count</code></td>
 <td>GET</td>
 <td>Application</td>
 <td>get the count of the online users in the chat channel</td>
 </tr>
 </tbody>
 </table>
-<h4 id="response_13">Response</h4>
+<h4 id="response_9">Response</h4>
 <div class="code"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span>          <span class="c1">// channel id</span>
     <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="kr">int</span>        <span class="c1">// online user count</span>
@@ -1262,14 +812,14 @@
 </thead>
 <tbody>
 <tr>
-<td><code>/chat_channels/user_counts</code></td>
+<td><code>/channels/user_counts</code></td>
 <td>GET</td>
 <td>Application</td>
 <td>get the count of the online users in all of the chat channels</td>
 </tr>
 </tbody>
 </table>
-<h4 id="response_14">Response</h4>
+<h4 id="response_10">Response</h4>
 <div class="code"><pre><span></span><span class="p">[</span>
     <span class="p">{</span>
         <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span>          <span class="c1">// channel id</span>
@@ -1296,14 +846,14 @@
 </thead>
 <tbody>
 <tr>
-<td><code>/chat_channels</code></td>
+<td><code>/channels</code></td>
 <td>POST</td>
 <td>Application</td>
 <td>create a chat channel</td>
 </tr>
 </tbody>
 </table>
-<h4 id="request_2">Request</h4>
+<h4 id="request">Request</h4>
 <div class="code"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>                     <span class="c1">// chat channel name</span>
     <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>                    <span class="c1">// title of the activity</span>
@@ -1312,20 +862,13 @@
 </pre></div>
 
 
-<h4 id="response_15">Response</h4>
+<h4 id="response_11">Response</h4>
 <div class="code"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span>                          <span class="c1">// chat channel id</span>
     <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>                     <span class="c1">// chat channel name</span>
     <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>                    <span class="c1">// title of the activity</span>
     <span class="s2">&quot;create_time&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span>                 <span class="c1">// create time of the channel</span>
     <span class="s2">&quot;cover_image_url&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>          <span class="c1">// the cover image of the channel</span>
-    <span class="s2">&quot;favorited&quot;</span><span class="o">:</span> <span class="kr">boolean</span><span class="p">,</span>               <span class="c1">// show if the user has favorited this channel</span>
-    <span class="s2">&quot;favorite_count&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span>              <span class="c1">// number of people who favorited the channel</span>
-    <span class="s2">&quot;online_user_count&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span>           <span class="c1">// number of current online users</span>
-    <span class="s2">&quot;timestamp&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span>                   <span class="c1">// the time when the activity is created</span>
-    <span class="s2">&quot;additional_data&quot;</span><span class="o">:</span> <span class="nx">json</span> <span class="nx">object</span><span class="p">,</span>     <span class="c1">// additional data attach to channel</span>
-    <span class="s2">&quot;notification_enabled&quot;</span><span class="o">:</span> <span class="kr">boolean</span><span class="p">,</span>    <span class="c1">// time stamp of the expiry time of this trending activity</span>
-    <span class="s2">&quot;enabled&quot;</span><span class="o">:</span> <span class="kr">boolean</span><span class="p">,</span>                 <span class="c1">// indicates if the channel is enabled or not</span>
 <span class="p">}</span>
 </pre></div>
 
@@ -1343,14 +886,14 @@
 </thead>
 <tbody>
 <tr>
-<td><code>/chat_channels/[:id]</code></td>
+<td><code>/channels/[:id]</code></td>
 <td>PUT</td>
 <td>Application</td>
 <td>modify a chat channel</td>
 </tr>
 </tbody>
 </table>
-<h4 id="request_3">Request</h4>
+<h4 id="request_1">Request</h4>
 <div class="code"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>                     <span class="c1">// optional, chat channel name</span>
     <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>                    <span class="c1">// optional, title of the activity</span>
@@ -1360,34 +903,8 @@
 
 
 <hr />
-<h3 id="9-enabledisable-notification">9. Enable/Disable Notification</h3>
-<p>Disable notification from a channel for a user. When notification is disabled, the user will no longer receive push when he gets a mention or reply in a channel.</p>
-<table>
-<thead>
-<tr>
-<th>Endpoint</th>
-<th>Method</th>
-<th>API Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>/chat_channels/[:id]/enable_notification</code></td>
-<td>PUT</td>
-<td>Application</td>
-<td>enable the notification</td>
-</tr>
-<tr>
-<td><code>/chat_channels/[:id]/disable_notification</code></td>
-<td>PUT</td>
-<td>Application</td>
-<td>disable the notification</td>
-</tr>
-</tbody>
-</table>
 <h3 id="10-delete-a-chat-channel">10. Delete a chat channel</h3>
-<p><code>/chat_channels/[:id]</code> | DELETE | Application | delete a chat channel</p>
+<p><code>/channels/[:id]</code> | DELETE | Application | delete a chat channel</p>
 <h2 id="messaging">Messaging</h2>
 <h3 id="1-sending-a-message">1. Sending a message</h3>
 <table>
@@ -1413,100 +930,44 @@
 <td>Send a message to a user</td>
 </tr>
 <tr>
-<td><code>/chat_channels/[:id]/messages</code></td>
+<td><code>/channels/[:id]/messages</code></td>
 <td>POST</td>
 <td>Application</td>
 <td>Send a message to a chat channel</td>
 </tr>
 </tbody>
 </table>
-<h4 id="request_4">Request</h4>
+<h4 id="request_2">Request</h4>
 <div class="code"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;text&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>                     <span class="c1">// message content</span>
-    <span class="s2">&quot;custom_data&quot;</span><span class="o">:</span> <span class="nx">dictionary</span><span class="p">,</span>      <span class="c1">// custom data</span>
+    <span class="s2">&quot;custom_data&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>              <span class="c1">// custom data. If you want to send object or json, please convert to string</span>
 <span class="p">}</span>
 </pre></div>
 
 
-<h3 id="2-receiving-a-message">2. Receiving a message</h3>
-<p>Messages are received in real time via native callbacks. </p>
-<h4 id="objective-c_1">Objective-C</h4>
-<div class="code"><pre><span></span><span class="p">[</span><span class="n">HCWidget</span><span class="p">.</span><span class="n">sharedWidget</span> <span class="nl">setReceiveMessageBlock</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="bp">NSDictionary</span> <span class="o">*</span><span class="n">message</span><span class="p">)</span> <span class="p">{</span>
-        <span class="c1">// handle the message here</span>
-    <span class="p">}];</span>
-</pre></div>
-
-
-<h4 id="swift_1">Swift</h4>
-<div class="code"><pre><span></span><span class="n">HCWidget</span><span class="p">.</span><span class="n">sharedWidget</span><span class="p">.</span><span class="n">setReceiveMessageBlock</span> <span class="p">(</span>
-<span class="p">{</span> <span class="p">(</span><span class="n">message</span><span class="p">)</span> <span class="k">in</span>
-
-<span class="p">})</span>
-</pre></div>
-
-
-<h4 id="android_1">Android</h4>
-<div class="code"><pre><span></span>
-</pre></div>
-
-
-<h4 id="message-response-format">Message Response Format</h4>
+<h4 id="response_12">Response</h4>
 <div class="code"><pre><span></span><span class="p">{</span>
-    <span class="nx">id</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span> <span class="c1">// message id</span>
-    <span class="nx">sender_id</span><span class="o">:</span> <span class="nx">string</span> <span class="c1">// sender&#39;s id</span>
-    <span class="nx">sender_name</span><span class="o">:</span> <span class="nx">string</span> <span class="c1">// sender&#39;s name</span>
-    <span class="nx">timestamp</span><span class="o">:</span> <span class="nx">number</span><span class="p">,</span> <span class="c1">// time when the message was sent, in miliseconds</span>
-    <span class="nx">text</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span> <span class="c1">// message text</span>
-    <span class="nx">custom_data</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span> <span class="c1">// user defined data, sent with the message</span>
-    <span class="nx">message_data</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span> <span class="c1">// other message data</span>
+    <span class="s2">&quot;text&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>                     <span class="c1">// message content</span>
+    <span class="s2">&quot;custom_data&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>              <span class="c1">// custom data. If you want to send object or json, please convert to string</span>
+    <span class="s2">&quot;meta_data&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>                <span class="c1">// meta data. Reserved field</span>
+    <span class="s2">&quot;dialog_id&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>                <span class="c1">// dialog id</span>
+    <span class="s2">&quot;dialog_type&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>              <span class="c1">// dialog type: i (individual), g (group), c (channel), s (system)</span>
 <span class="p">}</span>
 </pre></div>
 
 
-<h3 id="3-get-messages-in-a-channel">3. Get Messages in a Channel</h3>
-<table>
-<thead>
-<tr>
-<th>Endpoint</th>
-<th>Method</th>
-<th>API Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>/chat_channels/[:id]/messages?since_id=[:messageid]</code></td>
-<td>GET</td>
-<td>Application</td>
-<td>get messages in a channel after the message id if provided.</td>
-</tr>
-<tr>
-<td><code>/chat_channels/[:id]/messages?from_id=[:messageid]</code></td>
-<td>GET</td>
-<td>Application</td>
-<td>get messages in a channel before the message id if provided.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="4-like-a-message">4. Like a Message</h3>
-<table>
-<thead>
-<tr>
-<th>Endpoint</th>
-<th>Method</th>
-<th>API Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>/chat_channels/[:id]/messages/[:messageid]/like</code></td>
-<td>PUT</td>
-<td>Application</td>
-<td>get messages in a channel</td>
-</tr>
-</tbody>
-</table>
+<h3 id="2-receiving-messages">2. Receiving messages</h3>
+<p>To receive messages, you need to use the native code:</p>
+<div class="code"><pre><span></span><span class="c1">// iOS Swift</span>
+<span class="nx">HCSDKCore</span><span class="p">.</span><span class="nx">sharedInstance</span><span class="p">.</span><span class="nx">syncDelegate</span> <span class="o">=</span> <span class="nx">self</span>
+</pre></div>
+
+
+<p>Then implement:</p>
+<div class="code"><pre><span></span><span class="n">public</span> <span class="n">func</span> <span class="n">messagesReceived</span><span class="p">(</span><span class="nl">messages</span><span class="p">:</span> <span class="p">[[</span><span class="nl">String</span> <span class="p">:</span> <span class="n">AnyObject</span><span class="p">]])</span> 
+</pre></div>
+
+
 <h2 id="dialogs">Dialogs</h2>
 <h3 id="1-create-a-dialog">1. Create a dialog</h3>
 <p>To start a new conversation, call this method to create a dialog with users. You can then add or remove users from it.</p>
@@ -1528,7 +989,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="request-parameters_5">Request Parameters</h4>
+<h4 id="request-parameters_4">Request Parameters</h4>
 <div class="code"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>         <span class="c1">// required, the name of the dialog</span>
     <span class="s2">&quot;members&quot;</span><span class="o">:</span> <span class="nx">array</span><span class="p">,</span>       <span class="c1">// required, an array of the id&#39;s of the users who you want to be in this dialog</span>
@@ -1602,7 +1063,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="request-parameters_6">Request Parameters</h4>
+<h4 id="request-parameters_5">Request Parameters</h4>
 <div class="code"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>         <span class="c1">// optional, the name of the dialog</span>
     <span class="s2">&quot;owner_id&quot;</span>              <span class="c1">// optional, the user id of the owner of the dialog</span>
@@ -1622,14 +1083,14 @@
 </thead>
 <tbody>
 <tr>
-<td><code>/dialogs/[:id]/add_users</code></td>
+<td><code>/dialogs/[:id]/members</code></td>
 <td>POST</td>
 <td>Application</td>
 <td>add users to a dialog. After they users are added to the dialog, they will start receiving new messages from this dialog.</td>
 </tr>
 </tbody>
 </table>
-<h4 id="request-parameters_7">Request Parameters</h4>
+<h4 id="request-parameters_6">Request Parameters</h4>
 <div class="code"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;members&quot;</span><span class="o">:</span> <span class="nx">array</span><span class="p">,</span>       <span class="c1">// required, the id&#39;s of the users who you want to add to the dialog</span>
 <span class="p">}</span>
@@ -1648,14 +1109,14 @@
 </thead>
 <tbody>
 <tr>
-<td><code>/dialogs/[:id]/remove_users</code></td>
-<td>POST</td>
+<td><code>/dialogs/[:id]/members</code></td>
+<td>DELETE</td>
 <td>Application</td>
 <td>remove users from a dialog.</td>
 </tr>
 </tbody>
 </table>
-<h4 id="request-parameters_8">Request Parameters</h4>
+<h4 id="request-parameters_7">Request Parameters</h4>
 <div class="code"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;members&quot;</span><span class="o">:</span> <span class="nx">array</span><span class="p">,</span>       <span class="c1">// required, the id&#39;s of the users who you want to add to remove from the dialog</span>
 <span class="p">}</span>
@@ -1682,46 +1143,6 @@
 </tr>
 </tbody>
 </table>
-<h2 id="notifications">Notifications</h2>
-<h3 id="1-create-a-notification">1. Create a notification</h3>
-<table>
-<thead>
-<tr>
-<th>Endpoint</th>
-<th>Method</th>
-<th>API Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>/notifications</code></td>
-<td>POST</td>
-<td>Admin</td>
-<td>Create a notification</td>
-</tr>
-</tbody>
-</table>
-<h3 id="2-get-all-notifications-for-a-user">2. Get all notifications for a user</h3>
-<table>
-<thead>
-<tr>
-<th>Endpoint</th>
-<th>Method</th>
-<th>API Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>/users/[:id]/notifications</code></td>
-<td>GET</td>
-<td>Application</td>
-<td>fetch all notifications for the user</td>
-</tr>
-</tbody>
-</table>
-<h2 id="constants">Constants</h2>
 <h2 id="admin-apis">Admin APIs</h2>
 <h3 id="1-batch-create-and-update-users">1. Batch create and update users</h3>
 <table>

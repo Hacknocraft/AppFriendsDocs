@@ -317,26 +317,12 @@ Authorization: Bearer &lt;signature token&gt;
 <h3 id="create-a-user">Create a User</h3>
 <p>Users on AppFriends are simply mirror images or copies of users in your app. There are two ways to create users on AppFriends, <strong>sign up user in the app</strong> or <strong>batch create users using the admin api</strong>. To create a user, you need to provide the user's id and user name. There are other optional properties of the user you can provide, such as email, avatar(recommend) and real name:</p>
 <h3 id="sign-up-or-sign-in-user-in-the-app">Sign-up or Sign-in user in the app</h3>
-<p>In your app, call the SDK's login method.</p>
-<h4 id="objective-c">Objective-C</h4>
-<div class="code"><pre><span></span><span class="p">[</span><span class="n">HCWidget</span><span class="p">.</span><span class="n">sharedWidget</span> <span class="nl">loginWithUserInfo</span><span class="p">:</span><span class="l">@{</span>
-                       <span class="nl">kHCUserName</span><span class="p">:</span> <span class="s">@&quot;(user name)&quot;</span><span class="p">,</span>
-                       <span class="nl">kHCUserAvatar</span><span class="p">:</span> <span class="s">@&quot;(user avatar url)&quot;</span><span class="p">,</span>
-                       <span class="nl">kHCUserID</span><span class="p">:</span> <span class="s">@&quot;(user id)&quot;</span><span class="p">,</span>
-                       <span class="nl">kHCUserEmail</span><span class="p">:</span> <span class="s">@&quot;(user email)&quot;</span>
-                      <span class="l">}</span> <span class="nl">completion</span><span class="p">:</span><span class="nb">nil</span><span class="p">];</span>
-</pre></div>
-
-
+<p>In your app, call the SDK's login method. At minimum, you need to provide an user ID and an user name.</p>
 <h4 id="swift">Swift</h4>
-<div class="code"><pre><span></span><span class="n">HCWidget</span><span class="p">.</span><span class="n">sharedWidget</span><span class="p">().</span><span class="n">loginWithUserInfo</span><span class="p">(</span>
-                    <span class="p">[</span>
-                            <span class="n">kHCUserName</span><span class="p">:</span> <span class="s">&quot;(user name)&quot;</span><span class="p">,</span>
-                            <span class="n">kHCUserAvatar</span><span class="p">:</span> <span class="s">&quot;(user avatar url)&quot;</span><span class="p">,</span>
-                            <span class="n">kHCUserID</span><span class="p">:</span> <span class="s">&quot;(user id)&quot;</span>
-                    <span class="p">])</span> <span class="p">{</span> <span class="p">(</span><span class="n">success</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
-
-                    <span class="p">}</span>
+<div class="code"><pre><span></span><span class="c1">// for the param, you need to provide user id and user name</span>
+<span class="c1">// for example, [HCSDKConstants.kUserID: &quot;random-id&quot;, HCSDKConstants.kUserName: &quot;sample user name&quot;]</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">loginWithUserInfo</span><span class="p">(</span><span class="n">params</span><span class="p">:</span> <span class="p">[</span><span class="nb">String</span> <span class="p">:</span> <span class="nb">AnyObject</span><span class="p">]?,</span> 
+<span class="n">completion</span><span class="p">:</span> <span class="p">((</span><span class="n">response</span><span class="p">:</span> <span class="nb">AnyObject</span><span class="p">?,</span> <span class="n">error</span><span class="p">:</span> <span class="bp">NSError</span><span class="p">?)</span> <span class="p">-&gt;</span> <span class="p">())?</span> <span class="p">=</span> <span class="k">default</span><span class="p">)</span>
 </pre></div>
 
 

@@ -13,8 +13,7 @@ pages:
 - Android Documentation: android.md
 - AppFriends API: api.md
 - Authentication and API Requests: security.md
-- Analytics: analytics.md
-- Referral and Sharing: referral.md
+- Chat: chat.md
 
 markdown_extensions:
   - codehilite(css_class=code)
