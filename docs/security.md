@@ -73,28 +73,14 @@ Put timestamp (seconds) in your payout
 Users on AppFriends are simply mirror images or copies of users in your app. There are two ways to create users on AppFriends, **sign up user in the app** or **batch create users using the admin api**. To create a user, you need to provide the user's id and user name. There are other optional properties of the user you can provide, such as email, avatar(recommend) and real name:
 
 ### Sign-up or Sign-in user in the app
-In your app, call the SDK's login method.
-
-#### Objective-C
-```objc
-[HCWidget.sharedWidget loginWithUserInfo:@{
-                       kHCUserName: @"(user name)",
-                       kHCUserAvatar: @"(user avatar url)",
-                       kHCUserID: @"(user id)",
-                       kHCUserEmail: @"(user email)"
-                      } completion:nil];
-```
+In your app, call the SDK's login method. At minimum, you need to provide an user ID and an user name.
 
 #### Swift
 ```swift
-HCWidget.sharedWidget().loginWithUserInfo(
-                    [
-                            kHCUserName: "(user name)",
-                            kHCUserAvatar: "(user avatar url)",
-                            kHCUserID: "(user id)"
-                    ]) { (success, error) in
-                        
-                    }
+// for the param, you need to provide user id and user name
+// for example, [HCSDKConstants.kUserID: "random-id", HCSDKConstants.kUserName: "sample user name"]
+public func loginWithUserInfo(params: [String : AnyObject]?, 
+completion: ((response: AnyObject?, error: NSError?) -> ())? = default)
 ```
 
 #### Android

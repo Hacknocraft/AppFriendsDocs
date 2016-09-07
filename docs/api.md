@@ -2,9 +2,7 @@
 AppFriends API can be used to authenticate user, send messages, search for user, update user information, create social relationship and etc.
 
 - For user related APIs and users search. See [Users](#Users).
-- Create individual chat. See [Chat Groups](#chat-groups).
-- Create chat groups. See [Chat Groups](#chat-groups).
-- Create chat channels. See [Chat Channels](#chat-channels).
+- For messaging. See [Messaging](#Messaging).
 
 Most of the AppFriends APIs are accessed by using REST API
 
@@ -56,6 +54,7 @@ Endpoint      | Method        | API Type      | Description
     "email": string,						// user's email if provided
     "user_name": string,					// username
     "avatar": string,						// user's avatar if provided
+    "custom_data": string,					// custom data of the user
 }
 ```
 ------
@@ -72,6 +71,7 @@ Endpoint      | Method        | API Type      | Description
 	"user_name": string, 	// optional, username,
 	"real_name": string, 	// optional, the real name of the user
 	"avatar": string, 		// optional, the avatar of the user
+   "custom_data": string,					// optional , custom data of the user
 }
 ```
 
@@ -83,6 +83,7 @@ Endpoint      | Method        | API Type      | Description
     "user_name": string,		// username
     "real_name": string,		// user's real name if provided
     "avatar": string,			// user's avatar if provided
+    "custom_data": string,		// optional , custom data of the user
 }
 ```
 
@@ -99,11 +100,13 @@ Endpoint      | Method        | API Type      | Description
 	    "id": string, 				// user id provided by hosting app 
 	    "user_name": string,		// username
 	    "avatar": string,			// user's avatar if provided
+    	 "custom_data": string,		// optional , custom data of the user
 	}, 
 	{
 	    "id": string, 				
 	    "user_name": string,		
-	    "avatar": string,			
+	    "avatar": string,	
+    	 "custom_data": string,		// optional , custom data of the user		
 	}
 	...
 ]
@@ -248,213 +251,29 @@ Endpoint      | Method        | API Type      | Description
 ```
 ------
 
-## User Preferences
-For detail meanings of the constant values in user preference, please checkout [constants](#constants) secions.
-
-### 1. Get the preferences of the current user
-Endpoint      | Method        | API Type      | Description     
-------------- | ------------- | ------------- | ------------- 
-`/me/preferences`   | GET   | Application | get the current user's preferences
-
-#### Response
-```javascript
-{
-	"activity_permission_type": int,      // int value which indicates which type of activity sharing permission this user has.
-	"private_messaging_permission_type": int, 	// int value which indicates which type of private messaging permission this user has 
-	"show_real_name": int, // int value which indicates which type of permission the user for showing the real name	"push_enabled": boolean, // show if this user wants to accept push
-}
-```
-------
-
-### 2. Update the preferences of the current user
-Endpoint      | Method        | API Type      | Description     
-------------- | ------------- | ------------- | ------------- 
-`/me/preferences`   | PUT   | Application | change the current user's preferences
-
-#### Request Parameters
-```javascript
-{
-	"activity_permission_type": int,      			// optional
-	"private_messaging_permission_type": int, 		// optional 
-	"show_real_name": int, 							// optional	
-	"push_enabled": boolean, ／／optional				
-}
-```
-------
-
-## Activities
-### 1. Get the user's activities
-Endpoint      | Method        | API Type      | Description     
-------------- | ------------- | ------------- | ------------- 
-`/users/[:id]/activities`   | GET   | Application | get the user's activities
-
-#### Response
-```javascript
-// array of activities;
-[
-	{
-		"id": int, 						// activity id
-		"icon_image_url": string, 		// the url of the icon image for this activity. You can use either this or the icon_image_code to set the icon image for the activity.	
-		"icon_image_code": string,		// google icon code of the icon image. You can use either this or the icon_image_url to set the icon image for the activity.
-		"title": string, 				// title of the activity
-		"content": string,				// content of the activity
-		"content_image_url": string,	// the url of the image you want to attach to this activity
-		"path_url": string,				// a activity can link to a place in the app. See navigation section for detail		
-		"timestamp": int,				// the time when the activity is created
-		"additional_data": json object,	// additional data attach to activity	
-	},
-	{
-	...
-	},
-	...
-]
-```
-------
-
-### 2. Get the current user's friends activities
-Endpoint      | Method        | API Type      | Description     
-------------- | ------------- | ------------- | ------------- 
-`/users/[:id]/activities/friends`   | GET | Application | get the user's friends' activities
-
-#### Response
-```javascript
-// array of activities;
-[
-	{
-		"id": int, 						// activity id
-		"icon_image_url": string, 		// the url of the icon image for this activity. You can use either this or the icon_image_code to set the icon image for the activity.	
-		"icon_image_code": string,		// google icon code of the icon image. You can use either this or the icon_image_url to set the icon image for the activity.
-		"title": string, 				// title of the activity
-		"content": string,				// content of the activity
-		"content_image_url": string,	// the url of the image you want to attach to this activity
-		"path_url": string,				// a activity can link to a place in the app. See navigation section for detail		
-		"timestamp": int,				// the time when the activity is created
-		"additional_data": json object,	// additional data attach to activity	
-	},
-	{
-	...
-	},
-	...
-]
-```
-------
-
-### 3. Create an activity for a user
-Endpoint      | Method        | API Type      | Description     
-------------- | ------------- | ------------- | ------------- 
-`/users/[:id]/activities`  | POST | Admin | create an activity for a user
-
-#### Request
-```javascript
-{
-	"icon_image_url": string, 		// the url of the icon image for this activity. You can use either this or the icon_image_code to set the icon image for the activity.	
-	"icon_image_code": string,		// google icon code of the icon image. You can use either this or the icon_image_url to set the icon image for the activity.
-	"title": string, 				// title of the activity
-	"content": string,				// content of the activity
-	"content_image_url": string,	// the url of the image you want to attach to this activity
-	"path_url": string,				// a activity can link to a place in the app. See navigation section for detail		
-	"timestamp": int,				// the time when the activity is created
-	"additional_data": json object,	// additional data attach to activity
-}
-```
-
-### 4. Create a trending activity
-Endpoint      | Method        | API Type      | Description     
-------------- | ------------- | ------------- | ------------- 
-`/activities/trending`  | POST | Admin | create a trending activity
-
-#### Request
-```javascript
-{
-	"icon_image_url": string, 		// the url of the icon image for this activity. You can use either this or the icon_image_code to set the icon image for the activity.	
-	"icon_image_code": string,		// google icon code of the icon image. You can use either this or the icon_image_url to set the icon image for the activity.
-	"title": string, 				// title of the activity
-	"content": string,				// content of the activity
-	"content_image_url": string,	// the url of the image you want to attach to this activity
-	"path_url": string,				// a activity can link to a place in the app. See navigation section for detail		
-	"timestamp": int,				// the time when the activity is created
-	"additional_data": json object,	// additional data attach to activity
-	"expiry_time": int,				// time stamp of the expiry time of this trending activity
-}
-```
-
-### 5. Get the the trending activities
-Endpoint      | Method        | API Type      | Description     
-------------- | ------------- | ------------- | ------------- 
-`/activities/trending`  | GET | Application | get the trending activities
-
-#### Response
-```javascript
-// array of activities;
-[
-	{
-		"id": int, 						// activity id
-		"icon_image_url": string, 		// the url of the icon image for this activity. You can use either this or the icon_image_code to set the icon image for the activity.	
-		"icon_image_code": string,		// google icon code of the icon image. You can use either this or the icon_image_url to set the icon image for the activity.
-		"title": string, 				// title of the activity
-		"content": string,				// content of the activity
-		"content_image_url": string,	// the url of the image you want to attach to this activity
-		"path_url": string,				// a activity can link to a place in the app. See navigation section for detail		
-		"timestamp": int,				// the time when the activity is created
-		"additional_data": json object,	// additional data attach to activity
-		"expiry_time": int,				// time stamp of the expiry time of this trending activity
-	},
-	{
-	...
-	},
-	...
-]
-```
-------
-
 ## Chat Channels
 Chat channels are open to any user. 
 ### 1. Get all chat channels
 Endpoint      | Method        | API Type      | Description     
 ------------- | ------------- | ------------- | ------------- 
-`/chat_channels` | GET | Application | get all the public chat channels
+`/channels` | GET | Application | get all the public chat channels
 
 #### Response
 ```javascript
-// paged chat channels
+[
 {
-  "total_count": 2,
-  "total_page": 1,
-  "current_page": 1,
-  "chat_channels": [
-							{
-								"id": int, 							// chat channel id
-								"name": string,						// chat channel name
-								"title": string, 					// title of the activity
-								"create_time": int,					// create time of the channel
-								"cover_image_url": string,			// the cover image of the channel
-								"favorited": boolean,				// show if the user has favorited this channel
-								"favorite_count": int,				// number of people who favorited the channel
-								"online_user_count": int,			// number of current online users
-								"timestamp": int,					// the time when the activity is created
-								"additional_data": json object,		// additional data attach to channel
-								"notification_enabled": boolean,	// time stamp of the expiry time of this trending activity
-								"enabled": boolean,					// indicates if the channel is enabled or not
-							},
-							{
-							...
-							},
-							...
-						]
-}
+	
+},
+....
+]
 ```
 ------
 
-### 2. Favorite/unfavorite a chat channel
-Endpoint      | Method        | API Type      | Description     
-------------- | ------------- | ------------- | ------------- 
-`/chat_channels/[:id]/favorite` | PUT | Application | favorite a chat channel for the current user
-`/chat_channels/[:id]/unfavorite` | PUT | Application | unfavorite a chat channel for the current user
 
 ### 4. Get online users in a chat channel
 Endpoint      | Method        | API Type      | Description     
 ------------- | ------------- | ------------- | ------------- 
-`/chat_channels/[:id]/users` | GET | Application | get the current online users in the chat channel
+`/channels/[:id]/users` | GET | Application | get the current online users in the chat channel
 
 #### Response
 ```javascript
@@ -481,7 +300,7 @@ Endpoint      | Method        | API Type      | Description
 ### 5. Get online user count for a channel
 Endpoint      | Method        | API Type      | Description     
 ------------- | ------------- | ------------- | ------------- 
-`/chat_channels/[:id]/users/count` | GET | Application | get the count of the online users in the chat channel
+`/channels/[:id]/users/count` | GET | Application | get the count of the online users in the chat channel
 
 #### Response
 ```javascript
@@ -495,7 +314,7 @@ Endpoint      | Method        | API Type      | Description
 ### 6. Get online user count for all the channels
 Endpoint      | Method        | API Type      | Description     
 ------------- | ------------- | ------------- | ------------- 
-`/chat_channels/user_counts` | GET | Application | get the count of the online users in all of the chat channels
+`/channels/user_counts` | GET | Application | get the count of the online users in all of the chat channels
 
 #### Response
 ```javascript
@@ -515,7 +334,7 @@ Endpoint      | Method        | API Type      | Description
 ### 7. Create a chat channel
 Endpoint      | Method        | API Type      | Description     
 ------------- | ------------- | ------------- | ------------- 
-`/chat_channels` | POST | Application | create a chat channel
+`/channels` | POST | Application | create a chat channel
 
 #### Request
 ```javascript
@@ -533,13 +352,6 @@ Endpoint      | Method        | API Type      | Description
 	"title": string, 					// title of the activity
 	"create_time": int,					// create time of the channel
 	"cover_image_url": string,			// the cover image of the channel
-	"favorited": boolean,				// show if the user has favorited this channel
-	"favorite_count": int,				// number of people who favorited the channel
-	"online_user_count": int,			// number of current online users
-	"timestamp": int,					// the time when the activity is created
-	"additional_data": json object,		// additional data attach to channel
-	"notification_enabled": boolean,	// time stamp of the expiry time of this trending activity
-	"enabled": boolean,					// indicates if the channel is enabled or not
 }
 ```
 ------
@@ -547,7 +359,7 @@ Endpoint      | Method        | API Type      | Description
 ### 8. Modify a chat channel
 Endpoint      | Method        | API Type      | Description     
 ------------- | ------------- | ------------- | ------------- 
-`/chat_channels/[:id]` | PUT | Application | modify a chat channel
+`/channels/[:id]` | PUT | Application | modify a chat channel
 
 #### Request
 ```javascript
@@ -559,16 +371,8 @@ Endpoint      | Method        | API Type      | Description
 ```
 ------
 
-### 9. Enable/Disable Notification
-Disable notification from a channel for a user. When notification is disabled, the user will no longer receive push when he gets a mention or reply in a channel.
-
-Endpoint      | Method        | API Type      | Description     
-------------- | ------------- | ------------- | ------------- 
-`/chat_channels/[:id]/enable_notification` | PUT | Application | enable the notification
-`/chat_channels/[:id]/disable_notification` | PUT | Application | disable the notification
-
 ### 10. Delete a chat channel
-`/chat_channels/[:id]` | DELETE | Application | delete a chat channel
+`/channels/[:id]` | DELETE | Application | delete a chat channel
 
 
 ## Messaging
@@ -577,7 +381,7 @@ Endpoint      | Method        | API Type      | Description
 ------------- | ------------- | ------------- | ------------- 
 `/dialogs/[:id]/messages` | POST | Application | Send a message in a dialog
 `/users/[:id]/messages` | POST | Application | Send a message to a user
-`/chat_channels/[:id]/messages` | POST | Application | Send a message to a chat channel
+`/channels/[:id]/messages` | POST | Application | Send a message to a chat channel
 
 #### Request
 ```javascript
@@ -587,52 +391,30 @@ Endpoint      | Method        | API Type      | Description
 }
 ```
 
-### 2. Receiving a message
-Messages are received in real time via native callbacks. 
-#### Objective-C
-```objc
-[HCWidget.sharedWidget setReceiveMessageBlock:^(NSDictionary *message) {
-        // handle the message here
-    }];
-```
-
-#### Swift
-```swift
-HCWidget.sharedWidget.setReceiveMessageBlock (
-{ (message) in
-                        
-})
-```
-
-#### Android
-```java
-```
-
-#### Message Response Format
-``` javascript
+#### Response
+```javascript
 {
-	id: string, // message id
-	sender_id: string // sender's id
-	sender_name: string // sender's name
-	timestamp: number, // time when the message was sent, in miliseconds
-	text: string, // message text
-	custom_data: string, // user defined data, sent with the message
-	message_data: json, // other message data
+	"text": string,						// message content
+	"custom_data": string, 				// custom data. If you want to send object or json, please convert to string
+	"meta_data": string, 				// meta data. Reserved field
+	"dialog_id": string,				// dialog id
+	"dialog_type": string,				// dialog type: i (individual), g (group), c (channel), s (system)
 }
 ```
 
-### 3. Get Messages in a Channel
+### 2. Receiving messages
+To receive messages, you need to use the native code:
 
-Endpoint      | Method        | API Type      | Description     
-------------- | ------------- | ------------- | ------------- 
-`/chat_channels/[:id]/messages?since_id=[:messageid]` | GET | Application | get messages in a channel after the message id if provided. 
-`/chat_channels/[:id]/messages?from_id=[:messageid]` | GET | Application | get messages in a channel before the message id if provided.
+```javascript
+// iOS Swift
+HCSDKCore.sharedInstance.syncDelegate = self
+```
 
-### 4. Like a Message
-Endpoint      | Method        | API Type      | Description     
-------------- | ------------- | ------------- | ------------- 
-`/chat_channels/[:id]/messages/[:messageid]/like` | PUT | Application | get messages in a channel
+Then implement:
 
+```
+public func messagesReceived(messages: [[String : AnyObject]]) 
+```
 
 ## Dialogs
 ### 1. Create a dialog
@@ -699,7 +481,7 @@ Endpoint      | Method        | API Type      | Description
 ### 3. Add users to a chat group
 Endpoint      | Method        | API Type      | Description     
 ------------- | ------------- | ------------- | ------------- 
-`/dialogs/[:id]/add_users` | POST | Application | add users to a dialog. After they users are added to the dialog, they will start receiving new messages from this dialog.
+`/dialogs/[:id]/members` | POST | Application | add users to a dialog. After they users are added to the dialog, they will start receiving new messages from this dialog.
 
 #### Request Parameters
 ```javascript
@@ -711,7 +493,7 @@ Endpoint      | Method        | API Type      | Description
 ### 4. Remove users from a chat group
 Endpoint      | Method        | API Type      | Description     
 ------------- | ------------- | ------------- | ------------- 
-`/dialogs/[:id]/remove_users` | POST | Application | remove users from a dialog. 
+`/dialogs/[:id]/members ` | DELETE | Application | remove users from a dialog. 
 
 #### Request Parameters
 ```javascript
@@ -727,19 +509,6 @@ Endpoint      | Method        | API Type      | Description
 ------------- | ------------- | ------------- | ------------- 
 `/dialogs/[:id]` | DELETE | Application | The owner or admin can delete a dialog
 
-
-## Notifications
-### 1. Create a notification
-Endpoint      | Method        | API Type      | Description    
-------------- | ------------- | ------------- | -------------
-`/notifications`  | POST | Admin | Create a notification
-
-### 2. Get all notifications for a user
-Endpoint      | Method        | API Type      | Description        
-------------- | ------------- | ------------- | ------------
-`/users/[:id]/notifications`  | GET | Application | fetch all notifications for the user
-
-## Constants
 ## Admin APIs
 ### 1. Batch create and update users
 Endpoint      | Method        | API Type      | Description
