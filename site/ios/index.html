@@ -202,17 +202,8 @@
           
             
   <li>
-    <a class="" title="Analytics" href="../analytics/">
-      Analytics
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="Referral and Sharing" href="../referral/">
-      Referral and Sharing
+    <a class="" title="Chat" href="../chat/">
+      Chat
     </a>
     
   </li>
@@ -229,7 +220,7 @@
         <div class="wrapper">
           
           <h1 id="appfriends-ios-sdks">AppFriends iOS SDKs</h1>
-<p>AppFriends iOS has two SDKs that you could use: <code>AppFriendsCore</code> and <code>AppFriendsUI</code>.</p>
+<p>AppFriends iOS has two SDKs that you could use: <code>AppFriendsCore</code> and <code>AppFriendsUI</code>. </p>
 <h1 id="appfriends-core">AppFriends Core</h1>
 <p>AppFriendsCore SDK is used to make direct API calls to AppFriends server. For advance AppFriends users who wish to build UI from scratch, You only need to install this SDK into your project to start. It conveniently handles client authentication, request construction and callbacks. At the same time, it leaves the UI implementation completely up to the developer. </p>
 <h2 id="integration">Integration</h2>
@@ -341,6 +332,13 @@ self.presentVC(nav)
 <p><img alt="Alt text" src="http://res.cloudinary.com/hacknocraft-appfriends/image/upload/v1473191446/dialogsList_zwzuiz.png" title="Dialogs List Example" /></p>
 <h3 id="chat-ui">Chat UI</h3>
 <p><code>HCBaseChatViewController</code> or <code>HCDialogChatViewController</code> is a class you can use to display a chat UI. It provides basic chat UI.</p>
+<h3 id="typing-indicator">Typing Indicator</h3>
+<p>You can send typing events with startTyping and endTyping. If you use the chat view provided by this library, type indicator is provided for you automatically, so you don't have to write any additional code.</p>
+<p><img alt="Alt text" src="http://res.cloudinary.com/hacknocraft-appfriends/image/upload/c_scale,w_200/v1473730653/Simulator_Screen_Shot_Sep_12_2016_5.28.26_PM_uetywi.png" title="Search User Example" /></p>
+<h4 id="start-typing">Start typing</h4>
+<p><code>DialogsManager.sharedInstance.startTyping(_dialogID, dialogType: _dialogType)</code></p>
+<h4 id="end-typing">End typing</h4>
+<p><code>DialogsManager.sharedInstance.endTyping(_dialogID, dialogType: _dialogType)</code></p>
 <h3 id="search-user">Search User</h3>
 <p><code>AppFriendsUI</code> offers a convenient UI for you to search for users. To use this UI, you can either directly use <code>HCUserSearchViewController</code> or create its sub class. </p>
 <p><img alt="Alt text" src="http://res.cloudinary.com/hacknocraft-appfriends/image/upload/v1473189966/Simulator_Screen_Shot_Sep_6_2016_3.25.43_PM_auyjtu.png" title="Search User Example" /></p>

@@ -1,5 +1,5 @@
 # AppFriends iOS SDKs
-AppFriends iOS has two SDKs that you could use: `AppFriendsCore` and `AppFriendsUI`.
+AppFriends iOS has two SDKs that you could use: `AppFriendsCore` and `AppFriendsUI`. 
 
 # AppFriends Core
 AppFriendsCore SDK is used to make direct API calls to AppFriends server. For advance AppFriends users who wish to build UI from scratch, You only need to install this SDK into your project to start. It conveniently handles client authentication, request construction and callbacks. At the same time, it leaves the UI implementation completely up to the developer. 
@@ -127,6 +127,18 @@ self.presentVC(nav)
 
 ### Chat UI
 `HCBaseChatViewController` or `HCDialogChatViewController` is a class you can use to display a chat UI. It provides basic chat UI.
+
+### Typing Indicator
+You can send typing events with startTyping and endTyping. If you use the chat view provided by this library, type indicator is provided for you automatically, so you don't have to write any additional code.
+
+![Alt text](http://res.cloudinary.com/hacknocraft-appfriends/image/upload/c_scale,w_200/v1473730653/Simulator_Screen_Shot_Sep_12_2016_5.28.26_PM_uetywi.png "Search User Example")
+
+#### Start typing
+`DialogsManager.sharedInstance.startTyping(_dialogID, dialogType: _dialogType)`
+
+#### End typing
+`DialogsManager.sharedInstance.endTyping(_dialogID, dialogType: _dialogType)`
+
 
 ### Search User
 `AppFriendsUI` offers a convenient UI for you to search for users. To use this UI, you can either directly use `HCUserSearchViewController` or create its sub class. 

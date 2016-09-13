@@ -2,7 +2,9 @@
 AppFriends API can be used to authenticate user, send messages, search for user, update user information, create social relationship and etc.
 
 - For user related APIs and users search. See [Users](#Users).
+- For open chat channels. See [Channels](#Channels).
 - For messaging. See [Messaging](#Messaging).
+- For admin API's, see [Admin API](#Admin-APIs).
 
 Most of the AppFriends APIs are accessed by using REST API
 
@@ -87,37 +89,6 @@ Endpoint      | Method        | API Type      | Description
 }
 ```
 
-### 3. Online Users
-Endpoint      | Method        | API Type      | Description
-------------- | ------------- | ------------- | -------------
-`/users/online`   | GET           | Application   | Get the users who are currently online
-
-#### Response
-```javascript
-// array of online users
-[
-	{
-	    "id": string, 				// user id provided by hosting app 
-	    "user_name": string,		// username
-	    "avatar": string,			// user's avatar if provided
-    	 "custom_data": string,		// optional , custom data of the user
-	}, 
-	{
-	    "id": string, 				
-	    "user_name": string,		
-	    "avatar": string,	
-    	 "custom_data": string,		// optional , custom data of the user		
-	}
-	...
-]
-```
-
-### 3. Online Users
-Endpoint      | Method        | API Type      | Description
-------------- | ------------- | ------------- | -------------
-`/users/online/count`   | GET           | Application   | Get the count of the users who are currently online
-
-
 ## Followers and Friends
 
 ### 1. Get a user's followers
@@ -128,27 +99,21 @@ Endpoint      | Method        | API Type      | Description
 #### Response
 ```javascript
 {
-  "users": [
+[
     {
       "id": "782",
       "user_name": "wshucn7",
       "avatar": "https://cdn1.iconfinder.com/data/icons/user-pictures/100/male3-128.png"
+    	"custom_data": string,		// optional , custom data of the user
     },
     {
       "id": "3",
       "user_name": "haowang",
       "avatar": "https://robohash.org/3"
+    	"custom_data": string,		// optional , custom data of the user
     },
     ...
-  ],
-  "paging": {
-    "cursors": {
-      "after": 1463167249339,
-      "before": 1463252914178
-    },
-    "next": "https://appfriends-staging-api.hacknocraft.com/api/v3/users/online?limit=25&after=1463167249339",
-    "previous": "https://appfriends-staging-api.hacknocraft.com/api/v3/users/online?limit=25&before=1463252914178"
-  }
+  ]
 }
 ```
 ------
@@ -166,11 +131,13 @@ Endpoint      | Method        | API Type      | Description
 	    "id": string, 				// user id provided by hosting app 
 	    "user_name": string,		// username
 	    "avatar": string,			// user's avatar if provided
+    	 "custom_data": string,		// optional , custom data of the user
 	}, 
 	{
 	    "id": string, 				
 	    "user_name": string,		
-	    "avatar": string,			
+	    "avatar": string,	
+    	 "custom_data": string,		// optional , custom data of the user
 	}
 	...
 ]
@@ -180,27 +147,15 @@ Endpoint      | Method        | API Type      | Description
 ### 3. Make the current user follow a user
 Endpoint      | Method        | API Type      | Description      
 ------------- | ------------- | ------------- | -------------
-`/me/followings`  | POST | Application | Make the current user follow a user
+`/me/:id/follow`  | PUT | Application | Make the current user follow a user
 
-#### Request Parameters
-```javascript
-{
-	"id": string, 			// required, the id of the user to be followed
-}
-```
 ------
 
 ### 4. Make the current user unfollow a user
 Endpoint      | Method        | API Type      | Description      
 ------------- | ------------- | ------------- | -------------
-`/me/followings`  | DELETE | Application | Make the current user unfollow a user
+`/me/:id/unfollow`  | PUT | Application | Make the current user unfollow a user
 
-#### Request Parameters
-```javascript
-{
-	"id": string, 			// required, the id of the user to be unfollowed
-}
-```
 ------
 
 ### 5. Get the friends of a user
@@ -219,11 +174,13 @@ Endpoint      | Method        | API Type      | Description
 	    "id": string, 				// user id provided by hosting app 
 	    "user_name": string,		// username
 	    "avatar": string,			// user's avatar if provided
+    	"custom_data": string,		// optional , custom data of the user
 	}, 
 	{
 	    "id": string, 				
 	    "user_name": string,		
-	    "avatar": string,			
+	    "avatar": string,	
+    	"custom_data": string,		// optional , custom data of the user		
 	}
 	...
 ]
@@ -251,7 +208,7 @@ Endpoint      | Method        | API Type      | Description
 ```
 ------
 
-## Chat Channels
+## Channels
 Chat channels are open to any user. 
 ### 1. Get all chat channels
 Endpoint      | Method        | API Type      | Description     
@@ -262,76 +219,17 @@ Endpoint      | Method        | API Type      | Description
 ```javascript
 [
 {
-	
+	"name": string,						// chat channel name
+	"title": string, 					// title of the activity
+	"cover_image_url": string,			// the cover image of the channel
+	"custom_data": string, 				// custom data. If you want to send object or json, please convert to string
 },
 ....
 ]
 ```
 ------
 
-
-### 4. Get online users in a chat channel
-Endpoint      | Method        | API Type      | Description     
-------------- | ------------- | ------------- | ------------- 
-`/channels/[:id]/users` | GET | Application | get the current online users in the chat channel
-
-#### Response
-```javascript
-// array of users
-{
-  "total_count": 2,
-  "total_page": 1,
-  "current_page": 1,
-  "users": [
-		{
-		    "id": string, 				// user id 
-		    "user_name": string,		// username
-		    "avatar": string,			// user's avatar if provided
-		},
-		{
-			...
-		},
-		...
-	]
-}
-```
-------
-
-### 5. Get online user count for a channel
-Endpoint      | Method        | API Type      | Description     
-------------- | ------------- | ------------- | ------------- 
-`/channels/[:id]/users/count` | GET | Application | get the count of the online users in the chat channel
-
-#### Response
-```javascript
-{
-	"id": int,			// channel id
-	"count": int		// online user count
-}
-```
-------
-
-### 6. Get online user count for all the channels
-Endpoint      | Method        | API Type      | Description     
-------------- | ------------- | ------------- | ------------- 
-`/channels/user_counts` | GET | Application | get the count of the online users in all of the chat channels
-
-#### Response
-```javascript
-[
-	{
-		"id": int,			// channel id
-		"count": int		// online user count
-	},
-	{
-		...
-	},
-	....
-]
-```
-------
-
-### 7. Create a chat channel
+### 2. Create a chat channel
 Endpoint      | Method        | API Type      | Description     
 ------------- | ------------- | ------------- | ------------- 
 `/channels` | POST | Application | create a chat channel
@@ -342,6 +240,7 @@ Endpoint      | Method        | API Type      | Description
 	"name": string,						// chat channel name
 	"title": string, 					// title of the activity
 	"cover_image_url": string,			// the cover image of the channel
+	"custom_data": string, 				// custom data. If you want to send object or json, please convert to string
 }
 ```
 #### Response
@@ -356,7 +255,7 @@ Endpoint      | Method        | API Type      | Description
 ```
 ------
 
-### 8. Modify a chat channel
+### 3. Modify a chat channel
 Endpoint      | Method        | API Type      | Description     
 ------------- | ------------- | ------------- | ------------- 
 `/channels/[:id]` | PUT | Application | modify a chat channel
@@ -367,11 +266,12 @@ Endpoint      | Method        | API Type      | Description
 	"name": string,						// optional, chat channel name
 	"title": string, 					// optional, title of the activity
 	"cover_image_url": string,			// optional, the cover image of the channel
+	"custom_data": string, 				// custom data. If you want to send object or json, please convert to string
 }
 ```
 ------
 
-### 10. Delete a chat channel
+### 4. Delete a chat channel
 `/channels/[:id]` | DELETE | Application | delete a chat channel
 
 
@@ -465,7 +365,7 @@ Endpoint      | Method        | API Type      | Description
 	...
 ]
 ```
-### 2. Modify a dialog
+### 3. Modify a dialog
 Endpoint      | Method        | API Type      | Description     
 ------------- | ------------- | ------------- | ------------- 
 `/dialogs/[:id]` | PUT | Application | modify a dialog
@@ -478,7 +378,7 @@ Endpoint      | Method        | API Type      | Description
 }
 ```
 
-### 3. Add users to a chat group
+### 4. Add users to a group chat dialog
 Endpoint      | Method        | API Type      | Description     
 ------------- | ------------- | ------------- | ------------- 
 `/dialogs/[:id]/members` | POST | Application | add users to a dialog. After they users are added to the dialog, they will start receiving new messages from this dialog.
@@ -490,7 +390,7 @@ Endpoint      | Method        | API Type      | Description
 }
 ```
 
-### 4. Remove users from a chat group
+### 5. Remove users from a chat group
 Endpoint      | Method        | API Type      | Description     
 ------------- | ------------- | ------------- | ------------- 
 `/dialogs/[:id]/members ` | DELETE | Application | remove users from a dialog. 
@@ -502,7 +402,7 @@ Endpoint      | Method        | API Type      | Description
 }
 ```
 
-### 5. Delete a chat group
+### 6. Delete a chat group
 this api is only available to the owner of the group or using the admin secret
 
 Endpoint      | Method        | API Type      | Description     
@@ -513,8 +413,8 @@ Endpoint      | Method        | API Type      | Description
 ### 1. Batch create and update users
 Endpoint      | Method        | API Type      | Description
 ------------- | ------------- | ------------- | -------------
-`/users/batch_create`   | POST           | Admin   | create multiple users
-`/users/batch_update`   | PUT            | Admin   | update multiple users
+`/users/batch_import`   | POST           | Admin   | create multiple users
+`/users/batch_change`   | PUT            | Admin   | update multiple users
 
 #### Request Body
 ```javascript

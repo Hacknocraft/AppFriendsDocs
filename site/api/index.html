@@ -220,8 +220,8 @@
             </li>
           
             <li class="anchor">
-              <a title="Chat Channels" href="#chat-channels">
-                Chat Channels
+              <a title="Channels" href="#channels">
+                Channels
               </a>
             </li>
           
@@ -266,17 +266,8 @@
           
             
   <li>
-    <a class="" title="Analytics" href="../analytics/">
-      Analytics
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="Referral and Sharing" href="../referral/">
-      Referral and Sharing
+    <a class="" title="Chat" href="../chat/">
+      Chat
     </a>
     
   </li>
@@ -296,7 +287,9 @@
 <p>AppFriends API can be used to authenticate user, send messages, search for user, update user information, create social relationship and etc.</p>
 <ul>
 <li>For user related APIs and users search. See <a href="#Users">Users</a>.</li>
+<li>For open chat channels. See <a href="#Channels">Channels</a>.</li>
 <li>For messaging. See <a href="#Messaging">Messaging</a>.</li>
+<li>For admin API's, see <a href="#Admin-APIs">Admin API</a>.</li>
 </ul>
 <p>Most of the AppFriends APIs are accessed by using REST API</p>
 <h2 id="rest-apis">REST API's</h2>
@@ -406,64 +399,6 @@
 </pre></div>
 
 
-<h3 id="3-online-users">3. Online Users</h3>
-<table>
-<thead>
-<tr>
-<th>Endpoint</th>
-<th>Method</th>
-<th>API Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>/users/online</code></td>
-<td>GET</td>
-<td>Application</td>
-<td>Get the users who are currently online</td>
-</tr>
-</tbody>
-</table>
-<h4 id="response_3">Response</h4>
-<div class="code"><pre><span></span><span class="c1">// array of online users</span>
-<span class="p">[</span>
-    <span class="p">{</span>
-        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>               <span class="c1">// user id provided by hosting app </span>
-        <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>        <span class="c1">// username</span>
-        <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>           <span class="c1">// user&#39;s avatar if provided</span>
-         <span class="s2">&quot;custom_data&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>     <span class="c1">// optional , custom data of the user</span>
-    <span class="p">},</span> 
-    <span class="p">{</span>
-        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>               
-        <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>        
-        <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>   
-         <span class="s2">&quot;custom_data&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>     <span class="c1">// optional , custom data of the user       </span>
-    <span class="p">}</span>
-    <span class="p">...</span>
-<span class="p">]</span>
-</pre></div>
-
-
-<h3 id="3-online-users_1">3. Online Users</h3>
-<table>
-<thead>
-<tr>
-<th>Endpoint</th>
-<th>Method</th>
-<th>API Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>/users/online/count</code></td>
-<td>GET</td>
-<td>Application</td>
-<td>Get the count of the users who are currently online</td>
-</tr>
-</tbody>
-</table>
 <h2 id="followers-and-friends">Followers and Friends</h2>
 <h3 id="1-get-a-users-followers">1. Get a user's followers</h3>
 <table>
@@ -484,29 +419,23 @@
 </tr>
 </tbody>
 </table>
-<h4 id="response_4">Response</h4>
+<h4 id="response_3">Response</h4>
 <div class="code"><pre><span></span><span class="p">{</span>
-  <span class="s2">&quot;users&quot;</span><span class="o">:</span> <span class="p">[</span>
+<span class="p">[</span>
     <span class="p">{</span>
       <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;782&quot;</span><span class="p">,</span>
       <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;wshucn7&quot;</span><span class="p">,</span>
       <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;https://cdn1.iconfinder.com/data/icons/user-pictures/100/male3-128.png&quot;</span>
+        <span class="s2">&quot;custom_data&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>      <span class="c1">// optional , custom data of the user</span>
     <span class="p">},</span>
     <span class="p">{</span>
       <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
       <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;haowang&quot;</span><span class="p">,</span>
       <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;https://robohash.org/3&quot;</span>
+        <span class="s2">&quot;custom_data&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>      <span class="c1">// optional , custom data of the user</span>
     <span class="p">},</span>
     <span class="p">...</span>
-  <span class="p">],</span>
-  <span class="s2">&quot;paging&quot;</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">&quot;cursors&quot;</span><span class="o">:</span> <span class="p">{</span>
-      <span class="s2">&quot;after&quot;</span><span class="o">:</span> <span class="mi">1463167249339</span><span class="p">,</span>
-      <span class="s2">&quot;before&quot;</span><span class="o">:</span> <span class="mi">1463252914178</span>
-    <span class="p">},</span>
-    <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="s2">&quot;https://appfriends-staging-api.hacknocraft.com/api/v3/users/online?limit=25&amp;after=1463167249339&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;previous&quot;</span><span class="o">:</span> <span class="s2">&quot;https://appfriends-staging-api.hacknocraft.com/api/v3/users/online?limit=25&amp;before=1463252914178&quot;</span>
-  <span class="p">}</span>
+  <span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
 
@@ -531,18 +460,20 @@
 </tr>
 </tbody>
 </table>
-<h4 id="response_5">Response</h4>
+<h4 id="response_4">Response</h4>
 <div class="code"><pre><span></span><span class="c1">// array of users that the current user is following</span>
 <span class="p">[</span>
     <span class="p">{</span>
         <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>               <span class="c1">// user id provided by hosting app </span>
         <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>        <span class="c1">// username</span>
         <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>           <span class="c1">// user&#39;s avatar if provided</span>
+         <span class="s2">&quot;custom_data&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>     <span class="c1">// optional , custom data of the user</span>
     <span class="p">},</span> 
     <span class="p">{</span>
         <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>               
         <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>        
-        <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>           
+        <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>   
+         <span class="s2">&quot;custom_data&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>     <span class="c1">// optional , custom data of the user</span>
     <span class="p">}</span>
     <span class="p">...</span>
 <span class="p">]</span>
@@ -562,20 +493,13 @@
 </thead>
 <tbody>
 <tr>
-<td><code>/me/followings</code></td>
-<td>POST</td>
+<td><code>/me/:id/follow</code></td>
+<td>PUT</td>
 <td>Application</td>
 <td>Make the current user follow a user</td>
 </tr>
 </tbody>
 </table>
-<h4 id="request-parameters_1">Request Parameters</h4>
-<div class="code"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>           <span class="c1">// required, the id of the user to be followed</span>
-<span class="p">}</span>
-</pre></div>
-
-
 <hr />
 <h3 id="4-make-the-current-user-unfollow-a-user">4. Make the current user unfollow a user</h3>
 <table>
@@ -589,20 +513,13 @@
 </thead>
 <tbody>
 <tr>
-<td><code>/me/followings</code></td>
-<td>DELETE</td>
+<td><code>/me/:id/unfollow</code></td>
+<td>PUT</td>
 <td>Application</td>
 <td>Make the current user unfollow a user</td>
 </tr>
 </tbody>
 </table>
-<h4 id="request-parameters_2">Request Parameters</h4>
-<div class="code"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>           <span class="c1">// required, the id of the user to be unfollowed</span>
-<span class="p">}</span>
-</pre></div>
-
-
 <hr />
 <h3 id="5-get-the-friends-of-a-user">5. Get the friends of a user</h3>
 <table>
@@ -627,18 +544,20 @@
 <p class="admonition-title">who are my friends?</p>
 <p>Friends are users who follow each other.</p>
 </div>
-<h4 id="response_6">Response</h4>
+<h4 id="response_5">Response</h4>
 <div class="code"><pre><span></span><span class="c1">// array of users</span>
 <span class="p">[</span>
     <span class="p">{</span>
         <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>               <span class="c1">// user id provided by hosting app </span>
         <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>        <span class="c1">// username</span>
         <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>           <span class="c1">// user&#39;s avatar if provided</span>
+        <span class="s2">&quot;custom_data&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>      <span class="c1">// optional , custom data of the user</span>
     <span class="p">},</span> 
     <span class="p">{</span>
         <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>               
         <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>        
-        <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>           
+        <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>   
+        <span class="s2">&quot;custom_data&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>      <span class="c1">// optional , custom data of the user       </span>
     <span class="p">}</span>
     <span class="p">...</span>
 <span class="p">]</span>
@@ -691,7 +610,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="request-parameters_3">Request Parameters</h4>
+<h4 id="request-parameters_1">Request Parameters</h4>
 <div class="code"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;reason&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>           <span class="c1">// the reason why the user is being reported</span>
 <span class="p">}</span>
@@ -699,7 +618,7 @@
 
 
 <hr />
-<h2 id="chat-channels">Chat Channels</h2>
+<h2 id="channels">Channels</h2>
 <p>Chat channels are open to any user. </p>
 <h3 id="1-get-all-chat-channels">1. Get all chat channels</h3>
 <table>
@@ -720,10 +639,13 @@
 </tr>
 </tbody>
 </table>
-<h4 id="response_7">Response</h4>
+<h4 id="response_6">Response</h4>
 <div class="code"><pre><span></span><span class="p">[</span>
 <span class="p">{</span>
-
+    <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>                     <span class="c1">// chat channel name</span>
+    <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>                    <span class="c1">// title of the activity</span>
+    <span class="s2">&quot;cover_image_url&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>          <span class="c1">// the cover image of the channel</span>
+    <span class="s2">&quot;custom_data&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>              <span class="c1">// custom data. If you want to send object or json, please convert to string</span>
 <span class="p">},</span>
 <span class="p">....</span>
 <span class="p">]</span>
@@ -731,110 +653,7 @@
 
 
 <hr />
-<h3 id="4-get-online-users-in-a-chat-channel">4. Get online users in a chat channel</h3>
-<table>
-<thead>
-<tr>
-<th>Endpoint</th>
-<th>Method</th>
-<th>API Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>/channels/[:id]/users</code></td>
-<td>GET</td>
-<td>Application</td>
-<td>get the current online users in the chat channel</td>
-</tr>
-</tbody>
-</table>
-<h4 id="response_8">Response</h4>
-<div class="code"><pre><span></span><span class="c1">// array of users</span>
-<span class="p">{</span>
-  <span class="s2">&quot;total_count&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
-  <span class="s2">&quot;total_page&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-  <span class="s2">&quot;current_page&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-  <span class="s2">&quot;users&quot;</span><span class="o">:</span> <span class="p">[</span>
-        <span class="p">{</span>
-            <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>               <span class="c1">// user id </span>
-            <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>        <span class="c1">// username</span>
-            <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>           <span class="c1">// user&#39;s avatar if provided</span>
-        <span class="p">},</span>
-        <span class="p">{</span>
-            <span class="p">...</span>
-        <span class="p">},</span>
-        <span class="p">...</span>
-    <span class="p">]</span>
-<span class="p">}</span>
-</pre></div>
-
-
-<hr />
-<h3 id="5-get-online-user-count-for-a-channel">5. Get online user count for a channel</h3>
-<table>
-<thead>
-<tr>
-<th>Endpoint</th>
-<th>Method</th>
-<th>API Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>/channels/[:id]/users/count</code></td>
-<td>GET</td>
-<td>Application</td>
-<td>get the count of the online users in the chat channel</td>
-</tr>
-</tbody>
-</table>
-<h4 id="response_9">Response</h4>
-<div class="code"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span>          <span class="c1">// channel id</span>
-    <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="kr">int</span>        <span class="c1">// online user count</span>
-<span class="p">}</span>
-</pre></div>
-
-
-<hr />
-<h3 id="6-get-online-user-count-for-all-the-channels">6. Get online user count for all the channels</h3>
-<table>
-<thead>
-<tr>
-<th>Endpoint</th>
-<th>Method</th>
-<th>API Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>/channels/user_counts</code></td>
-<td>GET</td>
-<td>Application</td>
-<td>get the count of the online users in all of the chat channels</td>
-</tr>
-</tbody>
-</table>
-<h4 id="response_10">Response</h4>
-<div class="code"><pre><span></span><span class="p">[</span>
-    <span class="p">{</span>
-        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span>          <span class="c1">// channel id</span>
-        <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="kr">int</span>        <span class="c1">// online user count</span>
-    <span class="p">},</span>
-    <span class="p">{</span>
-        <span class="p">...</span>
-    <span class="p">},</span>
-    <span class="p">....</span>
-<span class="p">]</span>
-</pre></div>
-
-
-<hr />
-<h3 id="7-create-a-chat-channel">7. Create a chat channel</h3>
+<h3 id="2-create-a-chat-channel">2. Create a chat channel</h3>
 <table>
 <thead>
 <tr>
@@ -858,11 +677,12 @@
     <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>                     <span class="c1">// chat channel name</span>
     <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>                    <span class="c1">// title of the activity</span>
     <span class="s2">&quot;cover_image_url&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>          <span class="c1">// the cover image of the channel</span>
+    <span class="s2">&quot;custom_data&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>              <span class="c1">// custom data. If you want to send object or json, please convert to string</span>
 <span class="p">}</span>
 </pre></div>
 
 
-<h4 id="response_11">Response</h4>
+<h4 id="response_7">Response</h4>
 <div class="code"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="kr">int</span><span class="p">,</span>                          <span class="c1">// chat channel id</span>
     <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>                     <span class="c1">// chat channel name</span>
@@ -874,7 +694,7 @@
 
 
 <hr />
-<h3 id="8-modify-a-chat-channel">8. Modify a chat channel</h3>
+<h3 id="3-modify-a-chat-channel">3. Modify a chat channel</h3>
 <table>
 <thead>
 <tr>
@@ -898,12 +718,13 @@
     <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>                     <span class="c1">// optional, chat channel name</span>
     <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>                    <span class="c1">// optional, title of the activity</span>
     <span class="s2">&quot;cover_image_url&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>          <span class="c1">// optional, the cover image of the channel</span>
+    <span class="s2">&quot;custom_data&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>              <span class="c1">// custom data. If you want to send object or json, please convert to string</span>
 <span class="p">}</span>
 </pre></div>
 
 
 <hr />
-<h3 id="10-delete-a-chat-channel">10. Delete a chat channel</h3>
+<h3 id="4-delete-a-chat-channel">4. Delete a chat channel</h3>
 <p><code>/channels/[:id]</code> | DELETE | Application | delete a chat channel</p>
 <h2 id="messaging">Messaging</h2>
 <h3 id="1-sending-a-message">1. Sending a message</h3>
@@ -945,7 +766,7 @@
 </pre></div>
 
 
-<h4 id="response_12">Response</h4>
+<h4 id="response_8">Response</h4>
 <div class="code"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;text&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>                     <span class="c1">// message content</span>
     <span class="s2">&quot;custom_data&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>              <span class="c1">// custom data. If you want to send object or json, please convert to string</span>
@@ -989,7 +810,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="request-parameters_4">Request Parameters</h4>
+<h4 id="request-parameters_2">Request Parameters</h4>
 <div class="code"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>         <span class="c1">// required, the name of the dialog</span>
     <span class="s2">&quot;members&quot;</span><span class="o">:</span> <span class="nx">array</span><span class="p">,</span>       <span class="c1">// required, an array of the id&#39;s of the users who you want to be in this dialog</span>
@@ -1044,7 +865,7 @@
 </pre></div>
 
 
-<h3 id="2-modify-a-dialog">2. Modify a dialog</h3>
+<h3 id="3-modify-a-dialog">3. Modify a dialog</h3>
 <table>
 <thead>
 <tr>
@@ -1063,7 +884,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="request-parameters_5">Request Parameters</h4>
+<h4 id="request-parameters_3">Request Parameters</h4>
 <div class="code"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>         <span class="c1">// optional, the name of the dialog</span>
     <span class="s2">&quot;owner_id&quot;</span>              <span class="c1">// optional, the user id of the owner of the dialog</span>
@@ -1071,7 +892,7 @@
 </pre></div>
 
 
-<h3 id="3-add-users-to-a-chat-group">3. Add users to a chat group</h3>
+<h3 id="4-add-users-to-a-group-chat-dialog">4. Add users to a group chat dialog</h3>
 <table>
 <thead>
 <tr>
@@ -1090,14 +911,14 @@
 </tr>
 </tbody>
 </table>
-<h4 id="request-parameters_6">Request Parameters</h4>
+<h4 id="request-parameters_4">Request Parameters</h4>
 <div class="code"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;members&quot;</span><span class="o">:</span> <span class="nx">array</span><span class="p">,</span>       <span class="c1">// required, the id&#39;s of the users who you want to add to the dialog</span>
 <span class="p">}</span>
 </pre></div>
 
 
-<h3 id="4-remove-users-from-a-chat-group">4. Remove users from a chat group</h3>
+<h3 id="5-remove-users-from-a-chat-group">5. Remove users from a chat group</h3>
 <table>
 <thead>
 <tr>
@@ -1116,14 +937,14 @@
 </tr>
 </tbody>
 </table>
-<h4 id="request-parameters_7">Request Parameters</h4>
+<h4 id="request-parameters_5">Request Parameters</h4>
 <div class="code"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;members&quot;</span><span class="o">:</span> <span class="nx">array</span><span class="p">,</span>       <span class="c1">// required, the id&#39;s of the users who you want to add to remove from the dialog</span>
 <span class="p">}</span>
 </pre></div>
 
 
-<h3 id="5-delete-a-chat-group">5. Delete a chat group</h3>
+<h3 id="6-delete-a-chat-group">6. Delete a chat group</h3>
 <p>this api is only available to the owner of the group or using the admin secret</p>
 <table>
 <thead>
@@ -1156,13 +977,13 @@
 </thead>
 <tbody>
 <tr>
-<td><code>/users/batch_create</code></td>
+<td><code>/users/batch_import</code></td>
 <td>POST</td>
 <td>Admin</td>
 <td>create multiple users</td>
 </tr>
 <tr>
-<td><code>/users/batch_update</code></td>
+<td><code>/users/batch_change</code></td>
 <td>PUT</td>
 <td>Admin</td>
 <td>update multiple users</td>
