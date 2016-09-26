@@ -1,21 +1,21 @@
 # Welcome to AppFriends
 
-For product overview, please visit [AppFriends.me](http://appfriends.me). You can get started by signing up an account. If you are interested in our product or have idea on how we can improve it, please send email to [support@hacknocraft.com](SUPPORT@HACKNOCRAFT.COM) and we will get back to you very quickly.
+The AppFriends plugin integrates public chat channels, private messaging, and social graphs into any app to increase user interaction and engagement. AppFriends supports multiple platforms.
 
-## Chat
-To learn about how to use AppFriends to implement chat, and the different types of chats AppFriends offer, please read [Chat guide](chat.md).
+If you are interested in our product or have idea on how we can improve it, please send email to [support@hacknocraft.com](SUPPORT@HACKNOCRAFT.COM) and we will get back to you very quickly.
 
-## iOS SDK
-The iOS SDK can be integrated into existing xcode iOS projects. For details, please read [iOS SDK guide](ios.md).
+## Mobile
+AppFriends has native SDKs that make integration to iOS and Android much easier.
 
-For detailed class interface document, please go to [class documents](http://www.appfriends.me/documentation/ios_class/index.html).
+### iOS
+The iOS SDK can be integrated into existing xcode iOS projects. There are two SDK frameworks for you to use. If you don't want to use our provided UI, you can integrate the [AppFriendsCore](https://github.com/laeroah/AppFriendsCoreFramework) framework, which has no UI components but helps you communicate with AppFriends platform. There's also the [AppFriendsUI](https://github.com/laeroah/AppFriendsUI) framework, which contains a lot of convenient UI components for you to quickly implement the social component in your app. For details, please read [iOS SDK guide](iOS/quick_start.md).
 
-## Android SDK
+### Android
 The Android SDK can be integrated into existing Android projects. For details,
 please read [Android SDK guide](android.md).
 
-## AppFriends API
-Our SDK and backend have comprehensive API's for you to use, please read [our API doc](api.md).
+## Server API
+AppFriends has comprehensive REST API's for you to use, please read [our API doc](api.md).
 
 ## Admin Portal
 You can control the widget by log into the [admin portal](http://appfriends.hacknocraft.com/) with your AppFriends account.

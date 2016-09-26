@@ -1,4 +1,3 @@
-
 # Quick Start
 ## 1. Create an AppFriends Application
 Before start using AppFriends, you need to create an application on the [dashboard](http://appfriends.hacknocraft.com/landing/index) Users in the same application can talk to each other and you only need one application for all the platforms you want to support.
@@ -76,41 +75,3 @@ AppFriendsUI.sharedInstance.initialize("[appfriends key]", secret: "[appfriends 
 <pre><code class="swift">import AppFriendsCore
 import AppFriendsUI
 </code></pre>
-
-# User Create and Login
-AppFriends users are mirrors of the users in your app. To create or login a user on AppFriends, you need to provide at least
-
-1. an unique username
-2. an unique user ID
-
-### Example
-#### Swift
-<pre><code class="swift">
-let userInfo = [HCSDKConstants.kUserID: "e575be0fef6c24041a1749da54ece501", HCSDKConstants.kUserName: "John Doe"]
-HCSDKCore.sharedInstance.loginWithUserInfo(userInfo)
-{ (response, error) in
-  	if let err = error {
-  			// handle login error
-  	}
-  	else {
-			// login is successful here
-  	}
-}
-</code></pre>
-
-# Chat
-## Dialogs
-There are three types of dialogs:
-
-1. Private one on one dialog. This is a conversation between two users. You can't add more users to private one on one dialog. This type of dialog is only visible to the two users.
-2. Private group dialog. This is a conversation between multiple users. You can add up to 200 users to a private group chat. This type of dialog is only visible to users in the group.
-3. Open channel dialog. This is an open conversation. It is visible to everyone. Each user can only be in one channel at a time.
-
-### Mute a dialog
-
-
-## Messages
-
-
-# UI Components
-AppFriendsUI provides a lot of useful and convenient UI components for you to use. It can save a lot of your time developing the app.  

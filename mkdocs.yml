@@ -1,19 +1,23 @@
 site_name: AppFriends Documentation
-site_description: 'A turn-key to make your app social.'
-site_author: 'John Doe'
+site_description: 'A turn-key solution to enable messagina and make your app social.'
+site_author: 'Hao Wang'
 site_url: 'http://www.appfriends.me'
+site_favicon: images/logo.png
 
 # Copyright
 copyright: 'Copyright (c) 2016 Hacknocraft'
 
-theme: 'material'
+theme: 'cinder'
 pages:
 - Welcome: index.md
-- iOS Documentation: ios.md
-- Android Documentation: android.md
-- AppFriends API: api.md
-- Authentication and API Requests: security.md
-- Chat: chat.md
+- iOS:
+  - 'Quick Start': 'iOS/quick_start.md'
+  - 'Authentication': 'iOS/authentication.md'
+  - 'Chat': 'iOS/chat.md'
+  - 'Social Graph': 'social.md'
+  - 'UI Components': 'iOS/ui_components.md'
+- Android: android.md
+- Server API: api.md
 
 markdown_extensions:
   - codehilite(css_class=code)
