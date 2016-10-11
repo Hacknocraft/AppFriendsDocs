@@ -16,7 +16,9 @@ Also, add `use_frameworks!` to the file. eg.
 
 To see an sample app of how to use AppFriendsUI, please checkout our repo:
 
+<a href="https://github.com/laeroah/AppFriendsUI/">
 <button class="btn btn-info">Github Sample App Repo</button>  
+</a>
 
 If you don't want any of the UI components we provide, you can directly interact with the platform API, and we have a core framework to use for that purpose:
 

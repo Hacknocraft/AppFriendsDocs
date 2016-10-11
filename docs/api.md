@@ -19,10 +19,10 @@ If you use our out of box UI, all functionalities are enabled and ready to use b
 Have fun! and remember to tell us what you made, and how we can improve our product to better support you.
 
 ### Application API
-Application API's can only be accessed via the SDK, using the application secret. 
+Application API's can only be accessed via the SDK, using the application secret.
 
 ### Admin API
-The admin api's can be accessed via any http client, using the admin secret. 
+The admin api's can be accessed via any http client, using the admin secret.
 
 ### Response
 All responses from the REST API will be in `JSON` format. When a request is successful, the REST api will respond with requested data. When request is failed, an error with appropriate error code and some description of the error will be returned.
@@ -42,13 +42,13 @@ All responses from the REST API will be in `JSON` format. When a request is succ
 ## User
 
 !!! note "**/me**, a shortcut for current user"
-    */me*, is a shortcut for */user/[:current_user_id]*. For example, */me/profile* is equivalent to */user/[:current_user_id]/profile*. 
-    
+    */me*, is a shortcut for */user/[:current_user_id]*. For example, */me/profile* is equivalent to */user/[:current_user_id]/profile*.
+
 ### 1. Get User information
 Endpoint      | Method        | API Type      | Description
 ------------- | ------------- | ------------- | -------------
 `/users/[:id]`   | GET           | Application   | get the user's information
-	
+
 #### Response
 ```javascript
 {
@@ -80,7 +80,7 @@ Endpoint      | Method        | API Type      | Description
 #### Response
 ```javascript
 {
-    "id": string, 				// user id provided by hosting app 
+    "id": string, 				// user id provided by hosting app
     "email": string,			// user's email if provided
     "user_name": string,		// username
     "real_name": string,		// user's real name if provided
@@ -128,15 +128,15 @@ Endpoint      | Method        | API Type      | Description
 // array of users that the current user is following
 [
 	{
-	    "id": string, 				// user id provided by hosting app 
+	    "id": string, 				// user id provided by hosting app
 	    "user_name": string,		// username
 	    "avatar": string,			// user's avatar if provided
     	 "custom_data": string,		// optional , custom data of the user
-	}, 
+	},
 	{
 	    "id": string, 				
 	    "user_name": string,		
-	    "avatar": string,	
+	    "avatar": string,
     	 "custom_data": string,		// optional , custom data of the user
 	}
 	...
@@ -160,26 +160,26 @@ Endpoint      | Method        | API Type      | Description
 
 ### 5. Get the friends of a user
 Endpoint      | Method        | API Type      | Description     
-------------- | ------------- | ------------- | ------------- 
+------------- | ------------- | ------------- | -------------
 `/users/[:id]/Friends`   | GET   | Application | Get the user's friends
 
 !!! note "who are my friends?"
     Friends are users who follow each other.
-    
+
 #### Response
 ```javascript
 // array of users
 [
 	{
-	    "id": string, 				// user id provided by hosting app 
+	    "id": string, 				// user id provided by hosting app
 	    "user_name": string,		// username
 	    "avatar": string,			// user's avatar if provided
     	"custom_data": string,		// optional , custom data of the user
-	}, 
+	},
 	{
 	    "id": string, 				
 	    "user_name": string,		
-	    "avatar": string,	
+	    "avatar": string,
     	"custom_data": string,		// optional , custom data of the user		
 	}
 	...
@@ -189,7 +189,7 @@ Endpoint      | Method        | API Type      | Description
 
 ## Block/unblock users
 Endpoint      | Method        | API Type      | Description     
-------------- | ------------- | ------------- | ------------- 
+------------- | ------------- | ------------- | -------------
 `/users/[:id]/block`   | POST   | Application | Block this user
 `/users/[:id]/unblock` | POST   | Application | Unblock this user
 
@@ -197,7 +197,7 @@ Endpoint      | Method        | API Type      | Description
 
 ## Reporting a user
 Endpoint      | Method        | API Type      | Description     
-------------- | ------------- | ------------- | ------------- 
+------------- | ------------- | ------------- | -------------
 `/users/[:id]/report`   | POST   | Application | report this user
 
 #### Request Parameters
@@ -209,10 +209,10 @@ Endpoint      | Method        | API Type      | Description
 ------
 
 ## Channels
-Chat channels are open to any user. 
+Chat channels are open to any user.
 ### 1. Get all chat channels
 Endpoint      | Method        | API Type      | Description     
-------------- | ------------- | ------------- | ------------- 
+------------- | ------------- | ------------- | -------------
 `/channels` | GET | Application | get all the public chat channels
 
 #### Response
@@ -231,7 +231,7 @@ Endpoint      | Method        | API Type      | Description
 
 ### 2. Create a chat channel
 Endpoint      | Method        | API Type      | Description     
-------------- | ------------- | ------------- | ------------- 
+------------- | ------------- | ------------- | -------------
 `/channels` | POST | Application | create a chat channel
 
 #### Request
@@ -257,7 +257,7 @@ Endpoint      | Method        | API Type      | Description
 
 ### 3. Modify a chat channel
 Endpoint      | Method        | API Type      | Description     
-------------- | ------------- | ------------- | ------------- 
+------------- | ------------- | ------------- | -------------
 `/channels/[:id]` | PUT | Application | modify a chat channel
 
 #### Request
@@ -278,7 +278,7 @@ Endpoint      | Method        | API Type      | Description
 ## Messaging
 ### 1. Sending a message
 Endpoint      | Method        | API Type      | Description     
-------------- | ------------- | ------------- | ------------- 
+------------- | ------------- | ------------- | -------------
 `/dialogs/[:id]/messages` | POST | Application | Send a message in a dialog
 `/users/[:id]/messages` | POST | Application | Send a message to a user
 `/channels/[:id]/messages` | POST | Application | Send a message to a chat channel
@@ -313,7 +313,7 @@ HCSDKCore.sharedInstance.syncDelegate = self
 Then implement:
 
 ```
-public func messagesReceived(messages: [[String : AnyObject]]) 
+public func messagesReceived(messages: [[String : AnyObject]])
 ```
 
 ## Dialogs
@@ -321,7 +321,7 @@ public func messagesReceived(messages: [[String : AnyObject]])
 To start a new conversation, call this method to create a dialog with users. You can then add or remove users from it.
 
 Endpoint      | Method        | API Type      | Description     
-------------- | ------------- | ------------- | ------------- 
+------------- | ------------- | ------------- | -------------
 `/dialogs`    | POST          | Application   | create a chat dialog
 
 #### Request Parameters
@@ -343,11 +343,11 @@ Endpoint      | Method        | API Type      | Description
 }
 ```
 
-### 2. Get all dialogs that the user is in 
-When you want to start chat for user, you need to call this api to create a dialog first. 
- 
+### 2. Get all dialogs that the user is in
+When you want to start chat for user, you need to call this api to create a dialog first.
+
 Endpoint      | Method        | API Type      | Description     
-------------- | ------------- | ------------- | ------------- 
+------------- | ------------- | ------------- | -------------
 `/dialogs`    | GET           | Application   | get All dialogs that the user is currently in
 
 #### JSON Response
@@ -367,7 +367,7 @@ Endpoint      | Method        | API Type      | Description
 ```
 ### 3. Modify a dialog
 Endpoint      | Method        | API Type      | Description     
-------------- | ------------- | ------------- | ------------- 
+------------- | ------------- | ------------- | -------------
 `/dialogs/[:id]` | PUT | Application | modify a dialog
 
 #### Request Parameters
@@ -380,7 +380,7 @@ Endpoint      | Method        | API Type      | Description
 
 ### 4. Add users to a group chat dialog
 Endpoint      | Method        | API Type      | Description     
-------------- | ------------- | ------------- | ------------- 
+------------- | ------------- | ------------- | -------------
 `/dialogs/[:id]/members` | POST | Application | add users to a dialog. After they users are added to the dialog, they will start receiving new messages from this dialog.
 
 #### Request Parameters
@@ -392,8 +392,8 @@ Endpoint      | Method        | API Type      | Description
 
 ### 5. Remove users from a chat group
 Endpoint      | Method        | API Type      | Description     
-------------- | ------------- | ------------- | ------------- 
-`/dialogs/[:id]/members ` | DELETE | Application | remove users from a dialog. 
+------------- | ------------- | ------------- | -------------
+`/dialogs/[:id]/members ` | DELETE | Application | remove users from a dialog.
 
 #### Request Parameters
 ```javascript
@@ -406,7 +406,7 @@ Endpoint      | Method        | API Type      | Description
 this api is only available to the owner of the group or using the admin secret
 
 Endpoint      | Method        | API Type      | Description     
-------------- | ------------- | ------------- | ------------- 
+------------- | ------------- | ------------- | -------------
 `/dialogs/[:id]` | DELETE | Application | The owner or admin can delete a dialog
 
 ## Admin APIs
@@ -425,7 +425,7 @@ Endpoint      | Method        | API Type      | Description
     "user_name": "kejia",
     "avatar": "https://avatar.appfriends.me/kejia.png",
     "email": "kejia@gmail.com",
-    "note": "champion" // notes for this user, if it has value, it will be displayed below the user name in the default UI
+    "custom_data": "champion" // custom data of the user
   },
   {
     "id": "1236",
@@ -510,7 +510,7 @@ Sample error json:
         "more_info": "https://appfriends.me/documentation"
     }
 }
-``` 
+```
 ### Error Codes
 Error Code | Description
 -----------|-------------
@@ -521,12 +521,11 @@ Error Code | Description
 100        | invalid parameters
 104        | incorrect signature
 190			 | need to login to perform this request
-200        | need user to agree to permissions first 
-202        | operation cannot complete 
+200        | need user to agree to permissions first
+202        | operation cannot complete
 203			 | navigation url not found
 405			 | user authentication failed
 406			 | your account is logged in on another device
 502			 | under maintenance
-503 		 | verify new device failed 
+503 		 | verify new device failed
 504        | internet not available
-

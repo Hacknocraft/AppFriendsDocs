@@ -1,2 +1,2 @@
 # UI Components
-AppFriendsUI provides a lot of useful and convenient UI components for you to use. It can save a lot of your time developing the app.  
+`AppFriendsUI` provides a lot of useful and convenient UI components for you to use. It can save a lot of your time developing the app. Our [demo app](https://github.com/laeroah/AppFriendsUI/tree/master/Example/AFChatUISample) takes full advantage of the `AppFriendsUI`. You could clone the demo app repo from github to see how it uses, interact and customizes the UI components provided by `AppFriendsUI`.
