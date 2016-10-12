@@ -4,49 +4,67 @@
     
     <url>
      <loc>http://www.appfriends.me/</loc>
-     <lastmod>2016-09-12</lastmod>
+     <lastmod>2016-10-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
+        
     <url>
-     <loc>http://www.appfriends.me/ios/</loc>
-     <lastmod>2016-09-12</lastmod>
+     <loc>http://www.appfriends.me/iOS/quick_start/</loc>
+     <lastmod>2016-10-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
+        
+    <url>
+     <loc>http://www.appfriends.me/iOS/users/</loc>
+     <lastmod>2016-10-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://www.appfriends.me/iOS/chat/</loc>
+     <lastmod>2016-10-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://www.appfriends.me/iOS/ui_components/</loc>
+     <lastmod>2016-10-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
     
     <url>
      <loc>http://www.appfriends.me/android/</loc>
-     <lastmod>2016-09-12</lastmod>
+     <lastmod>2016-10-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
+        
     <url>
-     <loc>http://www.appfriends.me/api/</loc>
-     <lastmod>2016-09-12</lastmod>
+     <loc>http://www.appfriends.me/API/request_auth/</loc>
+     <lastmod>2016-10-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
+        
     <url>
-     <loc>http://www.appfriends.me/security/</loc>
-     <lastmod>2016-09-12</lastmod>
+     <loc>http://www.appfriends.me/API/applicationapi/</loc>
+     <lastmod>2016-10-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
+        
     <url>
-     <loc>http://www.appfriends.me/chat/</loc>
-     <lastmod>2016-09-12</lastmod>
+     <loc>http://www.appfriends.me/API/adminapi/</loc>
+     <lastmod>2016-10-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
+        
     
 
 </urlset>

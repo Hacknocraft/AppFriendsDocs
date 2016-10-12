@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="author" content="Hao Wang"> 
+    <link rel="canonical" href="http://www.appfriends.me/API/request_auth/"> 
+    <link rel="shortcut icon" href="../../../../images/logo.png">
+
+    <title>Request Authentication - AppFriends Documentation</title>
+
+    <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.018/css/hack.min.css">
+    <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../css/base.css" rel="stylesheet">
+    <link href="../../css/cinder.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/highlight.css">
+
+
+    <link href="../../extra.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+    <script>
+    WebFont.load({
+        google: {
+            families: ['Open Sans', 'PT Sans']
+        }
+    });
+    </script>
+
+    
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../..">AppFriends Documentation</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../..">Welcome</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">iOS <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../iOS/quick_start/">Quick Start</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../iOS/users/">Users</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../iOS/chat/">Chat</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../iOS/ui_components/">UI Components</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../android/">Android</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Server API <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li class="active">
+    <a href="./">Request Authentication</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../applicationapi/">Application APIs</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../adminapi/">Admin APIs</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+            
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                
+                    <li >
+                        <a rel="next" href="../../android/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../applicationapi/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="first-level active"><a href="#authentication-of-api-requests">Authentication of API Requests</a></li>
+        
+            <li class="second-level"><a href="#request-header">Request Header</a></li>
+            
+                <li class="third-level"><a href="#sample-request-header">Sample Request Header</a></li>
+            
+        
+            <li class="second-level"><a href="#app-id-and-secrets">App ID and Secrets</a></li>
+            
+        
+            <li class="second-level"><a href="#signature-creation">Signature Creation</a></li>
+            
+                <li class="third-level"><a href="#jwt-header">JWT Header</a></li>
+            
+                <li class="third-level"><a href="#jwt-payload">JWT Payload</a></li>
+            
+        
+    
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h1 id="authentication-of-api-requests">Authentication of API Requests</h1>
+<p>When you access AppFriends REST API via our SDK, you only need to provide the correct <strong>App_ID</strong> and <strong>App_Secret</strong> when you initialize the SDK. However, when you want to make direct REST API requests using a http client, the requests need to be structured correctly and signed by the appropriate secret. <code>admin secret</code> can be used for all APIs, but you should only use it on your server to keep it secret. <code>app secret</code> is for you to use inside your app, and it can only give access to application APIs.</p>
+<h2 id="request-header">Request Header</h2>
+<p>In the request http header, These fields need to be present:</p>
+<p><code>APP_ID</code> - Your App_ID. You can find it in the admin panel after your app is created there.</p>
+<p><code>TOKEN</code> - When you are sending the requests on a user's behave, the user's auth token should be included here. Auth token is returned after the user signup or login to AppFriends. See <a href="#user-authentication">user authentication</a>.</p>
+<p><code>Authorization</code> - Your request signature. See <a href="#signature-creation">signature creation</a>.</p>
+<p><code>Nonce</code> - A random integer.</p>
+<p><code>Timestamp</code> - system timestamp</p>
+<h3 id="sample-request-header">Sample Request Header</h3>
+<p>Your http header can contain other fields, but they need to include:</p>
+<div class="code"><pre><span></span>APP_ID: &quot;SVXJKXjXUGOkEFBWDK8NCwtt&quot;
+TOKEN: &quot;BE82LbEu_bGNnwXmy5KObw&quot;
+Timestamp: &quot;1462117651&quot;
+Nonce: &quot;&lt;random integer&gt;&quot;
+Authorization: Bearer &lt;signature token&gt;
+</pre></div>
+
+
+<h2 id="app-id-and-secrets">App ID and Secrets</h2>
+<p>For each application you create on AppFriends, there's going to an <strong>App_ID</strong>, an <strong>App_Secret</strong> and an <strong>Admin_Secret</strong>.</p>
+<p><code>App_ID</code> is used to identify your application.</p>
+<p><code>App_Secret</code> is the secret used to sign the requests coming from your application.</p>
+<p><code>Admin_Secret</code> is the secret used to sign the requests coming directly from your server. For example, your server can send a request via AppFriends REST API to update a user's token or you can export all the social graph data with your admin secret.</p>
+<p>These values play very important role in authenticating your requests, so please keep them away from the bad guys.</p>
+<h2 id="signature-creation">Signature Creation</h2>
+<p>The signature is creation is using JSON Web Tokens <a href="https://jwt.io/">(JWT)</a>, which is an open, industry standard <a href="https://tools.ietf.org/html/rfc7519">RFC 7519</a> method for representing claims securely between two parties. You can use <a href="https://jwt.io/">this website</a> to verify your signature.</p>
+<div class="code"><pre><span></span><span class="c1">//signature creation</span>
+<span class="nx">HMACSHA256</span><span class="p">(</span>
+  <span class="nx">base64UrlEncode</span><span class="p">(</span><span class="nx">JWT</span> <span class="nx">header</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;.&quot;</span> <span class="o">+</span>
+  <span class="nx">base64UrlEncode</span><span class="p">(</span><span class="nx">payload</span><span class="p">),</span>
+  <span class="o">&lt;</span><span class="nx">your</span> <span class="nx">secret</span> <span class="nx">here</span><span class="o">&gt;</span>
+<span class="p">)</span>
+</pre></div>
+
+
+<p>The signature created here will be used in the Authorization header using the Bearer schema.</p>
+<div class="code"><pre><span></span><span class="n">Authorization</span><span class="o">:</span> <span class="n">Bearer</span> <span class="o">&lt;</span><span class="n">signature</span> <span class="n">token</span><span class="o">&gt;</span>
+</pre></div>
+
+
+<h3 id="jwt-header">JWT Header</h3>
+<p>JWT header is not your request http header. It is used just to sign the request. The JWT header will look like this:</p>
+<div class="code"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;alg&quot;</span><span class="p">:</span> <span class="s2">&quot;HS256&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;typ&quot;</span><span class="p">:</span> <span class="s2">&quot;JWT&quot;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h3 id="jwt-payload">JWT Payload</h3>
+<p>Put timestamp (seconds) in your payout</p>
+<div class="code"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;timestamp&quot;</span><span class="p">:</span> <span class="s2">&quot;1462117651&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;token&quot;</span><span class="p">:</span> <span class="s2">&quot;the user token&quot;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p><img alt="Screenshot" src="../../images/jwt.png" />
+<em>Above: JWT example on <a href="https://jwt.io/">jwt.io</a></em></p></div>
+        
+    </div>
+
+    <footer class="col-md-12 text-center">
+        <hr>
+        <p>
+        <small>Copyright (c) 2016 Hacknocraft<br></small>
+        
+        <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p></small>
+    </footer>
+
+    <script src="../../js/jquery-1.10.2.min.js"></script>
+    <script src="../../js/bootstrap-3.0.3.min.js"></script>
+    <script src="../../js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+    var base_url = '../..';
+    </script>
+    <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
+    <script src="../../js/base.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        From here you can search these documents. Enter your search terms below.
+                    </p>
+                    <form role="form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                        </div>
+                    </form>
+                    <div id="mkdocs-search-results"></div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </body>
+
+</html>
