@@ -462,7 +462,7 @@ Endpoint      | Method        | API Type      | Description
     "id": "19",
     "followers": ["11","12" ...],
     "followings": ["11, "12" ...]
-  },
+  },``
   ....
 ]
 

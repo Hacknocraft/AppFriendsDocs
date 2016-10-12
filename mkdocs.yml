@@ -18,11 +18,8 @@ pages:
 - Android: android.md
 - Server API:
   - 'Request Authentication': 'API/request_auth.md'
-  - 'Admin APIs': 'API/request_auth.md'
-  - 'Users APIs': 'API/request_auth.md'
-  - 'Dialogs APIs': 'API/request_auth.md'
-  - 'Channels APIs': 'API/request_auth.md'
-  - 'Social APIs': 'API/request_auth.md'
+  - 'Application APIs': 'API/applicationapi.md'
+  - 'Admin APIs': 'API/adminapi.md'
 
 markdown_extensions:
   - codehilite(css_class=code)
