@@ -11,15 +11,15 @@ theme: 'cinder'
 pages:
 - Welcome: index.md
 - iOS:
-  - 'Quick Start': 'iOS/quick_start.md'
-  - 'Users': 'iOS/users.md'
-  - 'Chat': 'iOS/chat.md'
-  - 'UI Components': 'iOS/ui_components.md'
+  - 'Quick Start': 'ios/quick_start.md'
+  - 'Users': 'ios/users.md'
+  - 'Chat': 'ios/chat.md'
+  - 'UI Components': 'ios/ui_components.md'
 - Android: android.md
 - Server API:
-  - 'Request Authentication': 'API/request_auth.md'
-  - 'Application APIs': 'API/applicationapi.md'
-  - 'Admin APIs': 'API/adminapi.md'
+  - 'Request Authentication': 'api/request_auth.md'
+  - 'Application APIs': 'api/applicationapi.md'
+  - 'Admin APIs': 'api/adminapi.md'
 
 markdown_extensions:
   - codehilite(css_class=code)
