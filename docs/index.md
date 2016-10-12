@@ -8,14 +8,14 @@ If you are interested in our product or have idea on how we can improve it, plea
 AppFriends has native SDKs that make integration to iOS and Android much easier.
 
 ### iOS
-The iOS SDK can be integrated into existing xcode iOS projects. There are two SDK frameworks for you to use. If you don't want to use our provided UI, you can integrate the [AppFriendsCore](https://github.com/laeroah/AppFriendsCoreFramework) framework, which has no UI components but helps you communicate with AppFriends platform. There's also the [AppFriendsUI](https://github.com/laeroah/AppFriendsUI) framework, which contains a lot of convenient UI components for you to quickly implement the social component in your app. For details, please read [iOS SDK guide](iOS/quick_start.md).
+The iOS SDK can be integrated into existing xcode iOS projects. There are two SDK frameworks for you to use. If you don't want to use our provided UI, you can integrate the [AppFriendsCore](https://github.com/laeroah/AppFriendsCoreFramework) framework, which has no UI components but helps you communicate with AppFriends platform. There's also the [AppFriendsUI](https://github.com/laeroah/AppFriendsUI) framework, which contains a lot of convenient UI components for you to quickly implement the social component in your app. For details, please read [iOS SDK guide](ios/quick_start.md).
 
 ### Android
 The Android SDK can be integrated into existing Android projects. For details,
 please read [Android SDK guide](android.md).
 
 ## Server API
-AppFriends has comprehensive REST API's for you to use, please read [our API doc](api.md).
+AppFriends has comprehensive REST API's for you to use. There are two types of APIs: [Application API](api/applicationapi.md) and [Admin API](api/adminapi.md).
 
 ## Admin Portal
 You can control the widget by log into the [admin portal](http://appfriends.hacknocraft.com/) with your AppFriends account.
