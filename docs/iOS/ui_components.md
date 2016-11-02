@@ -6,3 +6,11 @@
 
 ## Advanced Customization
 For advanced customization, we recommend you inherit our UI component classes. For example, if you want to change the behavior when the user clicks on a message, you can inherit `HCBaseChatViewController`, and override the implementation of `func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)`
+
+### Subclass AppFriends View Controllers
+To customize a view controller provided by the `AppFriendsUI` SDK, you can create a subclass and then override the methods that you wish to change. You can also use xib with your view controller. For example, you could subclass `HCDialogsListViewController` to change the look of it. If you want to use xib, you need to put a tableview inside your xib, then make all the IBOutlet connections. Then you could initialize your view controller by using the
+```
+let dialogList = DialogsListViewController(nibName: "DialogsListView.", bundle: nil)
+```
+## Chat Reusable UI
+The two main UI components we provide are the dialogs list and the chat view.

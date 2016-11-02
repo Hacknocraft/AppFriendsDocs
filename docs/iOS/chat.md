@@ -1,16 +1,60 @@
 ## Dialogs
-There are three types of dialogs:
+There are three types of dialogs. Depending on your use case, please choose the appropriate type to use:
 
 1. Private one on one dialog. This is a conversation between two users. You can't add more users to private one on one dialog. This type of dialog is only visible to the two users.
-2. Private group dialog. This is a conversation between multiple users. You can add up to 200 users to a private group chat. This type of dialog is only visible to users in the group.
-3. Open channel dialog. This is an open conversation. It is visible to everyone. Each user can only be in one channel at a time.
+2. Private group dialog. This is a conversation between multiple users. You can add up to a few hundred users to a private group chat. This type of dialog is only visible to users in the group.
+3. Open channel dialog. This is an open conversation. It is visible to everyone. You can add up to a few thousand users to an open channel. Each user can only be in one channel at a time.
+
+Feature Type              |    Open Channels    |     Private Group Chat     |     One on One Private Chat
+-------------             | -----------------   | ------------------------   | -----------------------------
+Typing Indicator          | ✘                   | ✔                          | ✔
+Message Delivery Receipts | ✘                   | ✔                          | ✔
+Message Read Receipts     | ✘                   | ✔                          | ✔
+Video and Image           | ✘                   | ✔                          | ✔
+Create in app             | ✘                   | ✔                          | ✔
+Create in control panel   | ✔                   | ✘                          | ✘
+Mute                      | ✔                   | ✔                          | ✔
+User blocks user          | ✔                   | ✔                          | ✔
+Push notifications        | ✔                   | ✔                          | ✔
+Members limit             | 5000                | 500                        | N/A
+
+### Open Channels
+Open channel is a public chat, where all of your users can participate. It can handle thousands of users in one channel. ex) Twitch-style public chat
 
 ### Create a dialog
-Users can create private dialogs in your app.
+Users can create private dialogs in your app. The parameter which decides the type of dialog you are going to create is `dialogType`. If you are creating an one on one chat, you can pass `HCSDKConstants.kMessageTypeIndividual` and if you are creating a group chat, you can use `HCSDKConstants.kMessageTypeGroup`. You also need to pass the users (an id array) you want to include in the dialog. A title of a dialog can also be specified for a group dialog but it's optional.
+
+```
+DialogsManager.sharedInstance.initializeDialog(users, dialogType: dialogType, dialogTitle: title) { (dialogID, error) in
+  if error != nil {
+    // failed
+  }
+}
+```
+
+### Inviting users to a group dialog
+Users can add more members to a group dialog. You need to pass the IDs of the members who you want to add to the dialog.
+```
+DialogsManager.sharedInstance.addMembersToDialog(dialogID, members: users, completion: { (error) in
+  if error != nil {
+    // failed
+  }
+})
+```
+
+### Removing users from a group dialog
+Users can remove members from a group dialog. You need to pass the IDs of the members who you want to remove from the dialog.
+```
+DialogsManager.sharedInstance.leaveGroupDialog(dialogID, completion: { (error) in
+  if error != nil {
+    // failed
+  }
+})
+```
 
 ### Mute a dialog
 Muting a dialog means you will no longer receive any Apple push notification and badge update from new messages sent to this dialog. You can mute a dialog by:
-``` swift
+```
 DialogsManager.sharedInstance.muteDialog(_dialogID!, muted: toggle.on)
 { [weak self] (error) in
     if error == nil {

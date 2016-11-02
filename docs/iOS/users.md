@@ -11,7 +11,7 @@ To learn how to import all of your existing users onto AppFriends system all tog
 
 ### Example
 #### Swift
-<pre><code class="swift">
+```
 let userInfo = [HCSDKConstants.kUserID: "e575be0fef6c24041a1749da54ece501", HCSDKConstants.kUserName: "John Doe"]
 HCSDKCore.sharedInstance.loginWithUserInfo(userInfo)
 { (response, error) in
@@ -22,7 +22,7 @@ HCSDKCore.sharedInstance.loginWithUserInfo(userInfo)
 			// login is successful here
   	}
 }
-</code></pre>
+```
 
 ## User Update
 When user information is updated on your app, you need to update the same user on AppFriends, so the data is consistent. For example, if an user changed his profile on your app, and he/she chose a new username, or a different avatar picture, you will need to update the same user on AppFriends.

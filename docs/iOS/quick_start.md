@@ -30,9 +30,10 @@ The next step is import the headers.
 ### Example
 
 #### Swift
-<pre><code class="swift">import AppFriendsCore
+```
+import AppFriendsCore
 import AppFriendsUI
-</code></pre>
+```
 
 #### Objective-C
 ```
@@ -45,35 +46,37 @@ Now, we can use the AppFriends key and secret to initialize the SDK. Key and sec
 ### AppFriendsUI Initialization
 
 #### Swift
-<pre><code class="swift">
+```
 AppFriendsUI.sharedInstance.initialize("[appfriends key]", secret: "[appfriends secret]") { (success, error) in
 		if !success {
 				NSLog("AppFriends initialization error:\(error?.localizedDescription)")
 		}else {
 		}
 }
-</code></pre>
+```
 
 #### Objective-C
-<pre><code class="swift">import AppFriendsCore
+```
+import AppFriendsCore
 import AppFriendsUI
-</code></pre>
+```
 
 ### AppFriendsCore Initialization
 
 **Skip** this step if you are using the `AppFriendsUI` SDK. If you are using `AppFriendsCore` SDK, you can initialize by:
 
 #### Swift
-<pre><code class="swift">
+```
 AppFriendsUI.sharedInstance.initialize("[appfriends key]", secret: "[appfriends secret]") { (success, error) in
 		if !success {
 				NSLog("AppFriends initialization error:\(error?.localizedDescription)")
 		}else {
 		}
 }
-</code></pre>
+```
 
 #### Objective-C
-<pre><code class="swift">import AppFriendsCore
+```
+import AppFriendsCore
 import AppFriendsUI
-</code></pre>
+```

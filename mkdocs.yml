@@ -7,7 +7,7 @@ site_favicon: images/logo.png
 # Copyright
 copyright: 'Copyright (c) 2016 Hacknocraft'
 
-theme: 'cinder'
+theme: 'material'
 pages:
 - Welcome: index.md
 - iOS:
@@ -15,6 +15,7 @@ pages:
   - 'Users': 'ios/users.md'
   - 'Chat': 'ios/chat.md'
   - 'UI Components': 'ios/ui_components.md'
+  - 'External Dependencies': 'ios/dependencies.md'
 - Android: android.md
 - Server API:
   - 'Request Authentication': 'api/request_auth.md'
