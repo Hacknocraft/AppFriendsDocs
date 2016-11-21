@@ -110,3 +110,8 @@ To receive deeplink actions, you need to implement the `OnAppFriendsNotification
 
 ## Public Chat Channels
 By default, we create a global public chat channel for all of your users to chat. You can create, edit and remove public chat channels. You can either do it from the AppFriends admin panel or via our [API](server/index.html).
+
+## Other dependencies
+```
+https://github.com/splitwise/TokenAutoComplete
+```

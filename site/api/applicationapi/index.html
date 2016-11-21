@@ -47,7 +47,7 @@
       	font-style: normal;
       }
     </style>
-    <link rel="stylesheet" href="../../assets/stylesheets/application-a422ff04cc.css">
+    <link rel="stylesheet" href="../../assets/stylesheets/application-54f87043f3.css">
     
       <link rel="stylesheet" href="../../assets/stylesheets/palettes-05ab2406df.css">
     
@@ -55,7 +55,7 @@
       
       
       
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans:400,700|Monaco">
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open Sans:400,700|Monaco">
       <style>
         body, input {
           font-family: 'Open Sans', Helvetica, Arial, sans-serif;
@@ -291,6 +291,69 @@
 <p>AppFriends API can be used to authenticate user, send messages, search for user, update user information, create social relationship and etc. Application API's can only be accessed via the SDK, using the application secret.</p>
 <h2 id="rest-apis">REST APIs</h2>
 <p>Please see our application REST APIs <a href="https://documenter.getpostman.com/view/154000/appfriends-application-api/2MrYL7">here</a>.</p>
+<h3 id="error-codes">Error Codes</h3>
+<table>
+<thead>
+<tr>
+<th>Error Code</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9000</td>
+<td>operation not allowed</td>
+</tr>
+<tr>
+<td>10000</td>
+<td>parameter required</td>
+</tr>
+<tr>
+<td>10001</td>
+<td>need to login</td>
+</tr>
+<tr>
+<td>10002</td>
+<td>missing app ID</td>
+</tr>
+<tr>
+<td>10003</td>
+<td>invalid app ID</td>
+</tr>
+<tr>
+<td>10004</td>
+<td>no permission</td>
+</tr>
+<tr>
+<td>10005</td>
+<td>admin user not found</td>
+</tr>
+<tr>
+<td>10007</td>
+<td>no Authorization header found</td>
+</tr>
+<tr>
+<td>10008</td>
+<td>invalid Authorization header found</td>
+</tr>
+<tr>
+<td>10009</td>
+<td>invalid request path or method</td>
+</tr>
+<tr>
+<td>10010</td>
+<td>invalid params</td>
+</tr>
+<tr>
+<td>10011</td>
+<td>admin server api secret required</td>
+</tr>
+<tr>
+<td>30007</td>
+<td>exceed max import users per request</td>
+</tr>
+</tbody>
+</table>
           <aside class="copyright" role="note">
             
               Copyright (c) 2016 Hacknocraft &ndash;

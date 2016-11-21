@@ -1,443 +1,453 @@
 {
     "docs": [
         {
-            "location": "/",
-            "text": "Welcome to AppFriends\n\n\nThe AppFriends plugin integrates public chat channels, private messaging, and social graphs into any app to increase user interaction and engagement. AppFriends supports multiple platforms.\n\n\nThere are ton of features that we support:\n\n\n\nopen channel, group and one on one chats\n\n\nsocial features such as following and making friends\n\n\nprivacy features such as blocking/reporting an user\n\n\ndialog conversation settings such as muting, changing dialog name\n\n\ntyping indicator\n\n\nmessage receipts\n\n\nvideo and image messages\n\n\n...\n\n\n\n\nIf you are interested in our product or have idea on how we can improve it, please send email to \nsupport@hacknocraft.com\n and we will get back to you very quickly.\n\n\nMobile\n\n\nAppFriends has native SDKs that make integration to iOS and Android much easier.\n\n\niOS\n\n\nThe iOS SDK can be integrated into existing xcode iOS projects. There are two SDK frameworks for you to use. If you don't want to use our provided UI, you can integrate the \nAppFriendsCore\n framework, which has no UI components but helps you communicate with AppFriends platform. There's also the \nAppFriendsUI\n framework, which contains a lot of convenient UI components for you to quickly implement the social component in your app. For details, please read \niOS SDK guide\n.\n\n\nAndroid\n\n\nThe Android SDK can be integrated into existing Android projects. For details,\nplease read \nAndroid SDK guide\n.\n\n\nServer API\n\n\nAppFriends has comprehensive REST API's for you to use. There are two types of APIs: \nApplication API\n and \nAdmin API\n.\n\n\nAdmin Portal\n\n\nYou can control the widget by log into the \nadmin portal\n with your AppFriends account.",
+            "location": "/", 
+            "text": "Welcome to AppFriends\n\n\nThe AppFriends plugin integrates public chat channels, private messaging, and social graphs into any app to increase user interaction and engagement. AppFriends supports multiple platforms.\n\n\nThere are ton of features that we support:\n\n\n\nopen channel, group and one on one chats\n\n\nsocial features such as following and making friends\n\n\nprivacy features such as blocking/reporting an user\n\n\ndialog conversation settings such as muting, changing dialog name\n\n\ntyping indicator\n\n\nmessage receipts\n\n\nvideo and image messages\n\n\n...\n\n\n\n\nIf you are interested in our product or have idea on how we can improve it, please send email to \nsupport@hacknocraft.com\n and we will get back to you very quickly.\n\n\nMobile\n\n\nAppFriends has native SDKs that make integration to iOS and Android much easier.\n\n\niOS\n\n\nThe iOS SDK can be integrated into existing xcode iOS projects. There are two SDK frameworks for you to use. If you don't want to use our provided UI, you can integrate the \nAppFriendsCore\n framework, which has no UI components but helps you communicate with AppFriends platform. There's also the \nAppFriendsUI\n framework, which contains a lot of convenient UI components for you to quickly implement the social component in your app. For details, please read \niOS SDK guide\n.\n\n\nAndroid\n\n\nThe Android SDK can be integrated into existing Android projects. For details,\nplease read \nAndroid SDK guide\n.\n\n\nServer API\n\n\nAppFriends has comprehensive REST API's for you to use. There are two types of APIs: \nApplication API\n and \nAdmin API\n.\n\n\nAdmin Portal\n\n\nYou can control the widget by log into the \nadmin portal\n with your AppFriends account.", 
             "title": "Welcome"
-        },
+        }, 
         {
-            "location": "/#welcome-to-appfriends",
-            "text": "The AppFriends plugin integrates public chat channels, private messaging, and social graphs into any app to increase user interaction and engagement. AppFriends supports multiple platforms.  There are ton of features that we support:  open channel, group and one on one chats  social features such as following and making friends  privacy features such as blocking/reporting an user  dialog conversation settings such as muting, changing dialog name  typing indicator  message receipts  video and image messages  ...   If you are interested in our product or have idea on how we can improve it, please send email to  support@hacknocraft.com  and we will get back to you very quickly.",
+            "location": "/#welcome-to-appfriends", 
+            "text": "The AppFriends plugin integrates public chat channels, private messaging, and social graphs into any app to increase user interaction and engagement. AppFriends supports multiple platforms.  There are ton of features that we support:  open channel, group and one on one chats  social features such as following and making friends  privacy features such as blocking/reporting an user  dialog conversation settings such as muting, changing dialog name  typing indicator  message receipts  video and image messages  ...   If you are interested in our product or have idea on how we can improve it, please send email to  support@hacknocraft.com  and we will get back to you very quickly.", 
             "title": "Welcome to AppFriends"
-        },
+        }, 
         {
-            "location": "/#mobile",
-            "text": "AppFriends has native SDKs that make integration to iOS and Android much easier.",
+            "location": "/#mobile", 
+            "text": "AppFriends has native SDKs that make integration to iOS and Android much easier.", 
             "title": "Mobile"
-        },
+        }, 
         {
-            "location": "/#ios",
-            "text": "The iOS SDK can be integrated into existing xcode iOS projects. There are two SDK frameworks for you to use. If you don't want to use our provided UI, you can integrate the  AppFriendsCore  framework, which has no UI components but helps you communicate with AppFriends platform. There's also the  AppFriendsUI  framework, which contains a lot of convenient UI components for you to quickly implement the social component in your app. For details, please read  iOS SDK guide .",
+            "location": "/#ios", 
+            "text": "The iOS SDK can be integrated into existing xcode iOS projects. There are two SDK frameworks for you to use. If you don't want to use our provided UI, you can integrate the  AppFriendsCore  framework, which has no UI components but helps you communicate with AppFriends platform. There's also the  AppFriendsUI  framework, which contains a lot of convenient UI components for you to quickly implement the social component in your app. For details, please read  iOS SDK guide .", 
             "title": "iOS"
-        },
+        }, 
         {
-            "location": "/#android",
-            "text": "The Android SDK can be integrated into existing Android projects. For details,\nplease read  Android SDK guide .",
+            "location": "/#android", 
+            "text": "The Android SDK can be integrated into existing Android projects. For details,\nplease read  Android SDK guide .", 
             "title": "Android"
-        },
+        }, 
         {
-            "location": "/#server-api",
-            "text": "AppFriends has comprehensive REST API's for you to use. There are two types of APIs:  Application API  and  Admin API .",
+            "location": "/#server-api", 
+            "text": "AppFriends has comprehensive REST API's for you to use. There are two types of APIs:  Application API  and  Admin API .", 
             "title": "Server API"
-        },
+        }, 
         {
-            "location": "/#admin-portal",
-            "text": "You can control the widget by log into the  admin portal  with your AppFriends account.",
+            "location": "/#admin-portal", 
+            "text": "You can control the widget by log into the  admin portal  with your AppFriends account.", 
             "title": "Admin Portal"
-        },
+        }, 
         {
-            "location": "/ios/quick_start/",
-            "text": "Quick Start\n\n\n1. Create an AppFriends Application\n\n\nBefore start using AppFriends, you need to create an application on the \ndashboard\n Users in the same application can talk to each other and you only need one application for all the platforms you want to support.\n\n\n2. Integrate AppFriends SDK\n\n\nUsing Cocoapods\n\n\nTo integrate AppFriends iOS SDK to your Xcode iOS project, add this line in your \nPodfile\n\n\npod 'AppFriendsUI'\n\n\n\n\n\nAlso, add \nuse_frameworks!\n to the file. eg.\n\n\nplatform\n \n:\nios\n,\n \n\"8.0\"\n\n\nuse_frameworks\n!\n\n\n...\n\n\n\n\n\n\nTo see an sample app of how to use AppFriendsUI, please checkout our repo:\n\n\n\n\nGithub Sample App Repo\n\n\n\n\nIf you don't want any of the UI components we provide, you can directly interact with the platform API, and we have a core framework to use for that purpose:\n\n\npod 'AppFriendsCore'\n\n\n\n\n\n3. Import Header\n\n\nThe next step is import the headers.\n\n\nExample\n\n\nSwift\n\n\nimport\n \nAppFriendsCore\n\n\nimport\n \nAppFriendsUI\n\n\n\n\n\n\nObjective-C\n\n\n#import <AppFriendsCore/AppFriendsCore-Swift.h>\n\n\n#import <AppFriendsUI/AppFriendsUI-Swift.h>\n\n\n\n\n\n\n4. Initialization\n\n\nNow, we can use the AppFriends key and secret to initialize the SDK. Key and secret can be found in your AppFriends dashboard. If you are using the \nAppFriendsUI\n SDK, you can initialize by:\n\n\nAppFriendsUI Initialization\n\n\nSwift\n\n\nAppFriendsUI\n.\nsharedInstance\n.\ninitialize\n(\n\"[appfriends key]\"\n,\n \nsecret\n:\n \n\"[appfriends secret]\"\n)\n \n{\n \n(\nsuccess\n,\n \nerror\n)\n \nin\n\n        \nif\n \n!\nsuccess\n \n{\n\n                \nNSLog\n(\n\"AppFriends initialization error:\\(error?.localizedDescription)\"\n)\n\n        \n}\nelse\n \n{\n\n        \n}\n\n\n}\n\n\n\n\n\n\nObjective-C\n\n\nimport\n \nAppFriendsCore\n\n\nimport\n \nAppFriendsUI\n\n\n\n\n\n\nAppFriendsCore Initialization\n\n\nSkip\n this step if you are using the \nAppFriendsUI\n SDK. If you are using \nAppFriendsCore\n SDK, you can initialize by:\n\n\nSwift\n\n\nAppFriendsUI\n.\nsharedInstance\n.\ninitialize\n(\n\"[appfriends key]\"\n,\n \nsecret\n:\n \n\"[appfriends secret]\"\n)\n \n{\n \n(\nsuccess\n,\n \nerror\n)\n \nin\n\n        \nif\n \n!\nsuccess\n \n{\n\n                \nNSLog\n(\n\"AppFriends initialization error:\\(error?.localizedDescription)\"\n)\n\n        \n}\nelse\n \n{\n\n        \n}\n\n\n}\n\n\n\n\n\n\nObjective-C\n\n\nimport\n \nAppFriendsCore\n\n\nimport\n \nAppFriendsUI",
+            "location": "/ios/quick_start/", 
+            "text": "Quick Start\n\n\n1. Create an AppFriends Application\n\n\nBefore start using AppFriends, you need to create an application on the \ndashboard\n Users in the same application can talk to each other and you only need one application for all the platforms you want to support.\n\n\n2. Integrate AppFriends SDK\n\n\nUsing Cocoapods\n\n\nTo integrate AppFriends iOS SDK to your Xcode iOS project, add this line in your \nPodfile\n\n\npod \nAppFriendsUI\n\n\n\n\n\n\nAlso, add \nuse_frameworks!\n to the file. eg.\n\n\nplatform\n \n:\nios\n,\n \n8.0\n\n\nuse_frameworks\n!\n\n\n...\n\n\n\n\n\n\nTo see an sample app of how to use AppFriendsUI, please checkout our repo:\n\n\n\n\nGithub Sample App Repo\n\n\n\n\nIf you don't want any of the UI components we provide, you can directly interact with the platform API, and we have a core framework to use for that purpose:\n\n\npod \nAppFriendsCore\n\n\n\n\n\n\n3. Import Header\n\n\nThe next step is import the headers.\n\n\nExample\n\n\nSwift\n\n\nimport\n \nAppFriendsCore\n\n\nimport\n \nAppFriendsUI\n\n\n\n\n\n\nObjective-C\n\n\n#import \nAppFriendsCore/AppFriendsCore-Swift.h\n\n\n#import \nAppFriendsUI/AppFriendsUI-Swift.h\n\n\n\n\n\n\n4. Initialization\n\n\nNow, we can use the AppFriends key and secret to initialize the SDK. Key and secret can be found in your AppFriends dashboard. If you are using the \nAppFriendsUI\n SDK, you can initialize by:\n\n\nAppFriendsUI Initialization\n\n\nSwift\n\n\nAppFriendsUI\n.\nsharedInstance\n.\ninitialize\n(\n[appfriends key]\n,\n \nsecret\n:\n \n[appfriends secret]\n)\n \n{\n \n(\nsuccess\n,\n \nerror\n)\n \nin\n\n        \nif\n \n!\nsuccess\n \n{\n\n                \nNSLog\n(\nAppFriends initialization error:\\(error?.localizedDescription)\n)\n\n        \n}\nelse\n \n{\n\n        \n}\n\n\n}\n\n\n\n\n\n\nObjective-C\n\n\nimport\n \nAppFriendsCore\n\n\nimport\n \nAppFriendsUI\n\n\n\n\n\n\nAppFriendsCore Initialization\n\n\nSkip\n this step if you are using the \nAppFriendsUI\n SDK. If you are using \nAppFriendsCore\n SDK, you can initialize by:\n\n\nSwift\n\n\nAppFriendsUI\n.\nsharedInstance\n.\ninitialize\n(\n[appfriends key]\n,\n \nsecret\n:\n \n[appfriends secret]\n)\n \n{\n \n(\nsuccess\n,\n \nerror\n)\n \nin\n\n        \nif\n \n!\nsuccess\n \n{\n\n                \nNSLog\n(\nAppFriends initialization error:\\(error?.localizedDescription)\n)\n\n        \n}\nelse\n \n{\n\n        \n}\n\n\n}\n\n\n\n\n\n\nObjective-C\n\n\nimport\n \nAppFriendsCore\n\n\nimport\n \nAppFriendsUI", 
             "title": "Quick Start"
-        },
+        }, 
         {
-            "location": "/ios/quick_start/#quick-start",
-            "text": "",
+            "location": "/ios/quick_start/#quick-start", 
+            "text": "", 
             "title": "Quick Start"
-        },
+        }, 
         {
-            "location": "/ios/quick_start/#1-create-an-appfriends-application",
-            "text": "Before start using AppFriends, you need to create an application on the  dashboard  Users in the same application can talk to each other and you only need one application for all the platforms you want to support.",
+            "location": "/ios/quick_start/#1-create-an-appfriends-application", 
+            "text": "Before start using AppFriends, you need to create an application on the  dashboard  Users in the same application can talk to each other and you only need one application for all the platforms you want to support.", 
             "title": "1. Create an AppFriends Application"
-        },
+        }, 
         {
-            "location": "/ios/quick_start/#2-integrate-appfriends-sdk",
-            "text": "",
+            "location": "/ios/quick_start/#2-integrate-appfriends-sdk", 
+            "text": "", 
             "title": "2. Integrate AppFriends SDK"
-        },
+        }, 
         {
-            "location": "/ios/quick_start/#using-cocoapods",
-            "text": "To integrate AppFriends iOS SDK to your Xcode iOS project, add this line in your  Podfile  pod 'AppFriendsUI'  Also, add  use_frameworks!  to the file. eg.  platform   : ios ,   \"8.0\"  use_frameworks !  ...   To see an sample app of how to use AppFriendsUI, please checkout our repo:   Github Sample App Repo   If you don't want any of the UI components we provide, you can directly interact with the platform API, and we have a core framework to use for that purpose:  pod 'AppFriendsCore'",
+            "location": "/ios/quick_start/#using-cocoapods", 
+            "text": "To integrate AppFriends iOS SDK to your Xcode iOS project, add this line in your  Podfile  pod  AppFriendsUI   Also, add  use_frameworks!  to the file. eg.  platform   : ios ,   8.0  use_frameworks !  ...   To see an sample app of how to use AppFriendsUI, please checkout our repo:   Github Sample App Repo   If you don't want any of the UI components we provide, you can directly interact with the platform API, and we have a core framework to use for that purpose:  pod  AppFriendsCore", 
             "title": "Using Cocoapods"
-        },
+        }, 
         {
-            "location": "/ios/quick_start/#3-import-header",
-            "text": "The next step is import the headers.",
+            "location": "/ios/quick_start/#3-import-header", 
+            "text": "The next step is import the headers.", 
             "title": "3. Import Header"
-        },
+        }, 
         {
-            "location": "/ios/quick_start/#example",
-            "text": "",
+            "location": "/ios/quick_start/#example", 
+            "text": "", 
             "title": "Example"
-        },
+        }, 
         {
-            "location": "/ios/quick_start/#swift",
-            "text": "import   AppFriendsCore  import   AppFriendsUI",
+            "location": "/ios/quick_start/#swift", 
+            "text": "import   AppFriendsCore  import   AppFriendsUI", 
             "title": "Swift"
-        },
+        }, 
         {
-            "location": "/ios/quick_start/#objective-c",
-            "text": "#import <AppFriendsCore/AppFriendsCore-Swift.h>  #import <AppFriendsUI/AppFriendsUI-Swift.h>",
+            "location": "/ios/quick_start/#objective-c", 
+            "text": "#import  AppFriendsCore/AppFriendsCore-Swift.h  #import  AppFriendsUI/AppFriendsUI-Swift.h", 
             "title": "Objective-C"
-        },
+        }, 
         {
-            "location": "/ios/quick_start/#4-initialization",
-            "text": "Now, we can use the AppFriends key and secret to initialize the SDK. Key and secret can be found in your AppFriends dashboard. If you are using the  AppFriendsUI  SDK, you can initialize by:",
+            "location": "/ios/quick_start/#4-initialization", 
+            "text": "Now, we can use the AppFriends key and secret to initialize the SDK. Key and secret can be found in your AppFriends dashboard. If you are using the  AppFriendsUI  SDK, you can initialize by:", 
             "title": "4. Initialization"
-        },
+        }, 
         {
-            "location": "/ios/quick_start/#appfriendsui-initialization",
-            "text": "",
+            "location": "/ios/quick_start/#appfriendsui-initialization", 
+            "text": "", 
             "title": "AppFriendsUI Initialization"
-        },
+        }, 
         {
-            "location": "/ios/quick_start/#swift_1",
-            "text": "AppFriendsUI . sharedInstance . initialize ( \"[appfriends key]\" ,   secret :   \"[appfriends secret]\" )   {   ( success ,   error )   in \n         if   ! success   { \n                 NSLog ( \"AppFriends initialization error:\\(error?.localizedDescription)\" ) \n         } else   { \n         }  }",
+            "location": "/ios/quick_start/#swift_1", 
+            "text": "AppFriendsUI . sharedInstance . initialize ( [appfriends key] ,   secret :   [appfriends secret] )   {   ( success ,   error )   in \n         if   ! success   { \n                 NSLog ( AppFriends initialization error:\\(error?.localizedDescription) ) \n         } else   { \n         }  }", 
             "title": "Swift"
-        },
+        }, 
         {
-            "location": "/ios/quick_start/#objective-c_1",
-            "text": "import   AppFriendsCore  import   AppFriendsUI",
+            "location": "/ios/quick_start/#objective-c_1", 
+            "text": "import   AppFriendsCore  import   AppFriendsUI", 
             "title": "Objective-C"
-        },
+        }, 
         {
-            "location": "/ios/quick_start/#appfriendscore-initialization",
-            "text": "Skip  this step if you are using the  AppFriendsUI  SDK. If you are using  AppFriendsCore  SDK, you can initialize by:",
+            "location": "/ios/quick_start/#appfriendscore-initialization", 
+            "text": "Skip  this step if you are using the  AppFriendsUI  SDK. If you are using  AppFriendsCore  SDK, you can initialize by:", 
             "title": "AppFriendsCore Initialization"
-        },
+        }, 
         {
-            "location": "/ios/quick_start/#swift_2",
-            "text": "AppFriendsUI . sharedInstance . initialize ( \"[appfriends key]\" ,   secret :   \"[appfriends secret]\" )   {   ( success ,   error )   in \n         if   ! success   { \n                 NSLog ( \"AppFriends initialization error:\\(error?.localizedDescription)\" ) \n         } else   { \n         }  }",
+            "location": "/ios/quick_start/#swift_2", 
+            "text": "AppFriendsUI . sharedInstance . initialize ( [appfriends key] ,   secret :   [appfriends secret] )   {   ( success ,   error )   in \n         if   ! success   { \n                 NSLog ( AppFriends initialization error:\\(error?.localizedDescription) ) \n         } else   { \n         }  }", 
             "title": "Swift"
-        },
+        }, 
         {
-            "location": "/ios/quick_start/#objective-c_2",
-            "text": "import   AppFriendsCore  import   AppFriendsUI",
+            "location": "/ios/quick_start/#objective-c_2", 
+            "text": "import   AppFriendsCore  import   AppFriendsUI", 
             "title": "Objective-C"
-        },
+        }, 
         {
-            "location": "/ios/users/",
-            "text": "Users\n\n\nIn order to use AppFriends and for all the AppFriends UI components to work properly, your users will need to be mirrored on AppFriends' system. It means you need to make sure all of your users are copied onto AppFriends' system and updates to the user information, such as username change and so on, are also make available to AppFriends, so your user will get consistent result in your app. AppFriends SDK provides a lot of convenient interface for you to work with.\n\n\nAccount Create and Login\n\n\nAppFriends users are mirror images of the users in your app. To create or login a user on AppFriends, you need to provide at least\n\n\n\n\nan unique username\n\n\nan unique user ID\n\n\n\n\nTo learn how to import all of your existing users onto AppFriends system all together, please refer to the API document.\n\n\nExample\n\n\nSwift\n\n\nlet userInfo = [HCSDKConstants.kUserID: \"e575be0fef6c24041a1749da54ece501\", HCSDKConstants.kUserName: \"John Doe\"]\nHCSDKCore.sharedInstance.loginWithUserInfo(userInfo)\n{ (response, error) in\n    if let err = error {\n            // handle login error\n    }\n    else {\n            // login is successful here\n    }\n}\n\n\n\n\n\nUser Update\n\n\nWhen user information is updated on your app, you need to update the same user on AppFriends, so the data is consistent. For example, if an user changed his profile on your app, and he/she chose a new username, or a different avatar picture, you will need to update the same user on AppFriends.\n\n\nExample\n\n\nSwift\n\n\nAppFriendsUserManager.sharedInstance.updateUserInfo(currentUserID,\n  userInfo: [HCSDKConstants.kUserAvatar: avatar, HCSDKConstants.kUserName: username],\n  completion: { (response, error) in\n\n      // handle error or success here\n  })\n\n\n\n\n\nSocial\n\n\nAppFriends\n provides service to help your app to create a social graph in your app. Using social features, your users can follow one another and become friends in your app.\n\n\nFollow/Unfollow\n\n\nSocial graph is made by users following each other. If two users follow each other, they become \nfriends\n in AppFriends.\nYou can follow a user by:\n\n\nAppFriendsUserManager.sharedInstance.followUser(userID, completion: { (response, error) in\n      // handle error or success here\n})\n\n\n\n\n\nUnfollow a user:\n\n\nAppFriendsUserManager.sharedInstance.unfollowUser(userID, completion: { (response, error) in\n      // handle error or success here\n})\n\n\n\n\n\nBlocking/Unblocking\n\n\nAn user can block other users. If user A blocks user B, B will no longer be able to send any private message to A.\nYou can block a user by:\n\n\nAppFriendsUserManager.sharedInstance.blockUser(userID, completion: { (response, error) in\n      // handle error or success here\n})\n\n\n\n\n\nUnblock a user:\n\n\nAppFriendsUserManager.sharedInstance.unblockUser(userID, completion: { (response, error) in\n      // handle error or success here\n})\n\n\n\n\n\nConstants\n\n\n\n\n\n\n\n\nParameter\n\n\nType\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nHCSDKConstants.kUserID\n\n\nString\n\n\nthe user's userID of this user in the host app.\n\n\n\n\n\n\nHCSDKConstants.kUserAvatar\n\n\nString\n\n\nthe avatar url of this user in the host app.\n\n\n\n\n\n\nHCSDKConstants.kUserName\n\n\nString\n\n\nthe username",
+            "location": "/ios/users/", 
+            "text": "Users\n\n\nIn order to use AppFriends and for all the AppFriends UI components to work properly, your users will need to be mirrored on AppFriends' system. It means you need to make sure all of your users are copied onto AppFriends' system and updates to the user information, such as username change and so on, are also make available to AppFriends, so your user will get consistent result in your app. AppFriends SDK provides a lot of convenient interface for you to work with.\n\n\nAccount Create and Login\n\n\nAppFriends users are mirror images of the users in your app. To create or login a user on AppFriends, you need to provide at least\n\n\n\n\nan unique username\n\n\nan unique user ID\n\n\n\n\nTo learn how to import all of your existing users onto AppFriends system all together, please refer to the API document.\n\n\nExample\n\n\nSwift\n\n\nlet userInfo = [HCSDKConstants.kUserID: \ne575be0fef6c24041a1749da54ece501\n, HCSDKConstants.kUserName: \nJohn Doe\n]\nHCSDKCore.sharedInstance.loginWithUserInfo(userInfo)\n{ (response, error) in\n    if let err = error {\n            // handle login error\n    }\n    else {\n            // login is successful here\n    }\n}\n\n\n\n\n\nUser Update\n\n\nWhen user information is updated on your app, you need to update the same user on AppFriends, so the data is consistent. For example, if an user changed his profile on your app, and he/she chose a new username, or a different avatar picture, you will need to update the same user on AppFriends.\n\n\nExample\n\n\nSwift\n\n\nAppFriendsUserManager.sharedInstance.updateUserInfo(currentUserID,\n  userInfo: [HCSDKConstants.kUserAvatar: avatar, HCSDKConstants.kUserName: username],\n  completion: { (response, error) in\n\n      // handle error or success here\n  })\n\n\n\n\n\nSocial\n\n\nAppFriends\n provides service to help your app to create a social graph in your app. Using social features, your users can follow one another and become friends in your app.\n\n\nFollow/Unfollow\n\n\nSocial graph is made by users following each other. If two users follow each other, they become \nfriends\n in AppFriends.\nYou can follow a user by:\n\n\nAppFriendsUserManager.sharedInstance.followUser(userID, completion: { (response, error) in\n      // handle error or success here\n})\n\n\n\n\n\nUnfollow a user:\n\n\nAppFriendsUserManager.sharedInstance.unfollowUser(userID, completion: { (response, error) in\n      // handle error or success here\n})\n\n\n\n\n\nBlocking/Unblocking\n\n\nAn user can block other users. If user A blocks user B, B will no longer be able to send any private message to A.\nYou can block a user by:\n\n\nAppFriendsUserManager.sharedInstance.blockUser(userID, completion: { (response, error) in\n      // handle error or success here\n})\n\n\n\n\n\nUnblock a user:\n\n\nAppFriendsUserManager.sharedInstance.unblockUser(userID, completion: { (response, error) in\n      // handle error or success here\n})\n\n\n\n\n\nConstants\n\n\n\n\n\n\n\n\nParameter\n\n\nType\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nHCSDKConstants.kUserID\n\n\nString\n\n\nthe user's userID of this user in the host app.\n\n\n\n\n\n\nHCSDKConstants.kUserAvatar\n\n\nString\n\n\nthe avatar url of this user in the host app.\n\n\n\n\n\n\nHCSDKConstants.kUserName\n\n\nString\n\n\nthe username", 
             "title": "Users"
-        },
+        }, 
         {
-            "location": "/ios/users/#users",
-            "text": "In order to use AppFriends and for all the AppFriends UI components to work properly, your users will need to be mirrored on AppFriends' system. It means you need to make sure all of your users are copied onto AppFriends' system and updates to the user information, such as username change and so on, are also make available to AppFriends, so your user will get consistent result in your app. AppFriends SDK provides a lot of convenient interface for you to work with.",
+            "location": "/ios/users/#users", 
+            "text": "In order to use AppFriends and for all the AppFriends UI components to work properly, your users will need to be mirrored on AppFriends' system. It means you need to make sure all of your users are copied onto AppFriends' system and updates to the user information, such as username change and so on, are also make available to AppFriends, so your user will get consistent result in your app. AppFriends SDK provides a lot of convenient interface for you to work with.", 
             "title": "Users"
-        },
+        }, 
         {
-            "location": "/ios/users/#account-create-and-login",
-            "text": "AppFriends users are mirror images of the users in your app. To create or login a user on AppFriends, you need to provide at least   an unique username  an unique user ID   To learn how to import all of your existing users onto AppFriends system all together, please refer to the API document.",
+            "location": "/ios/users/#account-create-and-login", 
+            "text": "AppFriends users are mirror images of the users in your app. To create or login a user on AppFriends, you need to provide at least   an unique username  an unique user ID   To learn how to import all of your existing users onto AppFriends system all together, please refer to the API document.", 
             "title": "Account Create and Login"
-        },
+        }, 
         {
-            "location": "/ios/users/#example",
-            "text": "",
+            "location": "/ios/users/#example", 
+            "text": "", 
             "title": "Example"
-        },
+        }, 
         {
-            "location": "/ios/users/#swift",
-            "text": "let userInfo = [HCSDKConstants.kUserID: \"e575be0fef6c24041a1749da54ece501\", HCSDKConstants.kUserName: \"John Doe\"]\nHCSDKCore.sharedInstance.loginWithUserInfo(userInfo)\n{ (response, error) in\n    if let err = error {\n            // handle login error\n    }\n    else {\n            // login is successful here\n    }\n}",
+            "location": "/ios/users/#swift", 
+            "text": "let userInfo = [HCSDKConstants.kUserID:  e575be0fef6c24041a1749da54ece501 , HCSDKConstants.kUserName:  John Doe ]\nHCSDKCore.sharedInstance.loginWithUserInfo(userInfo)\n{ (response, error) in\n    if let err = error {\n            // handle login error\n    }\n    else {\n            // login is successful here\n    }\n}", 
             "title": "Swift"
-        },
+        }, 
         {
-            "location": "/ios/users/#user-update",
-            "text": "When user information is updated on your app, you need to update the same user on AppFriends, so the data is consistent. For example, if an user changed his profile on your app, and he/she chose a new username, or a different avatar picture, you will need to update the same user on AppFriends.",
+            "location": "/ios/users/#user-update", 
+            "text": "When user information is updated on your app, you need to update the same user on AppFriends, so the data is consistent. For example, if an user changed his profile on your app, and he/she chose a new username, or a different avatar picture, you will need to update the same user on AppFriends.", 
             "title": "User Update"
-        },
+        }, 
         {
-            "location": "/ios/users/#example_1",
-            "text": "",
+            "location": "/ios/users/#example_1", 
+            "text": "", 
             "title": "Example"
-        },
+        }, 
         {
-            "location": "/ios/users/#swift_1",
-            "text": "AppFriendsUserManager.sharedInstance.updateUserInfo(currentUserID,\n  userInfo: [HCSDKConstants.kUserAvatar: avatar, HCSDKConstants.kUserName: username],\n  completion: { (response, error) in\n\n      // handle error or success here\n  })",
+            "location": "/ios/users/#swift_1", 
+            "text": "AppFriendsUserManager.sharedInstance.updateUserInfo(currentUserID,\n  userInfo: [HCSDKConstants.kUserAvatar: avatar, HCSDKConstants.kUserName: username],\n  completion: { (response, error) in\n\n      // handle error or success here\n  })", 
             "title": "Swift"
-        },
+        }, 
         {
-            "location": "/ios/users/#social",
-            "text": "AppFriends  provides service to help your app to create a social graph in your app. Using social features, your users can follow one another and become friends in your app.",
+            "location": "/ios/users/#social", 
+            "text": "AppFriends  provides service to help your app to create a social graph in your app. Using social features, your users can follow one another and become friends in your app.", 
             "title": "Social"
-        },
+        }, 
         {
-            "location": "/ios/users/#followunfollow",
-            "text": "Social graph is made by users following each other. If two users follow each other, they become  friends  in AppFriends.\nYou can follow a user by:  AppFriendsUserManager.sharedInstance.followUser(userID, completion: { (response, error) in\n      // handle error or success here\n})  Unfollow a user:  AppFriendsUserManager.sharedInstance.unfollowUser(userID, completion: { (response, error) in\n      // handle error or success here\n})",
+            "location": "/ios/users/#followunfollow", 
+            "text": "Social graph is made by users following each other. If two users follow each other, they become  friends  in AppFriends.\nYou can follow a user by:  AppFriendsUserManager.sharedInstance.followUser(userID, completion: { (response, error) in\n      // handle error or success here\n})  Unfollow a user:  AppFriendsUserManager.sharedInstance.unfollowUser(userID, completion: { (response, error) in\n      // handle error or success here\n})", 
             "title": "Follow/Unfollow"
-        },
+        }, 
         {
-            "location": "/ios/users/#blockingunblocking",
-            "text": "An user can block other users. If user A blocks user B, B will no longer be able to send any private message to A.\nYou can block a user by:  AppFriendsUserManager.sharedInstance.blockUser(userID, completion: { (response, error) in\n      // handle error or success here\n})  Unblock a user:  AppFriendsUserManager.sharedInstance.unblockUser(userID, completion: { (response, error) in\n      // handle error or success here\n})",
+            "location": "/ios/users/#blockingunblocking", 
+            "text": "An user can block other users. If user A blocks user B, B will no longer be able to send any private message to A.\nYou can block a user by:  AppFriendsUserManager.sharedInstance.blockUser(userID, completion: { (response, error) in\n      // handle error or success here\n})  Unblock a user:  AppFriendsUserManager.sharedInstance.unblockUser(userID, completion: { (response, error) in\n      // handle error or success here\n})", 
             "title": "Blocking/Unblocking"
-        },
+        }, 
         {
-            "location": "/ios/users/#constants",
-            "text": "Parameter  Type  Description      HCSDKConstants.kUserID  String  the user's userID of this user in the host app.    HCSDKConstants.kUserAvatar  String  the avatar url of this user in the host app.    HCSDKConstants.kUserName  String  the username",
+            "location": "/ios/users/#constants", 
+            "text": "Parameter  Type  Description      HCSDKConstants.kUserID  String  the user's userID of this user in the host app.    HCSDKConstants.kUserAvatar  String  the avatar url of this user in the host app.    HCSDKConstants.kUserName  String  the username", 
             "title": "Constants"
-        },
+        }, 
         {
-            "location": "/ios/chat/",
-            "text": "Dialogs\n\n\nThere are three types of dialogs. Depending on your use case, please choose the appropriate type to use:\n\n\n\n\nPrivate one on one dialog. This is a conversation between two users. You can't add more users to private one on one dialog. This type of dialog is only visible to the two users.\n\n\nPrivate group dialog. This is a conversation between multiple users. You can add up to a few hundred users to a private group chat. This type of dialog is only visible to users in the group.\n\n\nOpen channel dialog. This is an open conversation. It is visible to everyone. You can add up to a few thousand users to an open channel. Each user can only be in one channel at a time.\n\n\n\n\n\n\n\n\n\n\nFeature Type\n\n\nOpen Channels\n\n\nPrivate Group Chat\n\n\nOne on One Private Chat\n\n\n\n\n\n\n\n\n\n\nTyping Indicator\n\n\n\u2718\n\n\n\u2714\n\n\n\u2714\n\n\n\n\n\n\nMessage Delivery Receipts\n\n\n\u2718\n\n\n\u2714\n\n\n\u2714\n\n\n\n\n\n\nMessage Read Receipts\n\n\n\u2718\n\n\n\u2714\n\n\n\u2714\n\n\n\n\n\n\nVideo and Image\n\n\n\u2718\n\n\n\u2714\n\n\n\u2714\n\n\n\n\n\n\nCreate in app\n\n\n\u2718\n\n\n\u2714\n\n\n\u2714\n\n\n\n\n\n\nCreate in control panel\n\n\n\u2714\n\n\n\u2718\n\n\n\u2718\n\n\n\n\n\n\nMute\n\n\n\u2714\n\n\n\u2714\n\n\n\u2714\n\n\n\n\n\n\nUser blocks user\n\n\n\u2714\n\n\n\u2714\n\n\n\u2714\n\n\n\n\n\n\nPush notifications\n\n\n\u2714\n\n\n\u2714\n\n\n\u2714\n\n\n\n\n\n\nMembers limit\n\n\n5000\n\n\n500\n\n\nN/A\n\n\n\n\n\n\n\n\nOpen Channels\n\n\nOpen channel is a public chat, where all of your users can participate. It can handle thousands of users in one channel. ex) Twitch-style public chat\n\n\nCreate a dialog\n\n\nUsers can create private dialogs in your app. The parameter which decides the type of dialog you are going to create is \ndialogType\n. If you are creating an one on one chat, you can pass \nHCSDKConstants.kMessageTypeIndividual\n and if you are creating a group chat, you can use \nHCSDKConstants.kMessageTypeGroup\n. You also need to pass the users (an id array) you want to include in the dialog. A title of a dialog can also be specified for a group dialog but it's optional.\n\n\nDialogsManager.sharedInstance.initializeDialog(users, dialogType: dialogType, dialogTitle: title) { (dialogID, error) in\n  if error != nil {\n    // failed\n  }\n}\n\n\n\n\n\nInviting users to a group dialog\n\n\nUsers can add more members to a group dialog. You need to pass the IDs of the members who you want to add to the dialog.\n\n\nDialogsManager.sharedInstance.addMembersToDialog(dialogID, members: users, completion: { (error) in\n  if error != nil {\n    // failed\n  }\n})\n\n\n\n\n\nRemoving users from a group dialog\n\n\nUsers can remove members from a group dialog. You need to pass the IDs of the members who you want to remove from the dialog.\n\n\nDialogsManager.sharedInstance.leaveGroupDialog(dialogID, completion: { (error) in\n  if error != nil {\n    // failed\n  }\n})\n\n\n\n\n\nMute a dialog\n\n\nMuting a dialog means you will no longer receive any Apple push notification and badge update from new messages sent to this dialog. You can mute a dialog by:\n\n\nDialogsManager\n.\nsharedInstance\n.\nmuteDialog\n(\n_dialogID\n!\n,\n \nmuted\n:\n \ntoggle\n.\non\n)\n\n\n{\n \n[\nweak\n \nself\n]\n \n(\nerror\n)\n \nin\n\n    \nif\n \nerror\n \n==\n \nnil\n \n{\n\n      \n// success\n\n    \n}\n\n    \nelse\n \n{\n\n      \n// failed\n\n    \n}\n\n\n}\n\n\n\n\n\n\nMessages\n\n\nMessages can be generated by the users in chats, or they can be from AppFriends platform to deliver special events. If you use \nAppFriendsUI\n framework, the messages are stored using \nCoreData\n. The special messages are also processed for you.\n\n\nTyping Indicators\n\n\nWhen someone is typing, the typing indicator can be displayed on the chat view. This feature is provided in the \nAppFriendsUI\n chat view, so you don't have to make any more effort\n\n\n\n\nStart typing\n\n\nIf you wish to manually trigger typing event, you can do it by:\n\n\nDialogsManager.sharedInstance.startTyping(_dialogID, dialogType: _dialogType)\n\n\n\n\n\nEnd typing\n\n\nDialogsManager.sharedInstance.endTyping(_dialogID, dialogType: _dialogType)\n\n\n\n\n\nTyping indicator event\n\n\nTo react to typing event, you need to implement \nMessagingManagerDelegate\n\n\noptional func didUpdateTypingStatus(dialogID: String, userName: String, typing: Bool)\n\n\n\n\n\nMessage Receipts\n\n\nThe sender of a message can request the receivers of the message for receipts. There are two types of receipts:\n\n\n\n\nreceive receipt, it means the message is received by the receiver's app\n\n\nread receipt, it means the message is read by the receiver\n\n\n\n\nYou can also find out which users have received/read the message by using a REST call to AppFriends platform.\n\n\nRequest for receipt\n\n\nWhen you send a message, set the require receipt parameter to \ntrue\n and it indicates that you want to record receipts for this message.\n\n\nMessagingManager.sharedInstance.sendTextMessage(text, dialogID: _dialogID, dialogType: _dialogType, requireReceipt: true, completion: { (success, error) in\n\n})\n\n\n\n\n\nReceipt update events\n\n\nTo react to receipt update events, you need to implement \nMessagingManagerDelegate\n\n\noptional func didUpdateMessageReceiptStatus(dialogID: String, messageID: String, status: MessageReceiptStatus)\n\n\n\n\n\nThe receipt status can be \nReceived\n or \nRead\n\n\nCheck receipts status of a message\n\n\nYou can use a REST api call to check who have received/read your message by:\n\n\nGET /messages/:temp_id/receipts\n\n\n\n\n\n\nSample response:\n\n\n{\n\"user_id\": \"09351dec3a3ac737cdaa7847d3b34b9e\"\n\"status\": \"read\"   // user has read the message\n\"date\": 1474908163090\n},\n{\n\"user_id\": \"58ac7103b3fcf6aa513c7fbf629df03c\"\n\"status\": \"received\" // user has received the message\n\"date\": 1474908261634\n}\n\n\n\n\n\nSend receipts\n\n\nReceipts are sent automatically if you use \nAppFriendsUI\n chat view. If you want to manually send receipts, you can use:\n\n\nMessagingManager.sharedInstance.postMessageReceipt(tempID: tempID, dialogID: dialogID, senderID: senderID, receiptStatus: .Read)",
+            "location": "/ios/chat/", 
+            "text": "Dialogs\n\n\nThere are three types of dialogs. Depending on your use case, please choose the appropriate type to use:\n\n\n\n\nPrivate one on one dialog. This is a conversation between two users. You can't add more users to private one on one dialog. This type of dialog is only visible to the two users.\n\n\nPrivate group dialog. This is a conversation between multiple users. You can add up to a few hundred users to a private group chat. This type of dialog is only visible to users in the group.\n\n\nOpen channel dialog. This is an open conversation. It is visible to everyone. You can add up to a few thousand users to an open channel. Each user can only be in one channel at a time.\n\n\n\n\n\n\n\n\n\n\nFeature Type\n\n\nOpen Channels\n\n\nPrivate Group Chat\n\n\nOne on One Private Chat\n\n\n\n\n\n\n\n\n\n\nTyping Indicator\n\n\n\u2718\n\n\n\u2714\n\n\n\u2714\n\n\n\n\n\n\nMessage Delivery Receipts\n\n\n\u2718\n\n\n\u2714\n\n\n\u2714\n\n\n\n\n\n\nMessage Read Receipts\n\n\n\u2718\n\n\n\u2714\n\n\n\u2714\n\n\n\n\n\n\nVideo and Image\n\n\n\u2718\n\n\n\u2714\n\n\n\u2714\n\n\n\n\n\n\nCreate in app\n\n\n\u2718\n\n\n\u2714\n\n\n\u2714\n\n\n\n\n\n\nCreate in control panel\n\n\n\u2714\n\n\n\u2718\n\n\n\u2718\n\n\n\n\n\n\nMute\n\n\n\u2714\n\n\n\u2714\n\n\n\u2714\n\n\n\n\n\n\nUser blocks user\n\n\n\u2714\n\n\n\u2714\n\n\n\u2714\n\n\n\n\n\n\nPush notifications\n\n\n\u2714\n\n\n\u2714\n\n\n\u2714\n\n\n\n\n\n\nMembers limit\n\n\n5000\n\n\n500\n\n\nN/A\n\n\n\n\n\n\n\n\nOpen Channels\n\n\nOpen channel is a public chat, where all of your users can participate. It can handle thousands of users in one channel. ex) Twitch-style public chat\n\n\nCreate a dialog\n\n\nUsers can create private dialogs in your app. The parameter which decides the type of dialog you are going to create is \ndialogType\n. If you are creating an one on one chat, you can pass \nHCSDKConstants.kMessageTypeIndividual\n and if you are creating a group chat, you can use \nHCSDKConstants.kMessageTypeGroup\n. You also need to pass the users (an id array) you want to include in the dialog. A title of a dialog can also be specified for a group dialog but it's optional.\n\n\nDialogsManager.sharedInstance.initializeDialog(users, dialogType: dialogType, dialogTitle: title) { (dialogID, error) in\n  if error != nil {\n    // failed\n  }\n}\n\n\n\n\n\nInviting users to a group dialog\n\n\nUsers can add more members to a group dialog. You need to pass the IDs of the members who you want to add to the dialog.\n\n\nDialogsManager.sharedInstance.addMembersToDialog(dialogID, members: users, completion: { (error) in\n  if error != nil {\n    // failed\n  }\n})\n\n\n\n\n\nRemoving users from a group dialog\n\n\nUsers can remove members from a group dialog. You need to pass the IDs of the members who you want to remove from the dialog.\n\n\nDialogsManager.sharedInstance.leaveGroupDialog(dialogID, completion: { (error) in\n  if error != nil {\n    // failed\n  }\n})\n\n\n\n\n\nMute a dialog\n\n\nMuting a dialog means you will no longer receive any Apple push notification and badge update from new messages sent to this dialog. You can mute a dialog by:\n\n\nDialogsManager\n.\nsharedInstance\n.\nmuteDialog\n(\n_dialogID\n!\n,\n \nmuted\n:\n \ntoggle\n.\non\n)\n\n\n{\n \n[\nweak\n \nself\n]\n \n(\nerror\n)\n \nin\n\n    \nif\n \nerror\n \n==\n \nnil\n \n{\n\n      \n// success\n\n    \n}\n\n    \nelse\n \n{\n\n      \n// failed\n\n    \n}\n\n\n}\n\n\n\n\n\n\nMessages\n\n\nMessages can be generated by the users in chats, or they can be from AppFriends platform to deliver special events. If you use \nAppFriendsUI\n framework, the messages are stored using \nCoreData\n. The special messages are also processed for you.\n\n\nTyping Indicators\n\n\nWhen someone is typing, the typing indicator can be displayed on the chat view. This feature is provided in the \nAppFriendsUI\n chat view, so you don't have to make any more effort\n\n\n\n\nStart typing\n\n\nIf you wish to manually trigger typing event, you can do it by:\n\n\nDialogsManager.sharedInstance.startTyping(_dialogID, dialogType: _dialogType)\n\n\n\n\n\nEnd typing\n\n\nDialogsManager.sharedInstance.endTyping(_dialogID, dialogType: _dialogType)\n\n\n\n\n\nTyping indicator event\n\n\nTo react to typing event, you need to implement \nMessagingManagerDelegate\n\n\noptional func didUpdateTypingStatus(dialogID: String, userName: String, typing: Bool)\n\n\n\n\n\nMessage Receipts\n\n\nThe sender of a message can request the receivers of the message for receipts. There are two types of receipts:\n\n\n\n\nreceive receipt, it means the message is received by the receiver's app\n\n\nread receipt, it means the message is read by the receiver\n\n\n\n\nYou can also find out which users have received/read the message by using a REST call to AppFriends platform.\n\n\nRequest for receipt\n\n\nWhen you send a message, set the require receipt parameter to \ntrue\n and it indicates that you want to record receipts for this message.\n\n\nMessagingManager.sharedInstance.sendTextMessage(text, dialogID: _dialogID, dialogType: _dialogType, requireReceipt: true, completion: { (success, error) in\n\n})\n\n\n\n\n\nReceipt update events\n\n\nTo react to receipt update events, you need to implement \nMessagingManagerDelegate\n\n\noptional func didUpdateMessageReceiptStatus(dialogID: String, messageID: String, status: MessageReceiptStatus)\n\n\n\n\n\nThe receipt status can be \nReceived\n or \nRead\n\n\nCheck receipts status of a message\n\n\nYou can use a REST api call to check who have received/read your message by:\n\n\nGET /messages/:temp_id/receipts\n\n\n\n\n\n\nSample response:\n\n\n{\n\nuser_id\n: \n09351dec3a3ac737cdaa7847d3b34b9e\n\n\nstatus\n: \nread\n   // user has read the message\n\ndate\n: 1474908163090\n},\n{\n\nuser_id\n: \n58ac7103b3fcf6aa513c7fbf629df03c\n\n\nstatus\n: \nreceived\n // user has received the message\n\ndate\n: 1474908261634\n}\n\n\n\n\n\nSend receipts\n\n\nReceipts are sent automatically if you use \nAppFriendsUI\n chat view. If you want to manually send receipts, you can use:\n\n\nMessagingManager.sharedInstance.postMessageReceipt(tempID: tempID, dialogID: dialogID, senderID: senderID, receiptStatus: .Read)", 
             "title": "Chat"
-        },
+        }, 
         {
-            "location": "/ios/chat/#dialogs",
-            "text": "There are three types of dialogs. Depending on your use case, please choose the appropriate type to use:   Private one on one dialog. This is a conversation between two users. You can't add more users to private one on one dialog. This type of dialog is only visible to the two users.  Private group dialog. This is a conversation between multiple users. You can add up to a few hundred users to a private group chat. This type of dialog is only visible to users in the group.  Open channel dialog. This is an open conversation. It is visible to everyone. You can add up to a few thousand users to an open channel. Each user can only be in one channel at a time.      Feature Type  Open Channels  Private Group Chat  One on One Private Chat      Typing Indicator  \u2718  \u2714  \u2714    Message Delivery Receipts  \u2718  \u2714  \u2714    Message Read Receipts  \u2718  \u2714  \u2714    Video and Image  \u2718  \u2714  \u2714    Create in app  \u2718  \u2714  \u2714    Create in control panel  \u2714  \u2718  \u2718    Mute  \u2714  \u2714  \u2714    User blocks user  \u2714  \u2714  \u2714    Push notifications  \u2714  \u2714  \u2714    Members limit  5000  500  N/A",
+            "location": "/ios/chat/#dialogs", 
+            "text": "There are three types of dialogs. Depending on your use case, please choose the appropriate type to use:   Private one on one dialog. This is a conversation between two users. You can't add more users to private one on one dialog. This type of dialog is only visible to the two users.  Private group dialog. This is a conversation between multiple users. You can add up to a few hundred users to a private group chat. This type of dialog is only visible to users in the group.  Open channel dialog. This is an open conversation. It is visible to everyone. You can add up to a few thousand users to an open channel. Each user can only be in one channel at a time.      Feature Type  Open Channels  Private Group Chat  One on One Private Chat      Typing Indicator  \u2718  \u2714  \u2714    Message Delivery Receipts  \u2718  \u2714  \u2714    Message Read Receipts  \u2718  \u2714  \u2714    Video and Image  \u2718  \u2714  \u2714    Create in app  \u2718  \u2714  \u2714    Create in control panel  \u2714  \u2718  \u2718    Mute  \u2714  \u2714  \u2714    User blocks user  \u2714  \u2714  \u2714    Push notifications  \u2714  \u2714  \u2714    Members limit  5000  500  N/A", 
             "title": "Dialogs"
-        },
+        }, 
         {
-            "location": "/ios/chat/#open-channels",
-            "text": "Open channel is a public chat, where all of your users can participate. It can handle thousands of users in one channel. ex) Twitch-style public chat",
+            "location": "/ios/chat/#open-channels", 
+            "text": "Open channel is a public chat, where all of your users can participate. It can handle thousands of users in one channel. ex) Twitch-style public chat", 
             "title": "Open Channels"
-        },
+        }, 
         {
-            "location": "/ios/chat/#create-a-dialog",
-            "text": "Users can create private dialogs in your app. The parameter which decides the type of dialog you are going to create is  dialogType . If you are creating an one on one chat, you can pass  HCSDKConstants.kMessageTypeIndividual  and if you are creating a group chat, you can use  HCSDKConstants.kMessageTypeGroup . You also need to pass the users (an id array) you want to include in the dialog. A title of a dialog can also be specified for a group dialog but it's optional.  DialogsManager.sharedInstance.initializeDialog(users, dialogType: dialogType, dialogTitle: title) { (dialogID, error) in\n  if error != nil {\n    // failed\n  }\n}",
+            "location": "/ios/chat/#create-a-dialog", 
+            "text": "Users can create private dialogs in your app. The parameter which decides the type of dialog you are going to create is  dialogType . If you are creating an one on one chat, you can pass  HCSDKConstants.kMessageTypeIndividual  and if you are creating a group chat, you can use  HCSDKConstants.kMessageTypeGroup . You also need to pass the users (an id array) you want to include in the dialog. A title of a dialog can also be specified for a group dialog but it's optional.  DialogsManager.sharedInstance.initializeDialog(users, dialogType: dialogType, dialogTitle: title) { (dialogID, error) in\n  if error != nil {\n    // failed\n  }\n}", 
             "title": "Create a dialog"
-        },
+        }, 
         {
-            "location": "/ios/chat/#inviting-users-to-a-group-dialog",
-            "text": "Users can add more members to a group dialog. You need to pass the IDs of the members who you want to add to the dialog.  DialogsManager.sharedInstance.addMembersToDialog(dialogID, members: users, completion: { (error) in\n  if error != nil {\n    // failed\n  }\n})",
+            "location": "/ios/chat/#inviting-users-to-a-group-dialog", 
+            "text": "Users can add more members to a group dialog. You need to pass the IDs of the members who you want to add to the dialog.  DialogsManager.sharedInstance.addMembersToDialog(dialogID, members: users, completion: { (error) in\n  if error != nil {\n    // failed\n  }\n})", 
             "title": "Inviting users to a group dialog"
-        },
+        }, 
         {
-            "location": "/ios/chat/#removing-users-from-a-group-dialog",
-            "text": "Users can remove members from a group dialog. You need to pass the IDs of the members who you want to remove from the dialog.  DialogsManager.sharedInstance.leaveGroupDialog(dialogID, completion: { (error) in\n  if error != nil {\n    // failed\n  }\n})",
+            "location": "/ios/chat/#removing-users-from-a-group-dialog", 
+            "text": "Users can remove members from a group dialog. You need to pass the IDs of the members who you want to remove from the dialog.  DialogsManager.sharedInstance.leaveGroupDialog(dialogID, completion: { (error) in\n  if error != nil {\n    // failed\n  }\n})", 
             "title": "Removing users from a group dialog"
-        },
+        }, 
         {
-            "location": "/ios/chat/#mute-a-dialog",
-            "text": "Muting a dialog means you will no longer receive any Apple push notification and badge update from new messages sent to this dialog. You can mute a dialog by:  DialogsManager . sharedInstance . muteDialog ( _dialogID ! ,   muted :   toggle . on )  {   [ weak   self ]   ( error )   in \n     if   error   ==   nil   { \n       // success \n     } \n     else   { \n       // failed \n     }  }",
+            "location": "/ios/chat/#mute-a-dialog", 
+            "text": "Muting a dialog means you will no longer receive any Apple push notification and badge update from new messages sent to this dialog. You can mute a dialog by:  DialogsManager . sharedInstance . muteDialog ( _dialogID ! ,   muted :   toggle . on )  {   [ weak   self ]   ( error )   in \n     if   error   ==   nil   { \n       // success \n     } \n     else   { \n       // failed \n     }  }", 
             "title": "Mute a dialog"
-        },
+        }, 
         {
-            "location": "/ios/chat/#messages",
-            "text": "Messages can be generated by the users in chats, or they can be from AppFriends platform to deliver special events. If you use  AppFriendsUI  framework, the messages are stored using  CoreData . The special messages are also processed for you.",
+            "location": "/ios/chat/#messages", 
+            "text": "Messages can be generated by the users in chats, or they can be from AppFriends platform to deliver special events. If you use  AppFriendsUI  framework, the messages are stored using  CoreData . The special messages are also processed for you.", 
             "title": "Messages"
-        },
+        }, 
         {
-            "location": "/ios/chat/#typing-indicators",
-            "text": "When someone is typing, the typing indicator can be displayed on the chat view. This feature is provided in the  AppFriendsUI  chat view, so you don't have to make any more effort",
+            "location": "/ios/chat/#typing-indicators", 
+            "text": "When someone is typing, the typing indicator can be displayed on the chat view. This feature is provided in the  AppFriendsUI  chat view, so you don't have to make any more effort", 
             "title": "Typing Indicators"
-        },
+        }, 
         {
-            "location": "/ios/chat/#start-typing",
-            "text": "If you wish to manually trigger typing event, you can do it by:  DialogsManager.sharedInstance.startTyping(_dialogID, dialogType: _dialogType)",
+            "location": "/ios/chat/#start-typing", 
+            "text": "If you wish to manually trigger typing event, you can do it by:  DialogsManager.sharedInstance.startTyping(_dialogID, dialogType: _dialogType)", 
             "title": "Start typing"
-        },
+        }, 
         {
-            "location": "/ios/chat/#end-typing",
-            "text": "DialogsManager.sharedInstance.endTyping(_dialogID, dialogType: _dialogType)",
+            "location": "/ios/chat/#end-typing", 
+            "text": "DialogsManager.sharedInstance.endTyping(_dialogID, dialogType: _dialogType)", 
             "title": "End typing"
-        },
+        }, 
         {
-            "location": "/ios/chat/#typing-indicator-event",
-            "text": "To react to typing event, you need to implement  MessagingManagerDelegate  optional func didUpdateTypingStatus(dialogID: String, userName: String, typing: Bool)",
+            "location": "/ios/chat/#typing-indicator-event", 
+            "text": "To react to typing event, you need to implement  MessagingManagerDelegate  optional func didUpdateTypingStatus(dialogID: String, userName: String, typing: Bool)", 
             "title": "Typing indicator event"
-        },
+        }, 
         {
-            "location": "/ios/chat/#message-receipts",
-            "text": "The sender of a message can request the receivers of the message for receipts. There are two types of receipts:   receive receipt, it means the message is received by the receiver's app  read receipt, it means the message is read by the receiver   You can also find out which users have received/read the message by using a REST call to AppFriends platform.",
+            "location": "/ios/chat/#message-receipts", 
+            "text": "The sender of a message can request the receivers of the message for receipts. There are two types of receipts:   receive receipt, it means the message is received by the receiver's app  read receipt, it means the message is read by the receiver   You can also find out which users have received/read the message by using a REST call to AppFriends platform.", 
             "title": "Message Receipts"
-        },
+        }, 
         {
-            "location": "/ios/chat/#request-for-receipt",
-            "text": "When you send a message, set the require receipt parameter to  true  and it indicates that you want to record receipts for this message.  MessagingManager.sharedInstance.sendTextMessage(text, dialogID: _dialogID, dialogType: _dialogType, requireReceipt: true, completion: { (success, error) in\n\n})",
+            "location": "/ios/chat/#request-for-receipt", 
+            "text": "When you send a message, set the require receipt parameter to  true  and it indicates that you want to record receipts for this message.  MessagingManager.sharedInstance.sendTextMessage(text, dialogID: _dialogID, dialogType: _dialogType, requireReceipt: true, completion: { (success, error) in\n\n})", 
             "title": "Request for receipt"
-        },
+        }, 
         {
-            "location": "/ios/chat/#receipt-update-events",
-            "text": "To react to receipt update events, you need to implement  MessagingManagerDelegate  optional func didUpdateMessageReceiptStatus(dialogID: String, messageID: String, status: MessageReceiptStatus)  The receipt status can be  Received  or  Read",
+            "location": "/ios/chat/#receipt-update-events", 
+            "text": "To react to receipt update events, you need to implement  MessagingManagerDelegate  optional func didUpdateMessageReceiptStatus(dialogID: String, messageID: String, status: MessageReceiptStatus)  The receipt status can be  Received  or  Read", 
             "title": "Receipt update events"
-        },
+        }, 
         {
-            "location": "/ios/chat/#check-receipts-status-of-a-message",
-            "text": "You can use a REST api call to check who have received/read your message by:  GET /messages/:temp_id/receipts   Sample response:  {\n\"user_id\": \"09351dec3a3ac737cdaa7847d3b34b9e\"\n\"status\": \"read\"   // user has read the message\n\"date\": 1474908163090\n},\n{\n\"user_id\": \"58ac7103b3fcf6aa513c7fbf629df03c\"\n\"status\": \"received\" // user has received the message\n\"date\": 1474908261634\n}",
+            "location": "/ios/chat/#check-receipts-status-of-a-message", 
+            "text": "You can use a REST api call to check who have received/read your message by:  GET /messages/:temp_id/receipts   Sample response:  { user_id :  09351dec3a3ac737cdaa7847d3b34b9e  status :  read    // user has read the message date : 1474908163090\n},\n{ user_id :  58ac7103b3fcf6aa513c7fbf629df03c  status :  received  // user has received the message date : 1474908261634\n}", 
             "title": "Check receipts status of a message"
-        },
+        }, 
         {
-            "location": "/ios/chat/#send-receipts",
-            "text": "Receipts are sent automatically if you use  AppFriendsUI  chat view. If you want to manually send receipts, you can use:  MessagingManager.sharedInstance.postMessageReceipt(tempID: tempID, dialogID: dialogID, senderID: senderID, receiptStatus: .Read)",
+            "location": "/ios/chat/#send-receipts", 
+            "text": "Receipts are sent automatically if you use  AppFriendsUI  chat view. If you want to manually send receipts, you can use:  MessagingManager.sharedInstance.postMessageReceipt(tempID: tempID, dialogID: dialogID, senderID: senderID, receiptStatus: .Read)", 
             "title": "Send receipts"
-        },
+        }, 
         {
-            "location": "/ios/ui_components/",
-            "text": "UI Components\n\n\nAppFriendsUI\n provides a lot of useful and convenient UI components for you to use. It can save a lot of your time developing the app. Our \ndemo app\n takes full advantage of the \nAppFriendsUI\n. You could clone the demo app repo from github to see how it uses, interact and customizes the UI components provided by \nAppFriendsUI\n.\n\n\nBasic Customization\n\n\nHCUIConfiguration\n gives you easy access to customize AppFriends UI components. For example, if you want to change the background color of the chat view, you can simply do it by changing the value of \nHCColorPalette.chatBackgroundColor\n\n\nAdvanced Customization\n\n\nFor advanced customization, we recommend you inherit our UI component classes. For example, if you want to change the behavior when the user clicks on a message, you can inherit \nHCBaseChatViewController\n, and override the implementation of \nfunc tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)\n\n\nSubclass AppFriends View Controllers\n\n\nTo customize a view controller provided by the \nAppFriendsUI\n SDK, you can create a subclass and then override the methods that you wish to change. You can also use xib with your view controller. For example, you could subclass \nHCDialogsListViewController\n to change the look of it. If you want to use xib, you need to put a tableview inside your xib, then make all the IBOutlet connections. Then you could initialize your view controller by using the\n\n\nlet dialogList = DialogsListViewController(nibName: \"DialogsListView.\", bundle: nil)\n\n\n\n\n\nChat Reusable UI\n\n\nThe two main UI components we provide are the dialogs list and the chat view.",
+            "location": "/ios/ui_components/", 
+            "text": "UI Components\n\n\nAppFriendsUI\n provides a lot of useful and convenient UI components for you to use. It can save a lot of your time developing the app. Our \ndemo app\n takes full advantage of the \nAppFriendsUI\n. You could clone the demo app repo from github to see how it uses, interact and customizes the UI components provided by \nAppFriendsUI\n.\n\n\nBasic Customization\n\n\nHCUIConfiguration\n gives you easy access to customize AppFriends UI components. For example, if you want to change the background color of the chat view, you can simply do it by changing the value of \nHCColorPalette.chatBackgroundColor\n\n\nAdvanced Customization\n\n\nFor advanced customization, we recommend you inherit our UI component classes. For example, if you want to change the behavior when the user clicks on a message, you can inherit \nHCBaseChatViewController\n, and override the implementation of \nfunc tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)\n\n\nSubclass AppFriends View Controllers\n\n\nTo customize a view controller provided by the \nAppFriendsUI\n SDK, you can create a subclass and then override the methods that you wish to change. You can also use xib with your view controller. For example, you could subclass \nHCDialogsListViewController\n to change the look of it. If you want to use xib, you need to put a tableview inside your xib, then make all the IBOutlet connections. Then you could initialize your view controller by using the\n\n\nlet dialogList = DialogsListViewController(nibName: \nDialogsListView.\n, bundle: nil)\n\n\n\n\n\nChat Reusable UI\n\n\nThe two main UI components we provide are the dialogs list and the chat view.", 
             "title": "UI Components"
-        },
+        }, 
         {
-            "location": "/ios/ui_components/#ui-components",
-            "text": "AppFriendsUI  provides a lot of useful and convenient UI components for you to use. It can save a lot of your time developing the app. Our  demo app  takes full advantage of the  AppFriendsUI . You could clone the demo app repo from github to see how it uses, interact and customizes the UI components provided by  AppFriendsUI .",
+            "location": "/ios/ui_components/#ui-components", 
+            "text": "AppFriendsUI  provides a lot of useful and convenient UI components for you to use. It can save a lot of your time developing the app. Our  demo app  takes full advantage of the  AppFriendsUI . You could clone the demo app repo from github to see how it uses, interact and customizes the UI components provided by  AppFriendsUI .", 
             "title": "UI Components"
-        },
+        }, 
         {
-            "location": "/ios/ui_components/#basic-customization",
-            "text": "HCUIConfiguration  gives you easy access to customize AppFriends UI components. For example, if you want to change the background color of the chat view, you can simply do it by changing the value of  HCColorPalette.chatBackgroundColor",
+            "location": "/ios/ui_components/#basic-customization", 
+            "text": "HCUIConfiguration  gives you easy access to customize AppFriends UI components. For example, if you want to change the background color of the chat view, you can simply do it by changing the value of  HCColorPalette.chatBackgroundColor", 
             "title": "Basic Customization"
-        },
+        }, 
         {
-            "location": "/ios/ui_components/#advanced-customization",
-            "text": "For advanced customization, we recommend you inherit our UI component classes. For example, if you want to change the behavior when the user clicks on a message, you can inherit  HCBaseChatViewController , and override the implementation of  func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)",
+            "location": "/ios/ui_components/#advanced-customization", 
+            "text": "For advanced customization, we recommend you inherit our UI component classes. For example, if you want to change the behavior when the user clicks on a message, you can inherit  HCBaseChatViewController , and override the implementation of  func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)", 
             "title": "Advanced Customization"
-        },
+        }, 
         {
-            "location": "/ios/ui_components/#subclass-appfriends-view-controllers",
-            "text": "To customize a view controller provided by the  AppFriendsUI  SDK, you can create a subclass and then override the methods that you wish to change. You can also use xib with your view controller. For example, you could subclass  HCDialogsListViewController  to change the look of it. If you want to use xib, you need to put a tableview inside your xib, then make all the IBOutlet connections. Then you could initialize your view controller by using the  let dialogList = DialogsListViewController(nibName: \"DialogsListView.\", bundle: nil)",
+            "location": "/ios/ui_components/#subclass-appfriends-view-controllers", 
+            "text": "To customize a view controller provided by the  AppFriendsUI  SDK, you can create a subclass and then override the methods that you wish to change. You can also use xib with your view controller. For example, you could subclass  HCDialogsListViewController  to change the look of it. If you want to use xib, you need to put a tableview inside your xib, then make all the IBOutlet connections. Then you could initialize your view controller by using the  let dialogList = DialogsListViewController(nibName:  DialogsListView. , bundle: nil)", 
             "title": "Subclass AppFriends View Controllers"
-        },
+        }, 
         {
-            "location": "/ios/ui_components/#chat-reusable-ui",
-            "text": "The two main UI components we provide are the dialogs list and the chat view.",
+            "location": "/ios/ui_components/#chat-reusable-ui", 
+            "text": "The two main UI components we provide are the dialogs list and the chat view.", 
             "title": "Chat Reusable UI"
-        },
+        }, 
         {
-            "location": "/ios/dependencies/",
-            "text": "Dependencies List\n\n\nAppFriends SDKs have several external dependencies with open source libraries. We are committed to always update our SDK to be compatible the latest version of the dependencies\n\n\n\n\n\n\n\n\nDependencies\n\n\nLicense Type\n\n\nAppFriendsCore\n\n\nAppFriendsUI\n\n\nVersion (swift2.3)\n\n\nVersion (swift3)\n\n\n\n\n\n\n\n\n\n\nAlamofire\n\n\nMIT\n\n\n\u2714\n\n\n\u2714\n\n\n~> 3.5.1\n\n\n~> 4.0.1\n\n\n\n\n\n\nJWT\n\n\nMIT\n\n\n\u2714\n\n\n\u2714\n\n\n~> 2.1.0\n\n\n~> 2.1.0\n\n\n\n\n\n\nEZSwiftExtensions\n\n\nMIT\n\n\n\u2714\n\n\n\u2714\n\n\n1.5\n\n\n~> 1.7\n\n\n\n\n\n\nCoreStore\n\n\nMIT\n\n\n\u2714\n\n\n\u2714\n\n\n~> 2.1.3\n\n\n~> 2.1.3\n\n\n\n\n\n\nCloudinary\n\n\nMIT\n\n\n\u2714\n\n\n\u2714\n\n\n~> 1.0.15\n\n\n~> 1.0.15\n\n\n\n\n\n\nSocket.IO-Client-Swift\n\n\nMIT\n\n\n\u2714\n\n\n\u2714\n\n\n~> 7.0.3\n\n\n~> 8.1.1\n\n\n\n\n\n\nFontAwesome.swift\n\n\nMIT\n\n\n\u2718\n\n\n\u2714\n\n\n0.10.1\n\n\n1.0.0\n\n\n\n\n\n\nSlackTextViewController\n\n\nMIT\n\n\n\u2718\n\n\n\u2714\n\n\n~> 1.9.5\n\n\n~> 1.9.5\n\n\n\n\n\n\nCLTokenInputView\n\n\nMIT\n\n\n\u2718\n\n\n\u2714\n\n\n~> 2.3.0\n\n\n~> 2.3.0\n\n\n\n\n\n\nSESlideTableViewCell\n\n\nMIT\n\n\n\u2718\n\n\n\u2714\n\n\n~> 0.7.1\n\n\n~> 0.7.1\n\n\n\n\n\n\nDZNEmptyDataSet\n\n\nMIT\n\n\n\u2718\n\n\n\u2714\n\n\n~> 1.8.1\n\n\n~> 1.9.5\n\n\n\n\n\n\nAFDateHelper\n\n\nMIT\n\n\n\u2718\n\n\n\u2714\n\n\n~> 3.5.3\n\n\n~> 1.9.5\n\n\n\n\n\n\nAlamofireImage\n\n\nMIT\n\n\n\u2718\n\n\n\u2714\n\n\n~> 2.5\n\n\n~> 3.1.0\n\n\n\n\n\n\n\n\nPodfile\n\n\nTo support Swift2.3, extra specifiers are needed. Below illustrates how the Podfile looks in Swift2.3 and Swift3.\n\n\nSwift 3\n\n\npod 'AppFriendsUI'\n\n\n\n\n\nSwift 2.3\n\n\npod 'AppFriendsUI', :git => 'https://github.com/laeroah/AppFriendsUI.git', :branch => 'swift2.3'\npod 'AppFriendsCore', :git => 'https://github.com/laeroah/AppFriendsCoreFramework.git', :branch => 'swift2.3'\npod 'AFDateHelper', :git => 'https://github.com/laeroah/DateExtension.git'\npod 'FontAwesome.swift', :git => 'https://github.com/thii/FontAwesome.swift.git', :branch => 'swift-2.3'\npod 'EZSwiftExtensions', :git => 'https://github.com/goktugyil/EZSwiftExtensions.git', :branch => 'Swift2.3'\npod 'Socket.IO-Client-Swift', :git => 'https://github.com/socketio/socket.io-client-swift.git', :branch => 'swift2.3'\n\npost_install do |installer|\n    installer.pods_project.targets.each do |target|\n        target.build_configurations.each do |configuration|\n            configuration.build_settings['SWIFT_VERSION'] = \"2.3\"\n        end\n    end\nend",
+            "location": "/ios/dependencies/", 
+            "text": "Dependencies List\n\n\nAppFriends SDKs have several external dependencies with open source libraries. We are committed to always update our SDK to be compatible the latest version of the dependencies\n\n\n\n\n\n\n\n\nDependencies\n\n\nLicense Type\n\n\nAppFriendsCore\n\n\nAppFriendsUI\n\n\nVersion (swift2.3)\n\n\nVersion (swift3)\n\n\n\n\n\n\n\n\n\n\nAlamofire\n\n\nMIT\n\n\n\u2714\n\n\n\u2714\n\n\n~\n 3.5.1\n\n\n~\n 4.0.1\n\n\n\n\n\n\nJWT\n\n\nMIT\n\n\n\u2714\n\n\n\u2714\n\n\n~\n 2.1.0\n\n\n~\n 2.1.0\n\n\n\n\n\n\nCoreStore\n\n\nMIT\n\n\n\u2714\n\n\n\u2714\n\n\n~\n 2.1.3\n\n\n~\n 2.1.3\n\n\n\n\n\n\nCloudinary\n\n\nMIT\n\n\n\u2714\n\n\n\u2714\n\n\n~\n 1.0.15\n\n\n~\n 1.0.15\n\n\n\n\n\n\nSocket.IO-Client-Swift\n\n\nMIT\n\n\n\u2714\n\n\n\u2714\n\n\n~\n 7.0.3\n\n\n~\n 8.1.1\n\n\n\n\n\n\nSlackTextViewController\n\n\nMIT\n\n\n\u2718\n\n\n\u2714\n\n\n~\n 1.9.5\n\n\n~\n 1.9.5\n\n\n\n\n\n\nCLTokenInputView\n\n\nMIT\n\n\n\u2718\n\n\n\u2714\n\n\n~\n 2.3.0\n\n\n~\n 2.3.0\n\n\n\n\n\n\nSESlideTableViewCell\n\n\nMIT\n\n\n\u2718\n\n\n\u2714\n\n\n~\n 0.7.1\n\n\n~\n 0.7.1\n\n\n\n\n\n\nAFDateHelper\n\n\nMIT\n\n\n\u2718\n\n\n\u2714\n\n\n~\n 3.5.3\n\n\n~\n 1.9.5\n\n\n\n\n\n\nAlamofireImage\n\n\nMIT\n\n\n\u2718\n\n\n\u2714\n\n\n~\n 2.5\n\n\n~\n 3.1.0\n\n\n\n\n\n\n\n\nPodfile\n\n\nTo support Swift2.3, extra specifiers are needed. Below illustrates how the Podfile looks in Swift2.3 and Swift3.\n\n\nSwift 3\n\n\npod \nAppFriendsUI\n\n\n\n\n\n\nSwift 2.3\n\n\npod \nAppFriendsUI\n, :git =\n \nhttps://github.com/laeroah/AppFriendsUI.git\n, :branch =\n \nswift2.3\n\npod \nAppFriendsCore\n, :git =\n \nhttps://github.com/laeroah/AppFriendsCoreFramework.git\n, :branch =\n \nswift2.3\n\npod \nAFDateHelper\n, :git =\n \nhttps://github.com/laeroah/DateExtension.git\n\npod \nFontAwesome.swift\n, :git =\n \nhttps://github.com/thii/FontAwesome.swift.git\n, :branch =\n \nswift-2.3\n\npod \nSocket.IO-Client-Swift\n, :git =\n \nhttps://github.com/socketio/socket.io-client-swift.git\n, :branch =\n \nswift2.3\n\n\npost_install do |installer|\n    installer.pods_project.targets.each do |target|\n        target.build_configurations.each do |configuration|\n            configuration.build_settings[\nSWIFT_VERSION\n] = \n2.3\n\n        end\n    end\nend", 
             "title": "External Dependencies"
-        },
+        }, 
         {
-            "location": "/ios/dependencies/#dependencies-list",
-            "text": "AppFriends SDKs have several external dependencies with open source libraries. We are committed to always update our SDK to be compatible the latest version of the dependencies     Dependencies  License Type  AppFriendsCore  AppFriendsUI  Version (swift2.3)  Version (swift3)      Alamofire  MIT  \u2714  \u2714  ~> 3.5.1  ~> 4.0.1    JWT  MIT  \u2714  \u2714  ~> 2.1.0  ~> 2.1.0    EZSwiftExtensions  MIT  \u2714  \u2714  1.5  ~> 1.7    CoreStore  MIT  \u2714  \u2714  ~> 2.1.3  ~> 2.1.3    Cloudinary  MIT  \u2714  \u2714  ~> 1.0.15  ~> 1.0.15    Socket.IO-Client-Swift  MIT  \u2714  \u2714  ~> 7.0.3  ~> 8.1.1    FontAwesome.swift  MIT  \u2718  \u2714  0.10.1  1.0.0    SlackTextViewController  MIT  \u2718  \u2714  ~> 1.9.5  ~> 1.9.5    CLTokenInputView  MIT  \u2718  \u2714  ~> 2.3.0  ~> 2.3.0    SESlideTableViewCell  MIT  \u2718  \u2714  ~> 0.7.1  ~> 0.7.1    DZNEmptyDataSet  MIT  \u2718  \u2714  ~> 1.8.1  ~> 1.9.5    AFDateHelper  MIT  \u2718  \u2714  ~> 3.5.3  ~> 1.9.5    AlamofireImage  MIT  \u2718  \u2714  ~> 2.5  ~> 3.1.0",
+            "location": "/ios/dependencies/#dependencies-list", 
+            "text": "AppFriends SDKs have several external dependencies with open source libraries. We are committed to always update our SDK to be compatible the latest version of the dependencies     Dependencies  License Type  AppFriendsCore  AppFriendsUI  Version (swift2.3)  Version (swift3)      Alamofire  MIT  \u2714  \u2714  ~  3.5.1  ~  4.0.1    JWT  MIT  \u2714  \u2714  ~  2.1.0  ~  2.1.0    CoreStore  MIT  \u2714  \u2714  ~  2.1.3  ~  2.1.3    Cloudinary  MIT  \u2714  \u2714  ~  1.0.15  ~  1.0.15    Socket.IO-Client-Swift  MIT  \u2714  \u2714  ~  7.0.3  ~  8.1.1    SlackTextViewController  MIT  \u2718  \u2714  ~  1.9.5  ~  1.9.5    CLTokenInputView  MIT  \u2718  \u2714  ~  2.3.0  ~  2.3.0    SESlideTableViewCell  MIT  \u2718  \u2714  ~  0.7.1  ~  0.7.1    AFDateHelper  MIT  \u2718  \u2714  ~  3.5.3  ~  1.9.5    AlamofireImage  MIT  \u2718  \u2714  ~  2.5  ~  3.1.0", 
             "title": "Dependencies List"
-        },
+        }, 
         {
-            "location": "/ios/dependencies/#podfile",
-            "text": "To support Swift2.3, extra specifiers are needed. Below illustrates how the Podfile looks in Swift2.3 and Swift3.",
+            "location": "/ios/dependencies/#podfile", 
+            "text": "To support Swift2.3, extra specifiers are needed. Below illustrates how the Podfile looks in Swift2.3 and Swift3.", 
             "title": "Podfile"
-        },
+        }, 
         {
-            "location": "/ios/dependencies/#swift-3",
-            "text": "pod 'AppFriendsUI'",
+            "location": "/ios/dependencies/#swift-3", 
+            "text": "pod  AppFriendsUI", 
             "title": "Swift 3"
-        },
+        }, 
         {
-            "location": "/ios/dependencies/#swift-23",
-            "text": "pod 'AppFriendsUI', :git => 'https://github.com/laeroah/AppFriendsUI.git', :branch => 'swift2.3'\npod 'AppFriendsCore', :git => 'https://github.com/laeroah/AppFriendsCoreFramework.git', :branch => 'swift2.3'\npod 'AFDateHelper', :git => 'https://github.com/laeroah/DateExtension.git'\npod 'FontAwesome.swift', :git => 'https://github.com/thii/FontAwesome.swift.git', :branch => 'swift-2.3'\npod 'EZSwiftExtensions', :git => 'https://github.com/goktugyil/EZSwiftExtensions.git', :branch => 'Swift2.3'\npod 'Socket.IO-Client-Swift', :git => 'https://github.com/socketio/socket.io-client-swift.git', :branch => 'swift2.3'\n\npost_install do |installer|\n    installer.pods_project.targets.each do |target|\n        target.build_configurations.each do |configuration|\n            configuration.build_settings['SWIFT_VERSION'] = \"2.3\"\n        end\n    end\nend",
+            "location": "/ios/dependencies/#swift-23", 
+            "text": "pod  AppFriendsUI , :git =   https://github.com/laeroah/AppFriendsUI.git , :branch =   swift2.3 \npod  AppFriendsCore , :git =   https://github.com/laeroah/AppFriendsCoreFramework.git , :branch =   swift2.3 \npod  AFDateHelper , :git =   https://github.com/laeroah/DateExtension.git \npod  FontAwesome.swift , :git =   https://github.com/thii/FontAwesome.swift.git , :branch =   swift-2.3 \npod  Socket.IO-Client-Swift , :git =   https://github.com/socketio/socket.io-client-swift.git , :branch =   swift2.3 \n\npost_install do |installer|\n    installer.pods_project.targets.each do |target|\n        target.build_configurations.each do |configuration|\n            configuration.build_settings[ SWIFT_VERSION ] =  2.3 \n        end\n    end\nend", 
             "title": "Swift 2.3"
-        },
+        }, 
         {
-            "location": "/android/",
-            "text": "AppFriends Android SDK\n\n\nDemo App\n\n\nA simple demo app showing the integrated AppFriends SDK is available at: \nDemo\n.\n\n\nIntegration\n\n\nMaven / jCenter / Bintray\n\n\nTo integrate AppFriends Android SDK to your Android Studio project, add the\nfollowing to your application's \nbuild.gradle\n file:\n\n\nrepositories {\n    maven {\n        url 'https://dl.bintray.com/appfriends/maven/'\n    }\n}\n\n\n\n\n\nand add the appfriends SDK as part of your app's dependencies:\n\n\ndependencies {\n    compile 'me.appfriends.android:appfriends:2.0.19'\n}\n\n\n\n\n\nIf your application uses a version of the Android support libraries that results in conflicts, you can force Gradle to build with your version with:\n\n\ncompile ('com.android.support:support-v4:23.4.0'){\n  force = true;\n}\n\n\n\n\n\nInitialization\n\n\nAfter logging into your admin panel, and created your application, you can find your \nApp ID\n and \nApp Secret\n. Add them to your \nAndroidManifest.xml\n file under \n<application>\n.\n\n\n<meta-data\n    android:name=\"me.appfriends.AppID\"\n    android:value=\"[APPFRIENDS_ID]\" />\n\n<meta-data\n    android:name=\"me.appfriends.AppSecret\"\n    android:value=\"[APPFRIENDS_SECRET]\" />\n\n\n\n\n\nAppFriends SDK and the corresponding UI Kit must be initialized prior to usage. In your custom \nApplication\n class, you have the option to customize the AppFriends SDK with \nAppFriendsConfiguration.Builder\n. You must call \nAppFriendsUIKit.init(this, configuration);\n to properly initialize the SDK:\n\n\npublic class MyApplication extends Application {\n    @Override\n    public void onCreate() {\n        super.onCreate();\n\n        AppFriendsConfiguration configuration =\n          new AppFriendsConfiguration.Builder()\n                                     .gravity(Gravity.RIGHT) // Which way the widget should open from\n                                     .build();\n\n        AppFriendsUIKit.init(this, configuration);\n    }\n}\n\n\n\n\n\nUser Authentication\n\n\nBefore your users can start enjoying AppFriends, they need to have an\nAppFriends account. Login the user by invoking:\n\n\nAppFriends.login(userID, username, avatarURL, userEmail);\n\n\n\n\n\nwhere the parameters as as follows:\n\n\n\n\n\n\n\n\nParameter\n\n\nType\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nuserID\n\n\nString\n\n\nthe user's userID in your own app.\n\n\n\n\n\n\nusername\n\n\nString\n\n\nthe username\n\n\n\n\n\n\navatarURL\n\n\nString\n\n\nthe full URL of the user's avatar\n\n\n\n\n\n\nuserEmail\n\n\nString\n\n\nuser's email address\n\n\n\n\n\n\n\n\nDisplay Widget Bubble\n\n\nTo add the default widget icon to your \nActivity\n or \nFragment\n, add the\nfollowing to your \nlayout xml\n:\n\n\n<me.appfriends.android.widget.AppFriendsWidget\n    android:id=\"@+id/appfriends_icon\"\n    android:layout_width=\"wrap_content\"\n    android:layout_height=\"wrap_content\"\n    app:bragIcon=\"[Custom Brag Icon Drawable]\"\n    app:deeplink=\"[Deeplink]\"/>\n\n\n\n\n\nYou may specify the \"brag\" icon (which allows users to share a screenshot) and the deeplink path of the current fragment/activity.\n\n\nThe AppFriends Android SDK should now be integrated and ready to go!\n\n\nStyling\n\n\nAppFriends Android UI Kit will soon support customizing the UI matching your app's style, stay tuned for an update.\n\n\nDeeplinks\n\n\nWhen a user shares screenshot from your app, a deeplink will be generated and shared with the screenshot. If the screenshot is taken from a place you have assign a path and parameters to, the information will also be included in the deeplink. When users clicks on the deeplink and install/open the app, we will trigger the callback with the path and parameters you provided.\n\n\nTo receive deeplink actions, you need to implement the \nOnAppFriendsNotificationListener\n interface register the listener with the UI Kit:\n\n\n  AppFriendsUIKit.addOnAppFriendsNotificationListener(new OnAppFriendsNotificationListener() {\n      @Override\n      public boolean onDeeplinkClicked(String deeplink) {\n          // Perform deeplink action\n          return true; // If handled, return true\n      }\n  });\n\n\n\n\n\nPublic Chat Channels\n\n\nBy default, we create a global public chat channel for all of your users to chat. You can create, edit and remove public chat channels. You can either do it from the AppFriends admin panel or via our \nAPI\n.",
+            "location": "/android/", 
+            "text": "AppFriends Android SDK\n\n\nDemo App\n\n\nA simple demo app showing the integrated AppFriends SDK is available at: \nDemo\n.\n\n\nIntegration\n\n\nMaven / jCenter / Bintray\n\n\nTo integrate AppFriends Android SDK to your Android Studio project, add the\nfollowing to your application's \nbuild.gradle\n file:\n\n\nrepositories {\n    maven {\n        url \nhttps://dl.bintray.com/appfriends/maven/\n\n    }\n}\n\n\n\n\n\nand add the appfriends SDK as part of your app's dependencies:\n\n\ndependencies {\n    compile \nme.appfriends.android:appfriends:2.0.19\n\n}\n\n\n\n\n\nIf your application uses a version of the Android support libraries that results in conflicts, you can force Gradle to build with your version with:\n\n\ncompile (\ncom.android.support:support-v4:23.4.0\n){\n  force = true;\n}\n\n\n\n\n\nInitialization\n\n\nAfter logging into your admin panel, and created your application, you can find your \nApp ID\n and \nApp Secret\n. Add them to your \nAndroidManifest.xml\n file under \napplication\n.\n\n\nmeta-data\n    android:name=\nme.appfriends.AppID\n\n    android:value=\n[APPFRIENDS_ID]\n /\n\n\n\nmeta-data\n    android:name=\nme.appfriends.AppSecret\n\n    android:value=\n[APPFRIENDS_SECRET]\n /\n\n\n\n\n\n\nAppFriends SDK and the corresponding UI Kit must be initialized prior to usage. In your custom \nApplication\n class, you have the option to customize the AppFriends SDK with \nAppFriendsConfiguration.Builder\n. You must call \nAppFriendsUIKit.init(this, configuration);\n to properly initialize the SDK:\n\n\npublic class MyApplication extends Application {\n    @Override\n    public void onCreate() {\n        super.onCreate();\n\n        AppFriendsConfiguration configuration =\n          new AppFriendsConfiguration.Builder()\n                                     .gravity(Gravity.RIGHT) // Which way the widget should open from\n                                     .build();\n\n        AppFriendsUIKit.init(this, configuration);\n    }\n}\n\n\n\n\n\nUser Authentication\n\n\nBefore your users can start enjoying AppFriends, they need to have an\nAppFriends account. Login the user by invoking:\n\n\nAppFriends.login(userID, username, avatarURL, userEmail);\n\n\n\n\n\nwhere the parameters as as follows:\n\n\n\n\n\n\n\n\nParameter\n\n\nType\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nuserID\n\n\nString\n\n\nthe user's userID in your own app.\n\n\n\n\n\n\nusername\n\n\nString\n\n\nthe username\n\n\n\n\n\n\navatarURL\n\n\nString\n\n\nthe full URL of the user's avatar\n\n\n\n\n\n\nuserEmail\n\n\nString\n\n\nuser's email address\n\n\n\n\n\n\n\n\nDisplay Widget Bubble\n\n\nTo add the default widget icon to your \nActivity\n or \nFragment\n, add the\nfollowing to your \nlayout xml\n:\n\n\nme.appfriends.android.widget.AppFriendsWidget\n    android:id=\n@+id/appfriends_icon\n\n    android:layout_width=\nwrap_content\n\n    android:layout_height=\nwrap_content\n\n    app:bragIcon=\n[Custom Brag Icon Drawable]\n\n    app:deeplink=\n[Deeplink]\n/\n\n\n\n\n\n\nYou may specify the \"brag\" icon (which allows users to share a screenshot) and the deeplink path of the current fragment/activity.\n\n\nThe AppFriends Android SDK should now be integrated and ready to go!\n\n\nStyling\n\n\nAppFriends Android UI Kit will soon support customizing the UI matching your app's style, stay tuned for an update.\n\n\nDeeplinks\n\n\nWhen a user shares screenshot from your app, a deeplink will be generated and shared with the screenshot. If the screenshot is taken from a place you have assign a path and parameters to, the information will also be included in the deeplink. When users clicks on the deeplink and install/open the app, we will trigger the callback with the path and parameters you provided.\n\n\nTo receive deeplink actions, you need to implement the \nOnAppFriendsNotificationListener\n interface register the listener with the UI Kit:\n\n\n  AppFriendsUIKit.addOnAppFriendsNotificationListener(new OnAppFriendsNotificationListener() {\n      @Override\n      public boolean onDeeplinkClicked(String deeplink) {\n          // Perform deeplink action\n          return true; // If handled, return true\n      }\n  });\n\n\n\n\n\nPublic Chat Channels\n\n\nBy default, we create a global public chat channel for all of your users to chat. You can create, edit and remove public chat channels. You can either do it from the AppFriends admin panel or via our \nAPI\n.\n\n\nOther dependencies\n\n\nhttps://github.com/splitwise/TokenAutoComplete", 
             "title": "Android"
-        },
+        }, 
         {
-            "location": "/android/#appfriends-android-sdk",
-            "text": "",
+            "location": "/android/#appfriends-android-sdk", 
+            "text": "", 
             "title": "AppFriends Android SDK"
-        },
+        }, 
         {
-            "location": "/android/#demo-app",
-            "text": "A simple demo app showing the integrated AppFriends SDK is available at:  Demo .",
+            "location": "/android/#demo-app", 
+            "text": "A simple demo app showing the integrated AppFriends SDK is available at:  Demo .", 
             "title": "Demo App"
-        },
+        }, 
         {
-            "location": "/android/#integration",
-            "text": "",
+            "location": "/android/#integration", 
+            "text": "", 
             "title": "Integration"
-        },
+        }, 
         {
-            "location": "/android/#maven-jcenter-bintray",
-            "text": "To integrate AppFriends Android SDK to your Android Studio project, add the\nfollowing to your application's  build.gradle  file:  repositories {\n    maven {\n        url 'https://dl.bintray.com/appfriends/maven/'\n    }\n}  and add the appfriends SDK as part of your app's dependencies:  dependencies {\n    compile 'me.appfriends.android:appfriends:2.0.19'\n}  If your application uses a version of the Android support libraries that results in conflicts, you can force Gradle to build with your version with:  compile ('com.android.support:support-v4:23.4.0'){\n  force = true;\n}",
+            "location": "/android/#maven-jcenter-bintray", 
+            "text": "To integrate AppFriends Android SDK to your Android Studio project, add the\nfollowing to your application's  build.gradle  file:  repositories {\n    maven {\n        url  https://dl.bintray.com/appfriends/maven/ \n    }\n}  and add the appfriends SDK as part of your app's dependencies:  dependencies {\n    compile  me.appfriends.android:appfriends:2.0.19 \n}  If your application uses a version of the Android support libraries that results in conflicts, you can force Gradle to build with your version with:  compile ( com.android.support:support-v4:23.4.0 ){\n  force = true;\n}", 
             "title": "Maven / jCenter / Bintray"
-        },
+        }, 
         {
-            "location": "/android/#initialization",
-            "text": "After logging into your admin panel, and created your application, you can find your  App ID  and  App Secret . Add them to your  AndroidManifest.xml  file under  <application> .  <meta-data\n    android:name=\"me.appfriends.AppID\"\n    android:value=\"[APPFRIENDS_ID]\" />\n\n<meta-data\n    android:name=\"me.appfriends.AppSecret\"\n    android:value=\"[APPFRIENDS_SECRET]\" />  AppFriends SDK and the corresponding UI Kit must be initialized prior to usage. In your custom  Application  class, you have the option to customize the AppFriends SDK with  AppFriendsConfiguration.Builder . You must call  AppFriendsUIKit.init(this, configuration);  to properly initialize the SDK:  public class MyApplication extends Application {\n    @Override\n    public void onCreate() {\n        super.onCreate();\n\n        AppFriendsConfiguration configuration =\n          new AppFriendsConfiguration.Builder()\n                                     .gravity(Gravity.RIGHT) // Which way the widget should open from\n                                     .build();\n\n        AppFriendsUIKit.init(this, configuration);\n    }\n}",
+            "location": "/android/#initialization", 
+            "text": "After logging into your admin panel, and created your application, you can find your  App ID  and  App Secret . Add them to your  AndroidManifest.xml  file under  application .  meta-data\n    android:name= me.appfriends.AppID \n    android:value= [APPFRIENDS_ID]  /  meta-data\n    android:name= me.appfriends.AppSecret \n    android:value= [APPFRIENDS_SECRET]  /   AppFriends SDK and the corresponding UI Kit must be initialized prior to usage. In your custom  Application  class, you have the option to customize the AppFriends SDK with  AppFriendsConfiguration.Builder . You must call  AppFriendsUIKit.init(this, configuration);  to properly initialize the SDK:  public class MyApplication extends Application {\n    @Override\n    public void onCreate() {\n        super.onCreate();\n\n        AppFriendsConfiguration configuration =\n          new AppFriendsConfiguration.Builder()\n                                     .gravity(Gravity.RIGHT) // Which way the widget should open from\n                                     .build();\n\n        AppFriendsUIKit.init(this, configuration);\n    }\n}", 
             "title": "Initialization"
-        },
+        }, 
         {
-            "location": "/android/#user-authentication",
-            "text": "Before your users can start enjoying AppFriends, they need to have an\nAppFriends account. Login the user by invoking:  AppFriends.login(userID, username, avatarURL, userEmail);  where the parameters as as follows:     Parameter  Type  Description      userID  String  the user's userID in your own app.    username  String  the username    avatarURL  String  the full URL of the user's avatar    userEmail  String  user's email address",
+            "location": "/android/#user-authentication", 
+            "text": "Before your users can start enjoying AppFriends, they need to have an\nAppFriends account. Login the user by invoking:  AppFriends.login(userID, username, avatarURL, userEmail);  where the parameters as as follows:     Parameter  Type  Description      userID  String  the user's userID in your own app.    username  String  the username    avatarURL  String  the full URL of the user's avatar    userEmail  String  user's email address", 
             "title": "User Authentication"
-        },
+        }, 
         {
-            "location": "/android/#display-widget-bubble",
-            "text": "To add the default widget icon to your  Activity  or  Fragment , add the\nfollowing to your  layout xml :  <me.appfriends.android.widget.AppFriendsWidget\n    android:id=\"@+id/appfriends_icon\"\n    android:layout_width=\"wrap_content\"\n    android:layout_height=\"wrap_content\"\n    app:bragIcon=\"[Custom Brag Icon Drawable]\"\n    app:deeplink=\"[Deeplink]\"/>  You may specify the \"brag\" icon (which allows users to share a screenshot) and the deeplink path of the current fragment/activity.  The AppFriends Android SDK should now be integrated and ready to go!",
+            "location": "/android/#display-widget-bubble", 
+            "text": "To add the default widget icon to your  Activity  or  Fragment , add the\nfollowing to your  layout xml :  me.appfriends.android.widget.AppFriendsWidget\n    android:id= @+id/appfriends_icon \n    android:layout_width= wrap_content \n    android:layout_height= wrap_content \n    app:bragIcon= [Custom Brag Icon Drawable] \n    app:deeplink= [Deeplink] /   You may specify the \"brag\" icon (which allows users to share a screenshot) and the deeplink path of the current fragment/activity.  The AppFriends Android SDK should now be integrated and ready to go!", 
             "title": "Display Widget Bubble"
-        },
+        }, 
         {
-            "location": "/android/#styling",
-            "text": "AppFriends Android UI Kit will soon support customizing the UI matching your app's style, stay tuned for an update.",
+            "location": "/android/#styling", 
+            "text": "AppFriends Android UI Kit will soon support customizing the UI matching your app's style, stay tuned for an update.", 
             "title": "Styling"
-        },
+        }, 
         {
-            "location": "/android/#deeplinks",
-            "text": "When a user shares screenshot from your app, a deeplink will be generated and shared with the screenshot. If the screenshot is taken from a place you have assign a path and parameters to, the information will also be included in the deeplink. When users clicks on the deeplink and install/open the app, we will trigger the callback with the path and parameters you provided.  To receive deeplink actions, you need to implement the  OnAppFriendsNotificationListener  interface register the listener with the UI Kit:    AppFriendsUIKit.addOnAppFriendsNotificationListener(new OnAppFriendsNotificationListener() {\n      @Override\n      public boolean onDeeplinkClicked(String deeplink) {\n          // Perform deeplink action\n          return true; // If handled, return true\n      }\n  });",
+            "location": "/android/#deeplinks", 
+            "text": "When a user shares screenshot from your app, a deeplink will be generated and shared with the screenshot. If the screenshot is taken from a place you have assign a path and parameters to, the information will also be included in the deeplink. When users clicks on the deeplink and install/open the app, we will trigger the callback with the path and parameters you provided.  To receive deeplink actions, you need to implement the  OnAppFriendsNotificationListener  interface register the listener with the UI Kit:    AppFriendsUIKit.addOnAppFriendsNotificationListener(new OnAppFriendsNotificationListener() {\n      @Override\n      public boolean onDeeplinkClicked(String deeplink) {\n          // Perform deeplink action\n          return true; // If handled, return true\n      }\n  });", 
             "title": "Deeplinks"
-        },
+        }, 
         {
-            "location": "/android/#public-chat-channels",
-            "text": "By default, we create a global public chat channel for all of your users to chat. You can create, edit and remove public chat channels. You can either do it from the AppFriends admin panel or via our  API .",
+            "location": "/android/#public-chat-channels", 
+            "text": "By default, we create a global public chat channel for all of your users to chat. You can create, edit and remove public chat channels. You can either do it from the AppFriends admin panel or via our  API .", 
             "title": "Public Chat Channels"
-        },
+        }, 
         {
-            "location": "/api/request_auth/",
-            "text": "Authentication of API Requests\n\n\nWhen you access AppFriends REST API via our SDK, you only need to provide the correct \nApp_ID\n and \nApp_Secret\n when you initialize the SDK. However, when you want to make direct REST API requests using a http client, the requests need to be structured correctly and signed by the appropriate secret. \nadmin secret\n can be used for all APIs, but you should only use it on your server to keep it secret. \napp secret\n is for you to use inside your app, and it can only give access to application APIs.\n\n\nRequest Header\n\n\nIn the request http header, These fields need to be present:\n\n\nAPP_ID\n - Your App_ID. You can find it in the admin panel after your app is created there.\n\n\nTOKEN\n - When you are sending the requests on a user's behave, the user's auth token should be included here. Auth token is returned after the user signup or login to AppFriends. See \nuser authentication\n.\n\n\nAuthorization\n - Your request signature. See \nsignature creation\n.\n\n\nNonce\n - A random integer.\n\n\nTimestamp\n - system timestamp\n\n\nSample Request Header\n\n\nYour http header can contain other fields, but they need to include:\n\n\nAPP_ID: \"SVXJKXjXUGOkEFBWDK8NCwtt\"\nTOKEN: \"BE82LbEu_bGNnwXmy5KObw\"\nTimestamp: \"1462117651\"\nNonce: \"<random integer>\"\nAuthorization: Bearer <signature token>\n\n\n\n\n\nApp ID and Secrets\n\n\nFor each application you create on AppFriends, there's going to an \nApp_ID\n, an \nApp_Secret\n and an \nAdmin_Secret\n.\n\n\nApp_ID\n is used to identify your application.\n\n\nApp_Secret\n is the secret used to sign the requests coming from your application.\n\n\nAdmin_Secret\n is the secret used to sign the requests coming directly from your server. For example, your server can send a request via AppFriends REST API to update a user's token or you can export all the social graph data with your admin secret.\n\n\nThese values play very important role in authenticating your requests, so please keep them away from the bad guys.\n\n\nSignature Creation\n\n\nThe signature is creation is using JSON Web Tokens \n(JWT)\n, which is an open, industry standard \nRFC 7519\n method for representing claims securely between two parties. You can use \nthis website\n to verify your signature.\n\n\n//signature creation\n\n\nHMACSHA256\n(\n\n  \nbase64UrlEncode\n(\nJWT\n \nheader\n)\n \n+\n \n\".\"\n \n+\n\n  \nbase64UrlEncode\n(\npayload\n),\n\n  \n<\nyour\n \nsecret\n \nhere\n>\n\n\n)\n\n\n\n\n\n\nThe signature created here will be used in the Authorization header using the Bearer schema.\n\n\nAuthorization\n:\n \nBearer\n \n<\nsignature\n \ntoken\n>\n\n\n\n\n\n\nJWT Header\n\n\nJWT header is not your request http header. It is used just to sign the request. The JWT header will look like this:\n\n\n{\n\n  \n\"alg\"\n:\n \n\"HS256\"\n,\n\n  \n\"typ\"\n:\n \n\"JWT\"\n\n\n}\n\n\n\n\n\n\nJWT Payload\n\n\nPut timestamp (seconds) in your payout\n\n\n{\n\n  \n\"timestamp\"\n:\n \n\"1462117651\"\n,\n\n  \n\"token\"\n:\n \n\"the user token\"\n\n\n}\n\n\n\n\n\n\n\n\nAbove: JWT example on \njwt.io",
+            "location": "/android/#other-dependencies", 
+            "text": "https://github.com/splitwise/TokenAutoComplete", 
+            "title": "Other dependencies"
+        }, 
+        {
+            "location": "/api/request_auth/", 
+            "text": "Authentication of API Requests\n\n\nWhen you access AppFriends REST API via our SDK, you only need to provide the correct \nApp_ID\n and \nApp_Secret\n when you initialize the SDK. However, when you want to make direct REST API requests using a http client, the requests need to be structured correctly and signed by the appropriate secret. \nadmin secret\n can be used for all APIs, but you should only use it on your server to keep it secret. \napp secret\n is for you to use inside your app, and it can only give access to application APIs.\n\n\nRequest Header\n\n\nIn the request http header, These fields need to be present:\n\n\nAPP_ID\n - Your App_ID. You can find it in the admin panel after your app is created there.\n\n\nTOKEN\n - When you are sending the requests on a user's behave, the user's auth token should be included here. Auth token is returned after the user signup or login to AppFriends. See \nuser authentication\n.\n\n\nAuthorization\n - Your request signature. See \nsignature creation\n.\n\n\nNonce\n - A random integer.\n\n\nTimestamp\n - system timestamp\n\n\nSample Request Header\n\n\nYour http header can contain other fields, but they need to include:\n\n\nAPP_ID: \nSVXJKXjXUGOkEFBWDK8NCwtt\n\nTOKEN: \nBE82LbEu_bGNnwXmy5KObw\n\nTimestamp: \n1462117651\n\nNonce: \nrandom integer\n\nAuthorization: Bearer \nsignature token\n\n\n\n\n\n\nApp ID and Secrets\n\n\nFor each application you create on AppFriends, there's going to an \nApp_ID\n, an \nApp_Secret\n and an \nAdmin_Secret\n.\n\n\nApp_ID\n is used to identify your application.\n\n\nApp_Secret\n is the secret used to sign the requests coming from your application.\n\n\nAdmin_Secret\n is the secret used to sign the requests coming directly from your server. For example, your server can send a request via AppFriends REST API to update a user's token or you can export all the social graph data with your admin secret.\n\n\nThese values play very important role in authenticating your requests, so please keep them away from the bad guys.\n\n\nSignature Creation\n\n\nThe signature is creation is using JSON Web Tokens \n(JWT)\n, which is an open, industry standard \nRFC 7519\n method for representing claims securely between two parties. You can use \nthis website\n to verify your signature.\n\n\n//signature creation\n\n\nHMACSHA256\n(\n\n  \nbase64UrlEncode\n(\nJWT\n \nheader\n)\n \n+\n \n.\n \n+\n\n  \nbase64UrlEncode\n(\npayload\n),\n\n  \nyour\n \nsecret\n \nhere\n\n\n)\n\n\n\n\n\n\nThe signature created here will be used in the Authorization header using the Bearer schema.\n\n\nAuthorization\n:\n \nBearer\n \nsignature\n \ntoken\n\n\n\n\n\n\nJWT Header\n\n\nJWT header is not your request http header. It is used just to sign the request. The JWT header will look like this:\n\n\n{\n\n  \nalg\n:\n \nHS256\n,\n\n  \ntyp\n:\n \nJWT\n\n\n}\n\n\n\n\n\n\nJWT Payload\n\n\nPut timestamp (seconds) in your payout\n\n\n{\n\n  \ntimestamp\n:\n \n1462117651\n,\n\n  \ntoken\n:\n \nthe user token\n\n\n}\n\n\n\n\n\n\n\n\nAbove: JWT example on \njwt.io", 
             "title": "Request Authentication"
-        },
+        }, 
         {
-            "location": "/api/request_auth/#authentication-of-api-requests",
-            "text": "When you access AppFriends REST API via our SDK, you only need to provide the correct  App_ID  and  App_Secret  when you initialize the SDK. However, when you want to make direct REST API requests using a http client, the requests need to be structured correctly and signed by the appropriate secret.  admin secret  can be used for all APIs, but you should only use it on your server to keep it secret.  app secret  is for you to use inside your app, and it can only give access to application APIs.",
+            "location": "/api/request_auth/#authentication-of-api-requests", 
+            "text": "When you access AppFriends REST API via our SDK, you only need to provide the correct  App_ID  and  App_Secret  when you initialize the SDK. However, when you want to make direct REST API requests using a http client, the requests need to be structured correctly and signed by the appropriate secret.  admin secret  can be used for all APIs, but you should only use it on your server to keep it secret.  app secret  is for you to use inside your app, and it can only give access to application APIs.", 
             "title": "Authentication of API Requests"
-        },
+        }, 
         {
-            "location": "/api/request_auth/#request-header",
-            "text": "In the request http header, These fields need to be present:  APP_ID  - Your App_ID. You can find it in the admin panel after your app is created there.  TOKEN  - When you are sending the requests on a user's behave, the user's auth token should be included here. Auth token is returned after the user signup or login to AppFriends. See  user authentication .  Authorization  - Your request signature. See  signature creation .  Nonce  - A random integer.  Timestamp  - system timestamp",
+            "location": "/api/request_auth/#request-header", 
+            "text": "In the request http header, These fields need to be present:  APP_ID  - Your App_ID. You can find it in the admin panel after your app is created there.  TOKEN  - When you are sending the requests on a user's behave, the user's auth token should be included here. Auth token is returned after the user signup or login to AppFriends. See  user authentication .  Authorization  - Your request signature. See  signature creation .  Nonce  - A random integer.  Timestamp  - system timestamp", 
             "title": "Request Header"
-        },
+        }, 
         {
-            "location": "/api/request_auth/#sample-request-header",
-            "text": "Your http header can contain other fields, but they need to include:  APP_ID: \"SVXJKXjXUGOkEFBWDK8NCwtt\"\nTOKEN: \"BE82LbEu_bGNnwXmy5KObw\"\nTimestamp: \"1462117651\"\nNonce: \"<random integer>\"\nAuthorization: Bearer <signature token>",
+            "location": "/api/request_auth/#sample-request-header", 
+            "text": "Your http header can contain other fields, but they need to include:  APP_ID:  SVXJKXjXUGOkEFBWDK8NCwtt \nTOKEN:  BE82LbEu_bGNnwXmy5KObw \nTimestamp:  1462117651 \nNonce:  random integer \nAuthorization: Bearer  signature token", 
             "title": "Sample Request Header"
-        },
+        }, 
         {
-            "location": "/api/request_auth/#app-id-and-secrets",
-            "text": "For each application you create on AppFriends, there's going to an  App_ID , an  App_Secret  and an  Admin_Secret .  App_ID  is used to identify your application.  App_Secret  is the secret used to sign the requests coming from your application.  Admin_Secret  is the secret used to sign the requests coming directly from your server. For example, your server can send a request via AppFriends REST API to update a user's token or you can export all the social graph data with your admin secret.  These values play very important role in authenticating your requests, so please keep them away from the bad guys.",
+            "location": "/api/request_auth/#app-id-and-secrets", 
+            "text": "For each application you create on AppFriends, there's going to an  App_ID , an  App_Secret  and an  Admin_Secret .  App_ID  is used to identify your application.  App_Secret  is the secret used to sign the requests coming from your application.  Admin_Secret  is the secret used to sign the requests coming directly from your server. For example, your server can send a request via AppFriends REST API to update a user's token or you can export all the social graph data with your admin secret.  These values play very important role in authenticating your requests, so please keep them away from the bad guys.", 
             "title": "App ID and Secrets"
-        },
+        }, 
         {
-            "location": "/api/request_auth/#signature-creation",
-            "text": "The signature is creation is using JSON Web Tokens  (JWT) , which is an open, industry standard  RFC 7519  method for representing claims securely between two parties. You can use  this website  to verify your signature.  //signature creation  HMACSHA256 ( \n   base64UrlEncode ( JWT   header )   +   \".\"   + \n   base64UrlEncode ( payload ), \n   < your   secret   here >  )   The signature created here will be used in the Authorization header using the Bearer schema.  Authorization :   Bearer   < signature   token >",
+            "location": "/api/request_auth/#signature-creation", 
+            "text": "The signature is creation is using JSON Web Tokens  (JWT) , which is an open, industry standard  RFC 7519  method for representing claims securely between two parties. You can use  this website  to verify your signature.  //signature creation  HMACSHA256 ( \n   base64UrlEncode ( JWT   header )   +   .   + \n   base64UrlEncode ( payload ), \n   your   secret   here  )   The signature created here will be used in the Authorization header using the Bearer schema.  Authorization :   Bearer   signature   token", 
             "title": "Signature Creation"
-        },
+        }, 
         {
-            "location": "/api/request_auth/#jwt-header",
-            "text": "JWT header is not your request http header. It is used just to sign the request. The JWT header will look like this:  { \n   \"alg\" :   \"HS256\" , \n   \"typ\" :   \"JWT\"  }",
+            "location": "/api/request_auth/#jwt-header", 
+            "text": "JWT header is not your request http header. It is used just to sign the request. The JWT header will look like this:  { \n   alg :   HS256 , \n   typ :   JWT  }", 
             "title": "JWT Header"
-        },
+        }, 
         {
-            "location": "/api/request_auth/#jwt-payload",
-            "text": "Put timestamp (seconds) in your payout  { \n   \"timestamp\" :   \"1462117651\" , \n   \"token\" :   \"the user token\"  }    Above: JWT example on  jwt.io",
+            "location": "/api/request_auth/#jwt-payload", 
+            "text": "Put timestamp (seconds) in your payout  { \n   timestamp :   1462117651 , \n   token :   the user token  }    Above: JWT example on  jwt.io", 
             "title": "JWT Payload"
-        },
+        }, 
         {
-            "location": "/api/applicationapi/",
-            "text": "Application API\n\n\nAppFriends API can be used to authenticate user, send messages, search for user, update user information, create social relationship and etc. Application API's can only be accessed via the SDK, using the application secret.\n\n\nREST APIs\n\n\nPlease see our application REST APIs \nhere\n.",
+            "location": "/api/applicationapi/", 
+            "text": "Application API\n\n\nAppFriends API can be used to authenticate user, send messages, search for user, update user information, create social relationship and etc. Application API's can only be accessed via the SDK, using the application secret.\n\n\nREST APIs\n\n\nPlease see our application REST APIs \nhere\n.\n\n\nError Codes\n\n\n\n\n\n\n\n\nError Code\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\n9000\n\n\noperation not allowed\n\n\n\n\n\n\n10000\n\n\nparameter required\n\n\n\n\n\n\n10001\n\n\nneed to login\n\n\n\n\n\n\n10002\n\n\nmissing app ID\n\n\n\n\n\n\n10003\n\n\ninvalid app ID\n\n\n\n\n\n\n10004\n\n\nno permission\n\n\n\n\n\n\n10005\n\n\nadmin user not found\n\n\n\n\n\n\n10007\n\n\nno Authorization header found\n\n\n\n\n\n\n10008\n\n\ninvalid Authorization header found\n\n\n\n\n\n\n10009\n\n\ninvalid request path or method\n\n\n\n\n\n\n10010\n\n\ninvalid params\n\n\n\n\n\n\n10011\n\n\nadmin server api secret required\n\n\n\n\n\n\n30007\n\n\nexceed max import users per request", 
             "title": "Application APIs"
-        },
+        }, 
         {
-            "location": "/api/applicationapi/#application-api",
-            "text": "AppFriends API can be used to authenticate user, send messages, search for user, update user information, create social relationship and etc. Application API's can only be accessed via the SDK, using the application secret.",
+            "location": "/api/applicationapi/#application-api", 
+            "text": "AppFriends API can be used to authenticate user, send messages, search for user, update user information, create social relationship and etc. Application API's can only be accessed via the SDK, using the application secret.", 
             "title": "Application API"
-        },
+        }, 
         {
-            "location": "/api/applicationapi/#rest-apis",
-            "text": "Please see our application REST APIs  here .",
+            "location": "/api/applicationapi/#rest-apis", 
+            "text": "Please see our application REST APIs  here .", 
             "title": "REST APIs"
-        },
+        }, 
         {
-            "location": "/api/adminapi/",
-            "text": "Application API\n\n\nAppFriends API can be used to authenticate user, send messages, search for user, update user information, create social relationship and etc. The admin api's can be accessed via any http client, using the admin secret.\n\n\nREST APIs\n\n\nPlease see our admin REST APIs \nhere\n.",
+            "location": "/api/applicationapi/#error-codes", 
+            "text": "Error Code  Description      9000  operation not allowed    10000  parameter required    10001  need to login    10002  missing app ID    10003  invalid app ID    10004  no permission    10005  admin user not found    10007  no Authorization header found    10008  invalid Authorization header found    10009  invalid request path or method    10010  invalid params    10011  admin server api secret required    30007  exceed max import users per request", 
+            "title": "Error Codes"
+        }, 
+        {
+            "location": "/api/adminapi/", 
+            "text": "Application API\n\n\nAppFriends API can be used to authenticate user, send messages, search for user, update user information, create social relationship and etc. The admin api's can be accessed via any http client, using the admin secret.\n\n\nREST APIs\n\n\nPlease see our admin REST APIs \nhere\n.", 
             "title": "Admin APIs"
-        },
+        }, 
         {
-            "location": "/api/adminapi/#application-api",
-            "text": "AppFriends API can be used to authenticate user, send messages, search for user, update user information, create social relationship and etc. The admin api's can be accessed via any http client, using the admin secret.",
+            "location": "/api/adminapi/#application-api", 
+            "text": "AppFriends API can be used to authenticate user, send messages, search for user, update user information, create social relationship and etc. The admin api's can be accessed via any http client, using the admin secret.", 
             "title": "Application API"
-        },
+        }, 
         {
-            "location": "/api/adminapi/#rest-apis",
-            "text": "Please see our admin REST APIs  here .",
+            "location": "/api/adminapi/#rest-apis", 
+            "text": "Please see our admin REST APIs  here .", 
             "title": "REST APIs"
         }
     ]

@@ -5,15 +5,12 @@ Dependencies   |   License Type   |   AppFriendsCore  |  AppFriendsUI   |  Versi
 -------------  | ---------------  | ----------------  | --------------- | ------------------  | -------------------
 Alamofire                 | MIT   | ✔                 | ✔               | ~> 3.5.1            | ~> 4.0.1        
 JWT                       | MIT   | ✔                 | ✔               | ~> 2.1.0            | ~> 2.1.0                     
-EZSwiftExtensions         | MIT   | ✔                 | ✔               |    1.5              | ~> 1.7                     
 CoreStore                 | MIT   | ✔                 | ✔               | ~> 2.1.3            | ~> 2.1.3     
 Cloudinary                | MIT   | ✔                 | ✔               | ~> 1.0.15           | ~> 1.0.15    
 Socket.IO-Client-Swift    | MIT   | ✔                 | ✔               | ~> 7.0.3            | ~> 8.1.1      
-FontAwesome.swift         | MIT   | ✘                 | ✔               |    0.10.1           |    1.0.0    
 SlackTextViewController   | MIT   | ✘                 | ✔               | ~> 1.9.5            | ~> 1.9.5         
 CLTokenInputView          | MIT   | ✘                 | ✔               | ~> 2.3.0            | ~> 2.3.0     
 SESlideTableViewCell      | MIT   | ✘                 | ✔               | ~> 0.7.1            | ~> 0.7.1     
-DZNEmptyDataSet           | MIT   | ✘                 | ✔               | ~> 1.8.1            | ~> 1.9.5     
 AFDateHelper              | MIT   | ✘                 | ✔               | ~> 3.5.3            | ~> 1.9.5     
 AlamofireImage            | MIT   | ✘                 | ✔               | ~> 2.5              | ~> 3.1.0     
 
@@ -32,7 +29,6 @@ pod 'AppFriendsUI', :git => 'https://github.com/laeroah/AppFriendsUI.git', :bran
 pod 'AppFriendsCore', :git => 'https://github.com/laeroah/AppFriendsCoreFramework.git', :branch => 'swift2.3'
 pod 'AFDateHelper', :git => 'https://github.com/laeroah/DateExtension.git'
 pod 'FontAwesome.swift', :git => 'https://github.com/thii/FontAwesome.swift.git', :branch => 'swift-2.3'
-pod 'EZSwiftExtensions', :git => 'https://github.com/goktugyil/EZSwiftExtensions.git', :branch => 'Swift2.3'
 pod 'Socket.IO-Client-Swift', :git => 'https://github.com/socketio/socket.io-client-swift.git', :branch => 'swift2.3'
 
 post_install do |installer|
