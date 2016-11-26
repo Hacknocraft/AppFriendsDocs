@@ -20,3 +20,4 @@ Error Code     |    Description
 10010 			   | invalid params
 10011 			   | admin server api secret required
 30007 			   | exceed max import users per request
+50000 			   | server is under maintenance
