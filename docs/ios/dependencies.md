@@ -21,6 +21,9 @@ To support Swift2.3, extra specifiers are needed. Below illustrates how the Podf
 ### Swift 3
 ```
 pod 'AppFriendsUI'
+
+# No need to add this pod if you install AppFriendsUI pod.
+# pod 'AppFriendsCore'
 ```
 
 ### Swift 2.3

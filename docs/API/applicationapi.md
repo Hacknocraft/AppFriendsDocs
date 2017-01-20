@@ -19,5 +19,6 @@ Error Code     |    Description
 10009          | invalid request path or method
 10010 			   | invalid params
 10011 			   | admin server api secret required
+20005          | dialog not found
 30007 			   | exceed max import users per request
 50000 			   | server is under maintenance

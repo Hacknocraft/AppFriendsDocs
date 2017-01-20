@@ -1,16 +1,12 @@
+
 <!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
-<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
-<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
-<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+<html class="no-js">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <title>Chat - AppFriends Documentation</title>
-      
+        <meta name="description" content="A turn-key solution to enable messagina and make your app social.">
       
       
         <link rel="canonical" href="http://www.appfriends.me/ios/chat/">
@@ -18,282 +14,609 @@
       
         <meta name="author" content="Hao Wang">
       
-    
-    <meta property="og:url" content="http://www.appfriends.me/ios/chat/">
-    <meta property="og:title" content="AppFriends Documentation">
-    <meta property="og:image" content="http://www.appfriends.me/ios/chat//../../images/logo.png">
-    <meta name="apple-mobile-web-app-title" content="AppFriends Documentation">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    
-      <link rel="apple-touch-icon" href="../../images/logo.png">
-    
-    
-    <link rel="shortcut icon" type="image/x-icon" href="../../../../images/logo.png">
-    <link rel="icon" type="image/x-icon" href="../../../../images/logo.png">
-    <style>
-      @font-face {
-      	font-family: 'Icon';
-      	src: url('../../assets/fonts/icon.eot?52m981');
-      	src: url('../../assets/fonts/icon.eot?#iefix52m981')
-               format('embedded-opentype'),
-      		   url('../../assets/fonts/icon.woff?52m981')
-               format('woff'),
-      		   url('../../assets/fonts/icon.ttf?52m981')
-               format('truetype'),
-      		   url('../../assets/fonts/icon.svg?52m981#icon')
-               format('svg');
-      	font-weight: normal;
-      	font-style: normal;
-      }
-    </style>
-    <link rel="stylesheet" href="../../assets/stylesheets/application-54f87043f3.css">
-    
-      <link rel="stylesheet" href="../../assets/stylesheets/palettes-05ab2406df.css">
+      
+        <link rel="shortcut icon" href="../../images/logo.png">
+      
+      <meta name="generator" content="mkdocs+mkdocs-material#1.0.2">
     
     
       
+        <title>Chat - AppFriends Documentation</title>
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr-facb31f4a3.js"></script>
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans:300,400,400i,700|Monaco">
+        <style>body,input{font-family:"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Monaco","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-1b8b9fdf68.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-02ce7adcc2.palette.css">
       
       
-      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open Sans:400,700|Monaco">
-      <style>
-        body, input {
-          font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-        }
-        pre, code {
-          font-family: 'Monaco', 'Courier New', 'Courier', monospace;
-        }
-      </style>
+        <link rel="stylesheet" href="../../extra.css">
+      
     
-    
-      <link rel="stylesheet" href="../../extra.css">
-    
-    <script src="../../assets/javascripts/modernizr-4ab42b99fd.js"></script>
     
   </head>
   
   
   
-  <body class="palette-primary-deep-orange palette-accent-orange">
-    
-    <div class="backdrop">
-      <div class="backdrop-paper"></div>
-    </div>
-    <input class="toggle" type="checkbox" id="toggle-drawer">
-    <input class="toggle" type="checkbox" id="toggle-search">
-    <label class="toggle-button overlay" for="toggle-drawer"></label>
-    <header class="header">
-      <nav aria-label="Header">
-  <div class="bar default">
-    <div class="button button-menu" role="button" aria-label="Menu">
-      <label class="toggle-button icon icon-menu" for="toggle-drawer">
-        <span></span>
-      </label>
-    </div>
-    <div class="stretch">
-      <div class="title">
-        
-          <span class="path">
-            
-              
-                iOS <i class="icon icon-link"></i>
-              
-            
-          </span>
-        
-        Chat
-      </div>
-    </div>
-    
-    
-    <div class="button button-search" role="button" aria-label="Search">
-      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
-    </div>
-  </div>
-  <div class="bar search">
-    <div class="button button-close" role="button" aria-label="Close">
-      <label class="toggle-button icon icon-back" for="toggle-search"></label>
-    </div>
-    <div class="stretch">
-      <div class="field">
-        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
-      </div>
-    </div>
-    <div class="button button-reset" role="button" aria-label="Search">
-      <button class="toggle-button icon icon-close" id="reset-search"></button>
-    </div>
-  </div>
-</nav>
-    </header>
-    <main class="main">
-      
-      <div class="drawer">
-        <nav aria-label="Navigation">
   
-  <a href="/" class="project">
-    <div class="banner">
-      
-        <div class="logo">
-          <img src="../../images/logo.png">
-        </div>
-      
-      <div class="name">
-        <strong>
-          AppFriends Documentation
-          <span class="version">
-            
-          </span>
-        </strong>
+    <body data-md-color-primary="deep-orange" data-md-color-accent="orange">
+  
+    <svg class="md-svg">
+      <defs>
         
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="AppFriends Documentation" class=" md-logo  md-header-nav__button">
+          
+            <img src="../../images/logo.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  iOS
+                </span>
+              
+            
+            Chat
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <div class="md-search__overlay"></div>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">
+      <label class="md-icon md-search__icon" for="search"></label>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result"></div>
       </div>
     </div>
-  </a>
-  <div class="scrollable">
-    <div class="wrapper">
-      
-      <div class="toc">
-        <ul>
+  </div>
+</div>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+          </div>
+      </div>
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
           
             
-  <li>
-    <a class="" title="Welcome" href="../..">
-      Welcome
-    </a>
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <i class=" md-logo  md-nav__button">
+      
+        <img src="../../images/logo.png">
+      
+    </i>
+    AppFriends Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  <li class="md-nav__item">
+    
+      <a href="../.." title="Welcome" class="md-nav__link">
+        Welcome
+      </a>
     
   </li>
 
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      iOS
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-2">
+        iOS
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
           
-            
-  <li>
-    <span class="section">iOS</span>
-    <ul>
-      
-        
-  <li>
-    <a class="" title="Quick Start" href="../quick_start/">
-      Quick Start
-    </a>
+          
+  <li class="md-nav__item">
+    
+      <a href="../quick_start/" title="Quick Start" class="md-nav__link">
+        Quick Start
+      </a>
     
   </li>
 
-      
         
-  <li>
-    <a class="" title="Users" href="../users/">
-      Users
-    </a>
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../users/" title="Users" class="md-nav__link">
+        Users
+      </a>
     
   </li>
 
-      
         
-  <li>
-    <a class="current" title="Chat" href="./">
+          
+          
+  <li class="md-nav__item">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Chat
+      </label>
+    
+    <a href="./" title="Chat" class="md-nav__link md-nav__link--active">
       Chat
     </a>
     
       
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
       
-        <ul>
-          
-            <li class="anchor">
-              <a title="Dialogs" href="#dialogs">
-                Dialogs
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="Messages" href="#messages">
-                Messages
-              </a>
-            </li>
-          
-        </ul>
-      
-    
-  </li>
-
-      
+        <li class="md-nav__item">
+  <a href="#dialogs" title="Dialogs" class="md-nav__link">
+    Dialogs
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
         
-  <li>
-    <a class="" title="UI Components" href="../ui_components/">
-      UI Components
-    </a>
-    
-  </li>
-
-      
+          <li class="md-nav__item">
+  <a href="#open-channels" title="Open Channels" class="md-nav__link">
+    Open Channels
+  </a>
+  
+</li>
         
-  <li>
-    <a class="" title="External Dependencies" href="../dependencies/">
-      External Dependencies
-    </a>
-    
-  </li>
-
+          <li class="md-nav__item">
+  <a href="#create-a-dialog" title="Create a dialog" class="md-nav__link">
+    Create a dialog
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inviting-users-to-a-group-dialog" title="Inviting users to a group dialog" class="md-nav__link">
+    Inviting users to a group dialog
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removing-users-from-a-group-dialog" title="Removing users from a group dialog" class="md-nav__link">
+    Removing users from a group dialog
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mute-a-dialog" title="Mute a dialog" class="md-nav__link">
+    Mute a dialog
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#messages" title="Messages" class="md-nav__link">
+    Messages
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#typing-indicators" title="Typing Indicators" class="md-nav__link">
+    Typing Indicators
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#start-typing" title="Start typing" class="md-nav__link">
+    Start typing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#end-typing" title="End typing" class="md-nav__link">
+    End typing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typing-indicator-event" title="Typing indicator event" class="md-nav__link">
+    Typing indicator event
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#message-receipts" title="Message Receipts" class="md-nav__link">
+    Message Receipts
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-for-receipt" title="Request for receipt" class="md-nav__link">
+    Request for receipt
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#receipt-update-events" title="Receipt update events" class="md-nav__link">
+    Receipt update events
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-receipts-status-of-a-message" title="Check receipts status of a message" class="md-nav__link">
+    Check receipts status of a message
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#send-receipts" title="Send receipts" class="md-nav__link">
+    Send receipts
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
     </ul>
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="Android" href="../../android/">
-      Android
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <span class="section">Server API</span>
-    <ul>
-      
-        
-  <li>
-    <a class="" title="Request Authentication" href="../../api/request_auth/">
-      Request Authentication
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="Application APIs" href="../../api/applicationapi/">
-      Application APIs
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="Admin APIs" href="../../api/adminapi/">
-      Admin APIs
-    </a>
-    
-  </li>
-
-      
-    </ul>
-  </li>
-
-          
-        </ul>
-        
-      </div>
-    </div>
-  </div>
+  
 </nav>
-      </div>
-      <article class="article">
-        <div class="wrapper">
+    
+  </li>
+
+        
           
-            <h1>Chat</h1>
           
-          <h2 id="dialogs">Dialogs</h2>
+  <li class="md-nav__item">
+    
+      <a href="../ui_components/" title="UI Components" class="md-nav__link">
+        UI Components
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../dependencies/" title="External Dependencies" class="md-nav__link">
+        External Dependencies
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item">
+    
+      <a href="../../android/" title="Android" class="md-nav__link">
+        Android
+      </a>
+    
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Server API
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-4">
+        Server API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../api/request_auth/" title="Request Authentication" class="md-nav__link">
+        Request Authentication
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../api/applicationapi/" title="Application APIs" class="md-nav__link">
+        Application APIs
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../api/adminapi/" title="Admin APIs" class="md-nav__link">
+        Admin APIs
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dialogs" title="Dialogs" class="md-nav__link">
+    Dialogs
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#open-channels" title="Open Channels" class="md-nav__link">
+    Open Channels
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-dialog" title="Create a dialog" class="md-nav__link">
+    Create a dialog
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inviting-users-to-a-group-dialog" title="Inviting users to a group dialog" class="md-nav__link">
+    Inviting users to a group dialog
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removing-users-from-a-group-dialog" title="Removing users from a group dialog" class="md-nav__link">
+    Removing users from a group dialog
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mute-a-dialog" title="Mute a dialog" class="md-nav__link">
+    Mute a dialog
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#messages" title="Messages" class="md-nav__link">
+    Messages
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#typing-indicators" title="Typing Indicators" class="md-nav__link">
+    Typing Indicators
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#start-typing" title="Start typing" class="md-nav__link">
+    Start typing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#end-typing" title="End typing" class="md-nav__link">
+    End typing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typing-indicator-event" title="Typing indicator event" class="md-nav__link">
+    Typing indicator event
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#message-receipts" title="Message Receipts" class="md-nav__link">
+    Message Receipts
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-for-receipt" title="Request for receipt" class="md-nav__link">
+    Request for receipt
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#receipt-update-events" title="Receipt update events" class="md-nav__link">
+    Receipt update events
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-receipts-status-of-a-message" title="Check receipts status of a message" class="md-nav__link">
+    Check receipts status of a message
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#send-receipts" title="Send receipts" class="md-nav__link">
+    Send receipts
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+               
+              
+                
+                  <h1>Chat</h1>
+                
+                <h2 id="dialogs">Dialogs</h2>
 <p>There are three types of dialogs. Depending on your use case, please choose the appropriate type to use:</p>
 <ol>
 <li>Private one on one dialog. This is a conversation between two users. You can't add more users to private one on one dialog. This type of dialog is only visible to the two users.</li>
@@ -367,55 +690,52 @@
 <tr>
 <td>Members limit</td>
 <td>5000</td>
-<td>500</td>
+<td>100</td>
 <td>N/A</td>
 </tr>
 </tbody>
 </table>
 <h3 id="open-channels">Open Channels</h3>
-<p>Open channel is a public chat, where all of your users can participate. It can handle thousands of users in one channel. ex) Twitch-style public chat</p>
+<p>Open channel is a public chat, where all of your users can participate. It can handle thousands of users in one channel. ex) Twitch-style public chat.
+You can create open channel from your AppFriends web control panel. After a channel is created, all of your users can see all the channels with <code>GET /channels</code> API. A user can only be inside one channel at a time. </p>
 <h3 id="create-a-dialog">Create a dialog</h3>
 <p>Users can create private dialogs in your app. The parameter which decides the type of dialog you are going to create is <code>dialogType</code>. If you are creating an one on one chat, you can pass <code>HCSDKConstants.kMessageTypeIndividual</code> and if you are creating a group chat, you can use <code>HCSDKConstants.kMessageTypeGroup</code>. You also need to pass the users (an id array) you want to include in the dialog. A title of a dialog can also be specified for a group dialog but it's optional.</p>
-<div class="code"><pre><span></span>DialogsManager.sharedInstance.initializeDialog(users, dialogType: dialogType, dialogTitle: title) { (dialogID, error) in
+<pre class="code"><code>DialogsManager.sharedInstance.initializeDialog(users, dialogType: dialogType, dialogTitle: title) { (dialogID, error) in
   if error != nil {
     // failed
   }
-}
-</pre></div>
+}</code></pre>
 
 
 <h3 id="inviting-users-to-a-group-dialog">Inviting users to a group dialog</h3>
 <p>Users can add more members to a group dialog. You need to pass the IDs of the members who you want to add to the dialog.</p>
-<div class="code"><pre><span></span>DialogsManager.sharedInstance.addMembersToDialog(dialogID, members: users, completion: { (error) in
+<pre class="code"><code>DialogsManager.sharedInstance.addMembersToDialog(dialogID, members: users, completion: { (error) in
   if error != nil {
     // failed
   }
-})
-</pre></div>
+})</code></pre>
 
 
 <h3 id="removing-users-from-a-group-dialog">Removing users from a group dialog</h3>
 <p>Users can remove members from a group dialog. You need to pass the IDs of the members who you want to remove from the dialog.</p>
-<div class="code"><pre><span></span>DialogsManager.sharedInstance.leaveGroupDialog(dialogID, completion: { (error) in
+<pre class="code"><code>DialogsManager.sharedInstance.leaveGroupDialog(dialogID, completion: { (error) in
   if error != nil {
     // failed
   }
-})
-</pre></div>
+})</code></pre>
 
 
 <h3 id="mute-a-dialog">Mute a dialog</h3>
 <p>Muting a dialog means you will no longer receive any Apple push notification and badge update from new messages sent to this dialog. You can mute a dialog by:</p>
-<div class="code"><pre><span></span><span class="n">DialogsManager</span><span class="p">.</span><span class="n">sharedInstance</span><span class="p">.</span><span class="n">muteDialog</span><span class="p">(</span><span class="n">_dialogID</span><span class="o">!</span><span class="p">,</span> <span class="nl">muted</span><span class="p">:</span> <span class="n">toggle</span><span class="p">.</span><span class="n">on</span><span class="p">)</span>
-<span class="p">{</span> <span class="p">[</span><span class="k">weak</span> <span class="nb">self</span><span class="p">]</span> <span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="k">in</span>
-    <span class="k">if</span> <span class="n">error</span> <span class="o">==</span> <span class="nb">nil</span> <span class="p">{</span>
-      <span class="c1">// success</span>
-    <span class="p">}</span>
-    <span class="k">else</span> <span class="p">{</span>
-      <span class="c1">// failed</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
+<pre class="code"><code>DialogsManager.sharedInstance.muteDialog(_dialogID!, muted: toggle.on)
+{ [weak self] (error) in
+    if error == nil {
+      // success
+    }
+    else {
+      // failed
+    }
+}</code></pre>
 
 
 <h2 id="messages">Messages</h2>
@@ -425,19 +745,16 @@
 <p><img alt="Alt text" src="http://res.cloudinary.com/hacknocraft-appfriends/image/upload/c_scale,w_200/v1473730653/Simulator_Screen_Shot_Sep_12_2016_5.28.26_PM_uetywi.png" title="Search User Example" /></p>
 <h4 id="start-typing">Start typing</h4>
 <p>If you wish to manually trigger typing event, you can do it by:</p>
-<div class="code"><pre><span></span>DialogsManager.sharedInstance.startTyping(_dialogID, dialogType: _dialogType)
-</pre></div>
+<pre class="code"><code>DialogsManager.sharedInstance.startTyping(_dialogID, dialogType: _dialogType)</code></pre>
 
 
 <h4 id="end-typing">End typing</h4>
-<div class="code"><pre><span></span>DialogsManager.sharedInstance.endTyping(_dialogID, dialogType: _dialogType)
-</pre></div>
+<pre class="code"><code>DialogsManager.sharedInstance.endTyping(_dialogID, dialogType: _dialogType)</code></pre>
 
 
 <h4 id="typing-indicator-event">Typing indicator event</h4>
 <p>To react to typing event, you need to implement <code>MessagingManagerDelegate</code></p>
-<div class="code"><pre><span></span>optional func didUpdateTypingStatus(dialogID: String, userName: String, typing: Bool)
-</pre></div>
+<pre class="code"><code>optional func didUpdateTypingStatus(dialogID: String, userName: String, typing: Bool)</code></pre>
 
 
 <h3 id="message-receipts">Message Receipts</h3>
@@ -449,27 +766,24 @@
 <p>You can also find out which users have received/read the message by using a REST call to AppFriends platform.</p>
 <h4 id="request-for-receipt">Request for receipt</h4>
 <p>When you send a message, set the require receipt parameter to <code>true</code> and it indicates that you want to record receipts for this message.</p>
-<div class="code"><pre><span></span>MessagingManager.sharedInstance.sendTextMessage(text, dialogID: _dialogID, dialogType: _dialogType, requireReceipt: true, completion: { (success, error) in
+<pre class="code"><code>MessagingManager.sharedInstance.sendTextMessage(text, dialogID: _dialogID, dialogType: _dialogType, requireReceipt: true, completion: { (success, error) in
 
-})
-</pre></div>
+})</code></pre>
 
 
 <h4 id="receipt-update-events">Receipt update events</h4>
 <p>To react to receipt update events, you need to implement <code>MessagingManagerDelegate</code></p>
-<div class="code"><pre><span></span>optional func didUpdateMessageReceiptStatus(dialogID: String, messageID: String, status: MessageReceiptStatus)
-</pre></div>
+<pre class="code"><code>optional func didUpdateMessageReceiptStatus(dialogID: String, messageID: String, status: MessageReceiptStatus)</code></pre>
 
 
 <p>The receipt status can be <code>Received</code> or <code>Read</code></p>
 <h4 id="check-receipts-status-of-a-message">Check receipts status of a message</h4>
 <p>You can use a REST api call to check who have received/read your message by:</p>
-<div class="code"><pre><span></span><span class="err">GET /messages/:temp_id/receipts</span>
-</pre></div>
+<pre class="code"><code>GET /messages/:temp_id/receipts</code></pre>
 
 
 <p>Sample response:</p>
-<div class="code"><pre><span></span>{
+<pre class="code"><code>{
 &quot;user_id&quot;: &quot;09351dec3a3ac737cdaa7847d3b34b9e&quot;
 &quot;status&quot;: &quot;read&quot;   // user has read the message
 &quot;date&quot;: 1474908163090
@@ -478,89 +792,85 @@
 &quot;user_id&quot;: &quot;58ac7103b3fcf6aa513c7fbf629df03c&quot;
 &quot;status&quot;: &quot;received&quot; // user has received the message
 &quot;date&quot;: 1474908261634
-}
-</pre></div>
+}</code></pre>
 
 
 <h4 id="send-receipts">Send receipts</h4>
 <p>Receipts are sent automatically if you use <code>AppFriendsUI</code> chat view. If you want to manually send receipts, you can use:</p>
-<div class="code"><pre><span></span>MessagingManager.sharedInstance.postMessageReceipt(tempID: tempID, dialogID: dialogID, senderID: senderID, receiptStatus: .Read)
-</pre></div>
-          <aside class="copyright" role="note">
-            
-              Copyright (c) 2016 Hacknocraft &ndash;
-            
-            Documentation built with
-            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
-            using the
-            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
-              Material
-            </a>
-            theme.
-          </aside>
-          
-            <footer class="footer">
+<pre class="code"><code>MessagingManager.sharedInstance.postMessageReceipt(tempID: tempID, dialogID: dialogID, senderID: senderID, receiptStatus: .Read)</code></pre>
               
-  <nav class="pagination" aria-label="Footer">
-    <div class="previous">
+            </article>
+          </div>
+        </div>
+      </main>
       
-        <a href="../users/" title="Users">
-          <span class="direction">
-            Previous
-          </span>
-          <div class="page">
-            <div class="button button-previous" role="button" aria-label="Previous">
-              <i class="icon icon-back"></i>
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../users/" title="Users" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
-            <div class="stretch">
-              <div class="title">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
                 Users
-              </div>
+              </span>
             </div>
-          </div>
-        </a>
-      
-    </div>
-    <div class="next">
-      
-        <a href="../ui_components/" title="UI Components">
-          <span class="direction">
-            Next
-          </span>
-          <div class="page">
-            <div class="stretch">
-              <div class="title">
+          </a>
+        
+        
+          <a href="../ui_components/" title="UI Components" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
                 UI Components
-              </div>
+              </span>
             </div>
-            <div class="button button-next" role="button" aria-label="Next">
-              <i class="icon icon-forward"></i>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
             </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright (c) 2016 Hacknocraft
           </div>
-        </a>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
       
     </div>
-  </nav>
-
-            </footer>
-          
-        </div>
-      </article>
-      <div class="results" role="status" aria-live="polite">
-        <div class="scrollable">
-          <div class="wrapper">
-            <div class="meta"></div>
-            <div class="list"></div>
-          </div>
-        </div>
-      </div>
-    </main>
-    <script>
-      var base_url = '../..';
-      var repo_id  = '';
-    </script>
-    <script src="../../assets/javascripts/application-997097ee0c.js"></script>
+  </div>
+</footer>
+      
+    </div>
     
+      <script src="../../assets/javascripts/application-16f434a21a.js"></script>
+      <script>var config={url:{base:"../.."}},app=new Application(config);app.initialize()</script>
+      
+    
+    
+      
     
   </body>
 </html>

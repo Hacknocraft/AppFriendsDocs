@@ -16,10 +16,11 @@ Create in control panel   | ✔                   | ✘                         
 Mute                      | ✔                   | ✔                          | ✔
 User blocks user          | ✔                   | ✔                          | ✔
 Push notifications        | ✔                   | ✔                          | ✔
-Members limit             | 5000                | 500                        | N/A
+Members limit             | 5000                | 100                        | N/A
 
 ### Open Channels
-Open channel is a public chat, where all of your users can participate. It can handle thousands of users in one channel. ex) Twitch-style public chat
+Open channel is a public chat, where all of your users can participate. It can handle thousands of users in one channel. ex) Twitch-style public chat.
+You can create open channel from your AppFriends web control panel. After a channel is created, all of your users can see all the channels with `GET /channels` API. A user can only be inside one channel at a time. 
 
 ### Create a dialog
 Users can create private dialogs in your app. The parameter which decides the type of dialog you are going to create is `dialogType`. If you are creating an one on one chat, you can pass `HCSDKConstants.kMessageTypeIndividual` and if you are creating a group chat, you can use `HCSDKConstants.kMessageTypeGroup`. You also need to pass the users (an id array) you want to include in the dialog. A title of a dialog can also be specified for a group dialog but it's optional.
