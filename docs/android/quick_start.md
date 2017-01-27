@@ -9,17 +9,26 @@ A simple demo app showing the integrated AppFriends SDK is available at: [Demo](
 To integrate AppFriends Android SDK to your Android Studio project, add the
 following to your application's `build.gradle` file:
 
+#### Project Level Gradle
+```
+allprojects {
+    repositories {
+        jcenter()
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+#### App Level Gradle
 ```
 repositories {
     maven {
         url 'https://dl.bintray.com/appfriends/maven/'
     }
 }
-```
-and add the appfriends SDK as part of your app's dependencies:
-```
+
 dependencies {
-    compile 'me.appfriends.android:appfriends:2.0.19'
+    // AppFriends
+    compile 'me.appfriends.sdk:ui:3.0.5'
 }
 ```
 

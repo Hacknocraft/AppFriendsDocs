@@ -24,7 +24,7 @@ The iOS SDK can be integrated into existing xcode iOS projects. There are two SD
 
 ### Android
 The Android SDK can be integrated into existing Android projects. For details,
-please read [Android SDK guide](android.md).
+please read [Android SDK guide](android/quick_start.md).
 
 ## Server API
 AppFriends has comprehensive REST API's for you to use. There are two types of APIs: [Application API](api/applicationapi.md) and [Admin API](api/adminapi.md).

@@ -13,4 +13,12 @@ To customize a view controller provided by the `AppFriendsUI` SDK, you can creat
 let dialogList = DialogsListViewController(nibName: "DialogsListView.", bundle: nil)
 ```
 ## Chat Reusable UI
-The two main UI components we provide are the dialogs list and the chat view.
+There are many UI components we provide for free. Among them, the three main UI components we provide are the dialogs list, the chat view and floating fob widget.
+
+### Dialogs List
+
+
+### Chat View
+
+
+### Floating Social Widget
