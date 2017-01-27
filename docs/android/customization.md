@@ -45,6 +45,9 @@ You can override values to customize the UI.
 <string name="title_activity_image_viewer">ImageViewerActivity</string>
 <string name="file_size_upload_too_big">file size is too big</string>
 <string name="sorry">sorry</string>
+
+<!-- Permission Checking -->
 <string name="permission_error_title">No Permission</string>
 <string name="permission_error_camera">Please grant camera permission</string>
+<string name="permission_error_gallery">Please grant access to read your image gallery</string>
 ```
