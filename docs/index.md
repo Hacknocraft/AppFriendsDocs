@@ -30,4 +30,4 @@ please read [Android SDK guide](android/quick_start.md).
 AppFriends has comprehensive REST API's for you to use. There are two types of APIs: [Application API](api/applicationapi.md) and [Admin API](api/adminapi.md).
 
 ## Admin Portal
-You can control the widget by log into the [admin portal](http://appfriends.hacknocraft.com/) with your AppFriends account.
+You can control the widget by log into the [admin portal](https://appfriends.hacknocraft.com/) with your AppFriends account.

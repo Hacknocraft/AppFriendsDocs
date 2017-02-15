@@ -6,14 +6,18 @@ Before start using AppFriends, you need to create an application on the [dashboa
 ### Using Cocoapods
 To integrate AppFriends iOS SDK to your Xcode iOS project, add this line in your `Podfile`
 
-	pod 'AppFriendsUI', :git => 'https://github.com/Hacknocraft/AppFriendsUI.git', :tag => '1.2.0'
-	pod 'AppFriendsCore', :git => 'https://github.com/Hacknocraft/AppFriendsCore.git', :tag => '1.1.0'
+	pod 'AppFriendsUI', '~> 1.2.15'
+	pod 'AppFriendsCore', '~> 1.1.10'
 
-Also, add `use_frameworks!` to the file. eg.
+Also, add `use_frameworks!` to the top of file. eg.
 
-	platform :ios, "8.0"
+	source 'https://github.com/CocoaPods/Specs.git'
+	source 'https://github.com/Hacknocraft/hacknocraft-cocoapods-spec.git'
+	platform :ios, "9.0"
 	use_frameworks!
 	...
+
+You might need to run `pod repo update` after this step before calling `pod install`
 
 To see an sample app of how to use AppFriendsUI, please checkout our repo:
 
@@ -23,7 +27,7 @@ To see an sample app of how to use AppFriendsUI, please checkout our repo:
 
 If you don't want any of the UI components we provide, you can directly interact with the platform API, and we have a core framework to use for that purpose:
 
-	pod 'AppFriendsCore', :git => 'https://github.com/Hacknocraft/AppFriendsCore.git', :tag => '1.1.0'
+	pod 'AppFriendsCore', '~> 1.1.10'
 
 ## 3. Import Header
 The next step is import the headers.
