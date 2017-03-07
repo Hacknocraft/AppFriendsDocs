@@ -17,15 +17,21 @@
       
         <link rel="shortcut icon" href="../../images/logo.png">
       
-      <meta name="generator" content="mkdocs+mkdocs-material#1.0.2">
+      <meta name="generator" content="mkdocs-0.16.1, mkdocs-material-1.2.0">
     
     
       
-        <title>UI Components - AppFriends Documentation</title>
+        <title>Customization - AppFriends Documentation</title>
       
     
     
-      <script src="../../assets/javascripts/modernizr-facb31f4a3.js"></script>
+      <script src="../../assets/javascripts/modernizr-56ade86843.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-e17eeafcbc.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-892b79c5c5.palette.css">
+      
     
     
       
@@ -38,13 +44,7 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application-1b8b9fdf68.css">
-      
-        <link rel="stylesheet" href="../../assets/stylesheets/application-02ce7adcc2.palette.css">
-      
-      
-        <link rel="stylesheet" href="../../extra.css">
-      
+      <link rel="stylesheet" href="../../css/extra.css">
     
     
   </head>
@@ -68,11 +68,11 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="AppFriends Documentation" class=" md-logo  md-header-nav__button">
-          
+        
+          <a href="../.." title="AppFriends Documentation" class="md-logo md-header-nav__button">
             <img src="../../images/logo.png" width="24" height="24">
-          
-        </a>
+          </a>
+        
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
@@ -87,7 +87,7 @@
                 </span>
               
             
-            UI Components
+            Customization
           
         </span>
       </div>
@@ -99,7 +99,7 @@
   <div class="md-search__overlay"></div>
   <div class="md-search__inner">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
       <label class="md-icon md-search__icon" for="search"></label>
     </form>
     <div class="md-search__output">
@@ -112,15 +112,17 @@
         
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
-          <div class="md-header-nav__source">
-            
-          </div>
+        <div class="md-header-nav__source">
+          
+        </div>
       </div>
     </div>
   </nav>
 </header>
     
     <div class="md-container">
+      
+      
       <main class="md-main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
@@ -128,13 +130,13 @@
               <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="drawer">
-    <i class=" md-logo  md-nav__button">
-      
+    
+      <i class="md-logo md-nav__button">
         <img src="../../images/logo.png">
-      
-    </i>
+      </i>
+    
     AppFriends Documentation
   </label>
   
@@ -142,25 +144,31 @@
     
       
       
+      
+
+
   <li class="md-nav__item">
-    
-      <a href="../.." title="Welcome" class="md-nav__link">
-        Welcome
-      </a>
-    
+    <a href="../.." title="Welcome" class="md-nav__link">
+      Welcome
+    </a>
   </li>
 
     
       
       
-  <li class="md-nav__item md-nav__item--nested">
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       iOS
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
         iOS
       </label>
@@ -169,40 +177,84 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../quick_start/" title="Quick Start" class="md-nav__link">
-        Quick Start
-      </a>
-    
+    <a href="../quick_start/" title="Quick Start" class="md-nav__link">
+      Quick Start
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../users/" title="Users" class="md-nav__link">
-        Users
-      </a>
-    
+    <a href="../sessions/" title="Sessions" class="md-nav__link">
+      Sessions
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../chat/" title="Chat" class="md-nav__link">
-        Chat
-      </a>
-    
+    <a href="../users/" title="Users" class="md-nav__link">
+      Users
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
+    <a href="../dialogs/" title="Dialogs and Messaging" class="md-nav__link">
+      Dialogs and Messaging
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../push_notification/" title="Push Notification" class="md-nav__link">
+      Push Notification
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../events/" title="Events" class="md-nav__link">
+      Events
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
@@ -210,11 +262,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        UI Components
+        Customization
       </label>
     
-    <a href="./" title="UI Components" class="md-nav__link md-nav__link--active">
-      UI Components
+    <a href="./" title="Customization" class="md-nav__link md-nav__link--active">
+      Customization
     </a>
     
       
@@ -232,53 +284,12 @@
     Basic Customization
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#advanced-customization" title="Advanced Customization" class="md-nav__link">
-    Advanced Customization
-  </a>
-  
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#subclass-appfriends-view-controllers" title="Subclass AppFriends View Controllers" class="md-nav__link">
-    Subclass AppFriends View Controllers
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#chat-reusable-ui" title="Chat Reusable UI" class="md-nav__link">
-    Chat Reusable UI
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#dialogs-list" title="Dialogs List" class="md-nav__link">
-    Dialogs List
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#chat-view" title="Chat View" class="md-nav__link">
-    Chat View
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#floating-social-widget" title="Floating Social Widget" class="md-nav__link">
-    Floating Social Widget
+  <a href="#list-of-customizable-values" title="List of Customizable Values" class="md-nav__link">
+    List of Customizable Values
   </a>
   
 </li>
@@ -297,12 +308,25 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../dependencies/" title="External Dependencies" class="md-nav__link">
-        External Dependencies
-      </a>
-    
+    <a href="../dependencies/" title="External Dependencies" class="md-nav__link">
+      External Dependencies
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../error/" title="Errors" class="md-nav__link">
+      Errors
+    </a>
   </li>
 
         
@@ -313,6 +337,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
@@ -320,7 +347,7 @@
     <label class="md-nav__link" for="nav-3">
       Android
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
         Android
       </label>
@@ -329,23 +356,25 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../android/quick_start/" title="Quick Start" class="md-nav__link">
-        Quick Start
-      </a>
-    
+    <a href="../../android/quick_start/" title="Quick Start" class="md-nav__link">
+      Quick Start
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../android/customization/" title="UI Customization" class="md-nav__link">
-        UI Customization
-      </a>
-    
+    <a href="../../android/customization/" title="UI Customization" class="md-nav__link">
+      UI Customization
+    </a>
   </li>
 
         
@@ -356,6 +385,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
@@ -363,7 +395,7 @@
     <label class="md-nav__link" for="nav-4">
       Server API
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
         Server API
       </label>
@@ -372,34 +404,37 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../api/request_auth/" title="Request Authentication" class="md-nav__link">
-        Request Authentication
-      </a>
-    
+    <a href="../../api/request_auth/" title="Request Authentication" class="md-nav__link">
+      Request Authentication
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../api/applicationapi/" title="Application APIs" class="md-nav__link">
-        Application APIs
-      </a>
-    
+    <a href="../../api/applicationapi/" title="Application APIs" class="md-nav__link">
+      Application APIs
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../api/adminapi/" title="Admin APIs" class="md-nav__link">
-        Admin APIs
-      </a>
-    
+    <a href="../../api/adminapi/" title="Admin APIs" class="md-nav__link">
+      Admin APIs
+    </a>
   </li>
 
         
@@ -433,53 +468,12 @@
     Basic Customization
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#advanced-customization" title="Advanced Customization" class="md-nav__link">
-    Advanced Customization
-  </a>
-  
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#subclass-appfriends-view-controllers" title="Subclass AppFriends View Controllers" class="md-nav__link">
-    Subclass AppFriends View Controllers
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#chat-reusable-ui" title="Chat Reusable UI" class="md-nav__link">
-    Chat Reusable UI
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#dialogs-list" title="Dialogs List" class="md-nav__link">
-    Dialogs List
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#chat-view" title="Chat View" class="md-nav__link">
-    Chat View
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#floating-social-widget" title="Floating Social Widget" class="md-nav__link">
-    Floating Social Widget
+  <a href="#list-of-customizable-values" title="List of Customizable Values" class="md-nav__link">
+    List of Customizable Values
   </a>
   
 </li>
@@ -502,22 +496,120 @@
                
               
                 
-                <h1 id="ui-components">UI Components</h1>
-<p><code>AppFriendsUI</code> provides a lot of useful and convenient UI components for you to use. It can save a lot of your time developing the app. Our <a href="https://github.com/laeroah/AppFriendsUI/tree/master/Example/AFChatUISample">demo app</a> takes full advantage of the <code>AppFriendsUI</code>. You could clone the demo app repo from github to see how it uses, interact and customizes the UI components provided by <code>AppFriendsUI</code>.</p>
-<h2 id="basic-customization">Basic Customization</h2>
+                <h1 id="ui-components-and-customization">UI Components and Customization<a class="headerlink" href="#ui-components-and-customization" title="Permanent link">&para;</a></h1>
+<p><code>AppFriendsUI</code> provides a lot of useful and convenient UI components for you to use. It can save a lot of your time developing the app. Our <a href="https://github.com/Hacknocraft/AppFriendsiOSSample">demo app</a> takes full advantage of the <code>AppFriendsUI</code>. You could clone the demo app repo from github to see how it uses, interact and customizes the UI components provided by <code>AppFriendsUI</code>.</p>
+<h2 id="basic-customization">Basic Customization<a class="headerlink" href="#basic-customization" title="Permanent link">&para;</a></h2>
 <p><code>HCUIConfiguration</code> gives you easy access to customize AppFriends UI components. For example, if you want to change the background color of the chat view, you can simply do it by changing the value of <code>HCColorPalette.chatBackgroundColor</code></p>
-<h2 id="advanced-customization">Advanced Customization</h2>
-<p>For advanced customization, we recommend you inherit our UI component classes. For example, if you want to change the behavior when the user clicks on a message, you can inherit <code>HCBaseChatViewController</code>, and override the implementation of <code>func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)</code></p>
-<h3 id="subclass-appfriends-view-controllers">Subclass AppFriends View Controllers</h3>
-<p>To customize a view controller provided by the <code>AppFriendsUI</code> SDK, you can create a subclass and then override the methods that you wish to change. You can also use xib with your view controller. For example, you could subclass <code>HCDialogsListViewController</code> to change the look of it. If you want to use xib, you need to put a tableview inside your xib, then make all the IBOutlet connections. Then you could initialize your view controller by using the</p>
-<pre class="code"><code>let dialogList = DialogsListViewController(nibName: &quot;DialogsListView.&quot;, bundle: nil)</code></pre>
-
-
-<h2 id="chat-reusable-ui">Chat Reusable UI</h2>
-<p>There are many UI components we provide for free. Among them, the three main UI components we provide are the dialogs list, the chat view and floating fob widget.</p>
-<h3 id="dialogs-list">Dialogs List</h3>
-<h3 id="chat-view">Chat View</h3>
-<h3 id="floating-social-widget">Floating Social Widget</h3>
+<h3 id="list-of-customizable-values">List of Customizable Values<a class="headerlink" href="#list-of-customizable-values" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>HCSettingsConfiguation</th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Variable Name</strong></td>
+<td><strong>Type</strong></td>
+<td><strong>Default Value</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr>
+<td>badgeDisplayIfMuted</td>
+<td>Boolean</td>
+<td>false</td>
+<td>turn this to true if you want to keep badge for a conversation after it's muted.</td>
+</tr>
+<tr>
+<td>showNewMessageLine</td>
+<td>Boolean</td>
+<td>true</td>
+<td>switch for new message line display on private dialogs</td>
+</tr>
+<tr>
+<td>supportedMessageTypes</td>
+<td>ChatSupportedMessageDataTypes</td>
+<td>.all</td>
+<td>The types of messages you want to support in your chat. This value will apply to all chat. You can also change the types of messages you want to support for each dialog when you initialize the chat view</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>HCFont</th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Variable Name</strong></td>
+<td><strong>Type</strong></td>
+<td><strong>Default Value</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr>
+<td>segmentSelectorFont</td>
+<td>UIFont</td>
+<td>UIFont.systemFont(ofSize: 15)</td>
+<td>segmented control button title font</td>
+</tr>
+<tr>
+<td>chatCellContentFont</td>
+<td>UIFont</td>
+<td>UIFont.systemFont(ofSize: 15)</td>
+<td>chat message content text font</td>
+</tr>
+<tr>
+<td>chatCellSystemMessageFont</td>
+<td>UIFont</td>
+<td>UIFont.systemFont(ofSize: 15)</td>
+<td>chat system message content text font</td>
+</tr>
+<tr>
+<td>boldButtonFont</td>
+<td>UIFont</td>
+<td>UIFont.boldSystemFont(ofSize: 16)</td>
+<td>button bold font</td>
+</tr>
+<tr>
+<td>dialogSettingFont</td>
+<td>UIFont</td>
+<td>UIFont.systemFont(ofSize: 15)</td>
+<td>dialog setting UI text font</td>
+</tr>
+<tr>
+<td>navigationBarTitleFont</td>
+<td>UIFont</td>
+<td>UIFont.systemFont(ofSize: 17)</td>
+<td>navigation bar title font</td>
+</tr>
+<tr>
+<td>chatDialogListSectionTitleFont</td>
+<td>UIFont</td>
+<td>UIFont.systemFont(ofSize: 15)</td>
+<td>dialog list section title font</td>
+</tr>
+<tr>
+<td>chatTimestampFont</td>
+<td>UIFont</td>
+<td>UIFont.systemFont(ofSize: 13)</td>
+<td>chat message time label</td>
+</tr>
+<tr>
+<td>chatDateLabelFont</td>
+<td>UIFont</td>
+<td>UIFont.systemFont(ofSize: 15)</td>
+<td>chat system date label</td>
+</tr>
+</tbody>
+</table>
+              
               
             </article>
           </div>
@@ -530,7 +622,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../chat/" title="Chat" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../events/" title="Events" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -539,7 +631,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Chat
+                Events
               </span>
             </div>
           </a>
@@ -578,6 +670,14 @@
       </div>
       
         
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/Hacknocraft/" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
       
     </div>
   </div>
@@ -585,8 +685,8 @@
       
     </div>
     
-      <script src="../../assets/javascripts/application-16f434a21a.js"></script>
-      <script>var config={url:{base:"../.."}},app=new Application(config);app.initialize()</script>
+      <script src="../../assets/javascripts/application-30ac6a1727.js"></script>
+      <script>app.initialize({url:{base:"../.."}})</script>
       
     
     

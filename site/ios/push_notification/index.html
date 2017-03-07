@@ -9,7 +9,7 @@
         <meta name="description" content="A turn-key solution to enable messagina and make your app social.">
       
       
-        <link rel="canonical" href="http://www.appfriends.me/ios/dependencies/">
+        <link rel="canonical" href="http://www.appfriends.me/ios/push_notification/">
       
       
         <meta name="author" content="Hao Wang">
@@ -21,7 +21,7 @@
     
     
       
-        <title>External Dependencies - AppFriends Documentation</title>
+        <title>Push Notification - AppFriends Documentation</title>
       
     
     
@@ -87,7 +87,7 @@
                 </span>
               
             
-            External Dependencies
+            Push Notification
           
         </span>
       </div>
@@ -227,11 +227,20 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../push_notification/" title="Push Notification" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+    <a href="./" title="Push Notification" class="md-nav__link md-nav__link--active">
       Push Notification
     </a>
+    
   </li>
 
         
@@ -263,20 +272,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-      
-    
-    
-    <a href="./" title="External Dependencies" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../dependencies/" title="External Dependencies" class="md-nav__link">
       External Dependencies
     </a>
-    
   </li>
 
         
@@ -424,8 +424,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#dependencies-list" title="Dependencies List" class="md-nav__link">
-    Dependencies List
+  <a href="#register-for-push" title="Register for Push" class="md-nav__link">
+    Register for Push
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unregister-for-push" title="Unregister for Push" class="md-nav__link">
+    Unregister for Push
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#process-push" title="Process Push" class="md-nav__link">
+    Process Push
   </a>
   
 </li>
@@ -443,104 +457,27 @@
                
               
                 
-                  <h1>External Dependencies</h1>
+                  <h1>Push Notification</h1>
                 
-                <h2 id="dependencies-list">Dependencies List<a class="headerlink" href="#dependencies-list" title="Permanent link">&para;</a></h2>
-<p>AppFriends SDKs have several external dependencies with open source libraries. We are committed to always update our SDK to be compatible the latest version of the dependencies</p>
-<table>
-<thead>
-<tr>
-<th>Dependencies</th>
-<th>License Type</th>
-<th>AppFriendsCore</th>
-<th>AppFriendsUI</th>
-<th>Version (swift3.0)</th>
-<th>Version (swift3.1)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Alamofire</td>
-<td>MIT</td>
-<td>✔</td>
-<td>✔</td>
-<td>~&gt; 4.0.1</td>
-<td>~&gt; 4.0.1</td>
-</tr>
-<tr>
-<td>JWT</td>
-<td>MIT</td>
-<td>✔</td>
-<td>✔</td>
-<td>~&gt; 2.1.0</td>
-<td>~&gt; 2.1.0</td>
-</tr>
-<tr>
-<td>CoreStore</td>
-<td>MIT</td>
-<td>✔</td>
-<td>✔</td>
-<td>~&gt; 2.1.3</td>
-<td>~&gt; 2.1.3</td>
-</tr>
-<tr>
-<td>Cloudinary</td>
-<td>MIT</td>
-<td>✔</td>
-<td>✔</td>
-<td>~&gt; 1.0.15</td>
-<td>~&gt; 1.0.15</td>
-</tr>
-<tr>
-<td>Socket.IO-Client-Swift</td>
-<td>MIT</td>
-<td>✔</td>
-<td>✔</td>
-<td>~&gt; 8.1.1</td>
-<td>~&gt; 8.1.1</td>
-</tr>
-<tr>
-<td>SlackTextViewController</td>
-<td>MIT</td>
-<td>✘</td>
-<td>✔</td>
-<td>~&gt; 1.9.5</td>
-<td>~&gt; 1.9.5</td>
-</tr>
-<tr>
-<td>CLTokenInputView</td>
-<td>MIT</td>
-<td>✘</td>
-<td>✔</td>
-<td>~&gt; 2.3.0</td>
-<td>~&gt; 2.3.0</td>
-</tr>
-<tr>
-<td>SESlideTableViewCell</td>
-<td>MIT</td>
-<td>✘</td>
-<td>✔</td>
-<td>~&gt; 0.7.1</td>
-<td>~&gt; 0.7.1</td>
-</tr>
-<tr>
-<td>AFDateHelper</td>
-<td>MIT</td>
-<td>✘</td>
-<td>✔</td>
-<td>~&gt; 3.5.3</td>
-<td>~&gt; 3.5.3</td>
-</tr>
-<tr>
-<td>AlamofireImage</td>
-<td>MIT</td>
-<td>✘</td>
-<td>✔</td>
-<td>~&gt; 3.1.0</td>
-<td>~&gt; 3.1.0</td>
-</tr>
-</tbody>
-</table>
+                <p>AppFriends can send push notification to the device when there's a new message for a user or if the user is mentioned in a channel chat. Push notification API is accessible via <code>AFPushNotification</code> class.</p>
+<h2 id="register-for-push">Register for Push<a class="headerlink" href="#register-for-push" title="Permanent link">&para;</a></h2>
+<p>To enable push notification, you need to first register the push token with AppFriends:</p>
+<div class="codehilite"><pre><span></span><span class="n">AFPushNotification</span><span class="p">.</span><span class="n">registerDeviceForPushNotification</span><span class="p">(</span><span class="n">pushToken</span><span class="p">:</span> <span class="n">pushToken</span><span class="p">,</span> <span class="n">completion</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+<span class="p">})</span>
+</pre></div>
+
+
+<h2 id="unregister-for-push">Unregister for Push<a class="headerlink" href="#unregister-for-push" title="Permanent link">&para;</a></h2>
+<p>To unregister push notification:</p>
+<div class="codehilite"><pre><span></span><span class="n">AFPushNotification</span><span class="p">.</span><span class="n">unregisterDeviceForPushNotification</span><span class="p">(</span><span class="n">pushToken</span><span class="p">:</span> <span class="n">pushToken</span><span class="p">,</span> <span class="n">completion</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+<span class="p">})</span>
+</pre></div>
+
+
+<h2 id="process-push">Process Push<a class="headerlink" href="#process-push" title="Permanent link">&para;</a></h2>
+<p>After you received remote push notification, please pass it to the SDK for better user experience</p>
+<div class="codehilite"><pre><span></span><span class="n">AFPushNotification</span><span class="p">.</span><span class="n">processPushNotification</span><span class="p">(</span><span class="n">notificationUserInfo</span><span class="p">:</span> <span class="n">userInfo</span><span class="p">)</span>
+</pre></div>
               
               
             </article>
@@ -554,7 +491,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../ui_components/" title="Customization" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../dialogs/" title="Dialogs and Messaging" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -563,19 +500,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Customization
+                Dialogs and Messaging
               </span>
             </div>
           </a>
         
         
-          <a href="../error/" title="Errors" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../events/" title="Events" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Errors
+                Events
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

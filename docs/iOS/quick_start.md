@@ -5,29 +5,30 @@ Before start using AppFriends, you need to create an application on the [dashboa
 ## 2. Integrate AppFriends SDK
 ### Using Cocoapods
 To integrate AppFriends iOS SDK to your Xcode iOS project, add this line in your `Podfile`
-
-	pod 'AppFriendsUI', '~> 1.2.15'
-	pod 'AppFriendsCore', '~> 1.1.10'
-
+``` ruby
+pod 'AppFriendsUI', '~> 2.0.0'
+pod 'AppFriendsCore', '~> 1.2.0'
+```
 Also, add `use_frameworks!` to the top of file. eg.
-
-	source 'https://github.com/CocoaPods/Specs.git'
-	source 'https://github.com/Hacknocraft/hacknocraft-cocoapods-spec.git'
-	platform :ios, "9.0"
-	use_frameworks!
-	...
+``` ruby
+source 'https://github.com/CocoaPods/Specs.git'
+source 'https://github.com/Hacknocraft/hacknocraft-cocoapods-spec.git'
+use_frameworks!
+...
+```
 
 You might need to run `pod repo update` after this step before calling `pod install`
 
 To see an sample app of how to use AppFriendsUI, please checkout our repo:
 
-<a href="https://github.com/laeroah/AppFriendsUI/">
-<button class="btn btn-info">Github Sample App Repo</button>  
+<a href="https://github.com/Hacknocraft/AppFriendsiOSSample">
+<button class="btn btn-info">Github iOS Sample App</button>  
 </a>
 
 If you don't want any of the UI components we provide, you can directly interact with the platform API, and we have a core framework to use for that purpose:
-
-	pod 'AppFriendsCore', '~> 1.1.10'
+``` ruby
+pod 'AppFriendsCore', '~> 1.2.0'
+```
 
 ## 3. Import Header
 The next step is import the headers.
@@ -35,13 +36,13 @@ The next step is import the headers.
 ### Example
 
 #### Swift
-```
-import AppFriendsCore
-import AppFriendsUI
+``` swift
+#import AppFriendsCore
+#import AppFriendsUI
 ```
 
 #### Objective-C
-```
+```Objective-C
 #import <AppFriendsCore/AppFriendsCore-Swift.h>
 #import <AppFriendsUI/AppFriendsUI-Swift.h>
 ```
@@ -51,17 +52,18 @@ Now, we can use the AppFriends key and secret to initialize the SDK. Key and sec
 ### AppFriendsUI Initialization
 
 #### Swift
-```
+```swift
 AppFriendsUI.sharedInstance.initialize("[appfriends key]", secret: "[appfriends secret]") { (success, error) in
 		if !success {
 				NSLog("AppFriends initialization error:\(error?.localizedDescription)")
 		}else {
+			 // initialization is successful
 		}
 }
 ```
 
 #### Objective-C
-```
+```Objective-C
 import AppFriendsCore
 import AppFriendsUI
 ```
@@ -71,17 +73,20 @@ import AppFriendsUI
 **Skip** this step if you are using the `AppFriendsUI` SDK. If you are using `AppFriendsCore` SDK, you can initialize by:
 
 #### Swift
-```
-AppFriendsUI.sharedInstance.initialize("[appfriends key]", secret: "[appfriends secret]") { (success, error) in
+```swift
+HCSDKCore.sharedInstance.initialize(key: "[appfriends key]", secret: "[appfriends secret]") { (success, error) in
 		if !success {
 				NSLog("AppFriends initialization error:\(error?.localizedDescription)")
 		}else {
+			 // initialization is successful
 		}
 }
 ```
 
 #### Objective-C
-```
+```Objective-C
 import AppFriendsCore
 import AppFriendsUI
 ```
+## 5. Login
+After initialization, you want to login your user to AppFriends, so he can start chatting with other users. Please see [sessions](sessions.md) for detail

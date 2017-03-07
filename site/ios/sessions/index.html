@@ -9,7 +9,7 @@
         <meta name="description" content="A turn-key solution to enable messagina and make your app social.">
       
       
-        <link rel="canonical" href="http://www.appfriends.me/ios/dependencies/">
+        <link rel="canonical" href="http://www.appfriends.me/ios/sessions/">
       
       
         <meta name="author" content="Hao Wang">
@@ -21,7 +21,7 @@
     
     
       
-        <title>External Dependencies - AppFriends Documentation</title>
+        <title>Sessions - AppFriends Documentation</title>
       
     
     
@@ -87,7 +87,7 @@
                 </span>
               
             
-            External Dependencies
+            Sessions
           
         </span>
       </div>
@@ -191,11 +191,20 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../sessions/" title="Sessions" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+    <a href="./" title="Sessions" class="md-nav__link md-nav__link--active">
       Sessions
     </a>
+    
   </li>
 
         
@@ -263,20 +272,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-      
-    
-    
-    <a href="./" title="External Dependencies" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../dependencies/" title="External Dependencies" class="md-nav__link">
       External Dependencies
     </a>
-    
   </li>
 
         
@@ -424,8 +424,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#dependencies-list" title="Dependencies List" class="md-nav__link">
-    Dependencies List
+  <a href="#login" title="Login" class="md-nav__link">
+    Login
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logout" title="Logout" class="md-nav__link">
+    Logout
   </a>
   
 </li>
@@ -443,104 +450,36 @@
                
               
                 
-                  <h1>External Dependencies</h1>
+                  <h1>Sessions</h1>
                 
-                <h2 id="dependencies-list">Dependencies List<a class="headerlink" href="#dependencies-list" title="Permanent link">&para;</a></h2>
-<p>AppFriends SDKs have several external dependencies with open source libraries. We are committed to always update our SDK to be compatible the latest version of the dependencies</p>
-<table>
-<thead>
-<tr>
-<th>Dependencies</th>
-<th>License Type</th>
-<th>AppFriendsCore</th>
-<th>AppFriendsUI</th>
-<th>Version (swift3.0)</th>
-<th>Version (swift3.1)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Alamofire</td>
-<td>MIT</td>
-<td>✔</td>
-<td>✔</td>
-<td>~&gt; 4.0.1</td>
-<td>~&gt; 4.0.1</td>
-</tr>
-<tr>
-<td>JWT</td>
-<td>MIT</td>
-<td>✔</td>
-<td>✔</td>
-<td>~&gt; 2.1.0</td>
-<td>~&gt; 2.1.0</td>
-</tr>
-<tr>
-<td>CoreStore</td>
-<td>MIT</td>
-<td>✔</td>
-<td>✔</td>
-<td>~&gt; 2.1.3</td>
-<td>~&gt; 2.1.3</td>
-</tr>
-<tr>
-<td>Cloudinary</td>
-<td>MIT</td>
-<td>✔</td>
-<td>✔</td>
-<td>~&gt; 1.0.15</td>
-<td>~&gt; 1.0.15</td>
-</tr>
-<tr>
-<td>Socket.IO-Client-Swift</td>
-<td>MIT</td>
-<td>✔</td>
-<td>✔</td>
-<td>~&gt; 8.1.1</td>
-<td>~&gt; 8.1.1</td>
-</tr>
-<tr>
-<td>SlackTextViewController</td>
-<td>MIT</td>
-<td>✘</td>
-<td>✔</td>
-<td>~&gt; 1.9.5</td>
-<td>~&gt; 1.9.5</td>
-</tr>
-<tr>
-<td>CLTokenInputView</td>
-<td>MIT</td>
-<td>✘</td>
-<td>✔</td>
-<td>~&gt; 2.3.0</td>
-<td>~&gt; 2.3.0</td>
-</tr>
-<tr>
-<td>SESlideTableViewCell</td>
-<td>MIT</td>
-<td>✘</td>
-<td>✔</td>
-<td>~&gt; 0.7.1</td>
-<td>~&gt; 0.7.1</td>
-</tr>
-<tr>
-<td>AFDateHelper</td>
-<td>MIT</td>
-<td>✘</td>
-<td>✔</td>
-<td>~&gt; 3.5.3</td>
-<td>~&gt; 3.5.3</td>
-</tr>
-<tr>
-<td>AlamofireImage</td>
-<td>MIT</td>
-<td>✘</td>
-<td>✔</td>
-<td>~&gt; 3.1.0</td>
-<td>~&gt; 3.1.0</td>
-</tr>
-</tbody>
-</table>
+                <p>Session API can be access using <code>AFSession</code> class.</p>
+<h2 id="login">Login<a class="headerlink" href="#login" title="Permanent link">&para;</a></h2>
+<p>Before an user can start using AppFriends features, he must first login to AppFriends. In your app, you could login your user to AppFriends as soon as the user is logged into your app. If the user has not previously registered with AppFriends, the user will be created on AppFriends.
+To login an user, we require</p>
+<ol>
+<li><strong>an unique username</strong></li>
+<li><strong>an unique user ID</strong>, this should be the same user id that you use in your app to identify the user</li>
+</ol>
+<div class="codehilite"><pre><span></span><span class="n">AFSession</span><span class="p">.</span><span class="n">login</span><span class="p">(</span><span class="n">username</span><span class="p">:</span> <span class="n">username</span><span class="p">,</span> <span class="n">userID</span><span class="p">:</span> <span class="n">userID</span><span class="p">,</span> <span class="n">completion</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">token</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+  <span class="k">if</span> <span class="kd">let</span> <span class="nv">err</span> <span class="p">=</span> <span class="n">error</span> <span class="p">{</span>
+    <span class="c1">// login failed</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="c1">// login is successful</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+
+
+<h2 id="logout">Logout<a class="headerlink" href="#logout" title="Permanent link">&para;</a></h2>
+<p>When an user logs out from your app, you should also log him out from AppFriends, so that new users can login later. To logout an user:</p>
+<div class="codehilite"><pre><span></span><span class="n">AFSession</span><span class="p">.</span><span class="n">logout</span> <span class="p">{</span> <span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+  <span class="k">if</span> <span class="kd">let</span> <span class="nv">err</span> <span class="p">=</span> <span class="n">error</span> <span class="p">{</span>
+    <span class="c1">// logout failed</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="c1">// logout is successful</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
               
               
             </article>
@@ -554,7 +493,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../ui_components/" title="Customization" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../quick_start/" title="Quick Start" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -563,19 +502,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Customization
+                Quick Start
               </span>
             </div>
           </a>
         
         
-          <a href="../error/" title="Errors" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../users/" title="Users" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Errors
+                Users
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

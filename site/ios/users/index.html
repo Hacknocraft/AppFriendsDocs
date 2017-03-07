@@ -17,7 +17,7 @@
       
         <link rel="shortcut icon" href="../../images/logo.png">
       
-      <meta name="generator" content="mkdocs+mkdocs-material#1.0.2">
+      <meta name="generator" content="mkdocs-0.16.1, mkdocs-material-1.2.0">
     
     
       
@@ -25,7 +25,13 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr-facb31f4a3.js"></script>
+      <script src="../../assets/javascripts/modernizr-56ade86843.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-e17eeafcbc.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-892b79c5c5.palette.css">
+      
     
     
       
@@ -38,13 +44,7 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application-1b8b9fdf68.css">
-      
-        <link rel="stylesheet" href="../../assets/stylesheets/application-02ce7adcc2.palette.css">
-      
-      
-        <link rel="stylesheet" href="../../extra.css">
-      
+      <link rel="stylesheet" href="../../css/extra.css">
     
     
   </head>
@@ -68,11 +68,11 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="AppFriends Documentation" class=" md-logo  md-header-nav__button">
-          
+        
+          <a href="../.." title="AppFriends Documentation" class="md-logo md-header-nav__button">
             <img src="../../images/logo.png" width="24" height="24">
-          
-        </a>
+          </a>
+        
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
@@ -99,7 +99,7 @@
   <div class="md-search__overlay"></div>
   <div class="md-search__inner">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
       <label class="md-icon md-search__icon" for="search"></label>
     </form>
     <div class="md-search__output">
@@ -112,15 +112,17 @@
         
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
-          <div class="md-header-nav__source">
-            
-          </div>
+        <div class="md-header-nav__source">
+          
+        </div>
       </div>
     </div>
   </nav>
 </header>
     
     <div class="md-container">
+      
+      
       <main class="md-main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
@@ -128,13 +130,13 @@
               <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="drawer">
-    <i class=" md-logo  md-nav__button">
-      
+    
+      <i class="md-logo md-nav__button">
         <img src="../../images/logo.png">
-      
-    </i>
+      </i>
+    
     AppFriends Documentation
   </label>
   
@@ -142,25 +144,31 @@
     
       
       
+      
+
+
   <li class="md-nav__item">
-    
-      <a href="../.." title="Welcome" class="md-nav__link">
-        Welcome
-      </a>
-    
+    <a href="../.." title="Welcome" class="md-nav__link">
+      Welcome
+    </a>
   </li>
 
     
       
       
-  <li class="md-nav__item md-nav__item--nested">
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       iOS
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
         iOS
       </label>
@@ -169,18 +177,36 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../quick_start/" title="Quick Start" class="md-nav__link">
-        Quick Start
-      </a>
-    
+    <a href="../quick_start/" title="Quick Start" class="md-nav__link">
+      Quick Start
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
+    <a href="../sessions/" title="Sessions" class="md-nav__link">
+      Sessions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
@@ -206,101 +232,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#account-create-and-login" title="Account Create and Login" class="md-nav__link">
-    Account Create and Login
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#example" title="Example" class="md-nav__link">
-    Example
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#swift" title="Swift" class="md-nav__link">
-    Swift
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#user-update" title="User Update" class="md-nav__link">
     User Update
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#example_1" title="Example" class="md-nav__link">
-    Example
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#swift_1" title="Swift" class="md-nav__link">
-    Swift
-  </a>
-  
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#fetch-information-of-an-user" title="Fetch Information of an User" class="md-nav__link">
+    Fetch Information of an User
+  </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#social" title="Social" class="md-nav__link">
-    Social
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#followunfollow" title="Follow/Unfollow" class="md-nav__link">
-    Follow/Unfollow
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#blockingunblocking" title="Blocking/Unblocking" class="md-nav__link">
-    Blocking/Unblocking
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#constants" title="Constants" class="md-nav__link">
-    Constants
+  <a href="#blockunblock" title="Block/Unblock" class="md-nav__link">
+    Block/Unblock
   </a>
   
 </li>
@@ -314,34 +261,73 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../chat/" title="Chat" class="md-nav__link">
-        Chat
-      </a>
-    
+    <a href="../dialogs/" title="Dialogs and Messaging" class="md-nav__link">
+      Dialogs and Messaging
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../ui_components/" title="UI Components" class="md-nav__link">
-        UI Components
-      </a>
-    
+    <a href="../push_notification/" title="Push Notification" class="md-nav__link">
+      Push Notification
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../dependencies/" title="External Dependencies" class="md-nav__link">
-        External Dependencies
-      </a>
-    
+    <a href="../events/" title="Events" class="md-nav__link">
+      Events
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ui_components/" title="Customization" class="md-nav__link">
+      Customization
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dependencies/" title="External Dependencies" class="md-nav__link">
+      External Dependencies
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../error/" title="Errors" class="md-nav__link">
+      Errors
+    </a>
   </li>
 
         
@@ -352,6 +338,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
@@ -359,7 +348,7 @@
     <label class="md-nav__link" for="nav-3">
       Android
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
         Android
       </label>
@@ -368,23 +357,25 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../android/quick_start/" title="Quick Start" class="md-nav__link">
-        Quick Start
-      </a>
-    
+    <a href="../../android/quick_start/" title="Quick Start" class="md-nav__link">
+      Quick Start
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../android/customization/" title="UI Customization" class="md-nav__link">
-        UI Customization
-      </a>
-    
+    <a href="../../android/customization/" title="UI Customization" class="md-nav__link">
+      UI Customization
+    </a>
   </li>
 
         
@@ -395,6 +386,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
@@ -402,7 +396,7 @@
     <label class="md-nav__link" for="nav-4">
       Server API
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
         Server API
       </label>
@@ -411,34 +405,37 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../api/request_auth/" title="Request Authentication" class="md-nav__link">
-        Request Authentication
-      </a>
-    
+    <a href="../../api/request_auth/" title="Request Authentication" class="md-nav__link">
+      Request Authentication
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../api/applicationapi/" title="Application APIs" class="md-nav__link">
-        Application APIs
-      </a>
-    
+    <a href="../../api/applicationapi/" title="Application APIs" class="md-nav__link">
+      Application APIs
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../api/adminapi/" title="Admin APIs" class="md-nav__link">
-        Admin APIs
-      </a>
-    
+    <a href="../../api/adminapi/" title="Admin APIs" class="md-nav__link">
+      Admin APIs
+    </a>
   </li>
 
         
@@ -468,101 +465,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#account-create-and-login" title="Account Create and Login" class="md-nav__link">
-    Account Create and Login
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#example" title="Example" class="md-nav__link">
-    Example
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#swift" title="Swift" class="md-nav__link">
-    Swift
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#user-update" title="User Update" class="md-nav__link">
     User Update
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#example_1" title="Example" class="md-nav__link">
-    Example
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#swift_1" title="Swift" class="md-nav__link">
-    Swift
-  </a>
-  
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#fetch-information-of-an-user" title="Fetch Information of an User" class="md-nav__link">
+    Fetch Information of an User
+  </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#social" title="Social" class="md-nav__link">
-    Social
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#followunfollow" title="Follow/Unfollow" class="md-nav__link">
-    Follow/Unfollow
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#blockingunblocking" title="Blocking/Unblocking" class="md-nav__link">
-    Blocking/Unblocking
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#constants" title="Constants" class="md-nav__link">
-    Constants
+  <a href="#blockunblock" title="Block/Unblock" class="md-nav__link">
+    Block/Unblock
   </a>
   
 </li>
@@ -580,98 +498,71 @@
                
               
                 
-                <h1 id="users">Users</h1>
-<p>In order to use AppFriends and for all the AppFriends UI components to work properly, your users will need to be mirrored on AppFriends' system. It means you need to make sure all of your users are copied onto AppFriends' system and updates to the user information, such as username change and so on, are also make available to AppFriends, so your user will get consistent result in your app. AppFriends SDK provides a lot of convenient interface for you to work with.</p>
-<h2 id="account-create-and-login">Account Create and Login</h2>
-<p>AppFriends users are mirror images of the users in your app. To create or login a user on AppFriends, you need to provide at least</p>
-<ol>
-<li>an unique username</li>
-<li>an unique user ID</li>
-</ol>
-<p>To learn how to import all of your existing users onto AppFriends system all together, please refer to the API document.</p>
-<h3 id="example">Example</h3>
-<h4 id="swift">Swift</h4>
-<pre class="code"><code>let userInfo = [HCSDKConstants.kUserID: &quot;e575be0fef6c24041a1749da54ece501&quot;, HCSDKConstants.kUserName: &quot;John Doe&quot;]
-HCSDKCore.sharedInstance.loginWithUserInfo(userInfo)
-{ (response, error) in
-    if let err = error {
-            // handle login error
-    }
-    else {
-            // login is successful here
-    }
-}</code></pre>
-
-
-<h2 id="user-update">User Update</h2>
+                <h1 id="users">Users<a class="headerlink" href="#users" title="Permanent link">&para;</a></h1>
+<p>The users API interface is in data model class <code>AFUser</code>. In order to use AppFriends and for all the AppFriends UI components to work properly, your users will need to be mirrored on AppFriends' system. It means you need to make sure all of your users are copied onto AppFriends' system and updates to the user information, such as username change and so on, are also make available to AppFriends, so your user will get consistent result in your app. Batch users import can be done via <a href="../../api/adminapi/">admin API</a>, and AppFriends SDK also provides a lot of convenient interface for you to work with.</p>
+<h2 id="user-update">User Update<a class="headerlink" href="#user-update" title="Permanent link">&para;</a></h2>
 <p>When user information is updated on your app, you need to update the same user on AppFriends, so the data is consistent. For example, if an user changed his profile on your app, and he/she chose a new username, or a different avatar picture, you will need to update the same user on AppFriends.</p>
-<h3 id="example_1">Example</h3>
-<h4 id="swift_1">Swift</h4>
-<pre class="code"><code>AppFriendsUserManager.sharedInstance.updateUserInfo(currentUserID,
-  userInfo: [HCSDKConstants.kUserAvatar: avatar, HCSDKConstants.kUserName: username],
-  completion: { (response, error) in
-
-      // handle error or success here
-  })</code></pre>
-
-
-<h2 id="social">Social</h2>
-<p><code>AppFriends</code> provides service to help your app to create a social graph in your app. Using social features, your users can follow one another and become friends in your app.</p>
-<h3 id="followunfollow">Follow/Unfollow</h3>
-<p>Social graph is made by users following each other. If two users follow each other, they become <code>friends</code> in AppFriends.
-You can follow a user by:</p>
-<pre class="code"><code>AppFriendsUserManager.sharedInstance.followUser(userID, completion: { (response, error) in
-      // handle error or success here
-})</code></pre>
+<p>Update Username:</p>
+<div class="codehilite"><pre><span></span><span class="kd">let</span> <span class="nv">username</span> <span class="p">=</span> <span class="s">&quot;a new username&quot;</span>
+<span class="n">AFUser</span><span class="p">.</span><span class="n">updateUserName</span><span class="p">(</span><span class="n">username</span><span class="p">:</span> <span class="n">username</span><span class="p">,</span> <span class="n">completion</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+  <span class="k">if</span> <span class="n">error</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+    <span class="c1">//update failed</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="c1">//update successful</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
 
 
-<p>Unfollow a user:</p>
-<pre class="code"><code>AppFriendsUserManager.sharedInstance.unfollowUser(userID, completion: { (response, error) in
-      // handle error or success here
-})</code></pre>
+<p>Update User Avatar:</p>
+<div class="codehilite"><pre><span></span><span class="kd">let</span> <span class="nv">avatarURL</span> <span class="p">=</span> <span class="s">&quot;https://someavatar.jpg&quot;</span>
+<span class="n">AFUser</span><span class="p">.</span><span class="n">updateUserAvatar</span><span class="p">(</span><span class="n">avatar</span><span class="p">:</span> <span class="n">avatarURL</span><span class="p">,</span> <span class="n">completion</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+  <span class="k">if</span> <span class="n">error</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+    <span class="c1">//update failed</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="c1">//update successful</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
 
 
-<h3 id="blockingunblocking">Blocking/Unblocking</h3>
+<h2 id="fetch-information-of-an-user">Fetch Information of an User<a class="headerlink" href="#fetch-information-of-an-user" title="Permanent link">&para;</a></h2>
+<p>You can fetch the information of an user.</p>
+<div class="codehilite"><pre><span></span><span class="n">AFUser</span><span class="p">.</span><span class="n">getUser</span><span class="p">(</span><span class="n">userID</span><span class="p">:</span> <span class="n">userID</span><span class="p">,</span> <span class="n">completion</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">user</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+               <span class="k">if</span> <span class="n">error</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+                   <span class="c1">// get user failed</span>
+               <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                   <span class="c1">// fetch successful, you can now use the returned user object</span>
+               <span class="p">}</span>
+           <span class="p">})</span>
+</pre></div>
+
+
+<h2 id="blockunblock">Block/Unblock<a class="headerlink" href="#blockunblock" title="Permanent link">&para;</a></h2>
 <p>An user can block other users. If user A blocks user B, B will no longer be able to send any private message to A.
 You can block a user by:</p>
-<pre class="code"><code>AppFriendsUserManager.sharedInstance.blockUser(userID, completion: { (response, error) in
-      // handle error or success here
-})</code></pre>
+<div class="codehilite"><pre><span></span><span class="n">AFUser</span><span class="p">.</span><span class="n">blockUser</span><span class="p">(</span><span class="n">userID</span><span class="p">:</span> <span class="n">userID</span><span class="p">,</span> <span class="n">completion</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+                        <span class="k">if</span> <span class="kd">let</span> <span class="nv">err</span> <span class="p">=</span> <span class="n">error</span> <span class="p">{</span>
+                            <span class="c1">// block user failed</span>
+                        <span class="p">}</span>
+                        <span class="k">else</span> <span class="p">{</span>
+                            <span class="c1">// block user successful</span>
+                        <span class="p">}</span>
+                    <span class="p">})</span>
+</pre></div>
 
 
 <p>Unblock a user:</p>
-<pre class="code"><code>AppFriendsUserManager.sharedInstance.unblockUser(userID, completion: { (response, error) in
-      // handle error or success here
-})</code></pre>
-
-
-<h2 id="constants">Constants</h2>
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>HCSDKConstants.kUserID</td>
-<td>String</td>
-<td>the user's userID of this user in the host app.</td>
-</tr>
-<tr>
-<td>HCSDKConstants.kUserAvatar</td>
-<td>String</td>
-<td>the avatar url of this user in the host app.</td>
-</tr>
-<tr>
-<td>HCSDKConstants.kUserName</td>
-<td>String</td>
-<td>the username</td>
-</tr>
-</tbody>
-</table>
+<div class="codehilite"><pre><span></span><span class="n">AFUser</span><span class="p">.</span><span class="n">unblockUser</span><span class="p">(</span><span class="n">userID</span><span class="p">:</span> <span class="n">userID</span><span class="p">,</span> <span class="n">completion</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+                        <span class="k">if</span> <span class="kd">let</span> <span class="nv">err</span> <span class="p">=</span> <span class="n">error</span> <span class="p">{</span>
+                            <span class="c1">// unblock user failed</span>
+                        <span class="p">}</span>
+                        <span class="k">else</span> <span class="p">{</span>
+                            <span class="c1">// unblock user successful</span>
+                        <span class="p">}</span>
+                    <span class="p">})</span>
+</pre></div>
+              
               
             </article>
           </div>
@@ -684,7 +575,7 @@ You can block a user by:</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../quick_start/" title="Quick Start" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../sessions/" title="Sessions" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -693,19 +584,19 @@ You can block a user by:</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Quick Start
+                Sessions
               </span>
             </div>
           </a>
         
         
-          <a href="../chat/" title="Chat" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../dialogs/" title="Dialogs and Messaging" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Chat
+                Dialogs and Messaging
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -732,6 +623,14 @@ You can block a user by:</p>
       </div>
       
         
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/Hacknocraft/" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
       
     </div>
   </div>
@@ -739,8 +638,8 @@ You can block a user by:</p>
       
     </div>
     
-      <script src="../../assets/javascripts/application-16f434a21a.js"></script>
-      <script>var config={url:{base:"../.."}},app=new Application(config);app.initialize()</script>
+      <script src="../../assets/javascripts/application-30ac6a1727.js"></script>
+      <script>app.initialize({url:{base:"../.."}})</script>
       
     
     

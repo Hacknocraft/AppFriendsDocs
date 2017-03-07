@@ -7,15 +7,19 @@ site_favicon: images/logo.png
 # Copyright
 copyright: 'Copyright (c) 2016 Hacknocraft'
 
-theme: 'material'
+theme_dir: 'mkdocs-material/material'
 pages:
 - Welcome: index.md
 - iOS:
   - 'Quick Start': 'ios/quick_start.md'
+  - 'Sessions': 'ios/sessions.md'
   - 'Users': 'ios/users.md'
-  - 'Chat': 'ios/chat.md'
-  - 'UI Components': 'ios/ui_components.md'
+  - 'Dialogs and Messaging': 'ios/dialogs.md'
+  - 'Push Notification': 'ios/push_notification.md'
+  - 'Events': 'ios/events.md'
+  - 'Customization': 'ios/ui_components.md'
   - 'External Dependencies': 'ios/dependencies.md'
+  - 'Errors': 'ios/error.md'
 - Android:
   - 'Quick Start': 'android/quick_start.md'
   - 'UI Customization': 'android/customization.md'
@@ -25,9 +29,14 @@ pages:
   - 'Admin APIs': 'api/adminapi.md'
 
 markdown_extensions:
-  - codehilite(css_class=code)
   - admonition
-extra_css: [extra.css]
+  - codehilite(guess_lang=false)
+  - footnotes
+  - meta
+  - toc(permalink=true)
+
+extra_css:
+    - css/extra.css
 
 extra:
   logo: 'images/logo.png'
@@ -37,3 +46,6 @@ extra:
   font:
     text: 'Open Sans'
     code: 'Monaco'
+  social:
+    - type: 'github'
+      link: 'https://github.com/Hacknocraft/'

@@ -9,7 +9,7 @@
         <meta name="description" content="A turn-key solution to enable messagina and make your app social.">
       
       
-        <link rel="canonical" href="http://www.appfriends.me/ios/dependencies/">
+        <link rel="canonical" href="http://www.appfriends.me/ios/error/">
       
       
         <meta name="author" content="Hao Wang">
@@ -21,7 +21,7 @@
     
     
       
-        <title>External Dependencies - AppFriends Documentation</title>
+        <title>Errors - AppFriends Documentation</title>
       
     
     
@@ -87,7 +87,7 @@
                 </span>
               
             
-            External Dependencies
+            Errors
           
         </span>
       </div>
@@ -263,6 +263,18 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../dependencies/" title="External Dependencies" class="md-nav__link">
+      External Dependencies
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -273,22 +285,10 @@
       
     
     
-    <a href="./" title="External Dependencies" class="md-nav__link md-nav__link--active">
-      External Dependencies
-    </a>
-    
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../error/" title="Errors" class="md-nav__link">
+    <a href="./" title="Errors" class="md-nav__link md-nav__link--active">
       Errors
     </a>
+    
   </li>
 
         
@@ -419,18 +419,8 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
   
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#dependencies-list" title="Dependencies List" class="md-nav__link">
-    Dependencies List
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -443,101 +433,66 @@
                
               
                 
-                  <h1>External Dependencies</h1>
-                
-                <h2 id="dependencies-list">Dependencies List<a class="headerlink" href="#dependencies-list" title="Permanent link">&para;</a></h2>
-<p>AppFriends SDKs have several external dependencies with open source libraries. We are committed to always update our SDK to be compatible the latest version of the dependencies</p>
+                <h1 id="errors">Errors<a class="headerlink" href="#errors" title="Permanent link">&para;</a></h1>
+<p>AppFriends errors are managed with <code>AFError</code> class and API.</p>
 <table>
 <thead>
 <tr>
-<th>Dependencies</th>
-<th>License Type</th>
-<th>AppFriendsCore</th>
-<th>AppFriendsUI</th>
-<th>Version (swift3.0)</th>
-<th>Version (swift3.1)</th>
+<th>Error Code</th>
+<th>Type</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Alamofire</td>
-<td>MIT</td>
-<td>✔</td>
-<td>✔</td>
-<td>~&gt; 4.0.1</td>
-<td>~&gt; 4.0.1</td>
+<td>90000</td>
+<td>.unknownError</td>
+<td>An unknown error has occurred</td>
 </tr>
 <tr>
-<td>JWT</td>
-<td>MIT</td>
-<td>✔</td>
-<td>✔</td>
-<td>~&gt; 2.1.0</td>
-<td>~&gt; 2.1.0</td>
+<td>90001</td>
+<td>.invalidParams</td>
+<td>Invalid parameters supplied</td>
 </tr>
 <tr>
-<td>CoreStore</td>
-<td>MIT</td>
-<td>✔</td>
-<td>✔</td>
-<td>~&gt; 2.1.3</td>
-<td>~&gt; 2.1.3</td>
+<td>90002</td>
+<td>.sdkNotInitialized</td>
+<td>SDK is not initialized properly</td>
 </tr>
 <tr>
-<td>Cloudinary</td>
-<td>MIT</td>
-<td>✔</td>
-<td>✔</td>
-<td>~&gt; 1.0.15</td>
-<td>~&gt; 1.0.15</td>
+<td>90003</td>
+<td>.userNotLoggedIn</td>
+<td>Need to login first</td>
 </tr>
 <tr>
-<td>Socket.IO-Client-Swift</td>
-<td>MIT</td>
-<td>✔</td>
-<td>✔</td>
-<td>~&gt; 8.1.1</td>
-<td>~&gt; 8.1.1</td>
+<td>20005</td>
+<td>.dialogNotFound</td>
+<td>Dialog is not found</td>
 </tr>
 <tr>
-<td>SlackTextViewController</td>
-<td>MIT</td>
-<td>✘</td>
-<td>✔</td>
-<td>~&gt; 1.9.5</td>
-<td>~&gt; 1.9.5</td>
+<td>90007</td>
+<td>.userAlreadyLoggedIn</td>
+<td>Trying to login while there's already an user logged in</td>
 </tr>
 <tr>
-<td>CLTokenInputView</td>
-<td>MIT</td>
-<td>✘</td>
-<td>✔</td>
-<td>~&gt; 2.3.0</td>
-<td>~&gt; 2.3.0</td>
+<td>90009</td>
+<td>.logoutWhenNotLoggedIn</td>
+<td>Trying to logout while there isn't any user logged in</td>
 </tr>
 <tr>
-<td>SESlideTableViewCell</td>
-<td>MIT</td>
-<td>✘</td>
-<td>✔</td>
-<td>~&gt; 0.7.1</td>
-<td>~&gt; 0.7.1</td>
+<td>90500</td>
+<td>.serverError</td>
+<td>Server error</td>
 </tr>
 <tr>
-<td>AFDateHelper</td>
-<td>MIT</td>
-<td>✘</td>
-<td>✔</td>
-<td>~&gt; 3.5.3</td>
-<td>~&gt; 3.5.3</td>
+<td>30001</td>
+<td>.userNotFound</td>
+<td>User not found</td>
 </tr>
 <tr>
-<td>AlamofireImage</td>
-<td>MIT</td>
-<td>✘</td>
-<td>✔</td>
-<td>~&gt; 3.1.0</td>
-<td>~&gt; 3.1.0</td>
+<td>91000</td>
+<td>.requestIsTooFrequent</td>
+<td>Request is too frequent</td>
 </tr>
 </tbody>
 </table>
@@ -554,7 +509,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../ui_components/" title="Customization" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../dependencies/" title="External Dependencies" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -563,19 +518,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Customization
+                External Dependencies
               </span>
             </div>
           </a>
         
         
-          <a href="../error/" title="Errors" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../android/quick_start/" title="Quick Start" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Errors
+                Quick Start
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
