@@ -2,22 +2,22 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Welcome to AppFriends\n\n\nThe AppFriends plugin integrates public chat channels, private messaging, and social graphs into any app to increase user interaction and engagement. AppFriends supports multiple platforms.\n\n\nThere are ton of features that we support:\n\n\n\nopen channel, group and one on one chats\n\n\nsocial features such as following and making friends\n\n\nprivacy features such as blocking/reporting an user\n\n\ndialog conversation settings such as muting, changing dialog name\n\n\ntyping indicator\n\n\nmessage receipts\n\n\nvideo and image messages\n\n\n...\n\n\n\n\nIf you are interested in our product or have idea on how we can improve it, please send email to \nsupport@hacknocraft.com\n and we will get back to you very quickly.\n\n\nMobile\n\n\nAppFriends has native SDKs that make integration to iOS and Android much easier.\n\n\niOS\n\n\nThe iOS SDK can be integrated into existing xcode iOS projects. There are two SDK frameworks for you to use. If you don't want to use our provided UI, you can integrate the \nAppFriendsCore\n framework, which has no UI components but helps you communicate with AppFriends platform. There's also the \nAppFriendsUI\n framework, which contains a lot of convenient UI components for you to quickly implement the social component in your app. For details, please read \niOS SDK guide\n.\n\n\nAndroid\n\n\nThe Android SDK can be integrated into existing Android projects. For details,\nplease read \nAndroid SDK guide\n.\n\n\nServer API\n\n\nAppFriends has comprehensive REST API's for you to use. There are two types of APIs: \nApplication API\n and \nAdmin API\n.\n\n\nAdmin Portal\n\n\nYou can control the widget by log into the \nadmin portal\n with your AppFriends account.", 
+            "text": "Welcome to AppFriends\n\n\nThe AppFriends plugin integrates public chat channels, private messaging, and social graphs into any app to increase user interaction and engagement. AppFriends supports multiple platforms.\n\n\nAppFriends supports a number of features:\n\n\n\nopen channel, group and one on one chats\n\n\nsocial features such as following and making friends\n\n\nprivacy features such as blocking/reporting an user\n\n\ndialog conversation settings such as muting, changing dialog name\n\n\ntyping indicator\n\n\nmessage receipts\n\n\nvideo and image messages\n\n\n...\n\n\n\n\nIf you are interested in our product or have ideas on how we can improve it, please send emails to \nsupport@hacknocraft.com\n; we would love to hear from you.\n\n\nMobile\n\n\nAppFriends has native SDKs that make integration for iOS and Android much easier.\n\n\niOS\n\n\nThe iOS SDK can be integrated into existing Xcode iOS projects. There are two SDK frameworks for you to use. If you don't want to use our provided UI, you can integrate the \nAppFriendsCore\n framework, which has no UI components but helps you communicate with the AppFriends platform. There is also the \nAppFriendsUI\n framework, which contains a lot of convenient UI components for you to quickly implement chat in your app. For details, please read the \niOS SDK guide\n.\n\n\nAndroid\n\n\nThe Android SDK can be integrated into existing Android projects. For details,\nplease read \nAndroid SDK guide\n.\n\n\nServer API\n\n\nAppFriends has comprehensive REST APIs for you to use. There are two types of APIs: \nApplication API\n and \nAdmin API\n.\n\n\nAdmin Portal\n\n\nYou can control the widget by logging into the \nadmin portal\n with your AppFriends account.", 
             "title": "Welcome"
         }, 
         {
             "location": "/#welcome-to-appfriends", 
-            "text": "The AppFriends plugin integrates public chat channels, private messaging, and social graphs into any app to increase user interaction and engagement. AppFriends supports multiple platforms.  There are ton of features that we support:  open channel, group and one on one chats  social features such as following and making friends  privacy features such as blocking/reporting an user  dialog conversation settings such as muting, changing dialog name  typing indicator  message receipts  video and image messages  ...   If you are interested in our product or have idea on how we can improve it, please send email to  support@hacknocraft.com  and we will get back to you very quickly.", 
+            "text": "The AppFriends plugin integrates public chat channels, private messaging, and social graphs into any app to increase user interaction and engagement. AppFriends supports multiple platforms.  AppFriends supports a number of features:  open channel, group and one on one chats  social features such as following and making friends  privacy features such as blocking/reporting an user  dialog conversation settings such as muting, changing dialog name  typing indicator  message receipts  video and image messages  ...   If you are interested in our product or have ideas on how we can improve it, please send emails to  support@hacknocraft.com ; we would love to hear from you.", 
             "title": "Welcome to AppFriends"
         }, 
         {
             "location": "/#mobile", 
-            "text": "AppFriends has native SDKs that make integration to iOS and Android much easier.", 
+            "text": "AppFriends has native SDKs that make integration for iOS and Android much easier.", 
             "title": "Mobile"
         }, 
         {
             "location": "/#ios", 
-            "text": "The iOS SDK can be integrated into existing xcode iOS projects. There are two SDK frameworks for you to use. If you don't want to use our provided UI, you can integrate the  AppFriendsCore  framework, which has no UI components but helps you communicate with AppFriends platform. There's also the  AppFriendsUI  framework, which contains a lot of convenient UI components for you to quickly implement the social component in your app. For details, please read  iOS SDK guide .", 
+            "text": "The iOS SDK can be integrated into existing Xcode iOS projects. There are two SDK frameworks for you to use. If you don't want to use our provided UI, you can integrate the  AppFriendsCore  framework, which has no UI components but helps you communicate with the AppFriends platform. There is also the  AppFriendsUI  framework, which contains a lot of convenient UI components for you to quickly implement chat in your app. For details, please read the  iOS SDK guide .", 
             "title": "iOS"
         }, 
         {
@@ -27,12 +27,12 @@
         }, 
         {
             "location": "/#server-api", 
-            "text": "AppFriends has comprehensive REST API's for you to use. There are two types of APIs:  Application API  and  Admin API .", 
+            "text": "AppFriends has comprehensive REST APIs for you to use. There are two types of APIs:  Application API  and  Admin API .", 
             "title": "Server API"
         }, 
         {
             "location": "/#admin-portal", 
-            "text": "You can control the widget by log into the  admin portal  with your AppFriends account.", 
+            "text": "You can control the widget by logging into the  admin portal  with your AppFriends account.", 
             "title": "Admin Portal"
         }, 
         {
