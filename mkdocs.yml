@@ -17,7 +17,7 @@ pages:
   - 'Dialogs and Messaging': 'ios/dialogs.md'
   - 'Push Notification': 'ios/push_notification.md'
   - 'Events': 'ios/events.md'
-  - 'Customization': 'ios/ui_components.md'
+  - 'UI Components & Customization': 'ios/ui_components.md'
   - 'External Dependencies': 'ios/dependencies.md'
   - 'Errors': 'ios/error.md'
 - Android:

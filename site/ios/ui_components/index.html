@@ -21,7 +21,7 @@
     
     
       
-        <title>Customization - AppFriends Documentation</title>
+        <title>UI Components & Customization - AppFriends Documentation</title>
       
     
     
@@ -87,7 +87,7 @@
                 </span>
               
             
-            Customization
+            UI Components & Customization
           
         </span>
       </div>
@@ -262,11 +262,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        Customization
+        UI Components & Customization
       </label>
     
-    <a href="./" title="Customization" class="md-nav__link md-nav__link--active">
-      Customization
+    <a href="./" title="UI Components & Customization" class="md-nav__link md-nav__link--active">
+      UI Components & Customization
     </a>
     
       
@@ -296,6 +296,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#album" title="Album" class="md-nav__link">
+    Album
+  </a>
   
 </li>
       
@@ -483,6 +490,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#album" title="Album" class="md-nav__link">
+    Album
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -534,6 +548,18 @@
 <td>ChatSupportedMessageDataTypes</td>
 <td>.all</td>
 <td>The types of messages you want to support in your chat. This value will apply to all chat. You can also change the types of messages you want to support for each dialog when you initialize the chat view</td>
+</tr>
+<tr>
+<td>gifContentRating</td>
+<td>AFGifContentRating</td>
+<td>.parentalGuide13</td>
+<td>change this value to control the gif</td>
+</tr>
+<tr>
+<td>showDialogAlbum</td>
+<td>Boolean</td>
+<td>true</td>
+<td>change to false if you don't want to show the dialog album</td>
 </tr>
 </tbody>
 </table>
@@ -606,6 +632,93 @@
 <td>UIFont</td>
 <td>UIFont.systemFont(ofSize: 15)</td>
 <td>chat system date label</td>
+</tr>
+<tr>
+<td>locationTitleFont</td>
+<td>UIFont</td>
+<td>UIFont.boldSystemFont(ofSize: 16)</td>
+<td>location message title font</td>
+</tr>
+<tr>
+<td>locationSubtitleFont</td>
+<td>UIFont</td>
+<td>UIFont.systemFont(ofSize: 15)</td>
+<td>location message description label font</td>
+</tr>
+<tr>
+<td>emptyTableLabelFont</td>
+<td>UIFont</td>
+<td>UIFont.systemFont(ofSize: 15)</td>
+<td>the font for the label to use when the table is empty</td>
+</tr>
+<tr>
+<td>albumSectionTitleFont</td>
+<td>UIFont</td>
+<td>UIFont.systemFont(ofSize: 15)</td>
+<td>album date title label font</td>
+</tr>
+</tbody>
+</table>
+<h2 id="album">Album<a class="headerlink" href="#album" title="Permanent link">&para;</a></h2>
+<p>Album is a feature including UI components which group all the images and videos sent inside a dialog in chronological order.
+To display the album UI, simply use the HCAlbumViewController:</p>
+<div class="codehilite"><pre><span></span><span class="kd">let</span> <span class="nv">albumVC</span> <span class="p">=</span> <span class="n">HCAlbumViewController</span><span class="p">(</span><span class="n">dialogID</span><span class="p">:</span> <span class="p">[</span><span class="n">dialog</span> <span class="n">id</span><span class="p">]])</span>
+<span class="kc">self</span><span class="p">.</span><span class="n">navigationController</span><span class="p">?.</span><span class="n">pushViewController</span><span class="p">(</span><span class="n">albumVC</span><span class="p">,</span> <span class="n">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+</pre></div>
+
+
+<p>There are some UI configuration you can do on the <code>HCAlbumViewController</code>:</p>
+<table>
+<thead>
+<tr>
+<th>HCColorPalette</th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Variable Name</strong></td>
+<td><strong>Type</strong></td>
+<td><strong>Default Value</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr>
+<td>albumBackgroundColor</td>
+<td>UIColor</td>
+<td>#252326 alpha:0.5</td>
+<td>album view background color</td>
+</tr>
+<tr>
+<td>albumSectionBackgroundColor</td>
+<td>UIColor</td>
+<td>#252326</td>
+<td>album section background color</td>
+</tr>
+<tr>
+<td>albumNavigationBarIconColor</td>
+<td>UIColor</td>
+<td>#ffffff alpha:0.9</td>
+<td>album navigationbar icon color</td>
+</tr>
+<tr>
+<td>albumNavigationBarTitleColor</td>
+<td>UIColor</td>
+<td>white</td>
+<td>album navigationbar title color</td>
+</tr>
+<tr>
+<td>albumNavigationBackgroundColor</td>
+<td>UIColor</td>
+<td>#252326</td>
+<td>album navigation background color</td>
+</tr>
+<tr>
+<td>albumSectionTitleColor</td>
+<td>UIColor</td>
+<td>white</td>
+<td>album section view background color</td>
 </tr>
 </tbody>
 </table>

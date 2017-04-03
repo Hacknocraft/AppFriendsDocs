@@ -32,7 +32,16 @@ The easiest way to use open channel is by using `HCChannelChatViewController`.
 let channelChatVC = HCChannelChatViewController(dialogID: dialogID)
 ```
 
-## Group Dialog
+## Private Dialogs
+
+### Listing All Private Dialogs
+AppFriends SDK remembers all the private dialogs and you can get the list of private dialogs by:
+```swift
+AFDialog.getDialogs { (dialogs, error) in
+    // this returns an array of all the private dialogs of type AFDialog
+}
+```
+### Group Dialog
 A group dialog is a private dialog which is only visible to users in it. You can add more users or remove users from the dialog. To start a group dialog, you need to first create a group dialog:
 ```swift
 AFDialog.createGroupDialog(dialogID: id, members: users, customData: data, pushData: pushData, title: dialogTitle, completion: { (id, error) in
@@ -46,7 +55,7 @@ AFDialog.createGroupDialog(dialogID: id, members: users, customData: data, pushD
 ```
 Please note that you can provide an id to this dialog. It is optional, and if you do not provide an id, AppFriends will assign an unique id to this dialog. This is a good way for you to bind the dialog with certain feature or part of your app.
 
-## Individual Dialog
+### Individual Dialog
 An individual dialog is a private dialog between two users. You cannot add more users to this dialog. To start an individual dialog:
 ```swift
 AFDialog.createIndividualDialog(withUser: userID, completion: { (dialogID, error) in

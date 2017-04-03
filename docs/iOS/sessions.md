@@ -16,6 +16,13 @@ AFSession.login(username: username, userID: userID, completion: { (token, error)
 })
 ```
 
+You can check if a user has logged in to AppFriends or not by using:
+```swift
+if AFSession.isLoggedIn() {
+  // user has logged in to AppFriends
+}
+```
+
 ## Logout
 When an user logs out from your app, you should also log him out from AppFriends, so that new users can login later. To logout an user:
 ```swift

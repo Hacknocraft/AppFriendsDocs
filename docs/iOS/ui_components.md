@@ -12,6 +12,8 @@ HCSettingsConfiguation    |
 badgeDisplayIfMuted       |     Boolean      |     false     | turn this to true if you want to keep badge for a conversation after it's muted.
 showNewMessageLine        |     Boolean      |     true      | switch for new message line display on private dialogs
 supportedMessageTypes     | ChatSupportedMessageDataTypes |     .all    |  The types of messages you want to support in your chat. This value will apply to all chat. You can also change the types of messages you want to support for each dialog when you initialize the chat view
+gifContentRating          |     AFGifContentRating      |     .parentalGuide13      | change this value to control the gif
+showDialogAlbum           |     Boolean      |     true      | change to false if you don't want to show the dialog album
 
 HCFont                    |
 -------------             |   -------------  |   -------------     |   -------------
@@ -25,3 +27,26 @@ navigationBarTitleFont    |     UIFont       |  UIFont.systemFont(ofSize: 17)  |
 chatDialogListSectionTitleFont    |     UIFont       |  UIFont.systemFont(ofSize: 15)  | dialog list section title font
 chatTimestampFont         |     UIFont       |  UIFont.systemFont(ofSize: 13)  | chat message time label
 chatDateLabelFont         |     UIFont       |  UIFont.systemFont(ofSize: 15)  | chat system date label
+locationTitleFont         |     UIFont       |  UIFont.boldSystemFont(ofSize: 16)  | location message title font
+locationSubtitleFont      |     UIFont       |  UIFont.systemFont(ofSize: 15)  | location message description label font
+emptyTableLabelFont       |     UIFont       |  UIFont.systemFont(ofSize: 15)  | the font for the label to use when the table is empty
+albumSectionTitleFont     |     UIFont       |  UIFont.systemFont(ofSize: 15)  | album date title label font
+
+## Album
+Album is a feature including UI components which group all the images and videos sent inside a dialog in chronological order.
+To display the album UI, simply use the HCAlbumViewController:
+```swift
+let albumVC = HCAlbumViewController(dialogID: [dialog id]])
+self.navigationController?.pushViewController(albumVC, animated: true)
+```
+There are some UI configuration you can do on the `HCAlbumViewController`:
+
+HCColorPalette                 |
+-------------                  |   -------------   |   -------------     |   -------------
+**Variable Name**              |    **Type**       |  **Default Value**  |     **Description**
+albumBackgroundColor           |     UIColor       |  #252326 alpha:0.5  | album view background color
+albumSectionBackgroundColor    |     UIColor       |  #252326            | album section background color
+albumNavigationBarIconColor    |     UIColor       |  #ffffff alpha:0.9  | album navigationbar icon color
+albumNavigationBarTitleColor   |     UIColor       |  white              | album navigationbar title color
+albumNavigationBackgroundColor |     UIColor       |  #252326            | album navigation background color
+albumSectionTitleColor         |     UIColor       |  white              | album section view background color

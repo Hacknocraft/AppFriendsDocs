@@ -262,8 +262,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../ui_components/" title="Customization" class="md-nav__link">
-      Customization
+    <a href="../ui_components/" title="UI Components & Customization" class="md-nav__link">
+      UI Components & Customization
     </a>
   </li>
 
@@ -431,16 +431,36 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#private-dialogs" title="Private Dialogs" class="md-nav__link">
+    Private Dialogs
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#listing-all-private-dialogs" title="Listing All Private Dialogs" class="md-nav__link">
+    Listing All Private Dialogs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#group-dialog" title="Group Dialog" class="md-nav__link">
     Group Dialog
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#individual-dialog" title="Individual Dialog" class="md-nav__link">
     Individual Dialog
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -579,7 +599,16 @@ You can create open channel from your AppFriends web control panel. After a chan
 </pre></div>
 
 
-<h2 id="group-dialog">Group Dialog<a class="headerlink" href="#group-dialog" title="Permanent link">&para;</a></h2>
+<h2 id="private-dialogs">Private Dialogs<a class="headerlink" href="#private-dialogs" title="Permanent link">&para;</a></h2>
+<h3 id="listing-all-private-dialogs">Listing All Private Dialogs<a class="headerlink" href="#listing-all-private-dialogs" title="Permanent link">&para;</a></h3>
+<p>AppFriends SDK remembers all the private dialogs and you can get the list of private dialogs by:</p>
+<div class="codehilite"><pre><span></span><span class="n">AFDialog</span><span class="p">.</span><span class="n">getDialogs</span> <span class="p">{</span> <span class="p">(</span><span class="n">dialogs</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+    <span class="c1">// this returns an array of all the private dialogs of type AFDialog</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h3 id="group-dialog">Group Dialog<a class="headerlink" href="#group-dialog" title="Permanent link">&para;</a></h3>
 <p>A group dialog is a private dialog which is only visible to users in it. You can add more users or remove users from the dialog. To start a group dialog, you need to first create a group dialog:</p>
 <div class="codehilite"><pre><span></span><span class="n">AFDialog</span><span class="p">.</span><span class="n">createGroupDialog</span><span class="p">(</span><span class="n">dialogID</span><span class="p">:</span> <span class="n">id</span><span class="p">,</span> <span class="n">members</span><span class="p">:</span> <span class="n">users</span><span class="p">,</span> <span class="n">customData</span><span class="p">:</span> <span class="n">data</span><span class="p">,</span> <span class="n">pushData</span><span class="p">:</span> <span class="n">pushData</span><span class="p">,</span> <span class="n">title</span><span class="p">:</span> <span class="n">dialogTitle</span><span class="p">,</span> <span class="n">completion</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">id</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
       <span class="k">if</span> <span class="n">error</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
@@ -593,7 +622,7 @@ You can create open channel from your AppFriends web control panel. After a chan
 
 
 <p>Please note that you can provide an id to this dialog. It is optional, and if you do not provide an id, AppFriends will assign an unique id to this dialog. This is a good way for you to bind the dialog with certain feature or part of your app.</p>
-<h2 id="individual-dialog">Individual Dialog<a class="headerlink" href="#individual-dialog" title="Permanent link">&para;</a></h2>
+<h3 id="individual-dialog">Individual Dialog<a class="headerlink" href="#individual-dialog" title="Permanent link">&para;</a></h3>
 <p>An individual dialog is a private dialog between two users. You cannot add more users to this dialog. To start an individual dialog:</p>
 <div class="codehilite"><pre><span></span><span class="n">AFDialog</span><span class="p">.</span><span class="n">createIndividualDialog</span><span class="p">(</span><span class="n">withUser</span><span class="p">:</span> <span class="n">userID</span><span class="p">,</span> <span class="n">completion</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">dialogID</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
     <span class="k">if</span> <span class="n">error</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
