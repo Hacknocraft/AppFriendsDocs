@@ -212,7 +212,7 @@
         }, 
         {
             "location": "/ios/push_notification/", 
-            "text": "AppFriends can send push notification to the device when there's a new message for a user or if the user is mentioned in a channel chat. Push notification API is accessible via \nAFPushNotification\n class.\n\n\nRegister for Push\n\n\nTo enable push notification, you need to first register the push token with AppFriends:\n\n\nAFPushNotification\n.\nregisterDeviceForPushNotification\n(\npushToken\n:\n \npushToken\n,\n \ncompletion\n:\n \n{\n \n(\nerror\n)\n \nin\n\n\n})\n\n\n\n\n\n\nUnregister for Push\n\n\nTo unregister push notification:\n\n\nAFPushNotification\n.\nunregisterDeviceForPushNotification\n(\npushToken\n:\n \npushToken\n,\n \ncompletion\n:\n \n{\n \n(\nerror\n)\n \nin\n\n\n})\n\n\n\n\n\n\nProcess Push\n\n\nAfter you received remote push notification, please pass it to the SDK for better user experience\n\n\nAFPushNotification\n.\nprocessPushNotification\n(\nnotificationUserInfo\n:\n \nuserInfo\n)", 
+            "text": "AppFriends can send push notification to the device when there's a new message for a user or if the user is mentioned in a channel chat. Push notification API is accessible via \nAFPushNotification\n class.\n\n\nRegister for Push\n\n\nTo enable push notification, you need to first register the push token with AppFriends:\n\n\nAFPushNotification\n.\nregisterDeviceForPushNotification\n(\npushToken\n:\n \npushToken\n,\n \ncompletion\n:\n \n{\n \n(\nerror\n)\n \nin\n\n\n})\n\n\n\n\n\n\nUnregister for Push\n\n\nTo unregister push notification:\n\n\nAFPushNotification\n.\nunregisterDeviceForPushNotification\n(\npushToken\n:\n \npushToken\n,\n \ncompletion\n:\n \n{\n \n(\nerror\n)\n \nin\n\n\n})\n\n\n\n\n\n\nProcess Push\n\n\nAfter you received remote push notification, please pass it to the SDK for better user experience. Especially if you are entering the app using the push notification sent by AppFriends. We will only look at push notification coming from AppFriends.\n\n\n// true if AppFriends SDK used the push notification\n\n\nlet\n \npushHandled\n \n=\n \nAFPushNotification\n.\nprocessPushNotification\n(\nnotificationUserInfo\n:\n \nuserInfo\n)", 
             "title": "Push Notification"
         }, 
         {
@@ -227,7 +227,7 @@
         }, 
         {
             "location": "/ios/push_notification/#process-push", 
-            "text": "After you received remote push notification, please pass it to the SDK for better user experience  AFPushNotification . processPushNotification ( notificationUserInfo :   userInfo )", 
+            "text": "After you received remote push notification, please pass it to the SDK for better user experience. Especially if you are entering the app using the push notification sent by AppFriends. We will only look at push notification coming from AppFriends.  // true if AppFriends SDK used the push notification  let   pushHandled   =   AFPushNotification . processPushNotification ( notificationUserInfo :   userInfo )", 
             "title": "Process Push"
         }, 
         {

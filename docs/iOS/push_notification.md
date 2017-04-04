@@ -13,7 +13,8 @@ AFPushNotification.unregisterDeviceForPushNotification(pushToken: pushToken, com
 })
 ```
 ## Process Push
-After you received remote push notification, please pass it to the SDK for better user experience
+After you received remote push notification, please pass it to the SDK for better user experience. Especially if you are entering the app using the push notification sent by AppFriends. We will only look at push notification coming from AppFriends.
 ```swift
-AFPushNotification.processPushNotification(notificationUserInfo: userInfo)
+// true if AppFriends SDK used the push notification
+let pushHandled = AFPushNotification.processPushNotification(notificationUserInfo: userInfo)
 ```

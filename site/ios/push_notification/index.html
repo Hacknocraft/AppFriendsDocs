@@ -475,8 +475,9 @@
 
 
 <h2 id="process-push">Process Push<a class="headerlink" href="#process-push" title="Permanent link">&para;</a></h2>
-<p>After you received remote push notification, please pass it to the SDK for better user experience</p>
-<div class="codehilite"><pre><span></span><span class="n">AFPushNotification</span><span class="p">.</span><span class="n">processPushNotification</span><span class="p">(</span><span class="n">notificationUserInfo</span><span class="p">:</span> <span class="n">userInfo</span><span class="p">)</span>
+<p>After you received remote push notification, please pass it to the SDK for better user experience. Especially if you are entering the app using the push notification sent by AppFriends. We will only look at push notification coming from AppFriends.</p>
+<div class="codehilite"><pre><span></span><span class="c1">// true if AppFriends SDK used the push notification</span>
+<span class="kd">let</span> <span class="nv">pushHandled</span> <span class="p">=</span> <span class="n">AFPushNotification</span><span class="p">.</span><span class="n">processPushNotification</span><span class="p">(</span><span class="n">notificationUserInfo</span><span class="p">:</span> <span class="n">userInfo</span><span class="p">)</span>
 </pre></div>
               
               
