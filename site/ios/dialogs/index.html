@@ -649,6 +649,27 @@ You can create open channel from your AppFriends web control panel. After a chan
 </pre></div>
 
 
+<p>For each dialog, the unread message can be found by using <code>AFDialog: unreadMessageCount</code>.
+When unread message count has updated, there will be notification <code>AppFriendsUI.kTotalUnreadMessageCountChangedNotification</code>. You can monitor the notification and update the badge on the app icon. eg.</p>
+<div class="codehilite"><pre><span></span><span class="c1">// register for notification</span>
+<span class="n">NotificationCenter</span><span class="p">.</span><span class="k">default</span><span class="p">.</span><span class="n">addObserver</span><span class="p">(</span><span class="kc">self</span><span class="p">,</span>
+  <span class="n">selector</span><span class="p">:</span> <span class="k">#selector</span><span class="p">(</span><span class="n">updateBadge</span><span class="p">),</span>
+  <span class="n">name</span><span class="p">:</span> <span class="bp">NSNotification</span><span class="p">.</span><span class="n">Name</span><span class="p">(</span><span class="n">rawValue</span><span class="p">:</span> <span class="n">AppFriendsUI</span><span class="p">.</span><span class="n">kTotalUnreadMessageCountChangedNotification</span><span class="p">),</span>
+  <span class="n">object</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+
+<span class="c1">// handle notification</span>
+<span class="kd">func</span> <span class="nf">updateTabBarBadge</span><span class="p">(</span><span class="kc">_</span> <span class="n">notification</span><span class="p">:</span> <span class="n">Notification</span><span class="p">?)</span>
+<span class="p">{</span>
+  <span class="n">DispatchQueue</span><span class="p">.</span><span class="n">main</span><span class="p">.</span><span class="n">async</span><span class="p">(</span><span class="n">execute</span><span class="p">:</span> <span class="p">{</span>
+
+      <span class="k">if</span> <span class="kd">let</span> <span class="nv">count</span> <span class="p">=</span> <span class="n">notification</span><span class="p">?.</span><span class="n">object</span> <span class="k">as</span><span class="p">?</span> <span class="nb">Int</span> <span class="p">{</span>
+          <span class="bp">UIApplication</span><span class="p">.</span><span class="n">shared</span><span class="p">.</span><span class="n">applicationIconBadgeNumber</span> <span class="p">=</span> <span class="bp">count</span>
+      <span class="p">}</span>
+  <span class="p">})</span>
+<span class="p">}</span>
+</pre></div>
+
+
 <h2 id="sending-messages">Sending Messages<a class="headerlink" href="#sending-messages" title="Permanent link">&para;</a></h2>
 <p>Sending text:</p>
 <div class="codehilite"><pre><span></span><span class="c1">// dialog is an AFDialog instance</span>
