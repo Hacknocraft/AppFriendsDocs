@@ -302,7 +302,7 @@
         }, 
         {
             "location": "/android/quick_start/", 
-            "text": "AppFriends Android SDK\n\n\nDemo App\n\n\nA simple demo app showing the integrated AppFriends SDK is available at: \nDemo\n.\n\n\nIntegration\n\n\nMaven / jCenter / Bintray\n\n\nTo integrate AppFriends Android SDK to your Android Studio project, add the\nfollowing to your application's \nbuild.gradle\n file:\n\n\nProject Level Gradle\n\n\nallprojects {\n    repositories {\n        jcenter()\n        maven { url \nhttps://jitpack.io\n }\n    }\n}\n\n\n\n\n\nApp Level Gradle\n\n\nrepositories {\n    maven {\n        url \nhttps://dl.bintray.com/appfriends/maven/\n\n    }\n}\n\ndependencies {\n    // AppFriends\n    compile \nme.appfriends.sdk:ui:3.0.5\n\n}\n\n\n\n\n\nIf your application uses a version of the Android support libraries that results in conflicts, you can force Gradle to build with your version with:\n\n\ncompile (\ncom.android.support:support-v4:23.4.0\n){\n  force = true;\n}\n\n\n\n\n\nInitialization\n\n\nAfter logging into your admin panel, and created your application, you can find your \nApp ID\n and \nApp Secret\n. Add them to your \nAndroidManifest.xml\n file under \napplication\n.\n\n\nmeta-data\n    android:name=\nme.appfriends.AppID\n\n    android:value=\n[APPFRIENDS_ID]\n /\n\n\n\nmeta-data\n    android:name=\nme.appfriends.AppSecret\n\n    android:value=\n[APPFRIENDS_SECRET]\n /\n\n\n\n\n\n\nAppFriends SDK and the corresponding UI Kit must be initialized prior to usage. In your custom \nApplication\n class, you have the option to customize the AppFriends SDK with \nAppFriendsConfiguration.Builder\n. You must call \nAppFriendsUIKit.init(this, configuration);\n to properly initialize the SDK:\n\n\npublic class MyApplication extends Application {\n    @Override\n    public void onCreate() {\n        super.onCreate();\n\n        AppFriendsConfiguration configuration =\n          new AppFriendsConfiguration.Builder()\n                                     .gravity(Gravity.RIGHT) // Which way the widget should open from\n                                     .build();\n\n        AppFriendsUIKit.init(this, configuration);\n    }\n}\n\n\n\n\n\nUser Authentication\n\n\nBefore your users can start enjoying AppFriends, they need to have an\nAppFriends account. Login the user by invoking:\n\n\nAppFriends.login(userID, username, avatarURL, userEmail);\n\n\n\n\n\nwhere the parameters as as follows:\n\n\n\n\n\n\n\n\nParameter\n\n\nType\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nuserID\n\n\nString\n\n\nthe user's userID in your own app.\n\n\n\n\n\n\nusername\n\n\nString\n\n\nthe username\n\n\n\n\n\n\navatarURL\n\n\nString\n\n\nthe full URL of the user's avatar\n\n\n\n\n\n\nuserEmail\n\n\nString\n\n\nuser's email address\n\n\n\n\n\n\n\n\nDisplay Widget Bubble\n\n\nTo add the default widget icon to your \nActivity\n or \nFragment\n, add the\nfollowing to your \nlayout xml\n:\n\n\nme.appfriends.android.widget.AppFriendsWidget\n    android:id=\n@+id/appfriends_icon\n\n    android:layout_width=\nwrap_content\n\n    android:layout_height=\nwrap_content\n\n    app:bragIcon=\n[Custom Brag Icon Drawable]\n\n    app:deeplink=\n[Deeplink]\n/\n\n\n\n\n\n\nYou may specify the \"brag\" icon (which allows users to share a screenshot) and the deeplink path of the current fragment/activity.\n\n\nThe AppFriends Android SDK should now be integrated and ready to go!\n\n\nStyling\n\n\nAppFriends Android UI Kit will soon support customizing the UI matching your app's style, stay tuned for an update.\n\n\nDeeplinks\n\n\nWhen a user shares screenshot from your app, a deeplink will be generated and shared with the screenshot. If the screenshot is taken from a place you have assign a path and parameters to, the information will also be included in the deeplink. When users clicks on the deeplink and install/open the app, we will trigger the callback with the path and parameters you provided.\n\n\nTo receive deeplink actions, you need to implement the \nOnAppFriendsNotificationListener\n interface register the listener with the UI Kit:\n\n\n  AppFriendsUIKit.addOnAppFriendsNotificationListener(new OnAppFriendsNotificationListener() {\n      @Override\n      public boolean onDeeplinkClicked(String deeplink) {\n          // Perform deeplink action\n          return true; // If handled, return true\n      }\n  });\n\n\n\n\n\nPublic Chat Channels\n\n\nBy default, we create a global public chat channel for all of your users to chat. You can create, edit and remove public chat channels. You can either do it from the AppFriends admin panel or via our \nAPI\n.\n\n\nOther dependencies\n\n\nhttps://github.com/splitwise/TokenAutoComplete", 
+            "text": "AppFriends Android SDK\n\n\nDemo App\n\n\nA simple demo app showing the integrated AppFriends SDK is available at: \nDemo\n.\n\n\nSDK documentation\n\n\n\n\nJavadoc\n\n\n\n\nIntegration\n\n\nGradle Integration\n\n\nTo integrate AppFriends Android SDK to your Android Studio project, add the\nfollowing to your application's \nbuild.gradle\n file:\n\n\nApp Level Gradle\n\n\nrepositories {\n    maven {\n        maven { url \nhttps://raw.githubusercontent.com/Hacknocraft/AppFriendsAndroidCore/master/\n }\n    }\n}\n\ndependencies {\n    // AppFriends\n    compile \nme.appfriends.sdk:ui:3.1.1\n\n}\n\n\n\n\n\nDependencies\n\n\nAppFriends UI SDK uses Android Support library version 25.2.0 and Play Services version 10.2.0\n\n\nAppFriends Core SDK uses OKHttp version 3.6.0\n\n\nIt is recommended that you use the same or more recent versions to maintain compatibility.\n\n\nHowever, if your application uses a version of of the libraries that result in conflicts and you would like to maintain your version:\n\n\ncompile (\ncom.android.support:support-v4:23.4.0\n) {\n  force = true;\n}\n\n\n\n\n\nInitialization\n\n\nAfter logging into your admin panel, and created your application, you can find your \nApp ID\n and \nApp Secret\n. Add them to your \nAndroidManifest.xml\n file under \napplication\n.\n\n\nmeta-data\n    android:name=\nme.appfriends.AppID\n\n    android:value=\n[APPFRIENDS_ID]\n /\n\n\n\nmeta-data\n    android:name=\nme.appfriends.AppSecret\n\n    android:value=\n[APPFRIENDS_SECRET]\n /\n\n\n\n\n\n\nAppFriends SDK must be initialized in your custom \nApplication\n class:\n\n\npublic class MyApplication extends Application {\n    @Override\n    public void onCreate() {\n        super.onCreate();\n\n        AppFriends instance = AppFriends.getInstance();\n        instance.init(getApplicationContext());\n    }\n}\n\n\n\n\n\nUser Authentication\n\n\nBefore your users can start enjoying AppFriends, they need to have an\nAppFriends account. Create or login the user by invoking:\n\n\nAppFriends.getInstance().login(userID, username);\n          .observeOn(AndroidSchedulers.mainThread())\n          .subscribe(new Subscriber\nBoolean\n() {\n              @Override\n              public void onCompleted() {\n              }\n\n              @Override\n              public void onError(Throwable e) {\n                  // Handle any errors\n              }\n\n              @Override\n              public void onNext(Boolean loggedIn) {\n                  // Handle login status\n              }\n          });\n\n\n\n\n\nAdditional APIs\n\n\n\n\nJavadoc", 
             "title": "Quick Start"
         }, 
         {
@@ -316,59 +316,44 @@
             "title": "Demo App"
         }, 
         {
+            "location": "/android/quick_start/#sdk-documentation", 
+            "text": "Javadoc", 
+            "title": "SDK documentation"
+        }, 
+        {
             "location": "/android/quick_start/#integration", 
             "text": "", 
             "title": "Integration"
         }, 
         {
-            "location": "/android/quick_start/#maven-jcenter-bintray", 
+            "location": "/android/quick_start/#gradle-integration", 
             "text": "To integrate AppFriends Android SDK to your Android Studio project, add the\nfollowing to your application's  build.gradle  file:", 
-            "title": "Maven / jCenter / Bintray"
-        }, 
-        {
-            "location": "/android/quick_start/#project-level-gradle", 
-            "text": "allprojects {\n    repositories {\n        jcenter()\n        maven { url  https://jitpack.io  }\n    }\n}", 
-            "title": "Project Level Gradle"
+            "title": "Gradle Integration"
         }, 
         {
             "location": "/android/quick_start/#app-level-gradle", 
-            "text": "repositories {\n    maven {\n        url  https://dl.bintray.com/appfriends/maven/ \n    }\n}\n\ndependencies {\n    // AppFriends\n    compile  me.appfriends.sdk:ui:3.0.5 \n}  If your application uses a version of the Android support libraries that results in conflicts, you can force Gradle to build with your version with:  compile ( com.android.support:support-v4:23.4.0 ){\n  force = true;\n}", 
+            "text": "repositories {\n    maven {\n        maven { url  https://raw.githubusercontent.com/Hacknocraft/AppFriendsAndroidCore/master/  }\n    }\n}\n\ndependencies {\n    // AppFriends\n    compile  me.appfriends.sdk:ui:3.1.1 \n}", 
             "title": "App Level Gradle"
         }, 
         {
+            "location": "/android/quick_start/#dependencies", 
+            "text": "AppFriends UI SDK uses Android Support library version 25.2.0 and Play Services version 10.2.0  AppFriends Core SDK uses OKHttp version 3.6.0  It is recommended that you use the same or more recent versions to maintain compatibility.  However, if your application uses a version of of the libraries that result in conflicts and you would like to maintain your version:  compile ( com.android.support:support-v4:23.4.0 ) {\n  force = true;\n}", 
+            "title": "Dependencies"
+        }, 
+        {
             "location": "/android/quick_start/#initialization", 
-            "text": "After logging into your admin panel, and created your application, you can find your  App ID  and  App Secret . Add them to your  AndroidManifest.xml  file under  application .  meta-data\n    android:name= me.appfriends.AppID \n    android:value= [APPFRIENDS_ID]  /  meta-data\n    android:name= me.appfriends.AppSecret \n    android:value= [APPFRIENDS_SECRET]  /   AppFriends SDK and the corresponding UI Kit must be initialized prior to usage. In your custom  Application  class, you have the option to customize the AppFriends SDK with  AppFriendsConfiguration.Builder . You must call  AppFriendsUIKit.init(this, configuration);  to properly initialize the SDK:  public class MyApplication extends Application {\n    @Override\n    public void onCreate() {\n        super.onCreate();\n\n        AppFriendsConfiguration configuration =\n          new AppFriendsConfiguration.Builder()\n                                     .gravity(Gravity.RIGHT) // Which way the widget should open from\n                                     .build();\n\n        AppFriendsUIKit.init(this, configuration);\n    }\n}", 
+            "text": "After logging into your admin panel, and created your application, you can find your  App ID  and  App Secret . Add them to your  AndroidManifest.xml  file under  application .  meta-data\n    android:name= me.appfriends.AppID \n    android:value= [APPFRIENDS_ID]  /  meta-data\n    android:name= me.appfriends.AppSecret \n    android:value= [APPFRIENDS_SECRET]  /   AppFriends SDK must be initialized in your custom  Application  class:  public class MyApplication extends Application {\n    @Override\n    public void onCreate() {\n        super.onCreate();\n\n        AppFriends instance = AppFriends.getInstance();\n        instance.init(getApplicationContext());\n    }\n}", 
             "title": "Initialization"
         }, 
         {
             "location": "/android/quick_start/#user-authentication", 
-            "text": "Before your users can start enjoying AppFriends, they need to have an\nAppFriends account. Login the user by invoking:  AppFriends.login(userID, username, avatarURL, userEmail);  where the parameters as as follows:     Parameter  Type  Description      userID  String  the user's userID in your own app.    username  String  the username    avatarURL  String  the full URL of the user's avatar    userEmail  String  user's email address", 
+            "text": "Before your users can start enjoying AppFriends, they need to have an\nAppFriends account. Create or login the user by invoking:  AppFriends.getInstance().login(userID, username);\n          .observeOn(AndroidSchedulers.mainThread())\n          .subscribe(new Subscriber Boolean () {\n              @Override\n              public void onCompleted() {\n              }\n\n              @Override\n              public void onError(Throwable e) {\n                  // Handle any errors\n              }\n\n              @Override\n              public void onNext(Boolean loggedIn) {\n                  // Handle login status\n              }\n          });", 
             "title": "User Authentication"
         }, 
         {
-            "location": "/android/quick_start/#display-widget-bubble", 
-            "text": "To add the default widget icon to your  Activity  or  Fragment , add the\nfollowing to your  layout xml :  me.appfriends.android.widget.AppFriendsWidget\n    android:id= @+id/appfriends_icon \n    android:layout_width= wrap_content \n    android:layout_height= wrap_content \n    app:bragIcon= [Custom Brag Icon Drawable] \n    app:deeplink= [Deeplink] /   You may specify the \"brag\" icon (which allows users to share a screenshot) and the deeplink path of the current fragment/activity.  The AppFriends Android SDK should now be integrated and ready to go!", 
-            "title": "Display Widget Bubble"
-        }, 
-        {
-            "location": "/android/quick_start/#styling", 
-            "text": "AppFriends Android UI Kit will soon support customizing the UI matching your app's style, stay tuned for an update.", 
-            "title": "Styling"
-        }, 
-        {
-            "location": "/android/quick_start/#deeplinks", 
-            "text": "When a user shares screenshot from your app, a deeplink will be generated and shared with the screenshot. If the screenshot is taken from a place you have assign a path and parameters to, the information will also be included in the deeplink. When users clicks on the deeplink and install/open the app, we will trigger the callback with the path and parameters you provided.  To receive deeplink actions, you need to implement the  OnAppFriendsNotificationListener  interface register the listener with the UI Kit:    AppFriendsUIKit.addOnAppFriendsNotificationListener(new OnAppFriendsNotificationListener() {\n      @Override\n      public boolean onDeeplinkClicked(String deeplink) {\n          // Perform deeplink action\n          return true; // If handled, return true\n      }\n  });", 
-            "title": "Deeplinks"
-        }, 
-        {
-            "location": "/android/quick_start/#public-chat-channels", 
-            "text": "By default, we create a global public chat channel for all of your users to chat. You can create, edit and remove public chat channels. You can either do it from the AppFriends admin panel or via our  API .", 
-            "title": "Public Chat Channels"
-        }, 
-        {
-            "location": "/android/quick_start/#other-dependencies", 
-            "text": "https://github.com/splitwise/TokenAutoComplete", 
-            "title": "Other dependencies"
+            "location": "/android/quick_start/#additional-apis", 
+            "text": "Javadoc", 
+            "title": "Additional APIs"
         }, 
         {
             "location": "/android/customization/", 

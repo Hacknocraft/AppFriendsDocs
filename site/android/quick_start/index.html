@@ -17,7 +17,7 @@
       
         <link rel="shortcut icon" href="../../images/logo.png">
       
-      <meta name="generator" content="mkdocs-0.16.1, mkdocs-material-1.2.0">
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.5.4">
     
     
       
@@ -28,9 +28,9 @@
       <script src="../../assets/javascripts/modernizr-56ade86843.js"></script>
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application-e17eeafcbc.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application-b1a1975878.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/application-892b79c5c5.palette.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/application-f78e5cb881.palette.css">
       
     
     
@@ -64,12 +64,12 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <header class="md-header">
+      <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
         
-          <a href="../.." title="AppFriends Documentation" class="md-logo md-header-nav__button">
+          <a href="http://www.appfriends.me" title="AppFriends Documentation" class="md-logo md-header-nav__button">
             <img src="../../images/logo.png" width="24" height="24">
           </a>
         
@@ -99,12 +99,18 @@
   <div class="md-search__overlay"></div>
   <div class="md-search__inner">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
       <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result"></div>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
       </div>
     </div>
   </div>
@@ -347,6 +353,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#sdk-documentation" title="SDK documentation" class="md-nav__link">
+    SDK documentation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#integration" title="Integration" class="md-nav__link">
     Integration
   </a>
@@ -355,23 +368,23 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#maven-jcenter-bintray" title="Maven / jCenter / Bintray" class="md-nav__link">
-    Maven / jCenter / Bintray
+  <a href="#gradle-integration" title="Gradle Integration" class="md-nav__link">
+    Gradle Integration
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#project-level-gradle" title="Project Level Gradle" class="md-nav__link">
-    Project Level Gradle
+  <a href="#app-level-gradle" title="App Level Gradle" class="md-nav__link">
+    App Level Gradle
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#app-level-gradle" title="App Level Gradle" class="md-nav__link">
-    App Level Gradle
+  <a href="#dependencies" title="Dependencies" class="md-nav__link">
+    Dependencies
   </a>
   
 </li>
@@ -401,39 +414,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#display-widget-bubble" title="Display Widget Bubble" class="md-nav__link">
-    Display Widget Bubble
+  <a href="#additional-apis" title="Additional APIs" class="md-nav__link">
+    Additional APIs
   </a>
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#styling" title="Styling" class="md-nav__link">
-    Styling
-  </a>
-  
-</li>
       
-        <li class="md-nav__item">
-  <a href="#deeplinks" title="Deeplinks" class="md-nav__link">
-    Deeplinks
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#public-chat-channels" title="Public Chat Channels" class="md-nav__link">
-    Public Chat Channels
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#other-dependencies" title="Other dependencies" class="md-nav__link">
-    Other dependencies
-  </a>
-  
-</li>
       
     </ul>
   
@@ -547,6 +534,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#sdk-documentation" title="SDK documentation" class="md-nav__link">
+    SDK documentation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#integration" title="Integration" class="md-nav__link">
     Integration
   </a>
@@ -555,23 +549,23 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#maven-jcenter-bintray" title="Maven / jCenter / Bintray" class="md-nav__link">
-    Maven / jCenter / Bintray
+  <a href="#gradle-integration" title="Gradle Integration" class="md-nav__link">
+    Gradle Integration
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#project-level-gradle" title="Project Level Gradle" class="md-nav__link">
-    Project Level Gradle
+  <a href="#app-level-gradle" title="App Level Gradle" class="md-nav__link">
+    App Level Gradle
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#app-level-gradle" title="App Level Gradle" class="md-nav__link">
-    App Level Gradle
+  <a href="#dependencies" title="Dependencies" class="md-nav__link">
+    Dependencies
   </a>
   
 </li>
@@ -601,39 +595,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#display-widget-bubble" title="Display Widget Bubble" class="md-nav__link">
-    Display Widget Bubble
+  <a href="#additional-apis" title="Additional APIs" class="md-nav__link">
+    Additional APIs
   </a>
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#styling" title="Styling" class="md-nav__link">
-    Styling
-  </a>
-  
-</li>
       
-        <li class="md-nav__item">
-  <a href="#deeplinks" title="Deeplinks" class="md-nav__link">
-    Deeplinks
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#public-chat-channels" title="Public Chat Channels" class="md-nav__link">
-    Public Chat Channels
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#other-dependencies" title="Other dependencies" class="md-nav__link">
-    Other dependencies
-  </a>
-  
-</li>
       
     </ul>
   
@@ -645,42 +613,40 @@
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
-               
               
+                
                 
                 <h1 id="appfriends-android-sdk">AppFriends Android SDK<a class="headerlink" href="#appfriends-android-sdk" title="Permanent link">&para;</a></h1>
 <h2 id="demo-app">Demo App<a class="headerlink" href="#demo-app" title="Permanent link">&para;</a></h2>
 <p>A simple demo app showing the integrated AppFriends SDK is available at: <a href="https://github.com/AppFriendsMe/AndroidDemo">Demo</a>.</p>
+<h2 id="sdk-documentation">SDK documentation<a class="headerlink" href="#sdk-documentation" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://hacknocraft.github.io/AppFriendsAndroidCore/">Javadoc</a></li>
+</ul>
 <h2 id="integration">Integration<a class="headerlink" href="#integration" title="Permanent link">&para;</a></h2>
-<h3 id="maven-jcenter-bintray">Maven / jCenter / Bintray<a class="headerlink" href="#maven-jcenter-bintray" title="Permanent link">&para;</a></h3>
+<h3 id="gradle-integration">Gradle Integration<a class="headerlink" href="#gradle-integration" title="Permanent link">&para;</a></h3>
 <p>To integrate AppFriends Android SDK to your Android Studio project, add the
 following to your application's <code>build.gradle</code> file:</p>
-<h4 id="project-level-gradle">Project Level Gradle<a class="headerlink" href="#project-level-gradle" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span>allprojects {
-    repositories {
-        jcenter()
-        maven { url &#39;https://jitpack.io&#39; }
-    }
-}
-</pre></div>
-
-
 <h4 id="app-level-gradle">App Level Gradle<a class="headerlink" href="#app-level-gradle" title="Permanent link">&para;</a></h4>
 <div class="codehilite"><pre><span></span>repositories {
     maven {
-        url &#39;https://dl.bintray.com/appfriends/maven/&#39;
+        maven { url &#39;https://raw.githubusercontent.com/Hacknocraft/AppFriendsAndroidCore/master/&#39; }
     }
 }
 
 dependencies {
     // AppFriends
-    compile &#39;me.appfriends.sdk:ui:3.0.5&#39;
+    compile &#39;me.appfriends.sdk:ui:3.1.1&#39;
 }
 </pre></div>
 
 
-<p>If your application uses a version of the Android support libraries that results in conflicts, you can force Gradle to build with your version with:</p>
-<div class="codehilite"><pre><span></span>compile (&#39;com.android.support:support-v4:23.4.0&#39;){
+<h4 id="dependencies">Dependencies<a class="headerlink" href="#dependencies" title="Permanent link">&para;</a></h4>
+<p>AppFriends UI SDK uses Android Support library version 25.2.0 and Play Services version 10.2.0</p>
+<p>AppFriends Core SDK uses OKHttp version 3.6.0</p>
+<p>It is recommended that you use the same or more recent versions to maintain compatibility.</p>
+<p>However, if your application uses a version of of the libraries that result in conflicts and you would like to maintain your version:</p>
+<div class="codehilite"><pre><span></span>compile (&#39;com.android.support:support-v4:23.4.0&#39;) {
   force = true;
 }
 </pre></div>
@@ -698,18 +664,14 @@ dependencies {
 </pre></div>
 
 
-<p>AppFriends SDK and the corresponding UI Kit must be initialized prior to usage. In your custom <code>Application</code> class, you have the option to customize the AppFriends SDK with <code>AppFriendsConfiguration.Builder</code>. You must call <code>AppFriendsUIKit.init(this, configuration);</code> to properly initialize the SDK:</p>
+<p>AppFriends SDK must be initialized in your custom <code>Application</code> class:</p>
 <div class="codehilite"><pre><span></span>public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
 
-        AppFriendsConfiguration configuration =
-          new AppFriendsConfiguration.Builder()
-                                     .gravity(Gravity.RIGHT) // Which way the widget should open from
-                                     .build();
-
-        AppFriendsUIKit.init(this, configuration);
+        AppFriends instance = AppFriends.getInstance();
+        instance.init(getApplicationContext());
     }
 }
 </pre></div>
@@ -717,78 +679,37 @@ dependencies {
 
 <h2 id="user-authentication">User Authentication<a class="headerlink" href="#user-authentication" title="Permanent link">&para;</a></h2>
 <p>Before your users can start enjoying AppFriends, they need to have an
-AppFriends account. Login the user by invoking:</p>
-<div class="codehilite"><pre><span></span>AppFriends.login(userID, username, avatarURL, userEmail);
+AppFriends account. Create or login the user by invoking:</p>
+<div class="codehilite"><pre><span></span>AppFriends.getInstance().login(userID, username);
+          .observeOn(AndroidSchedulers.mainThread())
+          .subscribe(new Subscriber&lt;Boolean&gt;() {
+              @Override
+              public void onCompleted() {
+              }
+
+              @Override
+              public void onError(Throwable e) {
+                  // Handle any errors
+              }
+
+              @Override
+              public void onNext(Boolean loggedIn) {
+                  // Handle login status
+              }
+          });
 </pre></div>
 
 
-<p>where the parameters as as follows:</p>
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>userID</td>
-<td>String</td>
-<td>the user's userID in your own app.</td>
-</tr>
-<tr>
-<td>username</td>
-<td>String</td>
-<td>the username</td>
-</tr>
-<tr>
-<td>avatarURL</td>
-<td>String</td>
-<td>the full URL of the user's avatar</td>
-</tr>
-<tr>
-<td>userEmail</td>
-<td>String</td>
-<td>user's email address</td>
-</tr>
-</tbody>
-</table>
-<h2 id="display-widget-bubble">Display Widget Bubble<a class="headerlink" href="#display-widget-bubble" title="Permanent link">&para;</a></h2>
-<p>To add the default widget icon to your <code>Activity</code> or <code>Fragment</code>, add the
-following to your <code>layout xml</code>:</p>
-<div class="codehilite"><pre><span></span>&lt;me.appfriends.android.widget.AppFriendsWidget
-    android:id=&quot;@+id/appfriends_icon&quot;
-    android:layout_width=&quot;wrap_content&quot;
-    android:layout_height=&quot;wrap_content&quot;
-    app:bragIcon=&quot;[Custom Brag Icon Drawable]&quot;
-    app:deeplink=&quot;[Deeplink]&quot;/&gt;
-</pre></div>
-
-
-<p>You may specify the "brag" icon (which allows users to share a screenshot) and the deeplink path of the current fragment/activity.</p>
-<p>The AppFriends Android SDK should now be integrated and ready to go!</p>
-<h2 id="styling">Styling<a class="headerlink" href="#styling" title="Permanent link">&para;</a></h2>
-<p>AppFriends Android UI Kit will soon support customizing the UI matching your app's style, stay tuned for an update.</p>
-<h2 id="deeplinks">Deeplinks<a class="headerlink" href="#deeplinks" title="Permanent link">&para;</a></h2>
-<p>When a user shares screenshot from your app, a deeplink will be generated and shared with the screenshot. If the screenshot is taken from a place you have assign a path and parameters to, the information will also be included in the deeplink. When users clicks on the deeplink and install/open the app, we will trigger the callback with the path and parameters you provided.</p>
-<p>To receive deeplink actions, you need to implement the <code>OnAppFriendsNotificationListener</code> interface register the listener with the UI Kit:</p>
-<div class="codehilite"><pre><span></span>  AppFriendsUIKit.addOnAppFriendsNotificationListener(new OnAppFriendsNotificationListener() {
-      @Override
-      public boolean onDeeplinkClicked(String deeplink) {
-          // Perform deeplink action
-          return true; // If handled, return true
-      }
-  });
-</pre></div>
-
-
-<h2 id="public-chat-channels">Public Chat Channels<a class="headerlink" href="#public-chat-channels" title="Permanent link">&para;</a></h2>
-<p>By default, we create a global public chat channel for all of your users to chat. You can create, edit and remove public chat channels. You can either do it from the AppFriends admin panel or via our <a href="../server/index.html">API</a>.</p>
-<h2 id="other-dependencies">Other dependencies<a class="headerlink" href="#other-dependencies" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span>https://github.com/splitwise/TokenAutoComplete
-</pre></div>
+<h2 id="additional-apis">Additional APIs<a class="headerlink" href="#additional-apis" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://hacknocraft.github.io/AppFriendsAndroidCore/">Javadoc</a></li>
+</ul>
+                
+                  
+                
               
+              
+                
               
             </article>
           </div>
@@ -864,7 +785,7 @@ following to your <code>layout xml</code>:</p>
       
     </div>
     
-      <script src="../../assets/javascripts/application-30ac6a1727.js"></script>
+      <script src="../../assets/javascripts/application-0b7df094bf.js"></script>
       <script>app.initialize({url:{base:"../.."}})</script>
       
     
