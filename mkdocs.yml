@@ -7,7 +7,7 @@ site_favicon: images/logo.png
 # Copyright
 copyright: 'Copyright (c) 2016 Hacknocraft'
 
-theme_dir: 'mkdocs-material/material'
+theme: 'material'
 pages:
 - Welcome: index.md
 - iOS:
