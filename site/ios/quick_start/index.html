@@ -17,7 +17,7 @@
       
         <link rel="shortcut icon" href="../../images/logo.png">
       
-      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.5.4">
+      <meta name="generator" content="mkdocs-0.16.1, mkdocs-material-1.2.0">
     
     
       
@@ -28,9 +28,9 @@
       <script src="../../assets/javascripts/modernizr-56ade86843.js"></script>
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application-b1a1975878.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application-e17eeafcbc.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/application-f78e5cb881.palette.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/application-892b79c5c5.palette.css">
       
     
     
@@ -64,12 +64,12 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <header class="md-header" data-md-component="header">
+      <header class="md-header">
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
         
-          <a href="http://www.appfriends.me" title="AppFriends Documentation" class="md-logo md-header-nav__button">
+          <a href="../.." title="AppFriends Documentation" class="md-logo md-header-nav__button">
             <img src="../../images/logo.png" width="24" height="24">
           </a>
         
@@ -99,18 +99,12 @@
   <div class="md-search__overlay"></div>
   <div class="md-search__inner">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" required placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
       <label class="md-icon md-search__icon" for="search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result">
-          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
-            Type to start searching
-          </div>
-          <ol class="md-search-result__list"></ol>
-        </div>
+        <div class="md-search-result" data-md-component="result"></div>
       </div>
     </div>
   </div>
@@ -235,6 +229,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#using-carthage" title="Using Carthage" class="md-nav__link">
+    Using Carthage
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -353,8 +354,6 @@
   </a>
   
 </li>
-      
-      
       
     </ul>
   
@@ -614,6 +613,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#using-carthage" title="Using Carthage" class="md-nav__link">
+    Using Carthage
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -733,8 +739,6 @@
   
 </li>
       
-      
-      
     </ul>
   
 </nav>
@@ -745,8 +749,8 @@
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
+               
               
-                
                 
                 <h1 id="quick-start">Quick Start<a class="headerlink" href="#quick-start" title="Permanent link">&para;</a></h1>
 <h2 id="1-create-an-appfriends-application">1. Create an AppFriends Application<a class="headerlink" href="#1-create-an-appfriends-application" title="Permanent link">&para;</a></h2>
@@ -754,8 +758,8 @@
 <h2 id="2-integrate-appfriends-sdk">2. Integrate AppFriends SDK<a class="headerlink" href="#2-integrate-appfriends-sdk" title="Permanent link">&para;</a></h2>
 <h3 id="using-cocoapods">Using Cocoapods<a class="headerlink" href="#using-cocoapods" title="Permanent link">&para;</a></h3>
 <p>To integrate AppFriends iOS SDK to your Xcode iOS project, add this line in your <code>Podfile</code></p>
-<div class="codehilite"><pre><span></span><span class="n">pod</span> <span class="s1">&#39;AppFriendsUI&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 2.0.1&#39;</span>
-<span class="n">pod</span> <span class="s1">&#39;AppFriendsCore&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 2.0.1&#39;</span>
+<div class="codehilite"><pre><span></span><span class="n">pod</span> <span class="s1">&#39;AppFriendsUI&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 2.0.3&#39;</span>
+<span class="n">pod</span> <span class="s1">&#39;AppFriendsCore&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 2.0.2&#39;</span>
 </pre></div>
 
 
@@ -768,12 +772,25 @@
 
 
 <p>You might need to run <code>pod repo update</code> after this step before calling <code>pod install</code></p>
-<p>To see an sample app of how to use AppFriendsUI, please checkout our repo:</p>
-<p><a href="https://github.com/Hacknocraft/AppFriendsiOSSample">
-<button class="btn btn-info">Github iOS Sample App</button><br />
-</a></p>
-<p>If you don't want any of the UI components we provide, you can directly interact with the platform API, and we have a core framework to use for that purpose:</p>
-<div class="codehilite"><pre><span></span><span class="n">pod</span> <span class="s1">&#39;AppFriendsCore&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 2.0.1&#39;</span>
+<h3 id="using-carthage">Using Carthage<a class="headerlink" href="#using-carthage" title="Permanent link">&para;</a></h3>
+<p>To integrate using Carthage
+``` ruby'
+github "Hacknocraft/AppFriendsCarthage" ~&gt; 2.0.3</p>
+<div class="codehilite"><pre><span></span>Add frameworks:
+&lt;img src=&quot;http://res.cloudinary.com/hacknocraft-appfriends/image/upload/v1493834981/carthage_frameworks_jrcwr8.jpg&quot;&gt;
+
+Copy frameworks:
+&lt;img src=&quot;http://res.cloudinary.com/hacknocraft-appfriends/image/upload/v1493835434/Screen_Shot_2017-05-03_at_2.16.53_PM_iebqwd.png&quot;&gt;
+
+To see an sample app of how to use AppFriendsUI, please checkout our repo:
+
+&lt;a href=&quot;https://github.com/Hacknocraft/AppFriendsiOSSample&quot;&gt;
+&lt;button class=&quot;btn btn-info&quot;&gt;Github iOS Sample App&lt;/button&gt;  
+&lt;/a&gt;
+
+If you don&#39;t want any of the UI components we provide, you can directly interact with the platform API, and we have a core framework to use for that purpose:
+``` ruby
+pod &#39;AppFriendsCore&#39;, &#39;~&gt; 2.0.2&#39;
 </pre></div>
 
 
@@ -833,12 +850,7 @@
 
 <h2 id="5-login">5. Login<a class="headerlink" href="#5-login" title="Permanent link">&para;</a></h2>
 <p>After initialization, you want to login your user to AppFriends, so he can start chatting with other users. Please see <a href="../sessions/">sessions</a> for detail</p>
-                
-                  
-                
               
-              
-                
               
             </article>
           </div>
@@ -914,7 +926,7 @@
       
     </div>
     
-      <script src="../../assets/javascripts/application-0b7df094bf.js"></script>
+      <script src="../../assets/javascripts/application-30ac6a1727.js"></script>
       <script>app.initialize({url:{base:"../.."}})</script>
       
     

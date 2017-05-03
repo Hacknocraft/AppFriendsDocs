@@ -31,6 +31,31 @@ locationTitleFont         |     UIFont       |  UIFont.boldSystemFont(ofSize: 16
 locationSubtitleFont      |     UIFont       |  UIFont.systemFont(ofSize: 15)  | location message description label font
 emptyTableLabelFont       |     UIFont       |  UIFont.systemFont(ofSize: 15)  | the font for the label to use when the table is empty
 albumSectionTitleFont     |     UIFont       |  UIFont.systemFont(ofSize: 15)  | album date title label font
+chatDialogListSectionTitleFont    |     UIFont       |  UIFont.systemFont(ofSize: 15)  | dialog list section title font
+chatDialogListCellTitleFont       |     UIFont       |  UIFont.systemFont(ofSize: 16)  | dialog list cell title (user name or dialog title) font
+chatDialogListCellTimestampFont   |     UIFont       |  UIFont.systemFont(ofSize: 13)  | dialog list cell timestamp label font
+chatDialogListCellLastMessageFont |     UIFont       |  UIFont.systemFont(ofSize: 13)  | dialog list cell last message label font
+
+HCColorPalette                 |
+-------------                  |   -------------   |   -------------     |   -------------
+**Variable Name**              |    **Type**       |  **Default Value**  |     **Description**
+chatBackgroundColor            |     UIColor       |  #0d0e28            | the background color of the chat views
+chatOutMessageContentTextColor |     UIColor       |  white              | outgoing message content text color
+chatInMessageContentTextColor  |     UIColor       |  black              | received message content text color
+chatUserNamelTextColor         |     UIColor       |  white              | the user name label color in the chat view
+chatTimeLabelTextColor         |     UIColor       |  lightgray          | time stamp label color in chat view
+chatDateLabelTextColor         |     UIColor       |  lightgray          | date label color in chat view
+chatSystemMessageColor         |     UIColor       |  lightgray          | system message text color in chat view
+chatSendButtonColor            |     UIColor       |  #0d0e28            | chat send button color
+chatOutMessageBubbleColor      |     UIColor       |  #5e62bc            | outgoing message bubble color
+chatInMessageBubbleColor       |     UIColor       |  #93d4f0            | received message bubble color
+chatMessageFailedButtonColor   |     UIColor       |  #f2433d            | color of the button to resend message when message failed to send
+chatVideoPlayIconColor         |     UIColor       |  black              | video play icon color
+chatLeaveConversationColor     |     UIColor       |  #f2433d            | color of the button to leave a dialog
+chatNewMessageDividerColor     |     UIColor       |  #f5a59a            | color of the new message divider
+chatInMessageLinkColor         |     UIColor       |  #437fb4            | color of the links in received messages
+chatOutMessageLinkColor        |     UIColor       |  #f2433d            | color of the links in outgoing messages
+chatAttachmentIconColor        |     UIColor       |  #f2433d            | color of the button to add attachment
 
 ## Album
 Album is a feature including UI components which group all the images and videos sent inside a dialog in chronological order.
