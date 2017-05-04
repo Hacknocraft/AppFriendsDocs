@@ -21,9 +21,11 @@ You might need to run `pod repo update` after this step before calling `pod inst
 
 ### Using Carthage
 To integrate using Carthage
+
 ``` ruby'
 github "Hacknocraft/AppFriendsCarthage" ~> 2.0.4
 ```
+
 Add frameworks:
 ![Frameworks](http://res.cloudinary.com/hacknocraft-appfriends/image/upload/v1493874920/Screen_Shot_2017-05-04_at_1.14.11_AM_kywady.png)
 
