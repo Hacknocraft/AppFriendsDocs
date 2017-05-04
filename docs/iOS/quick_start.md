@@ -6,7 +6,7 @@ Before start using AppFriends, you need to create an application on the [dashboa
 ### Using Cocoapods
 To integrate AppFriends iOS SDK to your Xcode iOS project, add this line in your `Podfile`
 ``` ruby
-pod 'AppFriendsUI', '~> 2.0.3'
+pod 'AppFriendsUI', '~> 2.0.4'
 pod 'AppFriendsCore', '~> 2.0.2'
 ```
 Also, add `use_frameworks!` to the top of file. eg.
@@ -22,13 +22,13 @@ You might need to run `pod repo update` after this step before calling `pod inst
 ### Using Carthage
 To integrate using Carthage
 ``` ruby'
-github "Hacknocraft/AppFriendsCarthage" ~> 2.0.3
+github "Hacknocraft/AppFriendsCarthage" ~> 2.0.4
 ```
 Add frameworks:
-<img src="http://res.cloudinary.com/hacknocraft-appfriends/image/upload/v1493834981/carthage_frameworks_jrcwr8.jpg">
+<img src="http://res.cloudinary.com/hacknocraft-appfriends/image/upload/v1493874920/Screen_Shot_2017-05-04_at_1.14.11_AM_kywady.png">
 
 Copy frameworks:
-<img src="http://res.cloudinary.com/hacknocraft-appfriends/image/upload/v1493835434/Screen_Shot_2017-05-03_at_2.16.53_PM_iebqwd.png">
+<img src="http://res.cloudinary.com/hacknocraft-appfriends/image/upload/v1493874915/Screen_Shot_2017-05-04_at_1.13.57_AM_gsfifq.png">
 
 To see an sample app of how to use AppFriendsUI, please checkout our repo:
 

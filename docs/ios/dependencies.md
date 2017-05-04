@@ -9,5 +9,5 @@ CoreStore                 | MIT   | ✔                 | ✔               | ~>
 Cloudinary                | MIT   | ✔                 | ✔               | ~> 1.0.15           | ~> 1.0.15    
 Socket.IO-Client-Swift    | MIT   | ✔                 | ✔               | ~> 8.1.1            | ~> 8.1.1      
 SlackTextViewController   | MIT   | ✘                 | ✔               | ~> 1.9.5            | ~> 1.9.5     
-AFDateHelper              | MIT   | ✘                 | ✔               | ~> 3.5.3            | ~> 3.5.3     
-AlamofireImage            | MIT   | ✘                 | ✔               | ~> 3.1.0            | ~> 3.1.0     
+AlamofireImage            | MIT   | ✘                 | ✔               | ~> 3.1.0            | ~> 3.1.0   
+JGProgressHUD             | MIT   | ✘                 | ✔               | ~> 1.4              | ~> 1.4  
