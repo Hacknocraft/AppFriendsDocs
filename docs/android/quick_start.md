@@ -1,7 +1,7 @@
 # AppFriends Android SDK
 
 ## Demo App
-A simple demo app showing the integrated AppFriends SDK is available at: [Demo](https://github.com/AppFriendsMe/AndroidDemo).
+A simple demo app showing the integrated AppFriends SDK is available at: [Demo](https://github.com/hacknocraft/AppfriendsAndroidSample).
 
 ## SDK documentation
 - [Javadoc](https://hacknocraft.github.io/AppFriendsAndroidCore/)
