@@ -82,23 +82,16 @@ The total number of unread messages by the current user can be found by:
 let totalUnreadCount = AFDialog.totalUnreadMessageCount()
 ```
 For each dialog, the unread message can be found by using `AFDialog: unreadMessageCount`.
-When unread message count has updated, there will be notification `AppFriendsUI.kTotalUnreadMessageCountChangedNotification`. You can monitor the notification and update the badge on the app icon. eg.
+When unread message count has updated, you can subscribe to `AFEvent`. You can monitor the notification and update the badge on the app icon. eg.
 ```swift
-// register for notification
-NotificationCenter.default.addObserver(self,
-  selector: #selector(updateBadge),
-  name: NSNotification.Name(rawValue: AppFriendsUI.kTotalUnreadMessageCountChangedNotification),
-  object: nil)
+// subscribe to AFEvent
+AFEvent.subscribe(subscriber: self)
 
 // handle notification
-func updateTabBarBadge(_ notification: Notification?)
-{
-  DispatchQueue.main.async(execute: {
-
-      if let count = notification?.object as? Int {
-          UIApplication.shared.applicationIconBadgeNumber = count
-      }
-  })
+func emitEvent(_ event: AFEvent) {
+    if event.name == .eventTotalUnreadCountChange {
+        // read badge number from AFDialog.totalUnreadMessageCount()
+    }
 }
 ```
 
