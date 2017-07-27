@@ -37,7 +37,7 @@
         }, 
         {
             "location": "/ios/quick_start/", 
-            "text": "Quick Start\n\n\n1. Create an AppFriends Application\n\n\nBefore start using AppFriends, you need to create an application on the \ndashboard\n Users in the same application can talk to each other and you only need one application for all the platforms you want to support.\n\n\n2. Integrate AppFriends SDK\n\n\nUsing Cocoapods\n\n\nTo integrate AppFriends iOS SDK to your Xcode iOS project, add this line in your \nPodfile\n\n\npod\n \nAppFriendsUI\n,\n \n~\n 2.0.4\n\n\npod\n \nAppFriendsCore\n,\n \n~\n 2.0.2\n\n\n\n\n\n\nAlso, add \nuse_frameworks!\n to the top of file. eg.\n\n\nsource\n \nhttps://github.com/CocoaPods/Specs.git\n\n\nsource\n \nhttps://github.com/Hacknocraft/hacknocraft-cocoapods-spec.git\n\n\nuse_frameworks!\n\n\n...\n\n\n\n\n\n\nYou might need to run \npod repo update\n after this step before calling \npod install\n\n\nUsing Carthage\n\n\nTo integrate using Carthage\n\n\ngithub \"Hacknocraft/AppFriendsCarthage\" ~\n 2.0.4\n\n\nAdd frameworks:\n\n\n\n\nCopy frameworks:\n\n\n\n\nTo see an sample app of how to use AppFriendsUI, please checkout our repo:\n\n\n\n\nGithub iOS Sample App\n\n\n\n\nIf you don't want any of the UI components we provide, you can directly interact with the platform API, and we have a core framework to use for that purpose:\n\n\npod\n \nAppFriendsCore\n,\n \n~\n 2.0.2\n\n\n\n\n\n\n3. Import Header\n\n\nThe next step is import the headers.\n\n\nExample\n\n\nSwift\n\n\n#\nimport\n \nAppFriendsCore\n\n\n#\nimport\n \nAppFriendsUI\n\n\n\n\n\n\nObjective-C\n\n\n#import \nAppFriendsCore/AppFriendsCore-Swift.h\n\n\n#import \nAppFriendsUI/AppFriendsUI-Swift.h\n\n\n\n\n\n\n4. Initialization\n\n\nNow, we can use the AppFriends key and secret to initialize the SDK. Key and secret can be found in your AppFriends dashboard. If you are using the \nAppFriendsUI\n SDK, you can initialize by:\n\n\nAppFriendsUI Initialization\n\n\nSwift\n\n\nAppFriendsUI\n.\nsharedInstance\n.\ninitialize\n(\n[appfriends key]\n,\n \nsecret\n:\n \n[appfriends secret]\n)\n \n{\n \n(\nsuccess\n,\n \nerror\n)\n \nin\n\n        \nif\n \n!\nsuccess\n \n{\n\n                \nNSLog\n(\nAppFriends initialization error:\n\\(\nerror\n?.\nlocalizedDescription\n)\n)\n\n        \n}\nelse\n \n{\n\n             \n// initialization is successful\n\n        \n}\n\n\n}\n\n\n\n\n\n\nObjective-C\n\n\nimport\n \nAppFriendsCore\n\n\nimport\n \nAppFriendsUI\n\n\n\n\n\n\nAppFriendsCore Initialization\n\n\nSkip\n this step if you are using the \nAppFriendsUI\n SDK. If you are using \nAppFriendsCore\n SDK, you can initialize by:\n\n\nSwift\n\n\nHCSDKCore\n.\nsharedInstance\n.\ninitialize\n(\nkey\n:\n \n[appfriends key]\n,\n \nsecret\n:\n \n[appfriends secret]\n)\n \n{\n \n(\nsuccess\n,\n \nerror\n)\n \nin\n\n        \nif\n \n!\nsuccess\n \n{\n\n                \nNSLog\n(\nAppFriends initialization error:\n\\(\nerror\n?.\nlocalizedDescription\n)\n)\n\n        \n}\nelse\n \n{\n\n             \n// initialization is successful\n\n        \n}\n\n\n}\n\n\n\n\n\n\nObjective-C\n\n\nimport\n \nAppFriendsCore\n\n\nimport\n \nAppFriendsUI\n\n\n\n\n\n\n5. Login\n\n\nAfter initialization, you want to login your user to AppFriends, so he can start chatting with other users. Please see \nsessions\n for detail", 
+            "text": "Quick Start\n\n\n1. Create an AppFriends Application\n\n\nBefore start using AppFriends, you need to create an application on the \ndashboard\n Users in the same application can talk to each other and you only need one application for all the platforms you want to support.\n\n\n2. Integrate AppFriends SDK\n\n\nUsing Cocoapods\n\n\nTo integrate AppFriends iOS SDK to your Xcode iOS project, add this line in your \nPodfile\n\n\npod\n \nAppFriendsUI\n,\n \n~\n 2.1.1\n\n\npod\n \nAppFriendsCore\n,\n \n~\n 2.0.5\n\n\n\n\n\n\nAlso, add \nuse_frameworks!\n to the top of file. eg.\n\n\nsource\n \nhttps://github.com/CocoaPods/Specs.git\n\n\nsource\n \nhttps://github.com/Hacknocraft/hacknocraft-cocoapods-spec.git\n\n\nuse_frameworks!\n\n\n...\n\n\n\n\n\n\nYou might need to run \npod repo update\n after this step before calling \npod install\n\n\nUsing Carthage\n\n\nTo integrate using Carthage\n\n\ngithub \"Hacknocraft/AppFriendsCarthage\" ~\n 2.0.4\n\n\nAdd frameworks:\n\n\n\n\nCopy frameworks:\n\n\n\n\nTo see an sample app of how to use AppFriendsUI, please checkout our repo:\n\n\n\n\nGithub iOS Sample App\n\n\n\n\nIf you don't want any of the UI components we provide, you can directly interact with the platform API, and we have a core framework to use for that purpose:\n\n\npod\n \nAppFriendsCore\n,\n \n~\n 2.0.5\n\n\n\n\n\n\n3. Import Header\n\n\nThe next step is import the headers.\n\n\nExample\n\n\nSwift\n\n\n#\nimport\n \nAppFriendsCore\n\n\n#\nimport\n \nAppFriendsUI\n\n\n\n\n\n\nObjective-C\n\n\nimport\n \nAppFriendsCore\n\n\nimport\n \nAppFriendsUI\n\n\n\n\n\n\n4. Initialization\n\n\nNow, we can use the AppFriends key and secret to initialize the SDK. Key and secret can be found in your AppFriends dashboard. If you are using the \nAppFriendsUI\n SDK, you can initialize by:\n\n\nAppFriends Initialization\n\n\nSwift\n\n\nAppFriendsUI\n.\nsharedInstance\n.\ninitialize\n(\n[appfriends key]\n,\n \nsecret\n:\n \n[appfriends secret]\n)\n \n{\n \n(\nsuccess\n,\n \nerror\n)\n \nin\n\n        \nif\n \n!\nsuccess\n \n{\n\n                \nNSLog\n(\nAppFriends initialization error:\n\\(\nerror\n?.\nlocalizedDescription\n)\n)\n\n        \n}\nelse\n \n{\n\n             \n// initialization is successful\n\n        \n}\n\n\n}\n\n\n\n\n\n\n5. Login\n\n\nAfter initialization, you want to login your user to AppFriends, so he can start chatting with other users. Please see \nsessions\n for detail", 
             "title": "Quick Start"
         }, 
         {
@@ -57,7 +57,7 @@
         }, 
         {
             "location": "/ios/quick_start/#using-cocoapods", 
-            "text": "To integrate AppFriends iOS SDK to your Xcode iOS project, add this line in your  Podfile  pod   AppFriendsUI ,   ~  2.0.4  pod   AppFriendsCore ,   ~  2.0.2   Also, add  use_frameworks!  to the top of file. eg.  source   https://github.com/CocoaPods/Specs.git  source   https://github.com/Hacknocraft/hacknocraft-cocoapods-spec.git  use_frameworks!  ...   You might need to run  pod repo update  after this step before calling  pod install", 
+            "text": "To integrate AppFriends iOS SDK to your Xcode iOS project, add this line in your  Podfile  pod   AppFriendsUI ,   ~  2.1.1  pod   AppFriendsCore ,   ~  2.0.5   Also, add  use_frameworks!  to the top of file. eg.  source   https://github.com/CocoaPods/Specs.git  source   https://github.com/Hacknocraft/hacknocraft-cocoapods-spec.git  use_frameworks!  ...   You might need to run  pod repo update  after this step before calling  pod install", 
             "title": "Using Cocoapods"
         }, 
         {
@@ -72,7 +72,7 @@
         }, 
         {
             "location": "/ios/quick_start/#copy-frameworks", 
-            "text": "To see an sample app of how to use AppFriendsUI, please checkout our repo:   Github iOS Sample App   If you don't want any of the UI components we provide, you can directly interact with the platform API, and we have a core framework to use for that purpose:  pod   AppFriendsCore ,   ~  2.0.2", 
+            "text": "To see an sample app of how to use AppFriendsUI, please checkout our repo:   Github iOS Sample App   If you don't want any of the UI components we provide, you can directly interact with the platform API, and we have a core framework to use for that purpose:  pod   AppFriendsCore ,   ~  2.0.5", 
             "title": "Copy frameworks:"
         }, 
         {
@@ -92,7 +92,7 @@
         }, 
         {
             "location": "/ios/quick_start/#objective-c", 
-            "text": "#import  AppFriendsCore/AppFriendsCore-Swift.h  #import  AppFriendsUI/AppFriendsUI-Swift.h", 
+            "text": "import   AppFriendsCore  import   AppFriendsUI", 
             "title": "Objective-C"
         }, 
         {
@@ -101,34 +101,14 @@
             "title": "4. Initialization"
         }, 
         {
-            "location": "/ios/quick_start/#appfriendsui-initialization", 
+            "location": "/ios/quick_start/#appfriends-initialization", 
             "text": "", 
-            "title": "AppFriendsUI Initialization"
+            "title": "AppFriends Initialization"
         }, 
         {
             "location": "/ios/quick_start/#swift_1", 
             "text": "AppFriendsUI . sharedInstance . initialize ( [appfriends key] ,   secret :   [appfriends secret] )   {   ( success ,   error )   in \n         if   ! success   { \n                 NSLog ( AppFriends initialization error: \\( error ?. localizedDescription ) ) \n         } else   { \n              // initialization is successful \n         }  }", 
             "title": "Swift"
-        }, 
-        {
-            "location": "/ios/quick_start/#objective-c_1", 
-            "text": "import   AppFriendsCore  import   AppFriendsUI", 
-            "title": "Objective-C"
-        }, 
-        {
-            "location": "/ios/quick_start/#appfriendscore-initialization", 
-            "text": "Skip  this step if you are using the  AppFriendsUI  SDK. If you are using  AppFriendsCore  SDK, you can initialize by:", 
-            "title": "AppFriendsCore Initialization"
-        }, 
-        {
-            "location": "/ios/quick_start/#swift_2", 
-            "text": "HCSDKCore . sharedInstance . initialize ( key :   [appfriends key] ,   secret :   [appfriends secret] )   {   ( success ,   error )   in \n         if   ! success   { \n                 NSLog ( AppFriends initialization error: \\( error ?. localizedDescription ) ) \n         } else   { \n              // initialization is successful \n         }  }", 
-            "title": "Swift"
-        }, 
-        {
-            "location": "/ios/quick_start/#objective-c_2", 
-            "text": "import   AppFriendsCore  import   AppFriendsUI", 
-            "title": "Objective-C"
         }, 
         {
             "location": "/ios/quick_start/#5-login", 

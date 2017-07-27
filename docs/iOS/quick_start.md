@@ -6,8 +6,8 @@ Before start using AppFriends, you need to create an application on the [dashboa
 ### Using Cocoapods
 To integrate AppFriends iOS SDK to your Xcode iOS project, add this line in your `Podfile`
 ``` ruby
-pod 'AppFriendsUI', '~> 2.0.4'
-pod 'AppFriendsCore', '~> 2.0.2'
+pod 'AppFriendsUI', '~> 2.1.1'
+pod 'AppFriendsCore', '~> 2.0.5'
 ```
 Also, add `use_frameworks!` to the top of file. eg.
 ``` ruby
@@ -38,7 +38,7 @@ To see an sample app of how to use AppFriendsUI, please checkout our repo:
 
 If you don't want any of the UI components we provide, you can directly interact with the platform API, and we have a core framework to use for that purpose:
 ``` ruby
-pod 'AppFriendsCore', '~> 2.0.2'
+pod 'AppFriendsCore', '~> 2.0.5'
 ```
 
 ## 3. Import Header
@@ -54,13 +54,13 @@ The next step is import the headers.
 
 #### Objective-C
 ```Objective-C
-#import <AppFriendsCore/AppFriendsCore-Swift.h>
-#import <AppFriendsUI/AppFriendsUI-Swift.h>
+import AppFriendsCore
+import AppFriendsUI
 ```
 ## 4. Initialization
 Now, we can use the AppFriends key and secret to initialize the SDK. Key and secret can be found in your AppFriends dashboard. If you are using the `AppFriendsUI` SDK, you can initialize by:
 
-### AppFriendsUI Initialization
+### AppFriends Initialization
 
 #### Swift
 ```swift
@@ -73,31 +73,5 @@ AppFriendsUI.sharedInstance.initialize("[appfriends key]", secret: "[appfriends 
 }
 ```
 
-#### Objective-C
-```Objective-C
-import AppFriendsCore
-import AppFriendsUI
-```
-
-### AppFriendsCore Initialization
-
-**Skip** this step if you are using the `AppFriendsUI` SDK. If you are using `AppFriendsCore` SDK, you can initialize by:
-
-#### Swift
-```swift
-HCSDKCore.sharedInstance.initialize(key: "[appfriends key]", secret: "[appfriends secret]") { (success, error) in
-		if !success {
-				NSLog("AppFriends initialization error:\(error?.localizedDescription)")
-		}else {
-			 // initialization is successful
-		}
-}
-```
-
-#### Objective-C
-```Objective-C
-import AppFriendsCore
-import AppFriendsUI
-```
 ## 5. Login
 After initialization, you want to login your user to AppFriends, so he can start chatting with other users. Please see [sessions](sessions.md) for detail
