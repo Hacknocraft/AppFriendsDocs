@@ -4,7 +4,7 @@
     
     <url>
      <loc>http://www.appfriends.me/</loc>
-     <lastmod>2017-07-27</lastmod>
+     <lastmod>2017-08-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,55 +13,61 @@
         
     <url>
      <loc>http://www.appfriends.me/ios/quick_start/</loc>
-     <lastmod>2017-07-27</lastmod>
+     <lastmod>2017-08-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.appfriends.me/ios/sessions/</loc>
-     <lastmod>2017-07-27</lastmod>
+     <lastmod>2017-08-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.appfriends.me/ios/users/</loc>
-     <lastmod>2017-07-27</lastmod>
+     <lastmod>2017-08-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.appfriends.me/ios/dialogs/</loc>
-     <lastmod>2017-07-27</lastmod>
+     <lastmod>2017-08-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.appfriends.me/ios/push_notification/</loc>
-     <lastmod>2017-07-27</lastmod>
+     <lastmod>2017-08-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.appfriends.me/ios/events/</loc>
-     <lastmod>2017-07-27</lastmod>
+     <lastmod>2017-08-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://www.appfriends.me/ios/encryption/</loc>
+     <lastmod>2017-08-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.appfriends.me/ios/ui_components/</loc>
-     <lastmod>2017-07-27</lastmod>
+     <lastmod>2017-08-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.appfriends.me/ios/dependencies/</loc>
-     <lastmod>2017-07-27</lastmod>
+     <lastmod>2017-08-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.appfriends.me/ios/error/</loc>
-     <lastmod>2017-07-27</lastmod>
+     <lastmod>2017-08-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -71,13 +77,13 @@
         
     <url>
      <loc>http://www.appfriends.me/android/quick_start/</loc>
-     <lastmod>2017-07-27</lastmod>
+     <lastmod>2017-08-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.appfriends.me/android/customization/</loc>
-     <lastmod>2017-07-27</lastmod>
+     <lastmod>2017-08-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -87,19 +93,19 @@
         
     <url>
      <loc>http://www.appfriends.me/api/request_auth/</loc>
-     <lastmod>2017-07-27</lastmod>
+     <lastmod>2017-08-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.appfriends.me/api/applicationapi/</loc>
-     <lastmod>2017-07-27</lastmod>
+     <lastmod>2017-08-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.appfriends.me/api/adminapi/</loc>
-     <lastmod>2017-07-27</lastmod>
+     <lastmod>2017-08-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
         

@@ -9,7 +9,7 @@
         <meta name="description" content="A turn-key solution to enable messagina and make your app social.">
       
       
-        <link rel="canonical" href="http://www.appfriends.me/ios/sessions/">
+        <link rel="canonical" href="http://www.appfriends.me/ios/encryption/">
       
       
         <meta name="author" content="Hao Wang">
@@ -21,7 +21,7 @@
     
     
       
-        <title>Sessions - AppFriends Documentation</title>
+        <title>Encryption - AppFriends Documentation</title>
       
     
     
@@ -87,7 +87,7 @@
                 </span>
               
             
-            Sessions
+            Encryption
           
         </span>
       </div>
@@ -191,20 +191,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-      
-    
-    
-    <a href="./" title="Sessions" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../sessions/" title="Sessions" class="md-nav__link">
       Sessions
     </a>
-    
   </li>
 
         
@@ -260,11 +251,20 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../encryption/" title="Encryption" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+    <a href="./" title="Encryption" class="md-nav__link md-nav__link--active">
       Encryption
     </a>
+    
   </li>
 
         
@@ -431,25 +431,8 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
   
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#login" title="Login" class="md-nav__link">
-    Login
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#logout" title="Logout" class="md-nav__link">
-    Logout
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -462,43 +445,10 @@
                
               
                 
-                  <h1>Sessions</h1>
-                
-                <p>Session API can be access using <code>AFSession</code> class.</p>
-<h2 id="login">Login<a class="headerlink" href="#login" title="Permanent link">&para;</a></h2>
-<p>Before an user can start using AppFriends features, he must first login to AppFriends. In your app, you could login your user to AppFriends as soon as the user is logged into your app. If the user has not previously registered with AppFriends, the user will be created on AppFriends.
-To login an user, we require</p>
-<ol>
-<li><strong>an unique username</strong></li>
-<li><strong>an unique user ID</strong>, this should be the same user id that you use in your app to identify the user</li>
-</ol>
-<div class="codehilite"><pre><span></span><span class="n">AFSession</span><span class="p">.</span><span class="n">login</span><span class="p">(</span><span class="n">username</span><span class="p">:</span> <span class="n">username</span><span class="p">,</span> <span class="n">userID</span><span class="p">:</span> <span class="n">userID</span><span class="p">,</span> <span class="n">completion</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">token</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
-  <span class="k">if</span> <span class="kd">let</span> <span class="nv">err</span> <span class="p">=</span> <span class="n">error</span> <span class="p">{</span>
-    <span class="c1">// login failed</span>
-  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-    <span class="c1">// login is successful</span>
-  <span class="p">}</span>
-<span class="p">})</span>
-</pre></div>
-
-
-<p>You can check if a user has logged in to AppFriends or not by using:</p>
-<div class="codehilite"><pre><span></span><span class="k">if</span> <span class="n">AFSession</span><span class="p">.</span><span class="n">isLoggedIn</span><span class="p">()</span> <span class="p">{</span>
-  <span class="c1">// user has logged in to AppFriends</span>
-<span class="p">}</span>
-</pre></div>
-
-
-<h2 id="logout">Logout<a class="headerlink" href="#logout" title="Permanent link">&para;</a></h2>
-<p>When an user logs out from your app, you should also log him out from AppFriends, so that new users can login later. To logout an user:</p>
-<div class="codehilite"><pre><span></span><span class="n">AFSession</span><span class="p">.</span><span class="n">logout</span> <span class="p">{</span> <span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="k">in</span>
-  <span class="k">if</span> <span class="kd">let</span> <span class="nv">err</span> <span class="p">=</span> <span class="n">error</span> <span class="p">{</span>
-    <span class="c1">// logout failed</span>
-  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-    <span class="c1">// logout is successful</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
+                <h1 id="encryption">Encryption<a class="headerlink" href="#encryption" title="Permanent link">&para;</a></h1>
+<p>For some apps, having end-to-end encryption and user privacy is one of the top priorities. An encryption extension can be added to AppFriends by providing a implementation of <code>AFEncryptionDelegate</code>.
+An example of <code>AFEncryptionDelegate</code> implementation can be found <a href="https://gist.github.com/laeroah/aeabc9bfd7e96a8ab5e6b20d979e575d">here</a>.</p>
+<p>In the sample implementation we used <a href="../virgilsecurity.com">Virgil</a>, which is encryption service provider. Please refer to <a href="https://medium.com/@haowang_81947/how-to-build-secure-chat-with-appfriends-and-virgil-f562683169e8">this article</a> for details on how to using Virgil to secure AppFriends chat communication.</p>
               
               
             </article>
@@ -512,7 +462,7 @@ To login an user, we require</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../quick_start/" title="Quick Start" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../events/" title="Events" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -521,19 +471,19 @@ To login an user, we require</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Quick Start
+                Events
               </span>
             </div>
           </a>
         
         
-          <a href="../users/" title="Users" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../ui_components/" title="UI Components & Customization" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Users
+                UI Components & Customization
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
