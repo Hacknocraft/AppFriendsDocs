@@ -252,12 +252,12 @@
         }, 
         {
             "location": "/ios/encryption/", 
-            "text": "Encryption\n\n\nFor some apps, having end-to-end encryption and user privacy is one of the top priorities. An encryption extension can be added to AppFriends by providing a implementation of \nAFEncryptionDelegate\n.\nAn example of \nAFEncryptionDelegate\n implementation can be found \nhere\n.\n\n\nIn the sample implementation we used \nVirgil\n, which is encryption service provider. Please refer to \nthis article\n for details on how to using Virgil to secure AppFriends chat communication.", 
+            "text": "Encryption\n\n\nFor some apps, user privacy is a top priority, and \nAppFriends\n supports that with an end-to-end encryption extension.  This extension can be added to AppFriends by providing an implementation of \nAFEncryptionDelegate\n. An example of \nAFEncryptionDelegate\n implementation can be found \nhere\n.\n\n\nIn the sample implementation we used \nVirgil\n, which is encryption service provider. Please refer to \nthis article\n for details on how to using Virgil to secure AppFriends chat communication.", 
             "title": "Encryption"
         }, 
         {
             "location": "/ios/encryption/#encryption", 
-            "text": "For some apps, having end-to-end encryption and user privacy is one of the top priorities. An encryption extension can be added to AppFriends by providing a implementation of  AFEncryptionDelegate .\nAn example of  AFEncryptionDelegate  implementation can be found  here .  In the sample implementation we used  Virgil , which is encryption service provider. Please refer to  this article  for details on how to using Virgil to secure AppFriends chat communication.", 
+            "text": "For some apps, user privacy is a top priority, and  AppFriends  supports that with an end-to-end encryption extension.  This extension can be added to AppFriends by providing an implementation of  AFEncryptionDelegate . An example of  AFEncryptionDelegate  implementation can be found  here .  In the sample implementation we used  Virgil , which is encryption service provider. Please refer to  this article  for details on how to using Virgil to secure AppFriends chat communication.", 
             "title": "Encryption"
         }, 
         {
