@@ -1,53 +1,81 @@
 # AppFriends UI Customization
 You can override values to customize the UI.
 
-## Colors
+## Color Values
 ```
-<!-- Messages -->
-<color name="message_date_title_color">[color of the date label of the messages]</color>
-<color name="message_sender_name_color">[color of the sender's name label of the messages]</color>
-<color name="message_in_bubble_color">[color of the message bubble of incoming messages]</color>
-<color name="message_out_bubble_color">[color of the message bubble of outgoing messages]</color>
-<color name="message_in_text_color">[color of the message text of incoming messages]</color>
-<color name="message_out_text_color">[color of the message text of incoming messages]</color>
-<color name="message_system_text_color">[color of the system message text of incoming messages]</color>
-<color name="message_composer_attachment_icon_color">[color of the attachment select icon on message composer]</color>
-<color name="message_composer_color">[color of the background message composer]</color>
-<color name="message_image_background_color">[color of the image message background]</color>
+<!-- Common -->
+<color name="af_color_primary">#0080d6</color>
+<color name="af_color_primary_dark">#0065ad</color>
+<color name="af_color_accent">#0080d6</color>
+<color name="af_color_background">#fafafa</color>
+<color name="af_color_scrim">#99323232</color>
+<color name="af_item_divider">#e5e5e5</color>
+<color name="af_main_background_color">#fff</color>
+<color name="af_avatar_background_color">@color/af_cool_gray</color>
+<color name="af_avatar_icon_color">@color/af_white</color>
+<color name="af_edit_text_background">@color/af_white</color>
 
-<!-- Other Colors -->
-<color name="unselected_tab">#80ffffff</color>
-<color name="item_divider">#e5e5e5</color>
-<color name="main_background_color">#fff</color>
-<color name="nav_bar_background_color">@color/blue</color>
-<color name="nav_bar_icon_color">#fff</color>
-<color name="contact_token_color">#45a0dd</color>
-<color name="contact_checkbox_color">#45a0dd</color>
-<color name="avatar_background_color">@color/cool_gray</color>
-<color name="avatar_icon_color">@color/white</color>
-<color name="edit_text_background">@color/white</color>
-<color name="ic_table_row_icons">#a9b4be</color>
+<!-- Chat -->
+<color name="af_message_day_title_color">@color/af_cool_gray_dark</color>
+<color name="af_message_time_title_color">@color/af_cool_gray</color>
+<color name="af_message_sender_name_color">@color/af_cool_gray</color>
+<color name="af_message_in_bubble_color">@color/af_cool_gray_lighter</color>
+<color name="af_message_out_bubble_color">@color/af_blue</color>
+<color name="af_message_in_text_color">@color/af_charcoalGrey</color>
+<color name="af_message_out_text_color">@color/af_white</color>
+<color name="af_message_composer_icon_color">#888e96</color>
+<color name="af_message_composer_color">@color/af_cool_gray_lighter</color>
+<color name="af_message_image_background_color">@color/af_cool_gray_lighter</color>
+<color name="af_message_timestamp_color">@color/af_gray_darker_50</color>
+<color name="af_typing_indicator_color">@color/af_gray_dark</color>
+<color name="af_new_message_line_color">@color/af_blue_50</color>
+
+<!-- Album -->
+<color name="af_album_background">#252326</color>
+
+<!-- Dialog List -->
+<color name="af_dialog_divider">@color/af_recycler_divider</color>
+<color name="af_dialog_avatar_color">@android:color/white</color>
+<color name="af_dialog_title_text">#35373d</color>
+<color name="af_dialog_message_text">#a6b4bf</color>
+<color name="af_dialog_date_text">#a6b4bf</color>
+<color name="af_dialog_unread_text">@android:color/white</color>
+<color name="af_dialog_unread_bubble">@android:color/holo_orange_dark</color>
+
+<!-- Channel List -->
+<color name="af_channel_item_background">@android:color/transparent</color>
+<color name="af_channel_title_text">@android:color/white</color>
+
+<!-- Channel Chat -->
+<color name="af_channel_online_badge">#00af00</color>
+<color name="af_channel_online_background">#eaeaea</color>
+
+<!-- Text -->
+<color name="af_color_hint_disabled_dark">#43000000</color>
+<color name="af_floating_action_button_background_color">@android:color/holo_orange_dark</color>
+<color name="af_recycler_divider">#e5e5e5</color>
+
+<!-- Popup -->
+<color name="af_popup_background">#fafafa</color>
 ```
 ## String Values
 ```
-<string name="SELECT_GALLERY">Choose from Gallery</string>
-<string name="SELECT_IMAGE_CAMERA">Take new photo</string>
-<string name="SELECT_IMAGE_VIDEO">Take Video</string>
-<string name="CANCEL">Cancel</string><string name="message_preview_image">[image]</string>
-<string name="message_preview_video">[video]</string>
-<string name="clipboard_description">Message</string>
-<string name="copied_to_clipboard">Copied to clipboard</string>
-<string name="message_composer_hint">Edit Message...</string>
-<string name="message_composer_send_button">Send</string>
-<string name="message_settings">Message Settings</string>
-<string name="icon_settings_string">{md-settings}</string>
-<string name="leave_conversation">Leave Conversation</string>
-<string name="title_activity_image_viewer">ImageViewerActivity</string>
-<string name="file_size_upload_too_big">file size is too big</string>
-<string name="sorry">sorry</string>
-
-<!-- Permission Checking -->
-<string name="permission_error_title">No Permission</string>
-<string name="permission_error_camera">Please grant camera permission</string>
-<string name="permission_error_gallery">Please grant access to read your image gallery</string>
+<string name="af_message_preview_image">[image]</string>
+<string name="af_message_preview_video">[video]</string>
+<string name="af_message_preview_location">[location]</string>
+<string name="af_clipboard_description">Message</string>
+<string name="af_copied_to_clipboard">Copied to clipboard</string>
+<string name="af_message_composer_hint">Edit Message...</string>
+<string name="af_file_size_upload_too_big">file size is too big</string>
+<string name="af_sorry">sorry</string>
+<string name="af_error_title">Error</string>
+<string name="af_message_failed_send_title">Failed to send message</string>
+<string name="af_message_failed_send_prompt">Do you want to send it again?</string>
+<string name="af_permission_error_title">No Permission</string>
+<string name="af_permission_error_camera">Please grant camera permission in settings.</string>
+<string name="af_permission_error_gallery">Please grant access to read your image gallery in settings.</string>
+<string name="af_permission_error_write_storage">Please grant permission to write to storage in settings</string>
+<string name="af_please_wait">please wait</string>
+<string name="af_new_message">NEW MESSAGE</string>
+<string name="af_default_location_title">Pinned Location</string>
 ```
