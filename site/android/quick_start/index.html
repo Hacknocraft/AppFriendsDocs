@@ -359,8 +359,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sdk-documentation" title="SDK documentation" class="md-nav__link">
-    SDK documentation
+  <a href="#sdk-documentation" title="SDK Documentation" class="md-nav__link">
+    SDK Documentation
   </a>
   
 </li>
@@ -372,6 +372,13 @@
   
     <nav class="md-nav">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-information" title="General Information" class="md-nav__link">
+    General Information
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#gradle-integration" title="Gradle Integration" class="md-nav__link">
@@ -420,8 +427,49 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#additional-apis" title="Additional APIs" class="md-nav__link">
-    Additional APIs
+  <a href="#push-notification" title="Push Notification" class="md-nav__link">
+    Push Notification
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ui-integration" title="UI Integration" class="md-nav__link">
+    UI Integration
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-simple-standalone-mode-recommended" title="1. Simple / Standalone Mode (Recommended)" class="md-nav__link">
+    1. Simple / Standalone Mode (Recommended)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-embedded-mode" title="2. Embedded Mode" class="md-nav__link">
+    2. Embedded Mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-custom-mode" title="3. Custom Mode" class="md-nav__link">
+    3. Custom Mode
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-api-functionalities" title="Additional API / Functionalities" class="md-nav__link">
+    Additional API / Functionalities
   </a>
   
 </li>
@@ -538,8 +586,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sdk-documentation" title="SDK documentation" class="md-nav__link">
-    SDK documentation
+  <a href="#sdk-documentation" title="SDK Documentation" class="md-nav__link">
+    SDK Documentation
   </a>
   
 </li>
@@ -551,6 +599,13 @@
   
     <nav class="md-nav">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-information" title="General Information" class="md-nav__link">
+    General Information
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#gradle-integration" title="Gradle Integration" class="md-nav__link">
@@ -599,8 +654,49 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#additional-apis" title="Additional APIs" class="md-nav__link">
-    Additional APIs
+  <a href="#push-notification" title="Push Notification" class="md-nav__link">
+    Push Notification
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ui-integration" title="UI Integration" class="md-nav__link">
+    UI Integration
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-simple-standalone-mode-recommended" title="1. Simple / Standalone Mode (Recommended)" class="md-nav__link">
+    1. Simple / Standalone Mode (Recommended)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-embedded-mode" title="2. Embedded Mode" class="md-nav__link">
+    2. Embedded Mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-custom-mode" title="3. Custom Mode" class="md-nav__link">
+    3. Custom Mode
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-api-functionalities" title="Additional API / Functionalities" class="md-nav__link">
+    Additional API / Functionalities
   </a>
   
 </li>
@@ -621,35 +717,37 @@
                 <h1 id="appfriends-android-sdk">AppFriends Android SDK<a class="headerlink" href="#appfriends-android-sdk" title="Permanent link">&para;</a></h1>
 <h2 id="demo-app">Demo App<a class="headerlink" href="#demo-app" title="Permanent link">&para;</a></h2>
 <p>A simple demo app showing the integrated AppFriends SDK is available at: <a href="https://github.com/hacknocraft/AppfriendsAndroidSample">Demo</a>.</p>
-<h2 id="sdk-documentation">SDK documentation<a class="headerlink" href="#sdk-documentation" title="Permanent link">&para;</a></h2>
+<h2 id="sdk-documentation">SDK Documentation<a class="headerlink" href="#sdk-documentation" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://hacknocraft.github.io/AppFriendsAndroidCore/">Javadoc</a></li>
 </ul>
 <h2 id="integration">Integration<a class="headerlink" href="#integration" title="Permanent link">&para;</a></h2>
+<h3 id="general-information">General Information<a class="headerlink" href="#general-information" title="Permanent link">&para;</a></h3>
+<p>AppFriends Android SDK utilizes RxJava 1.x (2.x support is coming soon!) to perform many of the asynchronous operations in order to be compatible with application architectures utilizing MVP or MVVM.</p>
 <h3 id="gradle-integration">Gradle Integration<a class="headerlink" href="#gradle-integration" title="Permanent link">&para;</a></h3>
 <p>To integrate AppFriends Android SDK to your Android Studio project, add the
 following to your application's <code>build.gradle</code> file:</p>
 <h4 id="app-level-gradle">App Level Gradle<a class="headerlink" href="#app-level-gradle" title="Permanent link">&para;</a></h4>
 <div class="codehilite"><pre><span></span>repositories {
-    maven {
-        maven { url &#39;https://raw.githubusercontent.com/Hacknocraft/AppFriendsAndroidCore/master/&#39; }
-    }
+   maven {
+       maven { url &#39;https://raw.githubusercontent.com/Hacknocraft/AppFriendsAndroidCore/master/&#39; }
+   }
 }
 
 dependencies {
-    // AppFriends
-    compile &#39;me.appfriends.sdk:ui:3.1.1&#39;
+   // AppFriends
+   compile &#39;me.appfriends.sdk:ui:3.2.0&#39;
 }
 </pre></div>
 
 
 <h4 id="dependencies">Dependencies<a class="headerlink" href="#dependencies" title="Permanent link">&para;</a></h4>
-<p>AppFriends UI SDK uses Android Support library version 25.2.0 and Play Services version 10.2.0</p>
+<p>AppFriends UI SDK uses Android Support library version 25.1.0</p>
 <p>AppFriends Core SDK uses OKHttp version 3.6.0</p>
 <p>It is recommended that you use the same or more recent versions to maintain compatibility.</p>
 <p>However, if your application uses a version of of the libraries that result in conflicts and you would like to maintain your version:</p>
 <div class="codehilite"><pre><span></span>compile (&#39;com.android.support:support-v4:23.4.0&#39;) {
-  force = true;
+ force = true;
 }
 </pre></div>
 
@@ -657,24 +755,24 @@ dependencies {
 <h2 id="initialization">Initialization<a class="headerlink" href="#initialization" title="Permanent link">&para;</a></h2>
 <p>After logging into your admin panel, and created your application, you can find your <code>App ID</code> and <code>App Secret</code>. Add them to your <code>AndroidManifest.xml</code> file under <code>&lt;application&gt;</code>.</p>
 <div class="codehilite"><pre><span></span>&lt;meta-data
-    android:name=&quot;me.appfriends.AppID&quot;
-    android:value=&quot;[APPFRIENDS_ID]&quot; /&gt;
+   android:name=&quot;me.appfriends.AppID&quot;
+   android:value=&quot;[APPFRIENDS_ID]&quot; /&gt;
 
 &lt;meta-data
-    android:name=&quot;me.appfriends.AppSecret&quot;
-    android:value=&quot;[APPFRIENDS_SECRET]&quot; /&gt;
+   android:name=&quot;me.appfriends.AppSecret&quot;
+   android:value=&quot;[APPFRIENDS_SECRET]&quot; /&gt;
 </pre></div>
 
 
 <p>AppFriends SDK must be initialized in your custom <code>Application</code> class:</p>
 <div class="codehilite"><pre><span></span>public class MyApplication extends Application {
-    @Override
-    public void onCreate() {
-        super.onCreate();
+   @Override
+   public void onCreate() {
+       super.onCreate();
 
-        AppFriends instance = AppFriends.getInstance();
-        instance.init(getApplicationContext());
-    }
+       AppFriends instance = AppFriends.getInstance();
+       instance.init(getApplicationContext());
+   }
 }
 </pre></div>
 
@@ -683,29 +781,93 @@ dependencies {
 <p>Before your users can start enjoying AppFriends, they need to have an
 AppFriends account. Create or login the user by invoking:</p>
 <div class="codehilite"><pre><span></span>AppFriends.getInstance().login(userID, username);
-          .observeOn(AndroidSchedulers.mainThread())
-          .subscribe(new Subscriber&lt;Boolean&gt;() {
-              @Override
-              public void onCompleted() {
-              }
+         .observeOn(AndroidSchedulers.mainThread())
+         .subscribe(new Subscriber&lt;Boolean&gt;() {
+             @Override
+             public void onCompleted() {
+             }
 
-              @Override
-              public void onError(Throwable e) {
-                  // Handle any errors
-              }
+             @Override
+             public void onError(Throwable e) {
+                 // Handle any errors
+             }
 
-              @Override
-              public void onNext(Boolean loggedIn) {
-                  // Handle login status
-              }
-          });
+             @Override
+             public void onNext(Boolean loggedIn) {
+                 // Handle login status
+             }
+         });
 </pre></div>
 
 
-<h2 id="additional-apis">Additional APIs<a class="headerlink" href="#additional-apis" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="https://hacknocraft.github.io/AppFriendsAndroidCore/">Javadoc</a></li>
-</ul>
+<h2 id="push-notification">Push Notification<a class="headerlink" href="#push-notification" title="Permanent link">&para;</a></h2>
+<p>You can register the device with AppFriends and receive push notification by:</p>
+<div class="codehilite"><pre><span></span>AppFriends.getInstance().pushService().updatePushToken(userId,
+        FirebaseInstanceId.getInstance().getToken())
+        .subscribe(new Subscriber&lt;Boolean&gt;() {
+            @Override
+            public void onCompleted() {
+
+            }
+
+            @Override
+            public void onError(Throwable e) {
+                Log.d(TAG, e.getMessage());
+            }
+
+            @Override
+            public void onNext(Boolean registered) {
+                Log.d(TAG, &quot;push token registered: &quot; + registered);
+            }
+        });
+</pre></div>
+
+
+<h2 id="ui-integration">UI Integration<a class="headerlink" href="#ui-integration" title="Permanent link">&para;</a></h2>
+<p>AppFriends Android SDK provides a full suite of ready-to-use UI components for simplified UI integrations.</p>
+<p>There are 3 UI integration modes, in order to decreasing difficulty but increased customization:</p>
+<h3 id="1-simple-standalone-mode-recommended">1. Simple / Standalone Mode (Recommended)<a class="headerlink" href="#1-simple-standalone-mode-recommended" title="Permanent link">&para;</a></h3>
+<p>Launching standalone AppFriends UI after a user has logged in, this will launch the full AppFriends UI with channel, group and private conversation views in separate activities (fullscreen or partial slide out).</p>
+<div class="codehilite"><pre><span></span>Intent intent = new Intent(getContext(), ConversationsActivity.class);
+startActivity(intent);
+</pre></div>
+
+
+<p>The views can be configured and customized to match your app's style guide. Please see the customization guide for full list of values you can override as well as the sample app for a customization example.</p>
+<div class="codehilite"><pre><span></span>&lt;style name=&quot;AppFriends.DialogList&quot;&gt;
+   &lt;item name=&quot;dialogTitleTextColor&quot;&gt;@android:color/holo_red_light&lt;/item&gt;
+   &lt;item name=&quot;dialogUnreadTitleTextColor&quot;&gt;@android:color/holo_red_light&lt;/item&gt;
+   &lt;item name=&quot;dialogUnreadTitleTextStyle&quot;&gt;italic&lt;/item&gt;
+&lt;/style&gt;
+
+&lt;style name=&quot;AppFriends.Toolbar&quot;&gt;
+   &lt;item name=&quot;android:textColorPrimary&quot;&gt;@android:color/holo_red_dark&lt;/item&gt;
+   &lt;item name=&quot;android:textColorSecondary&quot;&gt;@android:color/background_dark&lt;/item&gt;
+   &lt;item name=&quot;android:background&quot;&gt;@color/orange&lt;/item&gt;
+   &lt;item name=&quot;colorControlNormal&quot;&gt;#FF0000&lt;/item&gt;
+&lt;/style&gt;
+
+&lt;style name=&quot;AppFriends.Popup&quot;&gt;
+   &lt;item name=&quot;android:layout_marginStart&quot;&gt;32dp&lt;/item&gt;
+   &lt;item name=&quot;android:layout_marginEnd&quot;&gt;32dp&lt;/item&gt;
+   &lt;item name=&quot;android:layout_marginTop&quot;&gt;32dp&lt;/item&gt;
+   &lt;item name=&quot;android:layout_marginBottom&quot;&gt;32dp&lt;/item&gt;
+   &lt;item name=&quot;entranceOrigin&quot;&gt;bottom&lt;/item&gt;
+&lt;/style&gt;
+</pre></div>
+
+
+<h3 id="2-embedded-mode">2. Embedded Mode<a class="headerlink" href="#2-embedded-mode" title="Permanent link">&para;</a></h3>
+<p>It is also possible to embed AppFriends UI components into your existing application UI flow such as fragments. The AppFriends views all have integrated SDK linking thus reducing the need for you to connect with the core network and caching SDK.</p>
+<p>The following views can be directly embedded into your XML layouts:
+- <code>me.appfriends.ui.dialoglist.DialogListRecyclerView</code>
+- <code>me.appfriends.ui.channellist.ChannelListRecyclerView</code></p>
+<p>The chat window is a separate activity that you can either launch or extend called <code>DialogActivity</code>.</p>
+<p>Our sample app also provides extensive details on how to embedded these UI components.</p>
+<h3 id="3-custom-mode">3. Custom Mode<a class="headerlink" href="#3-custom-mode" title="Permanent link">&para;</a></h3>
+<p>If components supplied by the AppFriends UI SDK does not meet your needs, you may elect not to use the UI library and directly interact with the core library. To do so, replace <code>compile 'me.appfriends.sdk:ui:3.2.0'</code> with <code>compile 'me.appfriends.sdk:core:3.2.0'</code> in your <code>build.gradle</code> configuration file. The core SDK provides no UI elements but contains full asynchronous network, caching and persistence functionalities.</p>
+<h2 id="additional-api-functionalities">Additional API / Functionalities<a class="headerlink" href="#additional-api-functionalities" title="Permanent link">&para;</a></h2>
+<p>Should you decide to forego using AppFriends UI components or integrate additional functionalities such as dialog creation, member management, user operations, and etc. Please check out the full <a href="https://hacknocraft.github.io/AppFriendsAndroidCore/">Javadoc</a> API documentation and the sample app for their usages. Please don't hesitate to contact us should you have additional questions / requests.</p>
               
               
             </article>
