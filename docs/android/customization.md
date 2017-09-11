@@ -1,5 +1,5 @@
 # AppFriends UI Customization
-You can override values to customize the UI.
+A list of XML attributes that can be replaced to easily style AppFriends UI components
 
 ## Color Values
 ```

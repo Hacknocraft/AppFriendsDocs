@@ -23,7 +23,9 @@ pages:
   - 'Errors': 'ios/error.md'
 - Android:
   - 'Quick Start': 'android/quick_start.md'
-  - 'UI Customization': 'android/customization.md'
+  - 'Push Notifications Guide': 'android/push.md'
+  - 'UI Integration Guide': 'android/ui.md'
+  - 'UI Customization Guide': 'android/customization.md'
 - Server API:
   - 'Request Authentication': 'api/request_auth.md'
   - 'Application APIs': 'api/applicationapi.md'

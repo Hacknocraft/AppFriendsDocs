@@ -17,7 +17,7 @@
       
         <link rel="shortcut icon" href="../../images/logo.png">
       
-      <meta name="generator" content="mkdocs-0.16.1, mkdocs-material-1.2.0">
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.5.4">
     
     
       
@@ -28,9 +28,9 @@
       <script src="../../assets/javascripts/modernizr-56ade86843.js"></script>
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application-e17eeafcbc.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application-b1a1975878.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/application-892b79c5c5.palette.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/application-f78e5cb881.palette.css">
       
     
     
@@ -64,12 +64,12 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <header class="md-header">
+      <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
         
-          <a href="../.." title="AppFriends Documentation" class="md-logo md-header-nav__button">
+          <a href="http://www.appfriends.me" title="AppFriends Documentation" class="md-logo md-header-nav__button">
             <img src="../../images/logo.png" width="24" height="24">
           </a>
         
@@ -99,12 +99,18 @@
   <div class="md-search__overlay"></div>
   <div class="md-search__inner">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
       <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result"></div>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
       </div>
     </div>
   </div>
@@ -359,8 +365,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sdk-documentation" title="SDK documentation" class="md-nav__link">
-    SDK documentation
+  <a href="#sdk-documentation" title="SDK Documentation" class="md-nav__link">
+    SDK Documentation
   </a>
   
 </li>
@@ -372,6 +378,13 @@
   
     <nav class="md-nav">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-information" title="General Information" class="md-nav__link">
+    General Information
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#gradle-integration" title="Gradle Integration" class="md-nav__link">
@@ -420,11 +433,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#additional-apis" title="Additional APIs" class="md-nav__link">
-    Additional APIs
+  <a href="#ui-integration-and-customization" title="UI Integration and Customization" class="md-nav__link">
+    UI Integration and Customization
   </a>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#push-notifications" title="Push Notifications" class="md-nav__link">
+    Push Notifications
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-api-functionalities" title="Additional API / Functionalities" class="md-nav__link">
+    Additional API / Functionalities
+  </a>
+  
+</li>
+      
+      
       
     </ul>
   
@@ -439,8 +468,32 @@
 
 
   <li class="md-nav__item">
-    <a href="../customization/" title="UI Customization" class="md-nav__link">
-      UI Customization
+    <a href="../push/" title="Push Notifications Guide" class="md-nav__link">
+      Push Notifications Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ui/" title="UI Integration Guide" class="md-nav__link">
+      UI Integration Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../customization/" title="UI Customization Guide" class="md-nav__link">
+      UI Customization Guide
     </a>
   </li>
 
@@ -538,8 +591,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sdk-documentation" title="SDK documentation" class="md-nav__link">
-    SDK documentation
+  <a href="#sdk-documentation" title="SDK Documentation" class="md-nav__link">
+    SDK Documentation
   </a>
   
 </li>
@@ -551,6 +604,13 @@
   
     <nav class="md-nav">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-information" title="General Information" class="md-nav__link">
+    General Information
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#gradle-integration" title="Gradle Integration" class="md-nav__link">
@@ -599,11 +659,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#additional-apis" title="Additional APIs" class="md-nav__link">
-    Additional APIs
+  <a href="#ui-integration-and-customization" title="UI Integration and Customization" class="md-nav__link">
+    UI Integration and Customization
   </a>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#push-notifications" title="Push Notifications" class="md-nav__link">
+    Push Notifications
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-api-functionalities" title="Additional API / Functionalities" class="md-nav__link">
+    Additional API / Functionalities
+  </a>
+  
+</li>
+      
+      
       
     </ul>
   
@@ -615,66 +691,68 @@
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
-               
               
+                
                 
                 <h1 id="appfriends-android-sdk">AppFriends Android SDK<a class="headerlink" href="#appfriends-android-sdk" title="Permanent link">&para;</a></h1>
 <h2 id="demo-app">Demo App<a class="headerlink" href="#demo-app" title="Permanent link">&para;</a></h2>
 <p>A simple demo app showing the integrated AppFriends SDK is available at: <a href="https://github.com/hacknocraft/AppfriendsAndroidSample">Demo</a>.</p>
-<h2 id="sdk-documentation">SDK documentation<a class="headerlink" href="#sdk-documentation" title="Permanent link">&para;</a></h2>
+<h2 id="sdk-documentation">SDK Documentation<a class="headerlink" href="#sdk-documentation" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://hacknocraft.github.io/AppFriendsAndroidCore/">Javadoc</a></li>
 </ul>
 <h2 id="integration">Integration<a class="headerlink" href="#integration" title="Permanent link">&para;</a></h2>
+<h3 id="general-information">General Information<a class="headerlink" href="#general-information" title="Permanent link">&para;</a></h3>
+<p>AppFriends Android SDK utilizes RxJava 1.x (2.x support is coming soon!) to perform many of the asynchronous operations in order to be compatible with application architectures utilizing MVP or MVVM.</p>
 <h3 id="gradle-integration">Gradle Integration<a class="headerlink" href="#gradle-integration" title="Permanent link">&para;</a></h3>
 <p>To integrate AppFriends Android SDK to your Android Studio project, add the
 following to your application's <code>build.gradle</code> file:</p>
 <h4 id="app-level-gradle">App Level Gradle<a class="headerlink" href="#app-level-gradle" title="Permanent link">&para;</a></h4>
 <div class="codehilite"><pre><span></span>repositories {
-    maven {
-        maven { url &#39;https://raw.githubusercontent.com/Hacknocraft/AppFriendsAndroidCore/master/&#39; }
-    }
+   maven {
+       maven { url &#39;https://raw.githubusercontent.com/Hacknocraft/AppFriendsAndroidCore/master/&#39; }
+   }
 }
 
 dependencies {
-    // AppFriends
-    compile &#39;me.appfriends.sdk:ui:3.1.1&#39;
+   // AppFriends
+   compile &#39;me.appfriends.sdk:ui:3.2.1&#39;
 }
 </pre></div>
 
 
 <h4 id="dependencies">Dependencies<a class="headerlink" href="#dependencies" title="Permanent link">&para;</a></h4>
-<p>AppFriends UI SDK uses Android Support library version 25.2.0 and Play Services version 10.2.0</p>
+<p>AppFriends UI SDK uses Android Support library version 25.1.0</p>
 <p>AppFriends Core SDK uses OKHttp version 3.6.0</p>
 <p>It is recommended that you use the same or more recent versions to maintain compatibility.</p>
 <p>However, if your application uses a version of of the libraries that result in conflicts and you would like to maintain your version:</p>
 <div class="codehilite"><pre><span></span>compile (&#39;com.android.support:support-v4:23.4.0&#39;) {
-  force = true;
+ force = true;
 }
 </pre></div>
 
 
 <h2 id="initialization">Initialization<a class="headerlink" href="#initialization" title="Permanent link">&para;</a></h2>
-<p>After logging into your admin panel, and created your application, you can find your <code>App ID</code> and <code>App Secret</code>. Add them to your <code>AndroidManifest.xml</code> file under <code>&lt;application&gt;</code>.</p>
+<p>After logging into your admin panel on <a href="http://appfriends.me/">AppFriends.me</a> and creating an application, you can find your <code>App ID</code> and <code>App Secret</code>. Add them to your <code>AndroidManifest.xml</code> file under <code>&lt;application&gt;</code>.</p>
 <div class="codehilite"><pre><span></span>&lt;meta-data
-    android:name=&quot;me.appfriends.AppID&quot;
-    android:value=&quot;[APPFRIENDS_ID]&quot; /&gt;
+   android:name=&quot;me.appfriends.AppID&quot;
+   android:value=&quot;[APPFRIENDS_ID]&quot; /&gt;
 
 &lt;meta-data
-    android:name=&quot;me.appfriends.AppSecret&quot;
-    android:value=&quot;[APPFRIENDS_SECRET]&quot; /&gt;
+   android:name=&quot;me.appfriends.AppSecret&quot;
+   android:value=&quot;[APPFRIENDS_SECRET]&quot; /&gt;
 </pre></div>
 
 
 <p>AppFriends SDK must be initialized in your custom <code>Application</code> class:</p>
 <div class="codehilite"><pre><span></span>public class MyApplication extends Application {
-    @Override
-    public void onCreate() {
-        super.onCreate();
+   @Override
+   public void onCreate() {
+       super.onCreate();
 
-        AppFriends instance = AppFriends.getInstance();
-        instance.init(getApplicationContext());
-    }
+       AppFriends instance = AppFriends.getInstance();
+       instance.init(getApplicationContext());
+   }
 }
 </pre></div>
 
@@ -683,30 +761,37 @@ dependencies {
 <p>Before your users can start enjoying AppFriends, they need to have an
 AppFriends account. Create or login the user by invoking:</p>
 <div class="codehilite"><pre><span></span>AppFriends.getInstance().login(userID, username);
-          .observeOn(AndroidSchedulers.mainThread())
-          .subscribe(new Subscriber&lt;Boolean&gt;() {
-              @Override
-              public void onCompleted() {
-              }
+         .observeOn(AndroidSchedulers.mainThread())
+         .subscribe(new Subscriber&lt;Boolean&gt;() {
+             @Override
+             public void onCompleted() {
+             }
 
-              @Override
-              public void onError(Throwable e) {
-                  // Handle any errors
-              }
+             @Override
+             public void onError(Throwable e) {
+                 // Handle any errors
+             }
 
-              @Override
-              public void onNext(Boolean loggedIn) {
-                  // Handle login status
-              }
-          });
+             @Override
+             public void onNext(Boolean loggedIn) {
+                 // Handle login status
+             }
+         });
 </pre></div>
 
 
-<h2 id="additional-apis">Additional APIs<a class="headerlink" href="#additional-apis" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="https://hacknocraft.github.io/AppFriendsAndroidCore/">Javadoc</a></li>
-</ul>
+<h2 id="ui-integration-and-customization">UI Integration and Customization<a class="headerlink" href="#ui-integration-and-customization" title="Permanent link">&para;</a></h2>
+<p>Please see <a href="../ui/">UI Integration Guide</a></p>
+<h2 id="push-notifications">Push Notifications<a class="headerlink" href="#push-notifications" title="Permanent link">&para;</a></h2>
+<p>Please see <a href="../push/">Push Notifications Guide</a></p>
+<h2 id="additional-api-functionalities">Additional API / Functionalities<a class="headerlink" href="#additional-api-functionalities" title="Permanent link">&para;</a></h2>
+<p>Should you decide to forego using AppFriends UI components or integrate additional functionalities such as dialog creation, member management, user operations, and etc. Please check out the full <a href="https://hacknocraft.github.io/AppFriendsAndroidCore/">Javadoc</a> API documentation and the sample app for their usages. Please don't hesitate to contact us should you have additional questions / requests.</p>
+                
+                  
+                
               
+              
+                
               
             </article>
           </div>
@@ -734,13 +819,13 @@ AppFriends account. Create or login the user by invoking:</p>
           </a>
         
         
-          <a href="../customization/" title="UI Customization" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../push/" title="Push Notifications Guide" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                UI Customization
+                Push Notifications Guide
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -782,7 +867,7 @@ AppFriends account. Create or login the user by invoking:</p>
       
     </div>
     
-      <script src="../../assets/javascripts/application-30ac6a1727.js"></script>
+      <script src="../../assets/javascripts/application-0b7df094bf.js"></script>
       <script>app.initialize({url:{base:"../.."}})</script>
       
     
