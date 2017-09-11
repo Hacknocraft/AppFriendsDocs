@@ -1,0 +1,679 @@
+
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A turn-key solution to enable messagina and make your app social.">
+      
+      
+        <link rel="canonical" href="http://www.appfriends.me/android/ui/">
+      
+      
+        <meta name="author" content="Hao Wang">
+      
+      
+        <link rel="shortcut icon" href="../../images/logo.png">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.5.4">
+    
+    
+      
+        <title>UI Integration Guide - AppFriends Documentation</title>
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr-56ade86843.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-b1a1975878.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-f78e5cb881.palette.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans:300,400,400i,700|Monaco">
+        <style>body,input{font-family:"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Monaco","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="deep-orange" data-md-color-accent="orange">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href="http://www.appfriends.me" title="AppFriends Documentation" class="md-logo md-header-nav__button">
+            <img src="../../images/logo.png" width="24" height="24">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  Android
+                </span>
+              
+            
+            UI Integration Guide
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <div class="md-search__overlay"></div>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <div class="md-header-nav__source">
+          
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-logo md-nav__button">
+        <img src="../../images/logo.png">
+      </i>
+    
+    AppFriends Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Welcome" class="md-nav__link">
+      Welcome
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      iOS
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        iOS
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ios/quick_start/" title="Quick Start" class="md-nav__link">
+      Quick Start
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ios/sessions/" title="Sessions" class="md-nav__link">
+      Sessions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ios/users/" title="Users" class="md-nav__link">
+      Users
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ios/dialogs/" title="Dialogs and Messaging" class="md-nav__link">
+      Dialogs and Messaging
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ios/push_notification/" title="Push Notification" class="md-nav__link">
+      Push Notification
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ios/events/" title="Events" class="md-nav__link">
+      Events
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ios/encryption/" title="Encryption" class="md-nav__link">
+      Encryption
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ios/ui_components/" title="UI Components & Customization" class="md-nav__link">
+      UI Components & Customization
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ios/dependencies/" title="External Dependencies" class="md-nav__link">
+      External Dependencies
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ios/error/" title="Errors" class="md-nav__link">
+      Errors
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Android
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Android
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../quick_start/" title="Quick Start" class="md-nav__link">
+      Quick Start
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../push/" title="Push Notifications Guide" class="md-nav__link">
+      Push Notifications Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        UI Integration Guide
+      </label>
+    
+    <a href="./" title="UI Integration Guide" class="md-nav__link md-nav__link--active">
+      UI Integration Guide
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-simple-standalone-mode-recommended" title="1. Simple / Standalone Mode (Recommended)" class="md-nav__link">
+    1. Simple / Standalone Mode (Recommended)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-embedded-mode" title="2. Embedded Mode" class="md-nav__link">
+    2. Embedded Mode
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-custom-mode" title="3. Custom Mode" class="md-nav__link">
+    3. Custom Mode
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../customization/" title="UI Customization Guide" class="md-nav__link">
+      UI Customization Guide
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Server API
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Server API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api/request_auth/" title="Request Authentication" class="md-nav__link">
+      Request Authentication
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api/applicationapi/" title="Application APIs" class="md-nav__link">
+      Application APIs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api/adminapi/" title="Admin APIs" class="md-nav__link">
+      Admin APIs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-simple-standalone-mode-recommended" title="1. Simple / Standalone Mode (Recommended)" class="md-nav__link">
+    1. Simple / Standalone Mode (Recommended)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-embedded-mode" title="2. Embedded Mode" class="md-nav__link">
+    2. Embedded Mode
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-custom-mode" title="3. Custom Mode" class="md-nav__link">
+    3. Custom Mode
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="integrating-appfriends-ui-into-your-application">Integrating AppFriends UI into your application<a class="headerlink" href="#integrating-appfriends-ui-into-your-application" title="Permanent link">&para;</a></h1>
+<p>AppFriends Android SDK provides a full suite of ready-to-use UI components for simplified UI integrations.</p>
+<p>There are 3 UI integration modes, in order to decreasing difficulty but increased customization:</p>
+<h3 id="1-simple-standalone-mode-recommended">1. Simple / Standalone Mode (Recommended)<a class="headerlink" href="#1-simple-standalone-mode-recommended" title="Permanent link">&para;</a></h3>
+<p>Launching standalone AppFriends UI after a user has logged in, this will launch the full AppFriends UI with channel, group and private conversation views in separate activities (fullscreen or partial slide out).</p>
+<div class="codehilite"><pre><span></span>Intent intent = new Intent(getContext(), ConversationsActivity.class);
+startActivity(intent);
+</pre></div>
+
+
+<p>The views can be configured and customized to match your app's style guide through style configurations as well as overriding XML attribute. Please see the <a href="../customization/">UI Customization Guide</a> for full list of values you can override as well as the sample app for a customization example.</p>
+<div class="codehilite"><pre><span></span>&lt;style name=&quot;AppFriends.DialogList&quot;&gt;
+   &lt;item name=&quot;dialogTitleTextColor&quot;&gt;@android:color/holo_red_light&lt;/item&gt;
+   &lt;item name=&quot;dialogUnreadTitleTextColor&quot;&gt;@android:color/holo_red_light&lt;/item&gt;
+   &lt;item name=&quot;dialogUnreadTitleTextStyle&quot;&gt;italic&lt;/item&gt;
+&lt;/style&gt;
+
+&lt;style name=&quot;AppFriends.Toolbar&quot;&gt;
+   &lt;item name=&quot;android:textColorPrimary&quot;&gt;@android:color/holo_red_dark&lt;/item&gt;
+   &lt;item name=&quot;android:textColorSecondary&quot;&gt;@android:color/background_dark&lt;/item&gt;
+   &lt;item name=&quot;android:background&quot;&gt;@color/orange&lt;/item&gt;
+   &lt;item name=&quot;colorControlNormal&quot;&gt;#FF0000&lt;/item&gt;
+&lt;/style&gt;
+
+&lt;style name=&quot;AppFriends.Popup&quot;&gt;
+   &lt;item name=&quot;android:layout_marginStart&quot;&gt;32dp&lt;/item&gt;
+   &lt;item name=&quot;android:layout_marginEnd&quot;&gt;32dp&lt;/item&gt;
+   &lt;item name=&quot;android:layout_marginTop&quot;&gt;32dp&lt;/item&gt;
+   &lt;item name=&quot;android:layout_marginBottom&quot;&gt;32dp&lt;/item&gt;
+   &lt;item name=&quot;entranceOrigin&quot;&gt;bottom&lt;/item&gt;
+&lt;/style&gt;
+</pre></div>
+
+
+<h3 id="2-embedded-mode">2. Embedded Mode<a class="headerlink" href="#2-embedded-mode" title="Permanent link">&para;</a></h3>
+<p>It is also possible to embed AppFriends UI components into your existing application UI flow such as fragments. The AppFriends views all have integrated SDK linking thus reducing the need for you to connect with the core network and caching SDK.</p>
+<p>The following views can be directly embedded into your XML layouts:
+- <code>me.appfriends.ui.dialoglist.DialogListRecyclerView</code>
+- <code>me.appfriends.ui.channellist.ChannelListRecyclerView</code></p>
+<p>The chat window is a separate activity that you can either launch or extend called <code>DialogActivity</code>.</p>
+<p>Our sample app also provides extensive details on how to embedded these UI components.</p>
+<h3 id="3-custom-mode">3. Custom Mode<a class="headerlink" href="#3-custom-mode" title="Permanent link">&para;</a></h3>
+<p>If components supplied by the AppFriends UI SDK does not meet your needs, you may elect not to use the UI library and directly interact with the core library. To do so, replace <code>compile 'me.appfriends.sdk:ui:3.2.0'</code> with <code>compile 'me.appfriends.sdk:core:3.2.0'</code> in your <code>build.gradle</code> configuration file. The core SDK provides no UI elements but contains full asynchronous network, caching and persistence functionalities.</p>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../push/" title="Push Notifications Guide" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Push Notifications Guide
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../customization/" title="UI Customization Guide" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                UI Customization Guide
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright (c) 2016 Hacknocraft
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/Hacknocraft/" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application-0b7df094bf.js"></script>
+      <script>app.initialize({url:{base:"../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
