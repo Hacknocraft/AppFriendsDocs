@@ -1,4 +1,4 @@
-AppFriends can send push notification to the device when there's a new message for a user or if the user is mentioned in a channel chat. Push notification API is accessible via `AFPushNotification` class.
+AppFriends can send push notification to the device when there's a new message for a user or if the user is mentioned in a channel chat. Push notification API is accessible via `AFPushNotification` class. Please make sure the user has already logged in before registering for push. Unregistering must also happen before the user logout.
 
 ## Register for Push
 To enable push notification, you need to first register the push token with AppFriends:

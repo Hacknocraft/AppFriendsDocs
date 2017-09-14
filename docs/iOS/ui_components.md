@@ -1,77 +1,61 @@
-# UI Components and Customization
-`AppFriendsUI` provides a lot of useful and convenient UI components for you to use. It can save a lot of your time developing the app. Our [demo app](https://github.com/Hacknocraft/AppFriendsiOSSample) takes full advantage of the `AppFriendsUI`. You could clone the demo app repo from github to see how it uses, interact and customizes the UI components provided by `AppFriendsUI`.
+# UI Components
+In AppFriendsUI SDK, there are many ready to use UI components for you to save you a great deal of development time. To learn how to customize the UI, please read [ui customization](ui_customization.md). If more advanced customization is needed, you could subclass the existing UI components to change its default behavior.
 
-## Basic Customization
-`HCUIConfiguration` gives you easy access to customize AppFriends UI components. For example, if you want to change the background color of the chat view, you can simply do it by changing the value of `HCColorPalette.chatBackgroundColor`
+## Chat View
+The chat view which displays the conversation and allows the user to type and send different types of messages. For public channel chat and private chat, we have two different view controller classes for you to use.  
 
-### List of Customizable Values
+### Private Dialogs
+For private chat including 1:1 chat and private group chat, the main class is `HCDialogChatViewController`. This view controller offers typing indicator display, text input, media message input and messages display.
 
-HCSettingsConfiguation    |
--------------             |   -------------  |   -------------     |   -------------
-**Variable Name**         |    **Type**      |  **Default Value**  |     **Description**
-badgeDisplayIfMuted       |     Boolean      |     false     | turn this to true if you want to keep badge for a conversation after it's muted.
-showNewMessageLine        |     Boolean      |     true      | switch for new message line display on private dialogs
-supportedMessageTypes     | ChatSupportedMessageDataTypes |     .all    |  The types of messages you want to support in your chat. This value will apply to all chat. You can also change the types of messages you want to support for each dialog when you initialize the chat view
-gifContentRating          |     AFGifContentRating      |     .parentalGuide13      | change this value to control the gif
-showDialogAlbum           |     Boolean      |     true      | change to false if you don't want to show the dialog album
+![image of dialog view](../images/screenshots/dialog_view_1.png)
+![image of media input panel](../images/screenshots/dialog_view_2.png)
 
-HCFont                    |
--------------             |   -------------  |   -------------     |   -------------
-**Variable Name**         |    **Type**      |  **Default Value**  |     **Description**
-segmentSelectorFont       |     UIFont       |  UIFont.systemFont(ofSize: 15)  | segmented control button title font
-chatCellContentFont       |     UIFont       |  UIFont.systemFont(ofSize: 15)  | chat message content text font
-chatCellSystemMessageFont |     UIFont       |  UIFont.systemFont(ofSize: 15)  | chat system message content text font
-boldButtonFont            |     UIFont       |  UIFont.boldSystemFont(ofSize: 16) |  button bold font
-dialogSettingFont         |     UIFont       |  UIFont.systemFont(ofSize: 15)  | dialog setting UI text font
-navigationBarTitleFont    |     UIFont       |  UIFont.systemFont(ofSize: 17)  | navigation bar title font
-chatDialogListSectionTitleFont    |     UIFont       |  UIFont.systemFont(ofSize: 15)  | dialog list section title font
-chatTimestampFont         |     UIFont       |  UIFont.systemFont(ofSize: 13)  | chat message time label
-chatDateLabelFont         |     UIFont       |  UIFont.systemFont(ofSize: 15)  | chat system date label
-locationTitleFont         |     UIFont       |  UIFont.boldSystemFont(ofSize: 16)  | location message title font
-locationSubtitleFont      |     UIFont       |  UIFont.systemFont(ofSize: 15)  | location message description label font
-emptyTableLabelFont       |     UIFont       |  UIFont.systemFont(ofSize: 15)  | the font for the label to use when the table is empty
-albumSectionTitleFont     |     UIFont       |  UIFont.systemFont(ofSize: 15)  | album date title label font
-chatDialogListSectionTitleFont    |     UIFont       |  UIFont.systemFont(ofSize: 15)  | dialog list section title font
-chatDialogListCellTitleFont       |     UIFont       |  UIFont.systemFont(ofSize: 16)  | dialog list cell title (user name or dialog title) font
-chatDialogListCellTimestampFont   |     UIFont       |  UIFont.systemFont(ofSize: 13)  | dialog list cell timestamp label font
-chatDialogListCellLastMessageFont |     UIFont       |  UIFont.systemFont(ofSize: 13)  | dialog list cell last message label font
+Before entering a dialog view, you must create the dialog. Then you can pass the dialog ID to the `HCDialogChatViewController`:
+```swift
+// 1:1 chat, you can create a dialog, you can use the target user id.
+AFDialog.createIndividualDialog(withUser: userID, completion: { (dialogID, error) in
+  if error != nil {
+    // handle error here
+  } else if let id = dialogID {
+    let dialogVC = HCDialogChatViewController(dialogID: id)
+    self.navigationController?.pushViewController(dialogVC, animated: true)
+  }
+})
 
-HCColorPalette                 |
--------------                  |   -------------   |   -------------     |   -------------
-**Variable Name**              |    **Type**       |  **Default Value**  |     **Description**
-chatBackgroundColor            |     UIColor       |  #0d0e28            | the background color of the chat views
-chatOutMessageContentTextColor |     UIColor       |  white              | outgoing message content text color
-chatInMessageContentTextColor  |     UIColor       |  black              | received message content text color
-chatUserNamelTextColor         |     UIColor       |  white              | the user name label color in the chat view
-chatTimeLabelTextColor         |     UIColor       |  lightgray          | time stamp label color in chat view
-chatDateLabelTextColor         |     UIColor       |  lightgray          | date label color in chat view
-chatSystemMessageColor         |     UIColor       |  lightgray          | system message text color in chat view
-chatSendButtonColor            |     UIColor       |  #0d0e28            | chat send button color
-chatOutMessageBubbleColor      |     UIColor       |  #5e62bc            | outgoing message bubble color
-chatInMessageBubbleColor       |     UIColor       |  #93d4f0            | received message bubble color
-chatMessageFailedButtonColor   |     UIColor       |  #f2433d            | color of the button to resend message when message failed to send
-chatVideoPlayIconColor         |     UIColor       |  black              | video play icon color
-chatLeaveConversationColor     |     UIColor       |  #f2433d            | color of the button to leave a dialog
-chatNewMessageDividerColor     |     UIColor       |  #f5a59a            | color of the new message divider
-chatInMessageLinkColor         |     UIColor       |  #437fb4            | color of the links in received messages
-chatOutMessageLinkColor        |     UIColor       |  #f2433d            | color of the links in outgoing messages
-chatAttachmentIconColor        |     UIColor       |  #f2433d            | color of the button to add attachment
+// private group chat, you can create a dialog, you can pass your own dialog id.
+// If you want AppFriends to create a dialog id for you, you can simply pass nil.
+// Then you pass the ids of the members.
+AFDialog.createGroupDialog(dialogID: nil, members: users, completion: { (id, error) in
+  if error != nil {
+    // handle error here
+  } else if let dialogID = id {
+    let dialogVC = HCDialogChatViewController(dialogID: id)
+    self.navigationController?.pushViewController(dialogVC, animated: true)
+  }
+})
+```
+
+### Public Channel chat
+For public channel chat, the main class is `HCChannelChatViewController` This view controller offers typing indicator display, text input, media message input and messages display.
+
+![image of channel view](../images/screenshots/channel_view.png)
+
+```swift
+// similar to private chat, you need to pass channel dialog id to initialize channel chat view
+let channelChatVC = HCChannelChatViewController(dialogID: dialogID)
+```
+
+## Dialogs List
+You often need a dialogs list to display a user's past conversations so that he can quickly go back to or switch between conversations. The main class is `HCDialogsListViewController`. In dialog list, we already handle new message badge, message preview and sorting the new dialog on top and etc. To use `HCDialogsListViewController`, you can similar initialize it programmatically or use xib/storyboard. It will fetch past dialogs of the current user and when new messages are sent to the user, it will show up here.
+
+![image of dialog list](../images/screenshots/dialog_list.png)
 
 ## Album
-Album is a feature including UI components which group all the images and videos sent inside a dialog in chronological order.
-To display the album UI, simply use the HCAlbumViewController:
-```swift
-let albumVC = HCAlbumViewController(dialogID: [dialog id]])
-self.navigationController?.pushViewController(albumVC, animated: true)
-```
-There are some UI configuration you can do on the `HCAlbumViewController`:
+When users send images/videos in a conversation, they often want to have an easier way to browse all of them. For that, we have a `HCAlbumViewController` class.
 
-HCColorPalette                 |
--------------                  |   -------------   |   -------------     |   -------------
-**Variable Name**              |    **Type**       |  **Default Value**  |     **Description**
-albumBackgroundColor           |     UIColor       |  #252326 alpha:0.5  | album view background color
-albumSectionBackgroundColor    |     UIColor       |  #252326            | album section background color
-albumNavigationBarIconColor    |     UIColor       |  #ffffff alpha:0.9  | album navigationbar icon color
-albumNavigationBarTitleColor   |     UIColor       |  white              | album navigationbar title color
-albumNavigationBackgroundColor |     UIColor       |  #252326            | album navigation background color
-albumSectionTitleColor         |     UIColor       |  white              | album section view background color
+```swift
+// Albums are grouped by dialogs. To initialize, you need to pass a dialog id.
+let albumVC = HCAlbumViewController(dialogID: dialogID)
+```
+
+![image of album view](../images/screenshots/album_view.png)

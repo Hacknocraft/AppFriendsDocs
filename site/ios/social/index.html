@@ -9,7 +9,7 @@
         <meta name="description" content="A turn-key solution to enable messagina and make your app social.">
       
       
-        <link rel="canonical" href="http://www.appfriends.me/api/applicationapi/">
+        <link rel="canonical" href="http://www.appfriends.me/ios/social/">
       
       
         <meta name="author" content="Hao Wang">
@@ -21,7 +21,7 @@
     
     
       
-        <title>Application APIs - AppFriends Documentation</title>
+        <title>Social - AppFriends Documentation</title>
       
     
     
@@ -83,11 +83,11 @@
             
               
                 <span class="md-header-nav__parent">
-                  Server API
+                  iOS
                 </span>
               
             
-            Application APIs
+            Social
           
         </span>
       </div>
@@ -158,10 +158,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       iOS
@@ -179,7 +181,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../ios/quick_start/" title="Quick Start" class="md-nav__link">
+    <a href="../quick_start/" title="Quick Start" class="md-nav__link">
       Quick Start
     </a>
   </li>
@@ -191,7 +193,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../ios/sessions/" title="Sessions" class="md-nav__link">
+    <a href="../sessions/" title="Sessions" class="md-nav__link">
       Sessions
     </a>
   </li>
@@ -203,7 +205,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../ios/users/" title="Users" class="md-nav__link">
+    <a href="../users/" title="Users" class="md-nav__link">
       Users
     </a>
   </li>
@@ -213,11 +215,52 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../ios/social/" title="Social" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Social
+      </label>
+    
+    <a href="./" title="Social" class="md-nav__link md-nav__link--active">
       Social
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#followunfollow-and-friends" title="Follow/Unfollow and Friends" class="md-nav__link">
+    Follow/Unfollow and Friends
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blockunblock" title="Block/Unblock" class="md-nav__link">
+    Block/Unblock
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -227,7 +270,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../ios/dialogs/" title="Dialogs and Messaging" class="md-nav__link">
+    <a href="../dialogs/" title="Dialogs and Messaging" class="md-nav__link">
       Dialogs and Messaging
     </a>
   </li>
@@ -239,7 +282,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../ios/push_notification/" title="Push Notification" class="md-nav__link">
+    <a href="../push_notification/" title="Push Notification" class="md-nav__link">
       Push Notification
     </a>
   </li>
@@ -251,7 +294,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../ios/events/" title="Events" class="md-nav__link">
+    <a href="../events/" title="Events" class="md-nav__link">
       Events
     </a>
   </li>
@@ -263,7 +306,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../ios/encryption/" title="Encryption" class="md-nav__link">
+    <a href="../encryption/" title="Encryption" class="md-nav__link">
       Encryption
     </a>
   </li>
@@ -275,7 +318,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../ios/ui_components/" title="UI Components" class="md-nav__link">
+    <a href="../ui_components/" title="UI Components" class="md-nav__link">
       UI Components
     </a>
   </li>
@@ -287,7 +330,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../ios/ui_customization/" title="UI Customization" class="md-nav__link">
+    <a href="../ui_customization/" title="UI Customization" class="md-nav__link">
       UI Customization
     </a>
   </li>
@@ -299,7 +342,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../ios/dependencies/" title="External Dependencies" class="md-nav__link">
+    <a href="../dependencies/" title="External Dependencies" class="md-nav__link">
       External Dependencies
     </a>
   </li>
@@ -311,7 +354,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../ios/error/" title="Errors" class="md-nav__link">
+    <a href="../error/" title="Errors" class="md-nav__link">
       Errors
     </a>
   </li>
@@ -398,12 +441,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
       Server API
@@ -421,7 +462,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../request_auth/" title="Request Authentication" class="md-nav__link">
+    <a href="../../api/request_auth/" title="Request Authentication" class="md-nav__link">
       Request Authentication
     </a>
   </li>
@@ -431,58 +472,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        Application APIs
-      </label>
-    
-    <a href="./" title="Application APIs" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../api/applicationapi/" title="Application APIs" class="md-nav__link">
       Application APIs
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#rest-apis" title="REST APIs" class="md-nav__link">
-    REST APIs
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#error-codes" title="Error Codes" class="md-nav__link">
-    Error Codes
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -492,7 +486,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../adminapi/" title="Admin APIs" class="md-nav__link">
+    <a href="../../api/adminapi/" title="Admin APIs" class="md-nav__link">
       Admin APIs
     </a>
   </li>
@@ -524,22 +518,16 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#rest-apis" title="REST APIs" class="md-nav__link">
-    REST APIs
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#error-codes" title="Error Codes" class="md-nav__link">
-    Error Codes
+  <a href="#followunfollow-and-friends" title="Follow/Unfollow and Friends" class="md-nav__link">
+    Follow/Unfollow and Friends
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#blockunblock" title="Block/Unblock" class="md-nav__link">
+    Block/Unblock
+  </a>
   
 </li>
       
@@ -556,81 +544,91 @@
                
               
                 
-                <h1 id="application-api">Application API<a class="headerlink" href="#application-api" title="Permanent link">&para;</a></h1>
-<p>AppFriends API can be used to authenticate user, send messages, search for user, update user information, create social relationship and etc. Application API's can only be accessed via the SDK, using the application secret.</p>
-<h2 id="rest-apis">REST APIs<a class="headerlink" href="#rest-apis" title="Permanent link">&para;</a></h2>
-<p>Please see our application REST APIs <a href="https://documenter.getpostman.com/view/154000/appfriends-application-api/2MrYL7">here</a>.</p>
-<h3 id="error-codes">Error Codes<a class="headerlink" href="#error-codes" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Error Code</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>9000</td>
-<td>operation not allowed</td>
-</tr>
-<tr>
-<td>10000</td>
-<td>parameter required</td>
-</tr>
-<tr>
-<td>10001</td>
-<td>need to login</td>
-</tr>
-<tr>
-<td>10002</td>
-<td>missing app ID</td>
-</tr>
-<tr>
-<td>10003</td>
-<td>invalid app ID</td>
-</tr>
-<tr>
-<td>10004</td>
-<td>no permission</td>
-</tr>
-<tr>
-<td>10005</td>
-<td>admin user not found</td>
-</tr>
-<tr>
-<td>10007</td>
-<td>no Authorization header found</td>
-</tr>
-<tr>
-<td>10008</td>
-<td>invalid Authorization header found</td>
-</tr>
-<tr>
-<td>10009</td>
-<td>invalid request path or method</td>
-</tr>
-<tr>
-<td>10010</td>
-<td>invalid params</td>
-</tr>
-<tr>
-<td>10011</td>
-<td>admin server api secret required</td>
-</tr>
-<tr>
-<td>20005</td>
-<td>dialog not found</td>
-</tr>
-<tr>
-<td>30007</td>
-<td>exceed max import users per request</td>
-</tr>
-<tr>
-<td>50000</td>
-<td>server is under maintenance</td>
-</tr>
-</tbody>
-</table>
+                <h1 id="social-api">Social API<a class="headerlink" href="#social-api" title="Permanent link">&para;</a></h1>
+<p>AppFriends offers social features to help you build applications to connect users and store their social relationship.</p>
+<h2 id="followunfollow-and-friends">Follow/Unfollow and Friends<a class="headerlink" href="#followunfollow-and-friends" title="Permanent link">&para;</a></h2>
+<p>User can follow/unfollow one another.
+To follow a user:</p>
+<div class="codehilite"><pre><span></span><span class="c1">// userID is target user id</span>
+<span class="n">AFUser</span><span class="p">.</span><span class="n">followUser</span><span class="p">(</span><span class="n">userID</span><span class="p">:</span> <span class="n">userID</span><span class="p">,</span> <span class="n">completion</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+                <span class="k">if</span> <span class="n">error</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+                  <span class="c1">// handle error</span>
+                <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                  <span class="c1">// success</span>
+                <span class="p">}</span>
+            <span class="p">})</span>
+</pre></div>
+
+
+<p>To unfollow a user</p>
+<div class="codehilite"><pre><span></span><span class="c1">// userID is target user id</span>
+<span class="n">AFUser</span><span class="p">.</span><span class="n">unfollowUser</span><span class="p">(</span><span class="n">userID</span><span class="p">:</span> <span class="n">userID</span><span class="p">,</span> <span class="n">completion</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+                <span class="k">if</span> <span class="n">error</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+                  <span class="c1">// handle error</span>
+                <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                  <span class="c1">// success</span>
+                <span class="p">}</span>
+            <span class="p">})</span>
+</pre></div>
+
+
+<p>To get a list of the followers of the current user</p>
+<div class="codehilite"><pre><span></span><span class="n">AFUser</span><span class="p">.</span><span class="n">getFollowers</span> <span class="p">{</span> <span class="p">(</span><span class="n">users</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+            <span class="k">if</span> <span class="n">error</span> <span class="p">==</span> <span class="kc">nil</span><span class="p">,</span> <span class="kd">let</span> <span class="nv">userIDs</span> <span class="p">=</span> <span class="n">users</span> <span class="p">{</span>
+              <span class="c1">// success, you get a list of user ids of the followers</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+              <span class="c1">// failed</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+</pre></div>
+
+
+<p>To get a list of users that the current user is following</p>
+<div class="codehilite"><pre><span></span><span class="n">AFUser</span><span class="p">.</span><span class="n">getFollowing</span> <span class="p">{</span> <span class="p">(</span><span class="n">users</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+            <span class="k">if</span> <span class="n">error</span> <span class="p">==</span> <span class="kc">nil</span><span class="p">,</span> <span class="kd">let</span> <span class="nv">userIDs</span> <span class="p">=</span> <span class="n">users</span> <span class="p">{</span>
+              <span class="c1">// success, you get a list of user ids of the followers</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+              <span class="c1">// failed</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+</pre></div>
+
+
+<p>In AppFriends, when two users follow one another, they become friends. To get a list of friends of the current user, you can use:</p>
+<div class="codehilite"><pre><span></span><span class="n">AFUser</span><span class="p">.</span><span class="n">getFriends</span> <span class="p">{</span> <span class="p">(</span><span class="n">users</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+            <span class="k">if</span> <span class="n">error</span> <span class="p">==</span> <span class="kc">nil</span><span class="p">,</span> <span class="kd">let</span> <span class="nv">userIDs</span> <span class="p">=</span> <span class="n">users</span> <span class="p">{</span>
+              <span class="c1">// success, you get a list of user ids of the followers</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+              <span class="c1">// failed</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+</pre></div>
+
+
+<h2 id="blockunblock">Block/Unblock<a class="headerlink" href="#blockunblock" title="Permanent link">&para;</a></h2>
+<p>An user can block other users. If user A blocks user B, B will no longer be able to send any private message to A.
+You can block a user by:</p>
+<div class="codehilite"><pre><span></span><span class="n">AFUser</span><span class="p">.</span><span class="n">blockUser</span><span class="p">(</span><span class="n">userID</span><span class="p">:</span> <span class="n">userID</span><span class="p">,</span> <span class="n">completion</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+                        <span class="k">if</span> <span class="kd">let</span> <span class="nv">err</span> <span class="p">=</span> <span class="n">error</span> <span class="p">{</span>
+                            <span class="c1">// block user failed</span>
+                        <span class="p">}</span>
+                        <span class="k">else</span> <span class="p">{</span>
+                            <span class="c1">// block user successful</span>
+                        <span class="p">}</span>
+                    <span class="p">})</span>
+</pre></div>
+
+
+<p>Unblock a user:</p>
+<div class="codehilite"><pre><span></span><span class="n">AFUser</span><span class="p">.</span><span class="n">unblockUser</span><span class="p">(</span><span class="n">userID</span><span class="p">:</span> <span class="n">userID</span><span class="p">,</span> <span class="n">completion</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+                        <span class="k">if</span> <span class="kd">let</span> <span class="nv">err</span> <span class="p">=</span> <span class="n">error</span> <span class="p">{</span>
+                            <span class="c1">// unblock user failed</span>
+                        <span class="p">}</span>
+                        <span class="k">else</span> <span class="p">{</span>
+                            <span class="c1">// unblock user successful</span>
+                        <span class="p">}</span>
+                    <span class="p">})</span>
+</pre></div>
               
               
             </article>
@@ -644,7 +642,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../request_auth/" title="Request Authentication" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../users/" title="Users" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -653,19 +651,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Request Authentication
+                Users
               </span>
             </div>
           </a>
         
         
-          <a href="../adminapi/" title="Admin APIs" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../dialogs/" title="Dialogs and Messaging" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Admin APIs
+                Dialogs and Messaging
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

@@ -1,6 +1,11 @@
 # Quick Start
 ## 1. Create an AppFriends Application
 Before start using AppFriends, you need to create an application on the [dashboard](http://appfriends.hacknocraft.com/landing/index) Users in the same application can talk to each other and you only need one application for all the platforms you want to support.
+To see an sample app of how to use AppFriendsUI, please checkout our repo:
+
+<a href="https://github.com/Hacknocraft/AppFriendsiOSSample">
+<button class="btn btn-info">Github iOS Sample App</button>  
+</a>
 
 ## 2. Integrate AppFriends SDK
 ### Using Cocoapods
@@ -29,12 +34,6 @@ To integrate using Carthage
 
 #### Copy frameworks:
 ![Copy Frameworks](http://res.cloudinary.com/hacknocraft-appfriends/image/upload/v1493874915/Screen_Shot_2017-05-04_at_1.13.57_AM_gsfifq.png)
-
-To see an sample app of how to use AppFriendsUI, please checkout our repo:
-
-<a href="https://github.com/Hacknocraft/AppFriendsiOSSample">
-<button class="btn btn-info">Github iOS Sample App</button>  
-</a>
 
 If you don't want any of the UI components we provide, you can directly interact with the platform API, and we have a core framework to use for that purpose:
 ``` ruby
@@ -75,3 +74,6 @@ AppFriendsUI.sharedInstance.initialize("[appfriends key]", secret: "[appfriends 
 
 ## 5. Login
 After initialization, you want to login your user to AppFriends, so he can start chatting with other users. Please see [sessions](sessions.md) for detail
+
+## 6. UI
+There are a lot of ready to use UI components in the AppFriendsUI SDK. They can save you hundreds of hours of development. To learn the UI components and how to use them, please see [ui components section](ui_components.md)

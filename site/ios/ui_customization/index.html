@@ -9,7 +9,7 @@
         <meta name="description" content="A turn-key solution to enable messagina and make your app social.">
       
       
-        <link rel="canonical" href="http://www.appfriends.me/ios/events/">
+        <link rel="canonical" href="http://www.appfriends.me/ios/ui_customization/">
       
       
         <meta name="author" content="Hao Wang">
@@ -21,7 +21,7 @@
     
     
       
-        <title>Events - AppFriends Documentation</title>
+        <title>UI Customization - AppFriends Documentation</title>
       
     
     
@@ -87,7 +87,7 @@
                 </span>
               
             
-            Events
+            UI Customization
           
         </span>
       </div>
@@ -251,59 +251,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        Events
-      </label>
-    
-    <a href="./" title="Events" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../events/" title="Events" class="md-nav__link">
       Events
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#subscribe-to-appfriends-events" title="Subscribe to AppFriends Events" class="md-nav__link">
-    Subscribe to AppFriends Events
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#process-event" title="Process Event" class="md-nav__link">
-    Process Event
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#event-list" title="Event List" class="md-nav__link">
-    Event List
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -335,11 +287,65 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../ui_customization/" title="UI Customization" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        UI Customization
+      </label>
+    
+    <a href="./" title="UI Customization" class="md-nav__link md-nav__link--active">
       UI Customization
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic-customization" title="Basic Customization" class="md-nav__link">
+    Basic Customization
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-of-customizable-values" title="List of Customizable Values" class="md-nav__link">
+    List of Customizable Values
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#album" title="Album" class="md-nav__link">
+    Album
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -525,22 +531,28 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#subscribe-to-appfriends-events" title="Subscribe to AppFriends Events" class="md-nav__link">
-    Subscribe to AppFriends Events
+  <a href="#basic-customization" title="Basic Customization" class="md-nav__link">
+    Basic Customization
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-of-customizable-values" title="List of Customizable Values" class="md-nav__link">
+    List of Customizable Values
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#process-event" title="Process Event" class="md-nav__link">
-    Process Event
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#event-list" title="Event List" class="md-nav__link">
-    Event List
+  <a href="#album" title="Album" class="md-nav__link">
+    Album
   </a>
   
 </li>
@@ -558,71 +570,389 @@
                
               
                 
-                <h1 id="events">Events<a class="headerlink" href="#events" title="Permanent link">&para;</a></h1>
-<p>Your app can subscribe to events from AppFriends using <code>AFEvent</code> class and its API. Objects that implement <code>AFEventSubscriber</code> protocol can subscribe to AppFriends events.</p>
-<h2 id="subscribe-to-appfriends-events">Subscribe to AppFriends Events<a class="headerlink" href="#subscribe-to-appfriends-events" title="Permanent link">&para;</a></h2>
-<p>To get notified by AppFriends about events, you can subscribe to the event postings by:</p>
-<div class="codehilite"><pre><span></span><span class="c1">// subscribe, we will only hold a weak reference to subscriber</span>
-<span class="n">AFEvent</span><span class="p">.</span><span class="n">subscribe</span><span class="p">(</span><span class="n">subscriber</span><span class="p">:</span> <span class="kc">self</span><span class="p">)</span>
-
-<span class="c1">// unsubscribe</span>
-<span class="n">AFEvent</span><span class="p">.</span><span class="n">unsubscribe</span><span class="p">(</span><span class="n">subscriber</span><span class="p">:</span> <span class="kc">self</span><span class="p">)</span>
-</pre></div>
-
-
-<h2 id="process-event">Process Event<a class="headerlink" href="#process-event" title="Permanent link">&para;</a></h2>
-<p>To process posted events, please implement</p>
-<div class="codehilite"><pre><span></span><span class="kd">func</span> <span class="nf">emitEvent</span><span class="p">(</span><span class="kc">_</span> <span class="n">event</span><span class="p">:</span> <span class="n">AFEvent</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="n">eventName</span> <span class="p">==</span> <span class="p">.</span><span class="n">eventTypingStatusUpdated</span> <span class="p">{</span>
-    <span class="kd">let</span> <span class="nv">typingStatus</span> <span class="p">=</span> <span class="n">event</span><span class="p">.</span><span class="n">data</span> <span class="k">as</span><span class="p">?</span> <span class="n">AFTypingStatus</span> <span class="p">{</span>
-      <span class="c1">// process typing event</span>
-    <span class="p">}</span>
-  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span>
-    <span class="p">...</span>
-<span class="p">}</span>
-</pre></div>
-
-
-<p>Each <code>AFEvent</code> object contains an event name and a data object. The type of the data object depends on the type of event. For example, an <code>AFEventName.eventDialogUpdated</code> event will contain an <code>AFDialog</code></p>
-<h2 id="event-list">Event List<a class="headerlink" href="#event-list" title="Permanent link">&para;</a></h2>
+                <h1 id="ui-customization">UI Customization<a class="headerlink" href="#ui-customization" title="Permanent link">&para;</a></h1>
+<p><code>AppFriendsUI</code> provides a lot of useful and convenient UI components for you to use. It can save a lot of your time developing the app. Our <a href="https://github.com/Hacknocraft/AppFriendsiOSSample">demo app</a> takes full advantage of the <code>AppFriendsUI</code>. You could clone the demo app repo from github to see how it uses, interact and customizes the UI components provided by <code>AppFriendsUI</code>.</p>
+<h2 id="basic-customization">Basic Customization<a class="headerlink" href="#basic-customization" title="Permanent link">&para;</a></h2>
+<p><code>HCUIConfiguration</code> gives you easy access to customize AppFriends UI components. For example, if you want to change the background color of the chat view, you can simply do it by changing the value of <code>HCColorPalette.chatBackgroundColor</code></p>
+<h3 id="list-of-customizable-values">List of Customizable Values<a class="headerlink" href="#list-of-customizable-values" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th>Event name</th>
-<th>Data</th>
-<th>Description</th>
+<th>HCSettingsConfiguation</th>
+<th></th>
+<th></th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>.eventDialogCreated</td>
-<td><code>AFDialog</code> object</td>
-<td>dialog created, the newly created dialog will be the data</td>
+<td><strong>Variable Name</strong></td>
+<td><strong>Type</strong></td>
+<td><strong>Default Value</strong></td>
+<td><strong>Description</strong></td>
 </tr>
 <tr>
-<td>.eventDialogLeft</td>
-<td><code>AFDialog</code> object</td>
-<td>the current user has left the dialog</td>
+<td>badgeDisplayIfMuted</td>
+<td>Boolean</td>
+<td>false</td>
+<td>turn this to true if you want to keep badge for a conversation after it's muted.</td>
 </tr>
 <tr>
-<td>.eventDialogUpdated</td>
-<td><code>AFDialog</code> object</td>
-<td>dialog updated, the dialog that is updated will be the data</td>
+<td>showNewMessageLine</td>
+<td>Boolean</td>
+<td>true</td>
+<td>switch for new message line display on private dialogs</td>
 </tr>
 <tr>
-<td>.eventTypingStatusUpdated</td>
-<td><code>AFTypingStatus</code> object</td>
-<td>typing status updated, the <code>AFTypingStatus</code> object will be the data</td>
+<td>supportedMessageTypes</td>
+<td>ChatSupportedMessageDataTypes</td>
+<td>.all</td>
+<td>The types of messages you want to support in your chat. This value will apply to all chat. You can also change the types of messages you want to support for each dialog when you initialize the chat view</td>
 </tr>
 <tr>
-<td>.eventMessageReceived</td>
-<td><code>AFMessage</code> object</td>
-<td>new message received, the new <code>AFMessage</code> object will be the data</td>
+<td>gifContentRating</td>
+<td>AFGifContentRating</td>
+<td>.parentalGuide13</td>
+<td>change this value to control the gif</td>
 </tr>
 <tr>
-<td>.eventUserSelected</td>
-<td><code>String</code> userID</td>
-<td>user selected by the user from within the AppFriends UI. You can use this event to open user profile in your app.</td>
+<td>showDialogAlbum</td>
+<td>Boolean</td>
+<td>true</td>
+<td>change to false if you don't want to use the dialog album</td>
+</tr>
+<tr>
+<td>enableContentFlagging</td>
+<td>Boolean</td>
+<td>false</td>
+<td>change to true if you want to be able to flag content on the chat view</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>HCFont</th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Variable Name</strong></td>
+<td><strong>Type</strong></td>
+<td><strong>Default Value</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr>
+<td>segmentSelectorFont</td>
+<td>UIFont</td>
+<td>UIFont.systemFont(ofSize: 15)</td>
+<td>segmented control button title font</td>
+</tr>
+<tr>
+<td>chatCellContentFont</td>
+<td>UIFont</td>
+<td>UIFont.systemFont(ofSize: 15)</td>
+<td>chat message content text font</td>
+</tr>
+<tr>
+<td>chatCellSystemMessageFont</td>
+<td>UIFont</td>
+<td>UIFont.systemFont(ofSize: 15)</td>
+<td>chat system message content text font</td>
+</tr>
+<tr>
+<td>boldButtonFont</td>
+<td>UIFont</td>
+<td>UIFont.boldSystemFont(ofSize: 16)</td>
+<td>button bold font</td>
+</tr>
+<tr>
+<td>dialogSettingFont</td>
+<td>UIFont</td>
+<td>UIFont.systemFont(ofSize: 15)</td>
+<td>dialog setting UI text font</td>
+</tr>
+<tr>
+<td>navigationBarTitleFont</td>
+<td>UIFont</td>
+<td>UIFont.systemFont(ofSize: 17)</td>
+<td>navigation bar title font</td>
+</tr>
+<tr>
+<td>chatDialogListSectionTitleFont</td>
+<td>UIFont</td>
+<td>UIFont.systemFont(ofSize: 15)</td>
+<td>dialog list section title font</td>
+</tr>
+<tr>
+<td>chatTimestampFont</td>
+<td>UIFont</td>
+<td>UIFont.systemFont(ofSize: 13)</td>
+<td>chat message time label</td>
+</tr>
+<tr>
+<td>chatDateLabelFont</td>
+<td>UIFont</td>
+<td>UIFont.systemFont(ofSize: 15)</td>
+<td>chat system date label</td>
+</tr>
+<tr>
+<td>locationTitleFont</td>
+<td>UIFont</td>
+<td>UIFont.boldSystemFont(ofSize: 16)</td>
+<td>location message title font</td>
+</tr>
+<tr>
+<td>locationSubtitleFont</td>
+<td>UIFont</td>
+<td>UIFont.systemFont(ofSize: 15)</td>
+<td>location message description label font</td>
+</tr>
+<tr>
+<td>emptyTableLabelFont</td>
+<td>UIFont</td>
+<td>UIFont.systemFont(ofSize: 15)</td>
+<td>the font for the label to use when the table is empty</td>
+</tr>
+<tr>
+<td>albumSectionTitleFont</td>
+<td>UIFont</td>
+<td>UIFont.systemFont(ofSize: 15)</td>
+<td>album date title label font</td>
+</tr>
+<tr>
+<td>chatDialogListSectionTitleFont</td>
+<td>UIFont</td>
+<td>UIFont.systemFont(ofSize: 15)</td>
+<td>dialog list section title font</td>
+</tr>
+<tr>
+<td>chatDialogListCellTitleFont</td>
+<td>UIFont</td>
+<td>UIFont.systemFont(ofSize: 16)</td>
+<td>dialog list cell title (user name or dialog title) font</td>
+</tr>
+<tr>
+<td>chatDialogListCellTimestampFont</td>
+<td>UIFont</td>
+<td>UIFont.systemFont(ofSize: 13)</td>
+<td>dialog list cell timestamp label font</td>
+</tr>
+<tr>
+<td>chatDialogListCellLastMessageFont</td>
+<td>UIFont</td>
+<td>UIFont.systemFont(ofSize: 13)</td>
+<td>dialog list cell last message label font</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>HCColorPalette</th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Variable Name</strong></td>
+<td><strong>Type</strong></td>
+<td><strong>Default Value</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr>
+<td>chatBackgroundColor</td>
+<td>UIColor</td>
+<td>#0d0e28</td>
+<td>the background color of the chat views</td>
+</tr>
+<tr>
+<td>chatOutMessageContentTextColor</td>
+<td>UIColor</td>
+<td>white</td>
+<td>outgoing message content text color</td>
+</tr>
+<tr>
+<td>chatInMessageContentTextColor</td>
+<td>UIColor</td>
+<td>black</td>
+<td>received message content text color</td>
+</tr>
+<tr>
+<td>chatUserNamelTextColor</td>
+<td>UIColor</td>
+<td>white</td>
+<td>the user name label color in the chat view</td>
+</tr>
+<tr>
+<td>chatTimeLabelTextColor</td>
+<td>UIColor</td>
+<td>lightgray</td>
+<td>time stamp label color in chat view</td>
+</tr>
+<tr>
+<td>chatDateLabelTextColor</td>
+<td>UIColor</td>
+<td>lightgray</td>
+<td>date label color in chat view</td>
+</tr>
+<tr>
+<td>chatSystemMessageColor</td>
+<td>UIColor</td>
+<td>lightgray</td>
+<td>system message text color in chat view</td>
+</tr>
+<tr>
+<td>chatSendButtonColor</td>
+<td>UIColor</td>
+<td>#0d0e28</td>
+<td>chat send button color</td>
+</tr>
+<tr>
+<td>chatOutMessageBubbleColor</td>
+<td>UIColor</td>
+<td>#5e62bc</td>
+<td>outgoing message bubble color</td>
+</tr>
+<tr>
+<td>chatInMessageBubbleColor</td>
+<td>UIColor</td>
+<td>#93d4f0</td>
+<td>received message bubble color</td>
+</tr>
+<tr>
+<td>chatMessageFailedButtonColor</td>
+<td>UIColor</td>
+<td>#f2433d</td>
+<td>color of the button to resend message when message failed to send</td>
+</tr>
+<tr>
+<td>chatVideoPlayIconColor</td>
+<td>UIColor</td>
+<td>black</td>
+<td>video play icon color</td>
+</tr>
+<tr>
+<td>chatLeaveConversationColor</td>
+<td>UIColor</td>
+<td>#f2433d</td>
+<td>color of the button to leave a dialog</td>
+</tr>
+<tr>
+<td>chatNewMessageDividerColor</td>
+<td>UIColor</td>
+<td>#f5a59a</td>
+<td>color of the new message divider</td>
+</tr>
+<tr>
+<td>chatInMessageLinkColor</td>
+<td>UIColor</td>
+<td>#437fb4</td>
+<td>color of the links in received messages</td>
+</tr>
+<tr>
+<td>chatOutMessageLinkColor</td>
+<td>UIColor</td>
+<td>#f2433d</td>
+<td>color of the links in outgoing messages</td>
+</tr>
+<tr>
+<td>chatAttachmentIconColor</td>
+<td>UIColor</td>
+<td>#f2433d</td>
+<td>color of the button to add attachment</td>
+</tr>
+<tr>
+<td>chatMediaMessageButtonColor</td>
+<td>UIColor</td>
+<td>#707378</td>
+<td>color of the media buttons on the media input panel</td>
+</tr>
+<tr>
+<td>chatMediaMessageButtonBgColor</td>
+<td>UIColor</td>
+<td>#f9fbfb</td>
+<td>background color of the media buttons on the media input panel</td>
+</tr>
+<tr>
+<td>chatMediaMessageButtonBorderColor</td>
+<td>UIColor</td>
+<td>#e6e8e7</td>
+<td>color of the border of media buttons on the media input panel</td>
+</tr>
+<tr>
+<td>chatMediaMessageSelectionPanelColor</td>
+<td>UIColor</td>
+<td>#f5f8fa</td>
+<td>color of the media input panel</td>
+</tr>
+</tbody>
+</table>
+<h2 id="album">Album<a class="headerlink" href="#album" title="Permanent link">&para;</a></h2>
+<p>Album is a feature including UI components which group all the images and videos sent inside a dialog in chronological order.
+To display the album UI, simply use the HCAlbumViewController:</p>
+<div class="codehilite"><pre><span></span><span class="kd">let</span> <span class="nv">albumVC</span> <span class="p">=</span> <span class="n">HCAlbumViewController</span><span class="p">(</span><span class="n">dialogID</span><span class="p">:</span> <span class="p">[</span><span class="n">dialog</span> <span class="n">id</span><span class="p">]])</span>
+<span class="kc">self</span><span class="p">.</span><span class="n">navigationController</span><span class="p">?.</span><span class="n">pushViewController</span><span class="p">(</span><span class="n">albumVC</span><span class="p">,</span> <span class="n">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+</pre></div>
+
+
+<p>There are some UI configuration you can do on the <code>HCAlbumViewController</code>:</p>
+<table>
+<thead>
+<tr>
+<th>HCColorPalette</th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Variable Name</strong></td>
+<td><strong>Type</strong></td>
+<td><strong>Default Value</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr>
+<td>albumBackgroundColor</td>
+<td>UIColor</td>
+<td>#252326 alpha:0.5</td>
+<td>album view background color</td>
+</tr>
+<tr>
+<td>albumSectionBackgroundColor</td>
+<td>UIColor</td>
+<td>#252326</td>
+<td>album section background color</td>
+</tr>
+<tr>
+<td>albumNavigationBarIconColor</td>
+<td>UIColor</td>
+<td>#ffffff alpha:0.9</td>
+<td>album navigationbar icon color</td>
+</tr>
+<tr>
+<td>albumNavigationBarTitleColor</td>
+<td>UIColor</td>
+<td>white</td>
+<td>album navigationbar title color</td>
+</tr>
+<tr>
+<td>albumNavigationBackgroundColor</td>
+<td>UIColor</td>
+<td>#252326</td>
+<td>album navigation background color</td>
+</tr>
+<tr>
+<td>albumSectionTitleColor</td>
+<td>UIColor</td>
+<td>white</td>
+<td>album section view background color</td>
 </tr>
 </tbody>
 </table>
@@ -639,7 +969,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../push_notification/" title="Push Notification" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../ui_components/" title="UI Components" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -648,19 +978,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Push Notification
+                UI Components
               </span>
             </div>
           </a>
         
         
-          <a href="../encryption/" title="Encryption" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../dependencies/" title="External Dependencies" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Encryption
+                External Dependencies
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

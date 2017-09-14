@@ -15,10 +15,24 @@ AFUser.updateUserName(username: username, completion: { (error) in
   }
 })
 ```
+
 Update User Avatar:
 ```swift
 let avatarURL = "https://someavatar.jpg"
 AFUser.updateUserAvatar(avatar: avatarURL, completion: { (error) in
+  if error != nil {
+    //update failed
+  } else {
+    //update successful
+  }
+})
+```
+
+Update username and avatar at the same time:
+```swift
+let username = "a new username"
+let avatarURL = "https://someavatar.jpg"
+AFUser.updateUser(username: username, avatar: avatarURL, completion: { (error) in
   if error != nil {
     //update failed
   } else {
@@ -39,27 +53,24 @@ AFUser.getUser(userID: userID, completion: { (user, error) in
            })
 ```
 
-## Block/Unblock
-An user can block other users. If user A blocks user B, B will no longer be able to send any private message to A.
-You can block a user by:
+## Search users
+After you imported all of your users into AppFriends platform, you can perform search on usernames and get back a list of users.
 ```swift
-AFUser.blockUser(userID: userID, completion: { (error) in
-                        if let err = error {
-                            // block user failed
-                        }
-                        else {
-                            // block user successful
-                        }
-                    })
+AFUser.search(query: text, completion: { (users, error) in
+                if error != nil {
+                  // search failed, please handle error here
+                } else if let friends = users {
+                  // you get back an array of user ids
+                }
+                self.tableView.reloadData()
+            })
 ```
-Unblock a user:
+
+## Get online user count
+Our SDK can report how many users are online to your application. Your application can implement `HCSDKCoreOnlineUserObserver` and then register to receive the update by `HCSDKCore.sharedInstance.subscribeToOnlineUsers(self)`
 ```swift
-AFUser.unblockUser(userID: userID, completion: { (error) in
-                        if let err = error {
-                            // unblock user failed
-                        }
-                        else {
-                            // unblock user successful
-                        }
-                    })
+// MARK: HCSDKCoreOnlineUserObserver
+public func onlineUserCountChanged(count: NSInteger) {
+  self.collectionView?.reloadData()
+}
 ```

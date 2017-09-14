@@ -136,7 +136,7 @@ dialog.sendGif(url: url, requireReceipt: false, completion: { (error) in
 
 ```
 ## Message Receipts
-You can check the receipts of a message by using "AFMessage" class:
+You can check the receipts of a message by using `AFMessage` class:
 ```swift
 // message is an AFMessage object
 message.getReceipts { (receivedUserIDs, readUserIDs, error) in
@@ -145,6 +145,7 @@ message.getReceipts { (receivedUserIDs, readUserIDs, error) in
 }
 ```
 Sending Receipts:
+If you use the chat view provided in AppFriendsUI SDK, you do not need to manually send the receipts. The UI SDK automatically handles it. If you wish to send receipts yourself, you can call these API on a `AFMessage` object:
 ```swift
 // message is an AFMessage object
 message.markAsRead()      // post read receipt

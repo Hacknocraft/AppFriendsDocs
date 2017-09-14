@@ -17,7 +17,7 @@
       
         <link rel="shortcut icon" href="../../images/logo.png">
       
-      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.5.4">
+      <meta name="generator" content="mkdocs-0.16.1, mkdocs-material-1.2.0">
     
     
       
@@ -28,9 +28,9 @@
       <script src="../../assets/javascripts/modernizr-56ade86843.js"></script>
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application-b1a1975878.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application-e17eeafcbc.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/application-f78e5cb881.palette.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/application-892b79c5c5.palette.css">
       
     
     
@@ -64,12 +64,12 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <header class="md-header" data-md-component="header">
+      <header class="md-header">
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
         
-          <a href="http://www.appfriends.me" title="AppFriends Documentation" class="md-logo md-header-nav__button">
+          <a href="../.." title="AppFriends Documentation" class="md-logo md-header-nav__button">
             <img src="../../images/logo.png" width="24" height="24">
           </a>
         
@@ -99,18 +99,12 @@
   <div class="md-search__overlay"></div>
   <div class="md-search__inner">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" required placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
       <label class="md-icon md-search__icon" for="search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result">
-          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
-            Type to start searching
-          </div>
-          <ol class="md-search-result__list"></ol>
-        </div>
+        <div class="md-search-result" data-md-component="result"></div>
       </div>
     </div>
   </div>
@@ -252,18 +246,35 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#blockunblock" title="Block/Unblock" class="md-nav__link">
-    Block/Unblock
+  <a href="#search-users" title="Search users" class="md-nav__link">
+    Search users
   </a>
   
 </li>
       
-      
+        <li class="md-nav__item">
+  <a href="#get-online-user-count" title="Get online user count" class="md-nav__link">
+    Get online user count
+  </a>
+  
+</li>
       
     </ul>
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../social/" title="Social" class="md-nav__link">
+      Social
+    </a>
   </li>
 
         
@@ -321,8 +332,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../ui_components/" title="UI Components & Customization" class="md-nav__link">
-      UI Components & Customization
+    <a href="../ui_components/" title="UI Components" class="md-nav__link">
+      UI Components
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ui_customization/" title="UI Customization" class="md-nav__link">
+      UI Customization
     </a>
   </li>
 
@@ -523,13 +546,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#blockunblock" title="Block/Unblock" class="md-nav__link">
-    Block/Unblock
+  <a href="#search-users" title="Search users" class="md-nav__link">
+    Search users
   </a>
   
 </li>
       
-      
+        <li class="md-nav__item">
+  <a href="#get-online-user-count" title="Get online user count" class="md-nav__link">
+    Get online user count
+  </a>
+  
+</li>
       
     </ul>
   
@@ -541,8 +569,8 @@
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
+               
               
-                
                 
                 <h1 id="users">Users<a class="headerlink" href="#users" title="Permanent link">&para;</a></h1>
 <p>The users API interface is in data model class <code>AFUser</code>. In order to use AppFriends and for all the AppFriends UI components to work properly, your users will need to be mirrored on AppFriends' system. It means you need to make sure all of your users are copied onto AppFriends' system and updates to the user information, such as username change and so on, are also make available to AppFriends, so your user will get consistent result in your app. Batch users import can be done via <a href="../../api/adminapi/">admin API</a>, and AppFriends SDK also provides a lot of convenient interface for you to work with.</p>
@@ -572,6 +600,19 @@
 </pre></div>
 
 
+<p>Update username and avatar at the same time:</p>
+<div class="codehilite"><pre><span></span><span class="kd">let</span> <span class="nv">username</span> <span class="p">=</span> <span class="s">&quot;a new username&quot;</span>
+<span class="kd">let</span> <span class="nv">avatarURL</span> <span class="p">=</span> <span class="s">&quot;https://someavatar.jpg&quot;</span>
+<span class="n">AFUser</span><span class="p">.</span><span class="n">updateUser</span><span class="p">(</span><span class="n">username</span><span class="p">:</span> <span class="n">username</span><span class="p">,</span> <span class="n">avatar</span><span class="p">:</span> <span class="n">avatarURL</span><span class="p">,</span> <span class="n">completion</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+  <span class="k">if</span> <span class="n">error</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+    <span class="c1">//update failed</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="c1">//update successful</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+
+
 <h2 id="fetch-information-of-an-user">Fetch Information of an User<a class="headerlink" href="#fetch-information-of-an-user" title="Permanent link">&para;</a></h2>
 <p>You can fetch the information of an user.</p>
 <div class="codehilite"><pre><span></span><span class="n">AFUser</span><span class="p">.</span><span class="n">getUser</span><span class="p">(</span><span class="n">userID</span><span class="p">:</span> <span class="n">userID</span><span class="p">,</span> <span class="n">completion</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">user</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
@@ -584,36 +625,27 @@
 </pre></div>
 
 
-<h2 id="blockunblock">Block/Unblock<a class="headerlink" href="#blockunblock" title="Permanent link">&para;</a></h2>
-<p>An user can block other users. If user A blocks user B, B will no longer be able to send any private message to A.
-You can block a user by:</p>
-<div class="codehilite"><pre><span></span><span class="n">AFUser</span><span class="p">.</span><span class="n">blockUser</span><span class="p">(</span><span class="n">userID</span><span class="p">:</span> <span class="n">userID</span><span class="p">,</span> <span class="n">completion</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="k">in</span>
-                        <span class="k">if</span> <span class="kd">let</span> <span class="nv">err</span> <span class="p">=</span> <span class="n">error</span> <span class="p">{</span>
-                            <span class="c1">// block user failed</span>
-                        <span class="p">}</span>
-                        <span class="k">else</span> <span class="p">{</span>
-                            <span class="c1">// block user successful</span>
-                        <span class="p">}</span>
-                    <span class="p">})</span>
+<h2 id="search-users">Search users<a class="headerlink" href="#search-users" title="Permanent link">&para;</a></h2>
+<p>After you imported all of your users into AppFriends platform, you can perform search on usernames and get back a list of users.</p>
+<div class="codehilite"><pre><span></span><span class="n">AFUser</span><span class="p">.</span><span class="n">search</span><span class="p">(</span><span class="n">query</span><span class="p">:</span> <span class="n">text</span><span class="p">,</span> <span class="n">completion</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">users</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+                <span class="k">if</span> <span class="n">error</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+                  <span class="c1">// search failed, please handle error here</span>
+                <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="kd">let</span> <span class="nv">friends</span> <span class="p">=</span> <span class="n">users</span> <span class="p">{</span>
+                  <span class="c1">// you get back an array of user ids</span>
+                <span class="p">}</span>
+                <span class="kc">self</span><span class="p">.</span><span class="n">tableView</span><span class="p">.</span><span class="n">reloadData</span><span class="p">()</span>
+            <span class="p">})</span>
 </pre></div>
 
 
-<p>Unblock a user:</p>
-<div class="codehilite"><pre><span></span><span class="n">AFUser</span><span class="p">.</span><span class="n">unblockUser</span><span class="p">(</span><span class="n">userID</span><span class="p">:</span> <span class="n">userID</span><span class="p">,</span> <span class="n">completion</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="k">in</span>
-                        <span class="k">if</span> <span class="kd">let</span> <span class="nv">err</span> <span class="p">=</span> <span class="n">error</span> <span class="p">{</span>
-                            <span class="c1">// unblock user failed</span>
-                        <span class="p">}</span>
-                        <span class="k">else</span> <span class="p">{</span>
-                            <span class="c1">// unblock user successful</span>
-                        <span class="p">}</span>
-                    <span class="p">})</span>
+<h2 id="get-online-user-count">Get online user count<a class="headerlink" href="#get-online-user-count" title="Permanent link">&para;</a></h2>
+<p>Our SDK can report how many users are online to your application. Your application can implement <code>HCSDKCoreOnlineUserObserver</code> and then register to receive the update by <code>HCSDKCore.sharedInstance.subscribeToOnlineUsers(self)</code></p>
+<div class="codehilite"><pre><span></span><span class="c1">// </span><span class="cs">MARK:</span><span class="c1"> HCSDKCoreOnlineUserObserver</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">onlineUserCountChanged</span><span class="p">(</span><span class="bp">count</span><span class="p">:</span> <span class="n">NSInteger</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kc">self</span><span class="p">.</span><span class="n">collectionView</span><span class="p">?.</span><span class="n">reloadData</span><span class="p">()</span>
+<span class="p">}</span>
 </pre></div>
-                
-                  
-                
               
-              
-                
               
             </article>
           </div>
@@ -641,13 +673,13 @@ You can block a user by:</p>
           </a>
         
         
-          <a href="../dialogs/" title="Dialogs and Messaging" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../social/" title="Social" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Dialogs and Messaging
+                Social
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -689,7 +721,7 @@ You can block a user by:</p>
       
     </div>
     
-      <script src="../../assets/javascripts/application-0b7df094bf.js"></script>
+      <script src="../../assets/javascripts/application-30ac6a1727.js"></script>
       <script>app.initialize({url:{base:"../.."}})</script>
       
     

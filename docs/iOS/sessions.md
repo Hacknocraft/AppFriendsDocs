@@ -3,7 +3,7 @@ Session API can be access using `AFSession` class.
 Before an user can start using AppFriends features, he must first login to AppFriends. In your app, you could login your user to AppFriends as soon as the user is logged into your app. If the user has not previously registered with AppFriends, the user will be created on AppFriends.
 To login an user, we require
 
-1. **an unique username**
+1. **an username**, this value is also a nickname/display name of the user. It can contain space, and doesn't have to be unique.
 2. **an unique user ID**, this should be the same user id that you use in your app to identify the user
 
 ```swift
