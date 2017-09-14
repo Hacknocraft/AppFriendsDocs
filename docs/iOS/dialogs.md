@@ -1,22 +1,3 @@
-There are three types of dialogs. Depending on your use case, please choose the appropriate type to use:
-
-1. Private one on one dialog. This is a conversation between two users. You can't add more users to private one on one dialog. This type of dialog is only visible to the two users.
-2. Private group dialog. This is a conversation between multiple users. You can add up to a few hundred users to a private group chat. This type of dialog is only visible to users in the group.
-3. Open channel dialog. This is an open conversation. It is visible to everyone. You can add up to a few thousand users to an open channel. Each user can only be in one channel at a time.
-
-Feature Type              |    Open Channels    |     Private Group Chat     |     One on One Private Chat
--------------             | -----------------   | ------------------------   | -----------------------------
-Typing Indicator          | ✘                   | ✔                          | ✔
-Message Delivery Receipts | ✘                   | ✔                          | ✔
-Message Read Receipts     | ✘                   | ✔                          | ✔
-Video and Image           | ✔                   | ✔                          | ✔
-Create in app             | ✘                   | ✔                          | ✔
-Create in control panel   | ✔                   | ✘                          | ✘
-Mute                      | ✔                   | ✔                          | ✔
-Blocks user               | ✔                   | ✔                          | ✔
-Push notifications        | ✔                   | ✔                          | ✔
-Members limit             | 5000                | 100                        | 2
-
 ## Open Channels
 Open channel is a public chat, where all of your users can participate. It can handle thousands of users in one channel. ex) Twitch-style public chat.
 You can create open channel from your AppFriends web control panel. After a channel is created, all of your users can see all the channels with `GET /channels` API. A user can only be inside one channel at a time.
