@@ -9,7 +9,7 @@
         <meta name="description" content="A turn-key solution to enable messagina and make your app social.">
       
       
-        <link rel="canonical" href="http://www.appfriends.me/android/push/">
+        <link rel="canonical" href="http://www.appfriends.me/android/social/">
       
       
         <meta name="author" content="Hao Wang">
@@ -21,7 +21,7 @@
     
     
       
-        <title>Push Notifications Guide - AppFriends Documentation</title>
+        <title>Social - AppFriends Documentation</title>
       
     
     
@@ -87,7 +87,7 @@
                 </span>
               
             
-            Push Notifications Guide
+            Social
           
         </span>
       </div>
@@ -389,11 +389,54 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../social/" title="Social" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Social
+      </label>
+    
+    <a href="./" title="Social" class="md-nav__link md-nav__link--active">
       Social
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#followunfollow-and-friends" title="Follow/Unfollow and Friends" class="md-nav__link">
+    Follow/Unfollow and Friends
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blockunblock" title="Block/Unblock" class="md-nav__link">
+    Block/Unblock
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -413,20 +456,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-      
-    
-    
-    <a href="./" title="Push Notifications Guide" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../push/" title="Push Notifications Guide" class="md-nav__link">
       Push Notifications Guide
     </a>
-    
   </li>
 
         
@@ -560,6 +594,27 @@
     
   
   
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#followunfollow-and-friends" title="Follow/Unfollow and Friends" class="md-nav__link">
+    Follow/Unfollow and Friends
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blockunblock" title="Block/Unblock" class="md-nav__link">
+    Block/Unblock
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -571,11 +626,14 @@
               
                 
                 
-                <h1 id="receiving-message-push-notification">Receiving Message Push Notification<a class="headerlink" href="#receiving-message-push-notification" title="Permanent link">&para;</a></h1>
-<p>Once configuration for server side push notification is done on the AppFriends dashboard, you can easily register the app/client side push token with AppFriends and receive push notification:</p>
-<div class="codehilite"><pre><span></span><span class="n">AppFriends</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">pushService</span><span class="o">().</span><span class="na">updatePushToken</span><span class="o">(</span><span class="n">userId</span><span class="o">,</span>
-        <span class="n">FirebaseInstanceId</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">getToken</span><span class="o">())</span>
-        <span class="o">.</span><span class="na">subscribe</span><span class="o">(</span><span class="k">new</span> <span class="n">Subscriber</span><span class="o">&lt;</span><span class="n">Boolean</span><span class="o">&gt;()</span> <span class="o">{</span>
+                <h1 id="social-api">Social API<a class="headerlink" href="#social-api" title="Permanent link">&para;</a></h1>
+<p>AppFriends offers social features to help you build applications to connect users and store their social relationship.</p>
+<h2 id="followunfollow-and-friends">Follow/Unfollow and Friends<a class="headerlink" href="#followunfollow-and-friends" title="Permanent link">&para;</a></h2>
+<p>User can follow/unfollow one another.
+To follow a user:</p>
+<div class="codehilite"><pre><span></span><span class="n">String</span> <span class="n">userId</span> <span class="o">=</span> <span class="s">&quot;another user&#39;s id&quot;</span><span class="o">;</span>
+<span class="n">AppFriends</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">userService</span><span class="o">().</span><span class="na">followUser</span><span class="o">(</span><span class="n">userId</span><span class="o">)</span>
+        <span class="o">.</span><span class="na">subscribe</span><span class="o">(</span><span class="k">new</span> <span class="n">CompletableSubscriber</span><span class="o">()</span> <span class="o">{</span>
             <span class="nd">@Override</span>
             <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onCompleted</span><span class="o">()</span> <span class="o">{</span>
 
@@ -583,12 +641,143 @@
 
             <span class="nd">@Override</span>
             <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onError</span><span class="o">(</span><span class="n">Throwable</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
-                <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+                <span class="c1">// Error</span>
             <span class="o">}</span>
 
             <span class="nd">@Override</span>
-            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onNext</span><span class="o">(</span><span class="n">Boolean</span> <span class="n">registered</span><span class="o">)</span> <span class="o">{</span>
-                <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">&quot;push token registered: &quot;</span> <span class="o">+</span> <span class="n">registered</span><span class="o">);</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onSubscribe</span><span class="o">(</span><span class="n">Subscription</span> <span class="n">d</span><span class="o">)</span> <span class="o">{</span>
+                <span class="c1">// Success</span>
+            <span class="o">}</span>
+        <span class="o">});</span>
+</pre></div>
+
+
+<p>To unfollow a user</p>
+<div class="codehilite"><pre><span></span><span class="n">String</span> <span class="n">userId</span> <span class="o">=</span> <span class="s">&quot;another user&#39;s id&quot;</span><span class="o">;</span>
+<span class="n">AppFriends</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">userService</span><span class="o">().</span><span class="na">followUser</span><span class="o">(</span><span class="n">userId</span><span class="o">)</span>
+        <span class="o">.</span><span class="na">subscribe</span><span class="o">(</span><span class="k">new</span> <span class="n">CompletableSubscriber</span><span class="o">()</span> <span class="o">{</span>
+            <span class="nd">@Override</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onCompleted</span><span class="o">()</span> <span class="o">{</span>
+
+            <span class="o">}</span>
+
+            <span class="nd">@Override</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onError</span><span class="o">(</span><span class="n">Throwable</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+                <span class="c1">// Error</span>
+            <span class="o">}</span>
+
+            <span class="nd">@Override</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onSubscribe</span><span class="o">(</span><span class="n">Subscription</span> <span class="n">d</span><span class="o">)</span> <span class="o">{</span>
+                <span class="c1">// Success</span>
+            <span class="o">}</span>
+        <span class="o">});</span>
+</pre></div>
+
+
+<p>To get a list of the followers of the current user</p>
+<div class="codehilite"><pre><span></span><span class="n">AppFriends</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">userService</span><span class="o">().</span><span class="na">getFollowers</span><span class="o">()</span>
+        <span class="o">.</span><span class="na">subscribe</span><span class="o">(</span><span class="k">new</span> <span class="n">Subscriber</span><span class="o">&lt;</span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;&gt;()</span> <span class="o">{</span>
+            <span class="nd">@Override</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onCompleted</span><span class="o">()</span> <span class="o">{</span>
+
+            <span class="o">}</span>
+
+            <span class="nd">@Override</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onError</span><span class="o">(</span><span class="n">Throwable</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+
+            <span class="o">}</span>
+
+            <span class="nd">@Override</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onNext</span><span class="o">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">strings</span><span class="o">)</span> <span class="o">{</span>
+
+            <span class="o">}</span>
+        <span class="o">});</span>
+</pre></div>
+
+
+<p>To get a list of users that the current user is following</p>
+<div class="codehilite"><pre><span></span><span class="n">AppFriends</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">userService</span><span class="o">().</span><span class="na">getFollowing</span><span class="o">()</span>
+        <span class="o">.</span><span class="na">subscribe</span><span class="o">(</span><span class="k">new</span> <span class="n">Subscriber</span><span class="o">&lt;</span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;&gt;()</span> <span class="o">{</span>
+            <span class="nd">@Override</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onCompleted</span><span class="o">()</span> <span class="o">{</span>
+
+            <span class="o">}</span>
+
+            <span class="nd">@Override</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onError</span><span class="o">(</span><span class="n">Throwable</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+
+            <span class="o">}</span>
+
+            <span class="nd">@Override</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onNext</span><span class="o">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">strings</span><span class="o">)</span> <span class="o">{</span>
+
+            <span class="o">}</span>
+        <span class="o">});</span>
+</pre></div>
+
+
+<p>In AppFriends, when two users follow one another, they become friends. To get a list of friends of the current user, you can use:</p>
+<div class="codehilite"><pre><span></span><span class="n">AppFriends</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">userService</span><span class="o">().</span><span class="na">getFriends</span><span class="o">()</span>
+        <span class="o">.</span><span class="na">subscribe</span><span class="o">(</span><span class="k">new</span> <span class="n">Subscriber</span><span class="o">&lt;</span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;&gt;()</span> <span class="o">{</span>
+            <span class="nd">@Override</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onCompleted</span><span class="o">()</span> <span class="o">{</span>
+
+            <span class="o">}</span>
+
+            <span class="nd">@Override</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onError</span><span class="o">(</span><span class="n">Throwable</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+
+            <span class="o">}</span>
+
+            <span class="nd">@Override</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onNext</span><span class="o">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">strings</span><span class="o">)</span> <span class="o">{</span>
+
+            <span class="o">}</span>
+        <span class="o">});</span>
+</pre></div>
+
+
+<h2 id="blockunblock">Block/Unblock<a class="headerlink" href="#blockunblock" title="Permanent link">&para;</a></h2>
+<p>An user can block other users. If user A blocks user B, B will no longer be able to send any private message to A.
+You can block a user by:</p>
+<div class="codehilite"><pre><span></span><span class="n">String</span> <span class="n">userId</span> <span class="o">=</span> <span class="s">&quot;another user&#39;s id&quot;</span><span class="o">;</span>
+<span class="n">AppFriends</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">userService</span><span class="o">().</span><span class="na">blockUser</span><span class="o">(</span><span class="n">userId</span><span class="o">)</span>
+        <span class="o">.</span><span class="na">subscribe</span><span class="o">(</span><span class="k">new</span> <span class="n">CompletableSubscriber</span><span class="o">()</span> <span class="o">{</span>
+            <span class="nd">@Override</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onCompleted</span><span class="o">()</span> <span class="o">{</span>
+
+            <span class="o">}</span>
+
+            <span class="nd">@Override</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onError</span><span class="o">(</span><span class="n">Throwable</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+                <span class="c1">// Error</span>
+            <span class="o">}</span>
+
+            <span class="nd">@Override</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onSubscribe</span><span class="o">(</span><span class="n">Subscription</span> <span class="n">d</span><span class="o">)</span> <span class="o">{</span>
+                <span class="c1">// Success</span>
+            <span class="o">}</span>
+        <span class="o">});</span>
+</pre></div>
+
+
+<p>Unblock a user:</p>
+<div class="codehilite"><pre><span></span><span class="n">String</span> <span class="n">userId</span> <span class="o">=</span> <span class="s">&quot;another user&#39;s id&quot;</span><span class="o">;</span>
+<span class="n">AppFriends</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">userService</span><span class="o">().</span><span class="na">unblockUser</span><span class="o">(</span><span class="n">userId</span><span class="o">)</span>
+        <span class="o">.</span><span class="na">subscribe</span><span class="o">(</span><span class="k">new</span> <span class="n">CompletableSubscriber</span><span class="o">()</span> <span class="o">{</span>
+            <span class="nd">@Override</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onCompleted</span><span class="o">()</span> <span class="o">{</span>
+
+            <span class="o">}</span>
+
+            <span class="nd">@Override</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onError</span><span class="o">(</span><span class="n">Throwable</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+                <span class="c1">// Error</span>
+            <span class="o">}</span>
+
+            <span class="nd">@Override</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onSubscribe</span><span class="o">(</span><span class="n">Subscription</span> <span class="n">d</span><span class="o">)</span> <span class="o">{</span>
+                <span class="c1">// Success</span>
             <span class="o">}</span>
         <span class="o">});</span>
 </pre></div>
@@ -610,7 +799,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../dialogs/" title="Dialogs and Messaging" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../users/" title="Users" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -619,19 +808,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Dialogs and Messaging
+                Users
               </span>
             </div>
           </a>
         
         
-          <a href="../encryption/" title="Encryption" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../dialogs/" title="Dialogs and Messaging" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Encryption
+                Dialogs and Messaging
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

@@ -17,7 +17,7 @@
       
         <link rel="shortcut icon" href="../../images/logo.png">
       
-      <meta name="generator" content="mkdocs-0.16.1, mkdocs-material-1.2.0">
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.5.4">
     
     
       
@@ -28,9 +28,9 @@
       <script src="../../assets/javascripts/modernizr-56ade86843.js"></script>
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application-e17eeafcbc.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application-b1a1975878.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/application-892b79c5c5.palette.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/application-f78e5cb881.palette.css">
       
     
     
@@ -64,12 +64,12 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <header class="md-header">
+      <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
         
-          <a href="../.." title="AppFriends Documentation" class="md-logo md-header-nav__button">
+          <a href="http://www.appfriends.me" title="AppFriends Documentation" class="md-logo md-header-nav__button">
             <img src="../../images/logo.png" width="24" height="24">
           </a>
         
@@ -99,12 +99,18 @@
   <div class="md-search__overlay"></div>
   <div class="md-search__inner">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
       <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result"></div>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
       </div>
     </div>
   </div>
@@ -370,8 +376,68 @@
 
 
   <li class="md-nav__item">
+    <a href="../../android/sessions/" title="Sessions" class="md-nav__link">
+      Sessions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../android/users/" title="Users" class="md-nav__link">
+      Users
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../android/social/" title="Social" class="md-nav__link">
+      Social
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../android/dialogs/" title="Dialogs and Messaging" class="md-nav__link">
+      Dialogs and Messaging
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../android/push/" title="Push Notifications Guide" class="md-nav__link">
       Push Notifications Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../android/encryption/" title="Encryption" class="md-nav__link">
+      Encryption
     </a>
   </li>
 
@@ -396,6 +462,18 @@
   <li class="md-nav__item">
     <a href="../../android/customization/" title="UI Customization Guide" class="md-nav__link">
       UI Customization Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../android/error/" title="Errors & Exceptions" class="md-nav__link">
+      Errors & Exceptions
     </a>
   </li>
 
@@ -490,13 +568,18 @@
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
-               
               
+                
                 
                 <h1 id="encryption">Encryption<a class="headerlink" href="#encryption" title="Permanent link">&para;</a></h1>
 <p>For some apps, user privacy is a top priority, and <code>AppFriends</code> supports that with an end-to-end encryption extension.  This extension can be added to AppFriends by providing an implementation of <code>AFEncryptionDelegate</code>. An example of <code>AFEncryptionDelegate</code> implementation can be found <a href="https://gist.github.com/laeroah/aeabc9bfd7e96a8ab5e6b20d979e575d">here</a>.</p>
 <p>In the sample implementation we used <a href="../virgilsecurity.com">Virgil</a>, which is encryption service provider. Please refer to <a href="https://medium.com/@haowang_81947/how-to-build-secure-chat-with-appfriends-and-virgil-f562683169e8">this article</a> for details on how to using Virgil to secure AppFriends chat communication.</p>
+                
+                  
+                
               
+              
+                
               
             </article>
           </div>
@@ -572,7 +655,7 @@
       
     </div>
     
-      <script src="../../assets/javascripts/application-30ac6a1727.js"></script>
+      <script src="../../assets/javascripts/application-0b7df094bf.js"></script>
       <script>app.initialize({url:{base:"../.."}})</script>
       
     

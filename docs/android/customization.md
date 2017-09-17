@@ -1,4 +1,36 @@
 # AppFriends UI Customization
+AppFriends Android SDK's UI components provide a set of tools for easy styling which can be configured and customized to match your app's style guide through style configurations as well as overriding XML attribute.
+
+If you are using Simple or Embedded mode in the [UI Guide](ui.md), overriding the AppFriends' default style attributes is the simplest customization option.
+
+Below is a simple example of styling the pop out view with the resulting visual effects compared to the standard view.
+
+```
+<style name="AppFriends.DialogList">
+   <item name="dialogTitleTextColor">@android:color/holo_red_light</item>
+   <item name="dialogUnreadTitleTextColor">@android:color/holo_red_light</item>
+   <item name="dialogUnreadTitleTextStyle">italic</item>
+</style>
+
+<style name="AppFriends.Toolbar">
+   <item name="android:textColorPrimary">@android:color/white</item>
+   <item name="android:textColorSecondary">@android:color/background_dark</item>
+   <item name="android:background">@color/orange</item>
+   <item name="colorControlNormal">#FF0000</item>
+</style>
+
+<style name="AppFriends.Popup">
+   <item name="android:layout_marginStart">32dp</item>
+   <item name="android:layout_marginEnd">32dp</item>
+   <item name="android:layout_marginTop">32dp</item>
+   <item name="android:layout_marginBottom">32dp</item>
+   <item name="entranceOrigin">bottom</item>
+</style>
+```     
+![Full screen view](../images/screenshots/android_right.gif)
+![Popout from bottom with holo red light theme](../images/screenshots/android_popout.gif)
+
+
 A list of XML attributes that can be replaced to easily style AppFriends UI components
 
 ## Color Values
