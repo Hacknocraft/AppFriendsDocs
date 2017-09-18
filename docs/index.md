@@ -52,6 +52,9 @@ The iOS SDK can be integrated into existing Xcode iOS projects. There are two SD
 The Android SDK can be integrated into existing Android projects. For details,
 please read [Android SDK guide](android/quick_start.md). A sample android application can be found [here](https://github.com/hacknocraft/AppfriendsAndroidSample).
 
+### Javascript
+The javascript SDK can be used on your website as well as hybrid mobile apps. 
+
 ## Server API
 AppFriends has comprehensive REST APIs for you to use. There are two types of APIs: [Application API](api/applicationapi.md) and [Admin API](api/adminapi.md).
 

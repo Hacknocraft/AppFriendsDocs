@@ -114,8 +114,8 @@ Sending a gif
 dialog.sendGif(url: url, requireReceipt: false, completion: { (error) in
 
 })
-
 ```
+
 ## Message Receipts
 You can check the receipts of a message by using `AFMessage` class:
 ```swift

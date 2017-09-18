@@ -28,6 +28,13 @@ pages:
   - 'Push Notifications Guide': 'android/push.md'
   - 'UI Integration Guide': 'android/ui.md'
   - 'UI Customization Guide': 'android/customization.md'
+- Javascript:
+  - 'Quick Start': 'javascript/quick_start.md'
+  - 'Callbacks & Events': 'javascript/events.md'
+  - 'Users': 'javascript/users.md'
+  - 'Dialogs': 'javascript/dialogs.md'
+  - 'Messaging': 'javascript/messaging.md'
+  - 'Social': 'javascript/social.md'
 - Server API:
   - 'Request Authentication': 'api/request_auth.md'
   - 'Application APIs': 'api/applicationapi.md'
