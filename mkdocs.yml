@@ -25,9 +25,15 @@ pages:
   - 'Errors': 'ios/error.md'
 - Android:
   - 'Quick Start': 'android/quick_start.md'
+  - 'Sessions': 'android/sessions.md'
+  - 'Users': 'android/users.md'
+  - 'Social': 'android/social.md'
+  - 'Dialogs and Messaging': 'android/dialogs.md'
   - 'Push Notifications Guide': 'android/push.md'
+  - 'Encryption': 'android/encryption.md'
   - 'UI Integration Guide': 'android/ui.md'
   - 'UI Customization Guide': 'android/customization.md'
+  - 'Errors & Exceptions': 'android/error.md'
 - Javascript:
   - 'Quick Start': 'javascript/quick_start.md'
   - 'Callbacks & Events': 'javascript/events.md'
