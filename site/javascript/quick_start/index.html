@@ -9,7 +9,7 @@
         <meta name="description" content="A turn-key solution to enable messagina and make your app social.">
       
       
-        <link rel="canonical" href="http://www.appfriends.me/api/applicationapi/">
+        <link rel="canonical" href="http://www.appfriends.me/javascript/quick_start/">
       
       
         <meta name="author" content="Hao Wang">
@@ -21,7 +21,7 @@
     
     
       
-        <title>Application APIs - AppFriends Documentation</title>
+        <title>Quick Start - AppFriends Documentation</title>
       
     
     
@@ -83,11 +83,11 @@
             
               
                 <span class="md-header-nav__parent">
-                  Server API
+                  Javascript
                 </span>
               
             
-            Application APIs
+            Quick Start
           
         </span>
       </div>
@@ -470,10 +470,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
       Javascript
@@ -489,11 +491,52 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../javascript/quick_start/" title="Quick Start" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Quick Start
+      </label>
+    
+    <a href="./" title="Quick Start" class="md-nav__link md-nav__link--active">
       Quick Start
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#integration" title="Integration" class="md-nav__link">
+    Integration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#login" title="Login" class="md-nav__link">
+    Login
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -503,7 +546,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../javascript/events/" title="Callbacks & Events" class="md-nav__link">
+    <a href="../events/" title="Callbacks & Events" class="md-nav__link">
       Callbacks & Events
     </a>
   </li>
@@ -515,7 +558,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../javascript/users/" title="Users" class="md-nav__link">
+    <a href="../users/" title="Users" class="md-nav__link">
       Users
     </a>
   </li>
@@ -527,7 +570,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../javascript/dialogs/" title="Dialogs" class="md-nav__link">
+    <a href="../dialogs/" title="Dialogs" class="md-nav__link">
       Dialogs
     </a>
   </li>
@@ -539,7 +582,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../javascript/messaging/" title="Messaging" class="md-nav__link">
+    <a href="../messaging/" title="Messaging" class="md-nav__link">
       Messaging
     </a>
   </li>
@@ -551,7 +594,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../javascript/social/" title="Social" class="md-nav__link">
+    <a href="../social/" title="Social" class="md-nav__link">
       Social
     </a>
   </li>
@@ -566,12 +609,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
     <label class="md-nav__link" for="nav-5">
       Server API
@@ -589,7 +630,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../request_auth/" title="Request Authentication" class="md-nav__link">
+    <a href="../../api/request_auth/" title="Request Authentication" class="md-nav__link">
       Request Authentication
     </a>
   </li>
@@ -599,58 +640,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        Application APIs
-      </label>
-    
-    <a href="./" title="Application APIs" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../api/applicationapi/" title="Application APIs" class="md-nav__link">
       Application APIs
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#rest-apis" title="REST APIs" class="md-nav__link">
-    REST APIs
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#error-codes" title="Error Codes" class="md-nav__link">
-    Error Codes
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -660,7 +654,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../adminapi/" title="Admin APIs" class="md-nav__link">
+    <a href="../../api/adminapi/" title="Admin APIs" class="md-nav__link">
       Admin APIs
     </a>
   </li>
@@ -692,22 +686,16 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#rest-apis" title="REST APIs" class="md-nav__link">
-    REST APIs
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#error-codes" title="Error Codes" class="md-nav__link">
-    Error Codes
+  <a href="#integration" title="Integration" class="md-nav__link">
+    Integration
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#login" title="Login" class="md-nav__link">
+    Login
+  </a>
   
 </li>
       
@@ -724,81 +712,29 @@
                
               
                 
-                <h1 id="application-api">Application API<a class="headerlink" href="#application-api" title="Permanent link">&para;</a></h1>
-<p>AppFriends API can be used to authenticate user, send messages, search for user, update user information, create social relationship and etc. Application API's can only be accessed via the SDK, using the application secret.</p>
-<h2 id="rest-apis">REST APIs<a class="headerlink" href="#rest-apis" title="Permanent link">&para;</a></h2>
-<p>Please see our application REST APIs <a href="https://documenter.getpostman.com/view/154000/appfriends-application-api/2MrYL7">here</a>.</p>
-<h3 id="error-codes">Error Codes<a class="headerlink" href="#error-codes" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Error Code</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>9000</td>
-<td>operation not allowed</td>
-</tr>
-<tr>
-<td>10000</td>
-<td>parameter required</td>
-</tr>
-<tr>
-<td>10001</td>
-<td>need to login</td>
-</tr>
-<tr>
-<td>10002</td>
-<td>missing app ID</td>
-</tr>
-<tr>
-<td>10003</td>
-<td>invalid app ID</td>
-</tr>
-<tr>
-<td>10004</td>
-<td>no permission</td>
-</tr>
-<tr>
-<td>10005</td>
-<td>admin user not found</td>
-</tr>
-<tr>
-<td>10007</td>
-<td>no Authorization header found</td>
-</tr>
-<tr>
-<td>10008</td>
-<td>invalid Authorization header found</td>
-</tr>
-<tr>
-<td>10009</td>
-<td>invalid request path or method</td>
-</tr>
-<tr>
-<td>10010</td>
-<td>invalid params</td>
-</tr>
-<tr>
-<td>10011</td>
-<td>admin server api secret required</td>
-</tr>
-<tr>
-<td>20005</td>
-<td>dialog not found</td>
-</tr>
-<tr>
-<td>30007</td>
-<td>exceed max import users per request</td>
-</tr>
-<tr>
-<td>50000</td>
-<td>server is under maintenance</td>
-</tr>
-</tbody>
-</table>
+                <h1 id="quick-start">Quick Start<a class="headerlink" href="#quick-start" title="Permanent link">&para;</a></h1>
+<p>Before start using AppFriends, you need to create an application on the <a href="http://appfriends.hacknocraft.com/landing/index">dashboard</a> Users in the same application can talk to each other and you only need one application for all the platforms you want to support.
+To see an sample app of how to use AppFriendsJS, please checkout our repo:</p>
+<p><a href="https://github.com/Hacknocraft/AppFriendsWebUI">
+<button class="btn btn-info">Github Web Widget Sample App</button><br />
+</a></p>
+<h2 id="integration">Integration<a class="headerlink" href="#integration" title="Permanent link">&para;</a></h2>
+<p>Please download <code>AppFriends.min.js</code> from <a href="https://github.com/Hacknocraft/AppFriendsJavascript.git">Github</a>. Then include the script on your website by:</p>
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;AppFriends.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+
+
+<h2 id="login">Login<a class="headerlink" href="#login" title="Permanent link">&para;</a></h2>
+<p>A user must be authenticated/logged in first before any interaction with AppFriends can begin. Please provide a userID and username when you login a user. If the user id isn't found on AppFriends, we will create a user and assign username to this user. If user id is found, we will login the user and return a token.</p>
+<p>Login a user:</p>
+<div class="codehilite"><pre><span></span><span class="kr">const</span> <span class="nx">af</span> <span class="o">=</span> <span class="nx">windoww</span><span class="p">.</span><span class="nx">af</span><span class="p">;</span>
+<span class="c1">// to login you need to provide a user id and a username</span>
+<span class="nx">af</span><span class="p">.</span><span class="nx">login</span><span class="p">(</span><span class="nx">userId</span><span class="p">,</span> <span class="nx">nickname</span><span class="p">,</span> <span class="p">(</span><span class="nx">token</span><span class="p">,</span> <span class="nx">error</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// handle error</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
               
               
             </article>
@@ -812,7 +748,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../request_auth/" title="Request Authentication" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../android/error/" title="Errors & Exceptions" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -821,19 +757,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Request Authentication
+                Errors & Exceptions
               </span>
             </div>
           </a>
         
         
-          <a href="../adminapi/" title="Admin APIs" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../events/" title="Callbacks & Events" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Admin APIs
+                Callbacks & Events
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

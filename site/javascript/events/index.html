@@ -9,7 +9,7 @@
         <meta name="description" content="A turn-key solution to enable messagina and make your app social.">
       
       
-        <link rel="canonical" href="http://www.appfriends.me/api/applicationapi/">
+        <link rel="canonical" href="http://www.appfriends.me/javascript/events/">
       
       
         <meta name="author" content="Hao Wang">
@@ -21,7 +21,7 @@
     
     
       
-        <title>Application APIs - AppFriends Documentation</title>
+        <title>Callbacks & Events - AppFriends Documentation</title>
       
     
     
@@ -83,11 +83,11 @@
             
               
                 <span class="md-header-nav__parent">
-                  Server API
+                  Javascript
                 </span>
               
             
-            Application APIs
+            Callbacks & Events
           
         </span>
       </div>
@@ -470,10 +470,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
       Javascript
@@ -491,106 +493,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../javascript/quick_start/" title="Quick Start" class="md-nav__link">
+    <a href="../quick_start/" title="Quick Start" class="md-nav__link">
       Quick Start
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../javascript/events/" title="Callbacks & Events" class="md-nav__link">
-      Callbacks & Events
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../javascript/users/" title="Users" class="md-nav__link">
-      Users
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../javascript/dialogs/" title="Dialogs" class="md-nav__link">
-      Dialogs
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../javascript/messaging/" title="Messaging" class="md-nav__link">
-      Messaging
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../javascript/social/" title="Social" class="md-nav__link">
-      Social
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
-    
-    <label class="md-nav__link" for="nav-5">
-      Server API
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
-        Server API
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../request_auth/" title="Request Authentication" class="md-nav__link">
-      Request Authentication
     </a>
   </li>
 
@@ -610,11 +514,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        Application APIs
+        Callbacks & Events
       </label>
     
-    <a href="./" title="Application APIs" class="md-nav__link md-nav__link--active">
-      Application APIs
+    <a href="./" title="Callbacks & Events" class="md-nav__link md-nav__link--active">
+      Callbacks & Events
     </a>
     
       
@@ -628,22 +532,9 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#rest-apis" title="REST APIs" class="md-nav__link">
-    REST APIs
+  <a href="#subscribe-to-the-new-event" title="Subscribe to the new event" class="md-nav__link">
+    Subscribe to the new event
   </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#error-codes" title="Error Codes" class="md-nav__link">
-    Error Codes
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -660,7 +551,103 @@
 
 
   <li class="md-nav__item">
-    <a href="../adminapi/" title="Admin APIs" class="md-nav__link">
+    <a href="../users/" title="Users" class="md-nav__link">
+      Users
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dialogs/" title="Dialogs" class="md-nav__link">
+      Dialogs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../messaging/" title="Messaging" class="md-nav__link">
+      Messaging
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../social/" title="Social" class="md-nav__link">
+      Social
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Server API
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Server API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api/request_auth/" title="Request Authentication" class="md-nav__link">
+      Request Authentication
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api/applicationapi/" title="Application APIs" class="md-nav__link">
+      Application APIs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api/adminapi/" title="Admin APIs" class="md-nav__link">
       Admin APIs
     </a>
   </li>
@@ -692,22 +679,9 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#rest-apis" title="REST APIs" class="md-nav__link">
-    REST APIs
+  <a href="#subscribe-to-the-new-event" title="Subscribe to the new event" class="md-nav__link">
+    Subscribe to the new event
   </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#error-codes" title="Error Codes" class="md-nav__link">
-    Error Codes
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -724,81 +698,99 @@
                
               
                 
-                <h1 id="application-api">Application API<a class="headerlink" href="#application-api" title="Permanent link">&para;</a></h1>
-<p>AppFriends API can be used to authenticate user, send messages, search for user, update user information, create social relationship and etc. Application API's can only be accessed via the SDK, using the application secret.</p>
-<h2 id="rest-apis">REST APIs<a class="headerlink" href="#rest-apis" title="Permanent link">&para;</a></h2>
-<p>Please see our application REST APIs <a href="https://documenter.getpostman.com/view/154000/appfriends-application-api/2MrYL7">here</a>.</p>
-<h3 id="error-codes">Error Codes<a class="headerlink" href="#error-codes" title="Permanent link">&para;</a></h3>
+                <h1 id="events">Events<a class="headerlink" href="#events" title="Permanent link">&para;</a></h1>
+<p>Your app can subscribe to events from AppFriends SDK. The events/callback we will provide are:</p>
 <table>
 <thead>
 <tr>
-<th>Error Code</th>
+<th>Event name</th>
+<th>Data</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>9000</td>
-<td>operation not allowed</td>
+<td>onMessageReceived</td>
+<td><code>Dialog</code> object and <code>Message</code> object</td>
+<td>a new message is received</td>
 </tr>
 <tr>
-<td>10000</td>
-<td>parameter required</td>
+<td>onDialogCreated</td>
+<td><code>Dialog</code> object</td>
+<td>a new dialog is created</td>
 </tr>
 <tr>
-<td>10001</td>
-<td>need to login</td>
+<td>onDialogChanged</td>
+<td><code>Dialog</code> object</td>
+<td>a dialog has been changed</td>
 </tr>
 <tr>
-<td>10002</td>
-<td>missing app ID</td>
+<td>onBadgeUpdated</td>
+<td>n/a</td>
+<td>unread message count changed</td>
 </tr>
 <tr>
-<td>10003</td>
-<td>invalid app ID</td>
+<td>onUserJoined</td>
+<td><code>Dialog</code> object and 'User' object</td>
+<td>new user joined a dialog</td>
 </tr>
 <tr>
-<td>10004</td>
-<td>no permission</td>
-</tr>
-<tr>
-<td>10005</td>
-<td>admin user not found</td>
-</tr>
-<tr>
-<td>10007</td>
-<td>no Authorization header found</td>
-</tr>
-<tr>
-<td>10008</td>
-<td>invalid Authorization header found</td>
-</tr>
-<tr>
-<td>10009</td>
-<td>invalid request path or method</td>
-</tr>
-<tr>
-<td>10010</td>
-<td>invalid params</td>
-</tr>
-<tr>
-<td>10011</td>
-<td>admin server api secret required</td>
-</tr>
-<tr>
-<td>20005</td>
-<td>dialog not found</td>
-</tr>
-<tr>
-<td>30007</td>
-<td>exceed max import users per request</td>
-</tr>
-<tr>
-<td>50000</td>
-<td>server is under maintenance</td>
+<td>onUserLeft</td>
+<td><code>Dialog</code> object and 'User' object</td>
+<td>a user left a dialog</td>
 </tr>
 </tbody>
 </table>
+<h2 id="subscribe-to-the-new-event">Subscribe to the new event<a class="headerlink" href="#subscribe-to-the-new-event" title="Permanent link">&para;</a></h2>
+<p>Here's a sample code to create a event handler. You can register multiple event handlers, and the SDK will callback each one of them.</p>
+<div class="codehilite"><pre><span></span><span class="c1">// You can create a function like this which takes other functions as parameters</span>
+<span class="c1">// Then assign the functions to the handler object and register it with AppFriends SDK</span>
+<span class="nx">createHandlerGlobal</span><span class="p">(...</span><span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="c1">// message received handle</span>
+    <span class="kd">let</span> <span class="nx">messageReceivedFunc</span> <span class="o">=</span> <span class="nx">args</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+
+    <span class="c1">// dialog created handle</span>
+    <span class="kd">let</span> <span class="nx">dialogCreatedFunc</span> <span class="o">=</span> <span class="nx">args</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+
+    <span class="c1">// dialog updated handle</span>
+    <span class="kd">let</span> <span class="nx">dialogChangedFunc</span> <span class="o">=</span> <span class="nx">args</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+
+    <span class="c1">// unread message count change handle</span>
+    <span class="kd">let</span> <span class="nx">badgeChangedFunc</span> <span class="o">=</span> <span class="nx">args</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+
+    <span class="c1">// user joined a dialog</span>
+    <span class="kd">let</span> <span class="nx">userJoinFunc</span> <span class="o">=</span> <span class="nx">args</span><span class="p">[</span><span class="mi">4</span><span class="p">];</span>
+
+    <span class="c1">// user left a dialog</span>
+    <span class="kd">let</span> <span class="nx">userLeftFunc</span> <span class="o">=</span> <span class="nx">args</span><span class="p">[</span><span class="mi">5</span><span class="p">];</span>
+
+    <span class="kd">let</span> <span class="nx">DialogHandler</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="nx">onMessageReceived</span><span class="o">:</span> <span class="p">(</span><span class="nx">dialog</span><span class="p">,</span> <span class="nx">message</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="nx">messageReceivedFunc</span><span class="p">(</span><span class="nx">dialog</span><span class="p">,</span> <span class="nx">message</span><span class="p">);</span>
+      <span class="p">},</span>
+      <span class="nx">onDialogCreated</span><span class="o">:</span> <span class="p">(</span><span class="nx">dialog</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="nx">dialogCreatedFunc</span><span class="p">(</span><span class="nx">dialog</span><span class="p">);</span>
+      <span class="p">},</span>
+      <span class="nx">onDialogChanged</span><span class="o">:</span> <span class="p">(</span><span class="nx">dialog</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="nx">dialogChangedFunc</span><span class="p">(</span><span class="nx">dialog</span><span class="p">);</span>
+      <span class="p">},</span>
+      <span class="nx">onBadgeUpdated</span><span class="o">:</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="nx">badgeChangedFunc</span><span class="p">();</span>
+      <span class="p">},</span>
+      <span class="nx">onUserJoined</span><span class="o">:</span> <span class="p">(</span><span class="nx">dialog</span><span class="p">,</span> <span class="nx">user</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="nx">userJoinFunc</span><span class="p">(</span><span class="nx">dialog</span><span class="p">,</span> <span class="nx">user</span><span class="p">);</span>
+      <span class="p">},</span>
+      <span class="nx">onUserLeft</span><span class="o">:</span> <span class="p">(</span><span class="nx">dialog</span><span class="p">,</span> <span class="nx">user</span><span class="p">)</span> <span class="p">=&gt;</span>
+      <span class="p">{</span>
+        <span class="nx">userLeftFunc</span><span class="p">(</span><span class="nx">dialog</span><span class="p">,</span> <span class="nx">user</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">};</span>
+
+    <span class="c1">// adding a handler and provide a name to the handler</span>
+    <span class="nx">af</span><span class="p">.</span><span class="nx">addDialogHandler</span><span class="p">(</span><span class="s2">&quot;GLOBAL_HANDLER&quot;</span><span class="p">,</span> <span class="nx">DialogHandler</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
               
               
             </article>
@@ -812,7 +804,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../request_auth/" title="Request Authentication" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../quick_start/" title="Quick Start" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -821,19 +813,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Request Authentication
+                Quick Start
               </span>
             </div>
           </a>
         
         
-          <a href="../adminapi/" title="Admin APIs" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../users/" title="Users" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Admin APIs
+                Users
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

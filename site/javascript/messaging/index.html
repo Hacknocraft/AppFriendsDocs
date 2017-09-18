@@ -9,7 +9,7 @@
         <meta name="description" content="A turn-key solution to enable messagina and make your app social.">
       
       
-        <link rel="canonical" href="http://www.appfriends.me/api/applicationapi/">
+        <link rel="canonical" href="http://www.appfriends.me/javascript/messaging/">
       
       
         <meta name="author" content="Hao Wang">
@@ -21,7 +21,7 @@
     
     
       
-        <title>Application APIs - AppFriends Documentation</title>
+        <title>Messaging - AppFriends Documentation</title>
       
     
     
@@ -83,11 +83,11 @@
             
               
                 <span class="md-header-nav__parent">
-                  Server API
+                  Javascript
                 </span>
               
             
-            Application APIs
+            Messaging
           
         </span>
       </div>
@@ -470,10 +470,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
       Javascript
@@ -491,7 +493,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../javascript/quick_start/" title="Quick Start" class="md-nav__link">
+    <a href="../quick_start/" title="Quick Start" class="md-nav__link">
       Quick Start
     </a>
   </li>
@@ -503,7 +505,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../javascript/events/" title="Callbacks & Events" class="md-nav__link">
+    <a href="../events/" title="Callbacks & Events" class="md-nav__link">
       Callbacks & Events
     </a>
   </li>
@@ -515,7 +517,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../javascript/users/" title="Users" class="md-nav__link">
+    <a href="../users/" title="Users" class="md-nav__link">
       Users
     </a>
   </li>
@@ -527,70 +529,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../javascript/dialogs/" title="Dialogs" class="md-nav__link">
+    <a href="../dialogs/" title="Dialogs" class="md-nav__link">
       Dialogs
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../javascript/messaging/" title="Messaging" class="md-nav__link">
-      Messaging
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../javascript/social/" title="Social" class="md-nav__link">
-      Social
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
-    
-    <label class="md-nav__link" for="nav-5">
-      Server API
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
-        Server API
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../request_auth/" title="Request Authentication" class="md-nav__link">
-      Request Authentication
     </a>
   </li>
 
@@ -610,34 +550,53 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        Application APIs
+        Messaging
       </label>
     
-    <a href="./" title="Application APIs" class="md-nav__link md-nav__link--active">
-      Application APIs
+    <a href="./" title="Messaging" class="md-nav__link md-nav__link--active">
+      Messaging
     </a>
     
       
 <nav class="md-nav md-nav--secondary">
   
   
-    
-  
   
     <label class="md-nav__title" for="toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#rest-apis" title="REST APIs" class="md-nav__link">
-    REST APIs
+  <a href="#sending-messages" title="Sending Messages" class="md-nav__link">
+    Sending Messages
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#error-codes" title="Error Codes" class="md-nav__link">
-    Error Codes
+  <a href="#sending-text" title="Sending text:" class="md-nav__link">
+    Sending text:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sending-an-image" title="Sending an image:" class="md-nav__link">
+    Sending an image:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sending-a-video" title="Sending a video:" class="md-nav__link">
+    Sending a video:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sending-a-gif" title="Sending a gif" class="md-nav__link">
+    Sending a gif
   </a>
   
 </li>
@@ -660,7 +619,67 @@
 
 
   <li class="md-nav__item">
-    <a href="../adminapi/" title="Admin APIs" class="md-nav__link">
+    <a href="../social/" title="Social" class="md-nav__link">
+      Social
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Server API
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Server API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api/request_auth/" title="Request Authentication" class="md-nav__link">
+      Request Authentication
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api/applicationapi/" title="Application APIs" class="md-nav__link">
+      Application APIs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api/adminapi/" title="Admin APIs" class="md-nav__link">
       Admin APIs
     </a>
   </li>
@@ -685,23 +704,42 @@
 <nav class="md-nav md-nav--secondary">
   
   
-    
-  
   
     <label class="md-nav__title" for="toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#rest-apis" title="REST APIs" class="md-nav__link">
-    REST APIs
+  <a href="#sending-messages" title="Sending Messages" class="md-nav__link">
+    Sending Messages
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#error-codes" title="Error Codes" class="md-nav__link">
-    Error Codes
+  <a href="#sending-text" title="Sending text:" class="md-nav__link">
+    Sending text:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sending-an-image" title="Sending an image:" class="md-nav__link">
+    Sending an image:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sending-a-video" title="Sending a video:" class="md-nav__link">
+    Sending a video:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sending-a-gif" title="Sending a gif" class="md-nav__link">
+    Sending a gif
   </a>
   
 </li>
@@ -724,81 +762,70 @@
                
               
                 
-                <h1 id="application-api">Application API<a class="headerlink" href="#application-api" title="Permanent link">&para;</a></h1>
-<p>AppFriends API can be used to authenticate user, send messages, search for user, update user information, create social relationship and etc. Application API's can only be accessed via the SDK, using the application secret.</p>
-<h2 id="rest-apis">REST APIs<a class="headerlink" href="#rest-apis" title="Permanent link">&para;</a></h2>
-<p>Please see our application REST APIs <a href="https://documenter.getpostman.com/view/154000/appfriends-application-api/2MrYL7">here</a>.</p>
-<h3 id="error-codes">Error Codes<a class="headerlink" href="#error-codes" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Error Code</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>9000</td>
-<td>operation not allowed</td>
-</tr>
-<tr>
-<td>10000</td>
-<td>parameter required</td>
-</tr>
-<tr>
-<td>10001</td>
-<td>need to login</td>
-</tr>
-<tr>
-<td>10002</td>
-<td>missing app ID</td>
-</tr>
-<tr>
-<td>10003</td>
-<td>invalid app ID</td>
-</tr>
-<tr>
-<td>10004</td>
-<td>no permission</td>
-</tr>
-<tr>
-<td>10005</td>
-<td>admin user not found</td>
-</tr>
-<tr>
-<td>10007</td>
-<td>no Authorization header found</td>
-</tr>
-<tr>
-<td>10008</td>
-<td>invalid Authorization header found</td>
-</tr>
-<tr>
-<td>10009</td>
-<td>invalid request path or method</td>
-</tr>
-<tr>
-<td>10010</td>
-<td>invalid params</td>
-</tr>
-<tr>
-<td>10011</td>
-<td>admin server api secret required</td>
-</tr>
-<tr>
-<td>20005</td>
-<td>dialog not found</td>
-</tr>
-<tr>
-<td>30007</td>
-<td>exceed max import users per request</td>
-</tr>
-<tr>
-<td>50000</td>
-<td>server is under maintenance</td>
-</tr>
-</tbody>
-</table>
+                  <h1>Messaging</h1>
+                
+                <h2 id="sending-messages">Sending Messages<a class="headerlink" href="#sending-messages" title="Permanent link">&para;</a></h2>
+<p>Sending a message to dialog requires a dialog object. You can get dialog object by fetching all dialogs or creating one. For details on dialogs, please see <a href="../dialogs/">Dialogs</a>.</p>
+<h3 id="sending-text">Sending text:<a class="headerlink" href="#sending-text" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="nx">af</span><span class="p">.</span><span class="nx">Dialog</span><span class="p">.</span><span class="nx">sendTextMessage</span><span class="p">(</span>
+      <span class="nx">dialog</span><span class="p">,</span>          <span class="c1">// dialog object</span>
+      <span class="nx">text</span><span class="p">,</span>            <span class="c1">// text to be sent</span>
+      <span class="nx">customData</span><span class="p">,</span>      <span class="c1">// optional, custom data, you can send a string with your message</span>
+      <span class="nx">requireReceipt</span><span class="p">,</span>  <span class="c1">// if the message require receipt, default is false</span>
+      <span class="nx">mentionUsers</span><span class="p">,</span>    <span class="c1">// optional, an array of user ids of users who you want to mention in the message</span>
+      <span class="nx">sendPush</span><span class="p">,</span>        <span class="c1">// optional, if a message should trigger a push notification. Default is is true</span>
+      <span class="p">(</span><span class="nx">message</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+          <span class="c1">// this is a callback, after the message is sent.</span>
+      <span class="p">}</span>
+<span class="p">);</span>
+</pre></div>
+
+
+<h3 id="sending-an-image">Sending an image:<a class="headerlink" href="#sending-an-image" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="nx">af</span><span class="p">.</span><span class="nx">Dialog</span><span class="p">.</span><span class="nx">sendTextMessage</span><span class="p">(</span>
+      <span class="nx">dialog</span><span class="p">,</span>          <span class="c1">// dialog object</span>
+      <span class="nx">imageURL</span><span class="p">,</span>        <span class="c1">// full image url</span>
+      <span class="nx">thumbnailURL</span><span class="p">,</span>    <span class="c1">// thumbnail image url</span>
+      <span class="nx">customData</span><span class="p">,</span>      <span class="c1">// optional, custom data, you can send a string with your message</span>
+      <span class="nx">requireReceipt</span><span class="p">,</span>  <span class="c1">// if the message require receipt, default is false</span>
+      <span class="nx">mentionUsers</span><span class="p">,</span>    <span class="c1">// optional, an array of user ids of users who you want to mention in the message</span>
+      <span class="nx">sendPush</span><span class="p">,</span>        <span class="c1">// optional, if a message should trigger a push notification. Default is is true</span>
+      <span class="p">(</span><span class="nx">message</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+          <span class="c1">// this is a callback, after the message is sent.</span>
+      <span class="p">}</span>
+<span class="p">);</span>
+</pre></div>
+
+
+<h3 id="sending-a-video">Sending a video:<a class="headerlink" href="#sending-a-video" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="nx">af</span><span class="p">.</span><span class="nx">Dialog</span><span class="p">.</span><span class="nx">sendTextMessage</span><span class="p">(</span>
+      <span class="nx">dialog</span><span class="p">,</span>          <span class="c1">// dialog object</span>
+      <span class="nx">videoStreamURL</span><span class="p">,</span>  <span class="c1">// video stream url</span>
+      <span class="nx">thumbnailURL</span><span class="p">,</span>    <span class="c1">// thumbnail image url</span>
+      <span class="nx">customData</span><span class="p">,</span>      <span class="c1">// optional, custom data, you can send a string with your message</span>
+      <span class="nx">requireReceipt</span><span class="p">,</span>  <span class="c1">// if the message require receipt, default is false</span>
+      <span class="nx">mentionUsers</span><span class="p">,</span>    <span class="c1">// optional, an array of user ids of users who you want to mention in the message</span>
+      <span class="nx">sendPush</span><span class="p">,</span>        <span class="c1">// optional, if a message should trigger a push notification. Default is is true</span>
+      <span class="p">(</span><span class="nx">message</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+          <span class="c1">// this is a callback, after the message is sent.</span>
+      <span class="p">}</span>
+<span class="p">);</span>
+</pre></div>
+
+
+<h3 id="sending-a-gif">Sending a gif<a class="headerlink" href="#sending-a-gif" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="nx">af</span><span class="p">.</span><span class="nx">Dialog</span><span class="p">.</span><span class="nx">sendTextMessage</span><span class="p">(</span>
+      <span class="nx">dialog</span><span class="p">,</span>          <span class="c1">// dialog object</span>
+      <span class="nx">gifURL</span><span class="p">,</span>          <span class="c1">// gif url</span>
+      <span class="nx">customData</span><span class="p">,</span>      <span class="c1">// optional, custom data, you can send a string with your message</span>
+      <span class="nx">requireReceipt</span><span class="p">,</span>  <span class="c1">// if the message require receipt, default is false</span>
+      <span class="nx">mentionUsers</span><span class="p">,</span>    <span class="c1">// optional, an array of user ids of users who you want to mention in the message</span>
+      <span class="nx">sendPush</span><span class="p">,</span>        <span class="c1">// optional, if a message should trigger a push notification. Default is is true</span>
+      <span class="p">(</span><span class="nx">message</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+          <span class="c1">// this is a callback, after the message is sent.</span>
+      <span class="p">}</span>
+<span class="p">);</span>
+</pre></div>
               
               
             </article>
@@ -812,7 +839,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../request_auth/" title="Request Authentication" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../dialogs/" title="Dialogs" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -821,19 +848,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Request Authentication
+                Dialogs
               </span>
             </div>
           </a>
         
         
-          <a href="../adminapi/" title="Admin APIs" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../social/" title="Social" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Admin APIs
+                Social
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
