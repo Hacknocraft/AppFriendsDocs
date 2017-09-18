@@ -1,11 +1,15 @@
 # Quick Start
 Before start using AppFriends, you need to create an application on the [dashboard](http://appfriends.hacknocraft.com/landing/index) Users in the same application can talk to each other and you only need one application for all the platforms you want to support.
-To see an sample app of how to use AppFriendsUI, please checkout our repo:
+To see an sample app of how to use AppFriendsJS, please checkout our repo:
+
+<a href="https://github.com/Hacknocraft/AppFriendsWebUI">
+<button class="btn btn-info">Github Web Widget Sample App</button>  
+</a>
 
 ## Integration
-Please download `appfriends.js` from Github. Then include the script on your website by:
+Please download `AppFriends.min.js` from [Github](https://github.com/Hacknocraft/AppFriendsJavascript.git). Then include the script on your website by:
 ```html
-<script src="appfriends.js"></script>
+<script src="AppFriends.min.js"></script>
 ```
 
 ## Login
