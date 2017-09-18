@@ -53,7 +53,7 @@ The Android SDK can be integrated into existing Android projects. For details,
 please read [Android SDK guide](android/quick_start.md). A sample android application can be found [here](https://github.com/hacknocraft/AppfriendsAndroidSample).
 
 ### Javascript
-The javascript SDK can be used on your website as well as hybrid mobile apps. 
+The javascript SDK can be used on your website as well as hybrid mobile apps. Javascript SDK can be downloaded [here](https://github.com/Hacknocraft/AppFriendsJavascript). A sample web widget can be found [here](https://github.com/Hacknocraft/AppFriendsWebUI/tree/master/web-widget).
 
 ## Server API
 AppFriends has comprehensive REST APIs for you to use. There are two types of APIs: [Application API](api/applicationapi.md) and [Admin API](api/adminapi.md).
