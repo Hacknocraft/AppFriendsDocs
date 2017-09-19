@@ -14,6 +14,15 @@ To integrate AppFriends iOS SDK to your Xcode iOS project, add this line in your
 pod 'AppFriendsUI', '~> 2.1'
 pod 'AppFriendsCore', '~> 2.0'
 ```
+#### Swift 3.2
+for Swift 3.2, since a lot of dependent library haven't officially released swift3.2 support yet, please use branch in your Podfile.
+``` ruby
+pod 'AppFriendsCore', :git => 'https://github.com/Hacknocraft/AppFriendsCore.git', :branch => 'swift3_2'
+pod 'AppFriendsUI', :git => 'https://github.com/Hacknocraft/AppFriendsUI.git', :branch => 'swift3_2'
+pod 'CoreStore', :git => 'https://github.com/JohnEstropia/CoreStore.git', :branch => 'prototype/Swift_3_2'
+pod 'SlackTextViewController', :git => 'https://github.com/Hacknocraft/SlackTextViewController.git', :branch => 'master'
+```
+
 Also, add `use_frameworks!` to the top of file. eg.
 ``` ruby
 source 'https://github.com/CocoaPods/Specs.git'
