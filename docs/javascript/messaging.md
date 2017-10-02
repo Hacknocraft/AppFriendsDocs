@@ -62,3 +62,19 @@ af.Dialog.sendTextMessage(
       }
 );
 ```
+
+## Mentioning Users
+You can mention other users by referencing their IDs in the message you compose.
+```swift
+af.Dialog.sendTextMessage(
+      dialog,          // dialog object
+      gifURL,          // gif url
+      customData,      // optional, custom data, you can send a string with your message
+      requireReceipt,  // if the message require receipt, default is false
+      mentionUsers,    // optional, an array of user ids of users who you want to mention in the message
+      sendPush,        // optional, if a message should trigger a push notification. Default is is true
+      (message) => {
+          // this is a callback, after the message is sent.
+      }
+);
+```

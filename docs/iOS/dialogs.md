@@ -116,6 +116,19 @@ dialog.sendGif(url: url, requireReceipt: false, completion: { (error) in
 })
 ```
 
+## Mentioning Users
+You can mention other users by referencing their IDs in the message you compose.
+```swift
+// see mentionedUsers parameter
+// it's an array of mentioned users' IDs
+dialog.sendText(text: text, requireReceipt: true, mentionedUsers: mentionedIDs, completion: { (error) in
+
+    if error == nil {
+      self.didSendTextMessage()
+    }
+})
+```
+
 ## Message Receipts
 You can check the receipts of a message by using `AFMessage` class:
 ```swift

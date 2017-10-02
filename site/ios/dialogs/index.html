@@ -714,6 +714,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mentioning-users" title="Mentioning Users" class="md-nav__link">
+    Mentioning Users
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#message-receipts" title="Message Receipts" class="md-nav__link">
     Message Receipts
   </a>
@@ -849,6 +856,19 @@ When unread message count has updated, you can subscribe to <code>AFEvent</code>
 <div class="codehilite"><pre><span></span><span class="c1">// dialog is an AFDialog instance</span>
 <span class="n">dialog</span><span class="p">.</span><span class="n">sendGif</span><span class="p">(</span><span class="n">url</span><span class="p">:</span> <span class="n">url</span><span class="p">,</span> <span class="n">requireReceipt</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span> <span class="n">completion</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="k">in</span>
 
+<span class="p">})</span>
+</pre></div>
+
+
+<h2 id="mentioning-users">Mentioning Users<a class="headerlink" href="#mentioning-users" title="Permanent link">&para;</a></h2>
+<p>You can mention other users by referencing their IDs in the message you compose.</p>
+<div class="codehilite"><pre><span></span><span class="c1">// see mentionedUsers parameter</span>
+<span class="c1">// it&#39;s an array of mentioned users&#39; IDs</span>
+<span class="n">dialog</span><span class="p">.</span><span class="n">sendText</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="n">text</span><span class="p">,</span> <span class="n">requireReceipt</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="n">mentionedUsers</span><span class="p">:</span> <span class="n">mentionedIDs</span><span class="p">,</span> <span class="n">completion</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+
+    <span class="k">if</span> <span class="n">error</span> <span class="p">==</span> <span class="kc">nil</span> <span class="p">{</span>
+      <span class="kc">self</span><span class="p">.</span><span class="n">didSendTextMessage</span><span class="p">()</span>
+    <span class="p">}</span>
 <span class="p">})</span>
 </pre></div>
 

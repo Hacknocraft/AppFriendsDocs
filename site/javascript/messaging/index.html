@@ -606,6 +606,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#mentioning-users" title="Mentioning Users" class="md-nav__link">
+    Mentioning Users
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -749,6 +756,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#mentioning-users" title="Mentioning Users" class="md-nav__link">
+    Mentioning Users
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -822,6 +836,22 @@
       <span class="nx">mentionUsers</span><span class="p">,</span>    <span class="c1">// optional, an array of user ids of users who you want to mention in the message</span>
       <span class="nx">sendPush</span><span class="p">,</span>        <span class="c1">// optional, if a message should trigger a push notification. Default is is true</span>
       <span class="p">(</span><span class="nx">message</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+          <span class="c1">// this is a callback, after the message is sent.</span>
+      <span class="p">}</span>
+<span class="p">);</span>
+</pre></div>
+
+
+<h2 id="mentioning-users">Mentioning Users<a class="headerlink" href="#mentioning-users" title="Permanent link">&para;</a></h2>
+<p>You can mention other users by referencing their IDs in the message you compose.</p>
+<div class="codehilite"><pre><span></span><span class="n">af</span><span class="p">.</span><span class="n">Dialog</span><span class="p">.</span><span class="n">sendTextMessage</span><span class="p">(</span>
+      <span class="n">dialog</span><span class="p">,</span>          <span class="c1">// dialog object</span>
+      <span class="n">gifURL</span><span class="p">,</span>          <span class="c1">// gif url</span>
+      <span class="n">customData</span><span class="p">,</span>      <span class="c1">// optional, custom data, you can send a string with your message</span>
+      <span class="n">requireReceipt</span><span class="p">,</span>  <span class="c1">// if the message require receipt, default is false</span>
+      <span class="n">mentionUsers</span><span class="p">,</span>    <span class="c1">// optional, an array of user ids of users who you want to mention in the message</span>
+      <span class="n">sendPush</span><span class="p">,</span>        <span class="c1">// optional, if a message should trigger a push notification. Default is is true</span>
+      <span class="p">(</span><span class="n">message</span><span class="p">)</span> <span class="p">=</span><span class="o">&gt;</span> <span class="p">{</span>
           <span class="c1">// this is a callback, after the message is sent.</span>
       <span class="p">}</span>
 <span class="p">);</span>

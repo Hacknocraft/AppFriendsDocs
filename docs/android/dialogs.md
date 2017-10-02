@@ -8,7 +8,7 @@ AppFriends.getInstance().channelService().getChannels()
         .subscribe(new Subscriber<List<Channel>>() {
             @Override
             public void onCompleted() {
-                
+
             }
 
             @Override
@@ -37,7 +37,7 @@ AppFriends.getInstance().dialogService().getDialogs()
         .subscribe(new Subscriber<List<Dialog>>() {
             @Override
             public void onCompleted() {
-                
+
             }
 
             @Override
@@ -61,7 +61,7 @@ AppFriends.getInstance().dialogService().createDialog("dialog title", dialogMemb
         .subscribe(new Subscriber<Dialog>() {
             @Override
             public void onCompleted() {
-                
+
             }
 
             @Override
@@ -87,7 +87,7 @@ AppFriends.getInstance().dialogService().muteDialog("dialog id", true) // or fal
         .subscribe(new CompletableSubscriber() {
             @Override
             public void onCompleted() {
-                
+
             }
 
             @Override
@@ -123,7 +123,7 @@ AppFriends.getInstance().chatService.sendTextMessage(dialogId, type, message)
 
             @Override
             public void onSubscribe(Subscription d) {
-                
+
             }
         });
 ```
@@ -149,7 +149,7 @@ AppFriends.getInstance().chatService.sendImageMessage(dialogId, type, imageUrl, 
 
             @Override
             public void onSubscribe(Subscription d) {
-                
+
             }
         });
 ```
@@ -176,7 +176,7 @@ AppFriends.getInstance().chatService.sendVideoMessage(dialogId, type, videoMedia
 
             @Override
             public void onSubscribe(Subscription d) {
-                
+
             }
         });
 ```
@@ -202,10 +202,11 @@ AppFriends.getInstance().chatService.sendImageMessage(dialogId, type, gifImageUr
 
             @Override
             public void onSubscribe(Subscription d) {
-                
+
             }
         });
 ```
+
 ## Message Receipts
 You can check the receipts of a message by using:
 ```Java
@@ -223,7 +224,7 @@ AppFriends.getInstance().chatService().getReadReceipts(messageTempID)
 
             @Override
             public void onNext(List<String> receivedUserIds) {
-                
+
             }
         });
 ```
