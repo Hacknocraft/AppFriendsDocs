@@ -15,14 +15,12 @@ AppFriends Android SDK is available as a Gradle dependency, add the following to
 
 ```Groovy
 repositories {
-   maven {
-       maven { url 'https://raw.githubusercontent.com/Hacknocraft/AppFriendsAndroidCore/master/' }
-   }
+    maven { url 'https://raw.githubusercontent.com/Hacknocraft/AppFriendsAndroidCore/master/' }
 }
 
 dependencies {
    // AppFriends
-   compile 'me.appfriends.sdk:ui:3.2.2'
+   compile 'me.appfriends.sdk:ui:3.2.4'
 }
 ```
 
