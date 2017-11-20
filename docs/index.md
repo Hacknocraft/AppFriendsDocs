@@ -52,7 +52,10 @@ The iOS SDK can be integrated into existing Xcode iOS projects. There are two SD
 The Android SDK can be integrated into existing Android projects. For details,
 please read [Android SDK guide](android/quick_start.md). A sample android application can be found [here](https://github.com/hacknocraft/AppfriendsAndroidSample).
 
-### Javascript
+### ReactNative
+AppFriends can be used in your ReactNative project. The library can found [here](https://github.com/Hacknocraft/AppFriendsReactNative). In the github repo, we included a sample chat app which uses the AppFriends RN library to make app chat work on both iOS and Android. 
+
+### Javascript/Web
 The javascript SDK can be used on your website as well as hybrid mobile apps. Javascript SDK can be downloaded [here](https://github.com/Hacknocraft/AppFriendsJavascript). A sample web widget can be found [here](https://github.com/Hacknocraft/AppFriendsWebUI/tree/master/web-widget).
 
 ## Server API

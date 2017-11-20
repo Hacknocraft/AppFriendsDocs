@@ -34,6 +34,14 @@ pages:
   - 'UI Integration Guide': 'android/ui.md'
   - 'UI Customization Guide': 'android/customization.md'
   - 'Errors & Exceptions': 'android/error.md'
+- ReactNative:
+  - 'Quick Start': 'reactnative/quick_start.md'
+  - 'Sessions': 'reactnative/sessions.md'
+  - 'Users': 'reactnative/users.md'
+  - 'Dialogs': 'reactnative/dialogs.md'
+  - 'Messages': 'reactnative/messaging.md'
+  - 'Events': 'reactnative/events.md'
+  - 'Push Notifications Guide': 'reactnative/push.md'
 - Javascript:
   - 'Quick Start': 'javascript/quick_start.md'
   - 'Callbacks & Events': 'javascript/events.md'
