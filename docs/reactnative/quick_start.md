@@ -25,7 +25,24 @@ The last step is linking the library:
 ```
 
 ## Android Integration
+For Android, the native AppFriends Core library is a required dependency.
+Add the following to your application's `build.gradle` file:
 
+```Groovy
+repositories {
+    maven { url 'https://raw.githubusercontent.com/Hacknocraft/AppFriendsAndroidCore/master/' }
+}
+
+dependencies {
+   // AppFriends
+   compile 'me.appfriends.sdk:ui:3.2.4'
+}
+```
+
+Once Gradle successfully syncs the library, a final linking step is required:
+```
+`$ react-native link react-native-app-friends-library`
+```
 
 ## Initialization
 Before using AppFriends features, you need to initialize the SDK:
