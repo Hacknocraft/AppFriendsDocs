@@ -231,6 +231,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#swift-4" title="Swift 4" class="md-nav__link">
+    Swift 4
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#swift-32" title="Swift 3.2" class="md-nav__link">
     Swift 3.2
   </a>
@@ -412,6 +419,18 @@
   <li class="md-nav__item">
     <a href="../dialogs/" title="Dialogs and Messaging" class="md-nav__link">
       Dialogs and Messaging
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../album/" title="Album" class="md-nav__link">
+      Album
     </a>
   </li>
 
@@ -722,6 +741,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../reactnative/album/" title="Album" class="md-nav__link">
+      Album
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../reactnative/messaging/" title="Messages" class="md-nav__link">
       Messages
     </a>
@@ -957,6 +988,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#swift-4" title="Swift 4" class="md-nav__link">
+    Swift 4
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#swift-32" title="Swift 3.2" class="md-nav__link">
     Swift 3.2
   </a>
@@ -1110,17 +1148,15 @@ To see an sample app of how to use AppFriendsUI, please checkout our repo:</p>
 <h2 id="2-integrate-appfriends-sdk">2. Integrate AppFriends SDK<a class="headerlink" href="#2-integrate-appfriends-sdk" title="Permanent link">&para;</a></h2>
 <h3 id="using-cocoapods">Using Cocoapods<a class="headerlink" href="#using-cocoapods" title="Permanent link">&para;</a></h3>
 <p>To integrate AppFriends iOS SDK to your Xcode iOS project, add this line in your <code>Podfile</code></p>
-<div class="codehilite"><pre><span></span><span class="n">pod</span> <span class="s1">&#39;AppFriendsUI&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 2.1&#39;</span>
-<span class="n">pod</span> <span class="s1">&#39;AppFriendsCore&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 2.0&#39;</span>
+<h4 id="swift-4">Swift 4<a class="headerlink" href="#swift-4" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><span class="n">pod</span> <span class="s1">&#39;AppFriendsUI&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 2.3&#39;</span>
+<span class="n">pod</span> <span class="s1">&#39;AppFriendsCore&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 2.2&#39;</span>
 </pre></div>
 
 
 <h4 id="swift-32">Swift 3.2<a class="headerlink" href="#swift-32" title="Permanent link">&para;</a></h4>
-<p>for Swift 3.2, since a lot of dependent library haven't officially released swift3.2 support yet, please use branch in your Podfile.</p>
-<div class="codehilite"><pre><span></span><span class="n">pod</span> <span class="s1">&#39;AppFriendsCore&#39;</span><span class="p">,</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span class="s1">&#39;https://github.com/Hacknocraft/AppFriendsCore.git&#39;</span><span class="p">,</span> <span class="ss">:branch</span> <span class="o">=&gt;</span> <span class="s1">&#39;swift3_2&#39;</span>
-<span class="n">pod</span> <span class="s1">&#39;AppFriendsUI&#39;</span><span class="p">,</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span class="s1">&#39;https://github.com/Hacknocraft/AppFriendsUI.git&#39;</span><span class="p">,</span> <span class="ss">:branch</span> <span class="o">=&gt;</span> <span class="s1">&#39;swift3_2&#39;</span>
-<span class="n">pod</span> <span class="s1">&#39;CoreStore&#39;</span><span class="p">,</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span class="s1">&#39;https://github.com/JohnEstropia/CoreStore.git&#39;</span><span class="p">,</span> <span class="ss">:branch</span> <span class="o">=&gt;</span> <span class="s1">&#39;prototype/Swift_3_2&#39;</span>
-<span class="n">pod</span> <span class="s1">&#39;SlackTextViewController&#39;</span><span class="p">,</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span class="s1">&#39;https://github.com/Hacknocraft/SlackTextViewController.git&#39;</span><span class="p">,</span> <span class="ss">:branch</span> <span class="o">=&gt;</span> <span class="s1">&#39;master&#39;</span>
+<div class="codehilite"><pre><span></span><span class="n">pod</span> <span class="s1">&#39;AppFriendsUI&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 2.2&#39;</span>
+<span class="n">pod</span> <span class="s1">&#39;AppFriendsCore&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 2.1&#39;</span>
 </pre></div>
 
 
@@ -1141,7 +1177,7 @@ To see an sample app of how to use AppFriendsUI, please checkout our repo:</p>
 <h4 id="copy-frameworks">Copy frameworks:<a class="headerlink" href="#copy-frameworks" title="Permanent link">&para;</a></h4>
 <p><img alt="Copy Frameworks" src="http://res.cloudinary.com/hacknocraft-appfriends/image/upload/v1493874915/Screen_Shot_2017-05-04_at_1.13.57_AM_gsfifq.png" /></p>
 <p>If you don't want any of the UI components we provide, you can directly interact with the platform API, and we have a core framework to use for that purpose:</p>
-<div class="codehilite"><pre><span></span><span class="n">pod</span> <span class="s1">&#39;AppFriendsCore&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 2.0&#39;</span>
+<div class="codehilite"><pre><span></span><span class="n">pod</span> <span class="s1">&#39;AppFriendsCore&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 2.2&#39;</span>
 </pre></div>
 
 

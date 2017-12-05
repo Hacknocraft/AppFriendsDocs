@@ -10,17 +10,16 @@ To see an sample app of how to use AppFriendsUI, please checkout our repo:
 ## 2. Integrate AppFriends SDK
 ### Using Cocoapods
 To integrate AppFriends iOS SDK to your Xcode iOS project, add this line in your `Podfile`
+
+#### Swift 4
 ``` ruby
-pod 'AppFriendsUI', '~> 2.1'
-pod 'AppFriendsCore', '~> 2.0'
+pod 'AppFriendsUI', '~> 2.3'
+pod 'AppFriendsCore', '~> 2.2'
 ```
 #### Swift 3.2
-for Swift 3.2, since a lot of dependent library haven't officially released swift3.2 support yet, please use branch in your Podfile.
 ``` ruby
-pod 'AppFriendsCore', :git => 'https://github.com/Hacknocraft/AppFriendsCore.git', :branch => 'swift3_2'
-pod 'AppFriendsUI', :git => 'https://github.com/Hacknocraft/AppFriendsUI.git', :branch => 'swift3_2'
-pod 'CoreStore', :git => 'https://github.com/JohnEstropia/CoreStore.git', :branch => 'prototype/Swift_3_2'
-pod 'SlackTextViewController', :git => 'https://github.com/Hacknocraft/SlackTextViewController.git', :branch => 'master'
+pod 'AppFriendsUI', '~> 2.2'
+pod 'AppFriendsCore', '~> 2.1'
 ```
 
 Also, add `use_frameworks!` to the top of file. eg.
@@ -46,7 +45,7 @@ To integrate using Carthage
 
 If you don't want any of the UI components we provide, you can directly interact with the platform API, and we have a core framework to use for that purpose:
 ``` ruby
-pod 'AppFriendsCore', '~> 2.0'
+pod 'AppFriendsCore', '~> 2.2'
 ```
 
 ## 3. Import Header

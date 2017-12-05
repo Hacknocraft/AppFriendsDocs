@@ -4,7 +4,7 @@
     
     <url>
      <loc>http://www.appfriends.me/</loc>
-     <lastmod>2017-11-22</lastmod>
+     <lastmod>2017-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,73 +13,79 @@
         
     <url>
      <loc>http://www.appfriends.me/ios/quick_start/</loc>
-     <lastmod>2017-11-22</lastmod>
+     <lastmod>2017-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.appfriends.me/ios/sessions/</loc>
-     <lastmod>2017-11-22</lastmod>
+     <lastmod>2017-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.appfriends.me/ios/users/</loc>
-     <lastmod>2017-11-22</lastmod>
+     <lastmod>2017-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.appfriends.me/ios/social/</loc>
-     <lastmod>2017-11-22</lastmod>
+     <lastmod>2017-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.appfriends.me/ios/dialogs/</loc>
-     <lastmod>2017-11-22</lastmod>
+     <lastmod>2017-12-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://www.appfriends.me/ios/album/</loc>
+     <lastmod>2017-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.appfriends.me/ios/push_notification/</loc>
-     <lastmod>2017-11-22</lastmod>
+     <lastmod>2017-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.appfriends.me/ios/events/</loc>
-     <lastmod>2017-11-22</lastmod>
+     <lastmod>2017-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.appfriends.me/ios/encryption/</loc>
-     <lastmod>2017-11-22</lastmod>
+     <lastmod>2017-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.appfriends.me/ios/ui_components/</loc>
-     <lastmod>2017-11-22</lastmod>
+     <lastmod>2017-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.appfriends.me/ios/ui_customization/</loc>
-     <lastmod>2017-11-22</lastmod>
+     <lastmod>2017-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.appfriends.me/ios/dependencies/</loc>
-     <lastmod>2017-11-22</lastmod>
+     <lastmod>2017-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.appfriends.me/ios/error/</loc>
-     <lastmod>2017-11-22</lastmod>
+     <lastmod>2017-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -89,61 +95,61 @@
         
     <url>
      <loc>http://www.appfriends.me/android/quick_start/</loc>
-     <lastmod>2017-11-22</lastmod>
+     <lastmod>2017-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.appfriends.me/android/sessions/</loc>
-     <lastmod>2017-11-22</lastmod>
+     <lastmod>2017-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.appfriends.me/android/users/</loc>
-     <lastmod>2017-11-22</lastmod>
+     <lastmod>2017-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.appfriends.me/android/social/</loc>
-     <lastmod>2017-11-22</lastmod>
+     <lastmod>2017-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.appfriends.me/android/dialogs/</loc>
-     <lastmod>2017-11-22</lastmod>
+     <lastmod>2017-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.appfriends.me/android/push/</loc>
-     <lastmod>2017-11-22</lastmod>
+     <lastmod>2017-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.appfriends.me/android/encryption/</loc>
-     <lastmod>2017-11-22</lastmod>
+     <lastmod>2017-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.appfriends.me/android/ui/</loc>
-     <lastmod>2017-11-22</lastmod>
+     <lastmod>2017-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.appfriends.me/android/customization/</loc>
-     <lastmod>2017-11-22</lastmod>
+     <lastmod>2017-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.appfriends.me/android/error/</loc>
-     <lastmod>2017-11-22</lastmod>
+     <lastmod>2017-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -153,43 +159,49 @@
         
     <url>
      <loc>http://www.appfriends.me/reactnative/quick_start/</loc>
-     <lastmod>2017-11-22</lastmod>
+     <lastmod>2017-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.appfriends.me/reactnative/sessions/</loc>
-     <lastmod>2017-11-22</lastmod>
+     <lastmod>2017-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.appfriends.me/reactnative/users/</loc>
-     <lastmod>2017-11-22</lastmod>
+     <lastmod>2017-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.appfriends.me/reactnative/dialogs/</loc>
-     <lastmod>2017-11-22</lastmod>
+     <lastmod>2017-12-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://www.appfriends.me/reactnative/album/</loc>
+     <lastmod>2017-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.appfriends.me/reactnative/messaging/</loc>
-     <lastmod>2017-11-22</lastmod>
+     <lastmod>2017-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.appfriends.me/reactnative/events/</loc>
-     <lastmod>2017-11-22</lastmod>
+     <lastmod>2017-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.appfriends.me/reactnative/push/</loc>
-     <lastmod>2017-11-22</lastmod>
+     <lastmod>2017-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -199,37 +211,37 @@
         
     <url>
      <loc>http://www.appfriends.me/javascript/quick_start/</loc>
-     <lastmod>2017-11-22</lastmod>
+     <lastmod>2017-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.appfriends.me/javascript/events/</loc>
-     <lastmod>2017-11-22</lastmod>
+     <lastmod>2017-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.appfriends.me/javascript/users/</loc>
-     <lastmod>2017-11-22</lastmod>
+     <lastmod>2017-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.appfriends.me/javascript/dialogs/</loc>
-     <lastmod>2017-11-22</lastmod>
+     <lastmod>2017-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.appfriends.me/javascript/messaging/</loc>
-     <lastmod>2017-11-22</lastmod>
+     <lastmod>2017-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.appfriends.me/javascript/social/</loc>
-     <lastmod>2017-11-22</lastmod>
+     <lastmod>2017-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -239,19 +251,19 @@
         
     <url>
      <loc>http://www.appfriends.me/api/request_auth/</loc>
-     <lastmod>2017-11-22</lastmod>
+     <lastmod>2017-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.appfriends.me/api/applicationapi/</loc>
-     <lastmod>2017-11-22</lastmod>
+     <lastmod>2017-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.appfriends.me/api/adminapi/</loc>
-     <lastmod>2017-11-22</lastmod>
+     <lastmod>2017-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         

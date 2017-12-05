@@ -57,7 +57,7 @@
         }, 
         {
             "location": "/ios/quick_start/", 
-            "text": "Quick Start\n\n\n1. Create an AppFriends Application\n\n\nBefore start using AppFriends, you need to create an application on the \ndashboard\n Users in the same application can talk to each other and you only need one application for all the platforms you want to support.\nTo see an sample app of how to use AppFriendsUI, please checkout our repo:\n\n\n\n\nGithub iOS Sample App\n\n\n\n\n2. Integrate AppFriends SDK\n\n\nUsing Cocoapods\n\n\nTo integrate AppFriends iOS SDK to your Xcode iOS project, add this line in your \nPodfile\n\n\npod\n \nAppFriendsUI\n,\n \n~\n 2.1\n\n\npod\n \nAppFriendsCore\n,\n \n~\n 2.0\n\n\n\n\n\n\nSwift 3.2\n\n\nfor Swift 3.2, since a lot of dependent library haven't officially released swift3.2 support yet, please use branch in your Podfile.\n\n\npod\n \nAppFriendsCore\n,\n \n:git\n \n=\n \nhttps://github.com/Hacknocraft/AppFriendsCore.git\n,\n \n:branch\n \n=\n \nswift3_2\n\n\npod\n \nAppFriendsUI\n,\n \n:git\n \n=\n \nhttps://github.com/Hacknocraft/AppFriendsUI.git\n,\n \n:branch\n \n=\n \nswift3_2\n\n\npod\n \nCoreStore\n,\n \n:git\n \n=\n \nhttps://github.com/JohnEstropia/CoreStore.git\n,\n \n:branch\n \n=\n \nprototype/Swift_3_2\n\n\npod\n \nSlackTextViewController\n,\n \n:git\n \n=\n \nhttps://github.com/Hacknocraft/SlackTextViewController.git\n,\n \n:branch\n \n=\n \nmaster\n\n\n\n\n\n\nAlso, add \nuse_frameworks!\n to the top of file. eg.\n\n\nsource\n \nhttps://github.com/CocoaPods/Specs.git\n\n\nsource\n \nhttps://github.com/Hacknocraft/hacknocraft-cocoapods-spec.git\n\n\nuse_frameworks!\n\n\n...\n\n\n\n\n\n\nYou might need to run \npod repo update\n after this step before calling \npod install\n\n\nUsing Carthage\n\n\nTo integrate using Carthage\n\n\ngithub \"Hacknocraft/AppFriendsCarthage\" ~\n 2.1\n\n\nAdd frameworks:\n\n\n\n\nCopy frameworks:\n\n\n\n\nIf you don't want any of the UI components we provide, you can directly interact with the platform API, and we have a core framework to use for that purpose:\n\n\npod\n \nAppFriendsCore\n,\n \n~\n 2.0\n\n\n\n\n\n\n3. Import Header\n\n\nThe next step is import the headers.\n\n\nExample\n\n\nSwift\n\n\n#\nimport\n \nAppFriendsCore\n\n\n#\nimport\n \nAppFriendsUI\n\n\n\n\n\n\nObjective-C\n\n\nimport\n \nAppFriendsCore\n\n\nimport\n \nAppFriendsUI\n\n\n\n\n\n\n4. Initialization\n\n\nNow, we can use the AppFriends key and secret to initialize the SDK. Key and secret can be found in your AppFriends dashboard. If you are using the \nAppFriendsUI\n SDK, you can initialize by:\n\n\nAppFriends Initialization\n\n\nSwift\n\n\nAppFriendsUI\n.\nsharedInstance\n.\ninitialize\n(\n[appfriends key]\n,\n \nsecret\n:\n \n[appfriends secret]\n)\n \n{\n \n(\nsuccess\n,\n \nerror\n)\n \nin\n\n        \nif\n \n!\nsuccess\n \n{\n\n                \nNSLog\n(\nAppFriends initialization error:\n\\(\nerror\n?.\nlocalizedDescription\n)\n)\n\n        \n}\nelse\n \n{\n\n             \n// initialization is successful\n\n        \n}\n\n\n}\n\n\n\n\n\n\n5. Login\n\n\nAfter initialization, you want to login your user to AppFriends, so he can start chatting with other users. Please see \nsessions\n for detail\n\n\n6. UI\n\n\nThere are a lot of ready to use UI components in the AppFriendsUI SDK. They can save you hundreds of hours of development. To learn the UI components and how to use them, please see \nui components section", 
+            "text": "Quick Start\n\n\n1. Create an AppFriends Application\n\n\nBefore start using AppFriends, you need to create an application on the \ndashboard\n Users in the same application can talk to each other and you only need one application for all the platforms you want to support.\nTo see an sample app of how to use AppFriendsUI, please checkout our repo:\n\n\n\n\nGithub iOS Sample App\n\n\n\n\n2. Integrate AppFriends SDK\n\n\nUsing Cocoapods\n\n\nTo integrate AppFriends iOS SDK to your Xcode iOS project, add this line in your \nPodfile\n\n\nSwift 4\n\n\npod\n \nAppFriendsUI\n,\n \n~\n 2.3\n\n\npod\n \nAppFriendsCore\n,\n \n~\n 2.2\n\n\n\n\n\n\nSwift 3.2\n\n\npod\n \nAppFriendsUI\n,\n \n~\n 2.2\n\n\npod\n \nAppFriendsCore\n,\n \n~\n 2.1\n\n\n\n\n\n\nAlso, add \nuse_frameworks!\n to the top of file. eg.\n\n\nsource\n \nhttps://github.com/CocoaPods/Specs.git\n\n\nsource\n \nhttps://github.com/Hacknocraft/hacknocraft-cocoapods-spec.git\n\n\nuse_frameworks!\n\n\n...\n\n\n\n\n\n\nYou might need to run \npod repo update\n after this step before calling \npod install\n\n\nUsing Carthage\n\n\nTo integrate using Carthage\n\n\ngithub \"Hacknocraft/AppFriendsCarthage\" ~\n 2.1\n\n\nAdd frameworks:\n\n\n\n\nCopy frameworks:\n\n\n\n\nIf you don't want any of the UI components we provide, you can directly interact with the platform API, and we have a core framework to use for that purpose:\n\n\npod\n \nAppFriendsCore\n,\n \n~\n 2.2\n\n\n\n\n\n\n3. Import Header\n\n\nThe next step is import the headers.\n\n\nExample\n\n\nSwift\n\n\n#\nimport\n \nAppFriendsCore\n\n\n#\nimport\n \nAppFriendsUI\n\n\n\n\n\n\nObjective-C\n\n\nimport\n \nAppFriendsCore\n\n\nimport\n \nAppFriendsUI\n\n\n\n\n\n\n4. Initialization\n\n\nNow, we can use the AppFriends key and secret to initialize the SDK. Key and secret can be found in your AppFriends dashboard. If you are using the \nAppFriendsUI\n SDK, you can initialize by:\n\n\nAppFriends Initialization\n\n\nSwift\n\n\nAppFriendsUI\n.\nsharedInstance\n.\ninitialize\n(\n[appfriends key]\n,\n \nsecret\n:\n \n[appfriends secret]\n)\n \n{\n \n(\nsuccess\n,\n \nerror\n)\n \nin\n\n        \nif\n \n!\nsuccess\n \n{\n\n                \nNSLog\n(\nAppFriends initialization error:\n\\(\nerror\n?.\nlocalizedDescription\n)\n)\n\n        \n}\nelse\n \n{\n\n             \n// initialization is successful\n\n        \n}\n\n\n}\n\n\n\n\n\n\n5. Login\n\n\nAfter initialization, you want to login your user to AppFriends, so he can start chatting with other users. Please see \nsessions\n for detail\n\n\n6. UI\n\n\nThere are a lot of ready to use UI components in the AppFriendsUI SDK. They can save you hundreds of hours of development. To learn the UI components and how to use them, please see \nui components section", 
             "title": "Quick Start"
         }, 
         {
@@ -77,12 +77,17 @@
         }, 
         {
             "location": "/ios/quick_start/#using-cocoapods", 
-            "text": "To integrate AppFriends iOS SDK to your Xcode iOS project, add this line in your  Podfile  pod   AppFriendsUI ,   ~  2.1  pod   AppFriendsCore ,   ~  2.0", 
+            "text": "To integrate AppFriends iOS SDK to your Xcode iOS project, add this line in your  Podfile", 
             "title": "Using Cocoapods"
         }, 
         {
+            "location": "/ios/quick_start/#swift-4", 
+            "text": "pod   AppFriendsUI ,   ~  2.3  pod   AppFriendsCore ,   ~  2.2", 
+            "title": "Swift 4"
+        }, 
+        {
             "location": "/ios/quick_start/#swift-32", 
-            "text": "for Swift 3.2, since a lot of dependent library haven't officially released swift3.2 support yet, please use branch in your Podfile.  pod   AppFriendsCore ,   :git   =   https://github.com/Hacknocraft/AppFriendsCore.git ,   :branch   =   swift3_2  pod   AppFriendsUI ,   :git   =   https://github.com/Hacknocraft/AppFriendsUI.git ,   :branch   =   swift3_2  pod   CoreStore ,   :git   =   https://github.com/JohnEstropia/CoreStore.git ,   :branch   =   prototype/Swift_3_2  pod   SlackTextViewController ,   :git   =   https://github.com/Hacknocraft/SlackTextViewController.git ,   :branch   =   master   Also, add  use_frameworks!  to the top of file. eg.  source   https://github.com/CocoaPods/Specs.git  source   https://github.com/Hacknocraft/hacknocraft-cocoapods-spec.git  use_frameworks!  ...   You might need to run  pod repo update  after this step before calling  pod install", 
+            "text": "pod   AppFriendsUI ,   ~  2.2  pod   AppFriendsCore ,   ~  2.1   Also, add  use_frameworks!  to the top of file. eg.  source   https://github.com/CocoaPods/Specs.git  source   https://github.com/Hacknocraft/hacknocraft-cocoapods-spec.git  use_frameworks!  ...   You might need to run  pod repo update  after this step before calling  pod install", 
             "title": "Swift 3.2"
         }, 
         {
@@ -97,7 +102,7 @@
         }, 
         {
             "location": "/ios/quick_start/#copy-frameworks", 
-            "text": "If you don't want any of the UI components we provide, you can directly interact with the platform API, and we have a core framework to use for that purpose:  pod   AppFriendsCore ,   ~  2.0", 
+            "text": "If you don't want any of the UI components we provide, you can directly interact with the platform API, and we have a core framework to use for that purpose:  pod   AppFriendsCore ,   ~  2.2", 
             "title": "Copy frameworks:"
         }, 
         {
@@ -266,6 +271,26 @@
             "title": "Message Receipts"
         }, 
         {
+            "location": "/ios/album/", 
+            "text": "What is Album?\n\n\nAn album is a place where we group all the images and videos sent within a dialog. All dialogs have album, except the open channels. The purpose of an album is to help user quickly browse through the past media sent within a dialog. If you use our iOS UI SDK, there is built-in Album view available to use.\n\n\n\n\nAlbum APIs\n\n\nThere are some very simple API to use for interacting with Album.\n\n\nFetching Album Items\n\n\nYou can get album items using the \nAFAlbum\n API:\n\n\n/// fetch all album items\n\n\n///\n\n\n/// - Parameters:\n\n\n///   - id: the id of the dialog containing the album items you are fetching\n\n\n///   - time: the earliest time that you want to fetch from\n\n\n///   - completion: completion block. Returns an array of album items if the request is successful\n\n\nAFAlbum\n.\ngetAllAlbumItems\n(\nfromDialog\n:\n \nid\n,\n \nstartingFrom\n:\n \ntime\n,\n \ncompletion\n:\n \n{\n \n(\nitems\n,\n \nerror\n)\n \nin\n\n      \nif\n \nerror\n \n!=\n \nnil\n \n{\n\n        \n// handle error\n\n      \n}\n \nelse\n \n{\n\n        \n// fetch successful\n\n      \n}\n\n\n})", 
+            "title": "Album"
+        }, 
+        {
+            "location": "/ios/album/#what-is-album", 
+            "text": "An album is a place where we group all the images and videos sent within a dialog. All dialogs have album, except the open channels. The purpose of an album is to help user quickly browse through the past media sent within a dialog. If you use our iOS UI SDK, there is built-in Album view available to use.", 
+            "title": "What is Album?"
+        }, 
+        {
+            "location": "/ios/album/#album-apis", 
+            "text": "There are some very simple API to use for interacting with Album.", 
+            "title": "Album APIs"
+        }, 
+        {
+            "location": "/ios/album/#fetching-album-items", 
+            "text": "You can get album items using the  AFAlbum  API:  /// fetch all album items  ///  /// - Parameters:  ///   - id: the id of the dialog containing the album items you are fetching  ///   - time: the earliest time that you want to fetch from  ///   - completion: completion block. Returns an array of album items if the request is successful  AFAlbum . getAllAlbumItems ( fromDialog :   id ,   startingFrom :   time ,   completion :   {   ( items ,   error )   in \n       if   error   !=   nil   { \n         // handle error \n       }   else   { \n         // fetch successful \n       }  })", 
+            "title": "Fetching Album Items"
+        }, 
+        {
             "location": "/ios/push_notification/", 
             "text": "AppFriends can send push notification to the device when there's a new message for a user or if the user is mentioned in a channel chat. Push notification API is accessible via \nAFPushNotification\n class. Please make sure the user has already logged in before registering for push. Unregistering must also happen before the user logout.\n\n\nRegister for Push\n\n\nTo enable push notification, you need to first register the push token with AppFriends:\n\n\nAFPushNotification\n.\nregisterDeviceForPushNotification\n(\npushToken\n:\n \npushToken\n,\n \ncompletion\n:\n \n{\n \n(\nerror\n)\n \nin\n\n\n})\n\n\n\n\n\n\nUnregister for Push\n\n\nTo unregister push notification:\n\n\nAFPushNotification\n.\nunregisterDeviceForPushNotification\n(\npushToken\n:\n \npushToken\n,\n \ncompletion\n:\n \n{\n \n(\nerror\n)\n \nin\n\n\n})\n\n\n\n\n\n\nProcess Push\n\n\nAfter you received remote push notification, please pass it to the SDK for better user experience. Especially if you are entering the app using the push notification sent by AppFriends. We will only look at push notification coming from AppFriends.\n\n\n// true if AppFriends SDK used the push notification\n\n\nlet\n \npushHandled\n \n=\n \nAFPushNotification\n.\nprocessPushNotification\n(\nnotificationUserInfo\n:\n \nuserInfo\n)", 
             "title": "Push Notification"
@@ -382,12 +407,12 @@
         }, 
         {
             "location": "/ios/dependencies/", 
-            "text": "Dependencies List\n\n\nAppFriends SDKs have several external dependencies with open source libraries. We are committed to always update our SDK to be compatible the latest version of the dependencies\n\n\n\n\n\n\n\n\nDependencies\n\n\nLicense Type\n\n\nAppFriendsCore\n\n\nAppFriendsUI\n\n\nVersion (swift3.0)\n\n\nVersion (swift3.1)\n\n\n\n\n\n\n\n\n\n\nAlamofire\n\n\nMIT\n\n\n\u2714\n\n\n\u2714\n\n\n~\n 4.0.1\n\n\n~\n 4.0.1\n\n\n\n\n\n\nJWT\n\n\nMIT\n\n\n\u2714\n\n\n\u2714\n\n\n~\n 2.1.0\n\n\n~\n 2.1.0\n\n\n\n\n\n\nCoreStore\n\n\nMIT\n\n\n\u2714\n\n\n\u2714\n\n\n~\n 2.1.3\n\n\n~\n 2.1.3\n\n\n\n\n\n\nCloudinary\n\n\nMIT\n\n\n\u2714\n\n\n\u2714\n\n\n~\n 1.0.15\n\n\n~\n 1.0.15\n\n\n\n\n\n\nSocket.IO-Client-Swift\n\n\nMIT\n\n\n\u2714\n\n\n\u2714\n\n\n~\n 8.1.1\n\n\n~\n 8.1.1\n\n\n\n\n\n\nSlackTextViewController\n\n\nMIT\n\n\n\u2718\n\n\n\u2714\n\n\n~\n 1.9.5\n\n\n~\n 1.9.5\n\n\n\n\n\n\nAlamofireImage\n\n\nMIT\n\n\n\u2718\n\n\n\u2714\n\n\n~\n 3.1.0\n\n\n~\n 3.1.0\n\n\n\n\n\n\nJGProgressHUD\n\n\nMIT\n\n\n\u2718\n\n\n\u2714\n\n\n~\n 1.4\n\n\n~\n 1.4", 
+            "text": "Dependencies List\n\n\nAppFriends SDKs have several external dependencies with open source libraries. We are committed to always update our SDK to be compatible the latest version of the dependencies\n\n\n\n\n\n\n\n\nDependencies\n\n\nLicense Type\n\n\nAppFriendsCore\n\n\nAppFriendsUI\n\n\nVersion (swift4)\n\n\nVersion (swift3)\n\n\n\n\n\n\n\n\n\n\nAlamofire\n\n\nMIT\n\n\n\u2714\n\n\n\u2714\n\n\n~\n 4.5.1\n\n\n~\n 4.0.1\n\n\n\n\n\n\nJWT\n\n\nMIT\n\n\n\u2714\n\n\n\u2714\n\n\n~\n 2.2.0\n\n\n~\n 2.1.0\n\n\n\n\n\n\nCoreStore\n\n\nMIT\n\n\n\u2714\n\n\n\u2714\n\n\n~\n 5.0.0\n\n\n~\n 2.1.3\n\n\n\n\n\n\nCloudinary\n\n\nMIT\n\n\n\u2714\n\n\n\u2714\n\n\n~\n 1.0.15\n\n\n~\n 1.0.15\n\n\n\n\n\n\nSocket.IO-Client-Swift\n\n\nMIT\n\n\n\u2714\n\n\n\u2714\n\n\n~\n 12.0.0\n\n\n~\n 8.1.1\n\n\n\n\n\n\nAlamofireImage\n\n\nMIT\n\n\n\u2718\n\n\n\u2714\n\n\n~\n 4.0.1\n\n\n~\n 3.1.0\n\n\n\n\n\n\nJGProgressHUD\n\n\nMIT\n\n\n\u2718\n\n\n\u2714\n\n\n~\n 4.0.1\n\n\n~\n 1.4", 
             "title": "External Dependencies"
         }, 
         {
             "location": "/ios/dependencies/#dependencies-list", 
-            "text": "AppFriends SDKs have several external dependencies with open source libraries. We are committed to always update our SDK to be compatible the latest version of the dependencies     Dependencies  License Type  AppFriendsCore  AppFriendsUI  Version (swift3.0)  Version (swift3.1)      Alamofire  MIT  \u2714  \u2714  ~  4.0.1  ~  4.0.1    JWT  MIT  \u2714  \u2714  ~  2.1.0  ~  2.1.0    CoreStore  MIT  \u2714  \u2714  ~  2.1.3  ~  2.1.3    Cloudinary  MIT  \u2714  \u2714  ~  1.0.15  ~  1.0.15    Socket.IO-Client-Swift  MIT  \u2714  \u2714  ~  8.1.1  ~  8.1.1    SlackTextViewController  MIT  \u2718  \u2714  ~  1.9.5  ~  1.9.5    AlamofireImage  MIT  \u2718  \u2714  ~  3.1.0  ~  3.1.0    JGProgressHUD  MIT  \u2718  \u2714  ~  1.4  ~  1.4", 
+            "text": "AppFriends SDKs have several external dependencies with open source libraries. We are committed to always update our SDK to be compatible the latest version of the dependencies     Dependencies  License Type  AppFriendsCore  AppFriendsUI  Version (swift4)  Version (swift3)      Alamofire  MIT  \u2714  \u2714  ~  4.5.1  ~  4.0.1    JWT  MIT  \u2714  \u2714  ~  2.2.0  ~  2.1.0    CoreStore  MIT  \u2714  \u2714  ~  5.0.0  ~  2.1.3    Cloudinary  MIT  \u2714  \u2714  ~  1.0.15  ~  1.0.15    Socket.IO-Client-Swift  MIT  \u2714  \u2714  ~  12.0.0  ~  8.1.1    AlamofireImage  MIT  \u2718  \u2714  ~  4.0.1  ~  3.1.0    JGProgressHUD  MIT  \u2718  \u2714  ~  4.0.1  ~  1.4", 
             "title": "Dependencies List"
         }, 
         {
@@ -799,6 +824,26 @@
             "location": "/reactnative/dialogs/#create-a-one-on-one-dialog", 
             "text": "import   AppFriends   from   react-native-appfriends-library ;  /// - Parameters:  ///   - userID: id of the other user  AppFriends . dialog . createIndividualDialog ( userID )  . then (( dialogID )   =   { \n     // dialog created  },   ( error )   =   { \n     // dialog create failed  });", 
             "title": "Create a One on One Dialog"
+        }, 
+        {
+            "location": "/reactnative/album/", 
+            "text": "What is Album?\n\n\nAn album is a place where we group all the images and videos sent within a dialog. All dialogs have album, except the open channels. The purpose of an album is to help user quickly browse through the past media sent within a dialog.\n\n\n\n\nAlbum APIs\n\n\nThere are some very simple API to use for interacting with Album.\n\n\nFetching Album Items\n\n\n/// - Parameters:\n\n\n///   - dialogID: the id of the dialog containing the album items you are fetching\n\n\n///   - start: the earliest time that you want to fetch from\n\n\nAppFriends\n.\nalbum\n.\ngetAlbumItems\n(\ndialogID\n,\n \nstart\n)\n\n\n.\nthen\n((\nitems\n)\n \n=\n \n{\n\n    \n// items\n\n\n},\n \n(\nerror\n)\n \n=\n \n{\n\n    \n// failed to get items\n\n\n});", 
+            "title": "Album"
+        }, 
+        {
+            "location": "/reactnative/album/#what-is-album", 
+            "text": "An album is a place where we group all the images and videos sent within a dialog. All dialogs have album, except the open channels. The purpose of an album is to help user quickly browse through the past media sent within a dialog.", 
+            "title": "What is Album?"
+        }, 
+        {
+            "location": "/reactnative/album/#album-apis", 
+            "text": "There are some very simple API to use for interacting with Album.", 
+            "title": "Album APIs"
+        }, 
+        {
+            "location": "/reactnative/album/#fetching-album-items", 
+            "text": "/// - Parameters:  ///   - dialogID: the id of the dialog containing the album items you are fetching  ///   - start: the earliest time that you want to fetch from  AppFriends . album . getAlbumItems ( dialogID ,   start )  . then (( items )   =   { \n     // items  },   ( error )   =   { \n     // failed to get items  });", 
+            "title": "Fetching Album Items"
         }, 
         {
             "location": "/reactnative/messaging/", 
